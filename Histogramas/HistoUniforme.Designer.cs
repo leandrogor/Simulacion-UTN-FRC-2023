@@ -1,6 +1,6 @@
 ﻿namespace SIM_TP2.Histogramas
 {
-    partial class Histo_Uniforme
+    partial class HistoUniforme
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // HistoUniforme
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Histo_Uniforme";
+            this.Name = "HistoUniforme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HistoUniforme";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -64,17 +64,17 @@
     <Compile Include="Generadores\Uniforme.Designer.cs">
       <DependentUpon>Uniforme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Histogramas\Histo-Exponencial.cs">
+    <Compile Include="Histogramas\HistoExponencial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Histogramas\Histo-Exponencial.Designer.cs">
-      <DependentUpon>Histo-Exponencial.cs</DependentUpon>
+    <Compile Include="Histogramas\HistoExponencial.Designer.cs">
+      <DependentUpon>HistoExponencial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Histogramas\Histo-Uniforme.cs">
+    <Compile Include="Histogramas\HistoUniforme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Histogramas\Histo-Uniforme.Designer.cs">
-      <DependentUpon>Histo-Uniforme.cs</DependentUpon>
+    <Compile Include="Histogramas\HistoUniforme.Designer.cs">
+      <DependentUpon>HistoUniforme.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -89,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Generadores\Uniforme.resx">
       <DependentUpon>Uniforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Histogramas\HistoExponencial.resx">
+      <DependentUpon>HistoExponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Histogramas\HistoUniforme.resx">
+      <DependentUpon>HistoUniforme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

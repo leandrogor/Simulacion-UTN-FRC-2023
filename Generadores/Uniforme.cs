@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SIM_TP2.Histogramas;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.Generadores
 {
@@ -109,6 +111,20 @@ namespace SIM_TP2.Generadores
 
             dgvFrecuencias.Visible = true;
             btnGraficar.Enabled = true;
+            btnGraficar.Focus();
+        }
+
+        private void btnGraficar_Click(object sender, EventArgs e)
+        {
+            HistoUniforme ventana = new HistoUniforme();
+            ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
+        }
+
+        private void LogOut(object sender, FormClosedEventArgs e)
+        {
+            Show();
         }
     }
 }

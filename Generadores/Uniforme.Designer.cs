@@ -78,14 +78,10 @@
             // 
             // label1
             // 
-            this.btnGraficar.Enabled = false;
-            this.btnGraficar.Location = new System.Drawing.Point(182, 168);
-            this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGraficar.Name = "btnGraficar";
-            this.btnGraficar.Size = new System.Drawing.Size(115, 31);
-            this.btnGraficar.TabIndex = 5;
-            this.btnGraficar.Text = "Graficar";
-            this.btnGraficar.UseVisualStyleBackColor = true;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 27;
             // 
             // btnGenerar
             // 
@@ -100,6 +96,7 @@
             // 
             // btnGraficar
             // 
+            this.btnGraficar.Enabled = false;
             this.btnGraficar.Location = new System.Drawing.Point(182, 168);
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
@@ -107,6 +104,7 @@
             this.btnGraficar.TabIndex = 5;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = true;
+            this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click);
             // 
             // boxIntervalos
             // 

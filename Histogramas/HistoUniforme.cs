@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIM_TP2.Histogramas
 {
-    public partial class Histo_Uniforme : Form
+    public partial class HistoUniforme : Form
     {
-        public Histo_Uniforme()
+        public HistoUniforme()
         {
             InitializeComponent();
         }

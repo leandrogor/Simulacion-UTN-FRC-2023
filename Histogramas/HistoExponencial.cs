@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIM_TP2.Histogramas
 {
-    public partial class Histo_Exponencial : Form
+    public partial class HistoExponencial : Form
     {
-        public Histo_Exponencial()
+        public HistoExponencial()
         {
             InitializeComponent();
         }
