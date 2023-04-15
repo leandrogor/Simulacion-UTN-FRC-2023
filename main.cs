@@ -39,5 +39,13 @@ namespace SIM_TP2
             ventana.FormClosed += LogOut;
             Hide();
         }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            Normal ventana = new Normal();
+            ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
+        }
     }
 }

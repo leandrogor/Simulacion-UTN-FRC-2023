@@ -84,8 +84,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Abst\Normal\BoxMullerMethod.cs" />
+    <Compile Include="Abst\Normal\ConvolutionMethod.cs" />
+    <Compile Include="Abst\Normal\NormalDistributionCalculator.cs" />
     <EmbeddedResource Include="Generadores\Exponencial.resx">
       <DependentUpon>Exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generadores\Normal.resx">
+      <DependentUpon>Normal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Generadores\Uniforme.resx">
       <DependentUpon>Uniforme.cs</DependentUpon>
