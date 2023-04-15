@@ -19,7 +19,9 @@ namespace SIM_TP2.Generadores
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            
+            dgvExponencial.Rows.Clear();
+            List<double> exponentialNumbersList = negativeExponentialSerie((int)txtCantidad.Value, lambdaOrMeanValidation((double)txtParam.Value));
+
         }
 
         public List<double> negativeExponentialSerie(int n, double param)
@@ -31,6 +33,7 @@ namespace SIM_TP2.Generadores
                 double psedef = Random.NextDouble();
                 double num = negativeExponentialGenerator(psedef, param);
                 lista.Add(num);
+                dgvExponencial.Rows.Add((i + 1).ToString(), num.ToString());
 
             }
             return lista;
@@ -38,12 +41,17 @@ namespace SIM_TP2.Generadores
 
         private double negativeExponentialGenerator(double pseudo, double param)
         {
+            return (-1 / (double) txtParam.Value) * Math.Log(1 - pseudo);
+        }
+
+        private double lambdaOrMeanValidation(double param)
+        {
             if (cbxParam.SelectedItem.ToString() == "Media")
             {
-                double lambda = (1 / param);
-                return (-1 / lambda) * Math.Log(1 - pseudo);
+                return (1 / param);
             }
-            return (-1 / (double) txtParam.Value) * Math.Log(1 - pseudo);
+
+            return param;
         }
     }
 }
