@@ -46,14 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Generadores\Exponencial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Generadores\Exponencial.Designer.cs">
+      <DependentUpon>Exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Generadores\Uniforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generadores\Uniforme.Designer.cs">
+      <DependentUpon>Uniforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Histogramas\Histo-Exponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histogramas\Histo-Exponencial.Designer.cs">
+      <DependentUpon>Histo-Exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Histogramas\Histo-Uniforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histogramas\Histo-Uniforme.Designer.cs">
+      <DependentUpon>Histo-Uniforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Generadores\Exponencial.resx">
+      <DependentUpon>Exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generadores\Uniforme.resx">
+      <DependentUpon>Uniforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

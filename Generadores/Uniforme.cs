@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SIM_TP2
+namespace SIM_TP2.Generadores
 {
-    public partial class Form1 : Form
+    public partial class Uniforme : Form
     {
-        public Form1()
+        public Uniforme()
         {
             InitializeComponent();
         }
