@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.lblA = new System.Windows.Forms.Label();
             this.lblB = new System.Windows.Forms.Label();
-            this.btnGraficar = new System.Windows.Forms.Button();
+            this.lblA = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
+            this.btnGraficar = new System.Windows.Forms.Button();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
-            this.dgvUniforme = new System.Windows.Forms.DataGridView();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUniforme = new System.Windows.Forms.DataGridView();
             this.txtA = new System.Windows.Forms.NumericUpDown();
             this.txtB = new System.Windows.Forms.NumericUpDown();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
@@ -46,33 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 16);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Cantidad de Intervalos:";
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(22, 92);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(133, 16);
-            this.lblCantidad.TabIndex = 19;
-            this.lblCantidad.Text = "Cantidad de Valores:";
-            // 
-            // lblA
-            // 
-            this.lblA.AutoSize = true;
-            this.lblA.Location = new System.Drawing.Point(22, 29);
-            this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(107, 16);
-            this.lblA.TabIndex = 17;
-            this.lblA.Text = "A (límite inferior) :";
             // 
             // lblB
             // 
@@ -83,15 +56,32 @@
             this.lblB.TabIndex = 16;
             this.lblB.Text = "B (límite superior):";
             // 
-            // btnGraficar
+            // lblA
             // 
-            this.btnGraficar.Location = new System.Drawing.Point(182, 168);
-            this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGraficar.Name = "btnGraficar";
-            this.btnGraficar.Size = new System.Drawing.Size(115, 31);
-            this.btnGraficar.TabIndex = 5;
-            this.btnGraficar.Text = "Graficar";
-            this.btnGraficar.UseVisualStyleBackColor = true;
+            this.lblA.AutoSize = true;
+            this.lblA.Location = new System.Drawing.Point(22, 29);
+            this.lblA.Name = "lblA";
+            this.lblA.Size = new System.Drawing.Size(107, 16);
+            this.lblA.TabIndex = 17;
+            this.lblA.Text = "A (límite inferior) :";
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(22, 92);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(133, 16);
+            this.lblCantidad.TabIndex = 19;
+            this.lblCantidad.Text = "Cantidad de Valores:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(144, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Cantidad de Intervalos:";
             // 
             // btnGenerar
             // 
@@ -103,6 +93,16 @@
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
+            // 
+            // btnGraficar
+            // 
+            this.btnGraficar.Location = new System.Drawing.Point(182, 168);
+            this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGraficar.Name = "btnGraficar";
+            this.btnGraficar.Size = new System.Drawing.Size(115, 31);
+            this.btnGraficar.TabIndex = 5;
+            this.btnGraficar.Text = "Graficar";
+            this.btnGraficar.UseVisualStyleBackColor = true;
             // 
             // boxIntervalos
             // 
@@ -117,6 +117,22 @@
             this.boxIntervalos.Name = "boxIntervalos";
             this.boxIntervalos.Size = new System.Drawing.Size(120, 24);
             this.boxIntervalos.TabIndex = 4;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 125;
+            // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 125;
             // 
             // dgvUniforme
             // 
@@ -134,22 +150,6 @@
             this.dgvUniforme.RowTemplate.Height = 24;
             this.dgvUniforme.Size = new System.Drawing.Size(439, 217);
             this.dgvUniforme.TabIndex = 25;
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 125;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 125;
             // 
             // txtA
             // 
@@ -244,16 +244,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.Label lblA;
         private System.Windows.Forms.Label lblB;
-        private System.Windows.Forms.Button btnGraficar;
+        private System.Windows.Forms.Label lblA;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Button btnGraficar;
         private System.Windows.Forms.ComboBox boxIntervalos;
-        private System.Windows.Forms.DataGridView dgvUniforme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
+        private System.Windows.Forms.DataGridView dgvUniforme;
         private System.Windows.Forms.NumericUpDown txtA;
         private System.Windows.Forms.NumericUpDown txtB;
         private System.Windows.Forms.NumericUpDown txtCantidad;
