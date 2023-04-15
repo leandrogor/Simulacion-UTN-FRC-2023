@@ -41,10 +41,12 @@
             this.txtA = new System.Windows.Forms.NumericUpDown();
             this.txtB = new System.Windows.Forms.NumericUpDown();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,6 +87,7 @@
             // 
             // btnGraficar
             // 
+            this.btnGraficar.Enabled = false;
             this.btnGraficar.Location = new System.Drawing.Point(182, 168);
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
@@ -173,11 +176,6 @@
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(120, 22);
             this.txtA.TabIndex = 1;
-            this.txtA.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // txtB
             // 
@@ -201,6 +199,11 @@
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(120, 22);
             this.txtB.TabIndex = 2;
+            this.txtB.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtCantidad
             // 
@@ -213,12 +216,33 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(120, 22);
             this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // dgvFrecuencias
+            // 
+            this.dgvFrecuencias.AllowUserToAddRows = false;
+            this.dgvFrecuencias.AllowUserToDeleteRows = false;
+            this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFrecuencias.Location = new System.Drawing.Point(25, 266);
+            this.dgvFrecuencias.Name = "dgvFrecuencias";
+            this.dgvFrecuencias.ReadOnly = true;
+            this.dgvFrecuencias.RowHeadersVisible = false;
+            this.dgvFrecuencias.RowHeadersWidth = 51;
+            this.dgvFrecuencias.RowTemplate.Height = 24;
+            this.dgvFrecuencias.Size = new System.Drawing.Size(731, 146);
+            this.dgvFrecuencias.TabIndex = 26;
+            this.dgvFrecuencias.Visible = false;
             // 
             // Uniforme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dgvFrecuencias);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.txtA);
@@ -237,6 +261,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +282,6 @@
         private System.Windows.Forms.NumericUpDown txtA;
         private System.Windows.Forms.NumericUpDown txtB;
         private System.Windows.Forms.NumericUpDown txtCantidad;
+        private System.Windows.Forms.DataGridView dgvFrecuencias;
     }
 }
