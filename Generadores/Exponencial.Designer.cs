@@ -31,7 +31,7 @@
             this.txtParam = new System.Windows.Forms.NumericUpDown();
             this.cbxParam = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
-            this.dgvUniforme = new System.Windows.Forms.DataGridView();
+            this.dgvExponencial = new System.Windows.Forms.DataGridView();
             this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
@@ -41,7 +41,7 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtParam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExponencial)).BeginInit();
             this.SuspendLayout();
             // 
             // txtParam
@@ -96,22 +96,22 @@
             this.txtCantidad.Size = new System.Drawing.Size(120, 22);
             this.txtCantidad.TabIndex = 31;
             // 
-            // dgvUniforme
+            // dgvExponencial
             // 
-            this.dgvUniforme.AllowUserToAddRows = false;
-            this.dgvUniforme.AllowUserToDeleteRows = false;
-            this.dgvUniforme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUniforme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvExponencial.AllowUserToAddRows = false;
+            this.dgvExponencial.AllowUserToDeleteRows = false;
+            this.dgvExponencial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExponencial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nro,
             this.valor});
-            this.dgvUniforme.Location = new System.Drawing.Point(319, 12);
-            this.dgvUniforme.Name = "dgvUniforme";
-            this.dgvUniforme.ReadOnly = true;
-            this.dgvUniforme.RowHeadersVisible = false;
-            this.dgvUniforme.RowHeadersWidth = 51;
-            this.dgvUniforme.RowTemplate.Height = 24;
-            this.dgvUniforme.Size = new System.Drawing.Size(439, 217);
-            this.dgvUniforme.TabIndex = 38;
+            this.dgvExponencial.Location = new System.Drawing.Point(319, 12);
+            this.dgvExponencial.Name = "dgvExponencial";
+            this.dgvExponencial.ReadOnly = true;
+            this.dgvExponencial.RowHeadersVisible = false;
+            this.dgvExponencial.RowHeadersWidth = 51;
+            this.dgvExponencial.RowTemplate.Height = 24;
+            this.dgvExponencial.Size = new System.Drawing.Size(439, 217);
+            this.dgvExponencial.TabIndex = 38;
             // 
             // nro
             // 
@@ -190,7 +190,7 @@
             this.Controls.Add(this.txtParam);
             this.Controls.Add(this.cbxParam);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.dgvUniforme);
+            this.Controls.Add(this.dgvExponencial);
             this.Controls.Add(this.boxIntervalos);
             this.Controls.Add(this.btnGraficar);
             this.Controls.Add(this.btnGenerar);
@@ -201,7 +201,7 @@
             this.Text = "Exponencial";
             ((System.ComponentModel.ISupportInitialize)(this.txtParam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExponencial)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +212,7 @@
         private System.Windows.Forms.NumericUpDown txtParam;
         private System.Windows.Forms.ComboBox cbxParam;
         private System.Windows.Forms.NumericUpDown txtCantidad;
-        private System.Windows.Forms.DataGridView dgvUniforme;
+        private System.Windows.Forms.DataGridView dgvExponencial;
         private System.Windows.Forms.DataGridViewTextBoxColumn nro;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.ComboBox boxIntervalos;
