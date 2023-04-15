@@ -85,7 +85,7 @@
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(139, 47);
             this.btnNormal.TabIndex = 4;
-            this.btnNormal.Text = "EXPONENCIAL";
+            this.btnNormal.Text = "NORMAL";
             this.btnNormal.UseVisualStyleBackColor = true;
             // 
             // main
@@ -100,7 +100,6 @@
             this.Controls.Add(this.label1);
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Simulación - TP2";
             this.ResumeLayout(false);
             this.PerformLayout();
 
