@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abst\Normal\ChartDTO.cs" />
     <Compile Include="Generadores\Exponencial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +72,12 @@
     <Compile Include="Histogramas\HistoExponencial.Designer.cs">
       <DependentUpon>HistoExponencial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Histogramas\HistoNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Histogramas\HistoNormal.Designer.cs">
+      <DependentUpon>HistoNormal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Histogramas\HistoUniforme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,14 +92,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Abst\Normal\BoxMullerMethod.cs" />
+    <Compile Include="Abst\Normal\ConvolutionMethod.cs" />
+    <Compile Include="Abst\Normal\NormalDistributionCalculator.cs" />
     <EmbeddedResource Include="Generadores\Exponencial.resx">
       <DependentUpon>Exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generadores\Normal.resx">
+      <DependentUpon>Normal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Generadores\Uniforme.resx">
       <DependentUpon>Uniforme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Histogramas\HistoExponencial.resx">
       <DependentUpon>HistoExponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Histogramas\HistoNormal.resx">
+      <DependentUpon>HistoNormal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Histogramas\HistoUniforme.resx">
       <DependentUpon>HistoUniforme.cs</DependentUpon>
