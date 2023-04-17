@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIM_TP2.Util.NormalUtil;
 
@@ -70,19 +66,18 @@ namespace SIM_TP2.Generadores
             dgvNormal.Rows.Clear();
             dgvFrecuencias.Rows.Clear();
 
-            // Si no cargó cantidad de intervalos, le asignamos el valor 10.
-            if (txtCantidad.Text == "")
-            {
-                txtCantidad.Text = "10";
-            }
-
             int n = int.Parse(txtCantidad.Text);  // tamaño de muestra
             int cantidadIntervalos = int.Parse(boxIntervalos.Text); // cantidad de intervalos
 
-            double media = Convert.ToDouble(txtA.Text); // límite inferior
-            double desvi = Convert.ToDouble(txtB.Text); // límite superior
+            double media = Convert.ToDouble(txtA.Text); // media
+            double desvi = Convert.ToDouble(txtB.Text); // desviación
+
+            //Calculo de la serie de números aleatorios con distribución normal
+            //Se implementa un patrón strategy para calcular los valores con los distintos métodos.
             NormalDistributionCalculator metodoSeleccionado = (NormalDistributionCalculator)comboMetodo.SelectedItem;
             List<double> serie = NormalSerie(n, media, desvi, metodoSeleccionado);
+
+            //Obtención de valores máximos y mínimos para cálculo de intervalos.
             double max = serie.Max();
             double min = serie.Min();
 
@@ -97,23 +92,24 @@ namespace SIM_TP2.Generadores
             }
 
             // Cálculo de las frecuencias esperadas
-            double frecuenciaEsperada = n / cantidadIntervalos;
             double[] frecuenciasEsperadas = new double[cantidadIntervalos];
             for (int i = 0; i < cantidadIntervalos; i++)
             {
-                frecuenciasEsperadas[i] = frecuenciaEsperada;
+                //Marca de clase del intervalo.
+                double marcaDeClase = (limitesSuperiores[i] + limitesInferiores[i])/2;
+
+                //La frecuencia esperada se calculó obteniendo primero el valor de la función de densidad
+                //en la marca de clase y después se multiplicó por la amplitud para obtener la probabilidad.
+                //Por último se multiplica por la cantidad de observaciones para obtener la frecuencia esperada.
+                //Esta forma es una aproximada ya que no se encontró una fórmula de la función de acumulación de la distribución normal.
+                frecuenciasEsperadas[i] = funcionDistribucionNormal(marcaDeClase, media, desvi) * amplitud * n;
             }
 
             // Generación de los valores aleatorios y cálculo de las frecuencias observadas
             int[] frecuenciasObservadas = new int[cantidadIntervalos];
-            // List<double> lista = new List<double>();
-            Random rnd = new Random();
-
-            for (int i = 0; i < n; i++)
+            int numeroDeFila = 0;
+            foreach (double valor in serie)
             {
-                // Generación del valor aleatorio
-                double valor = serie[i];
-
                 // Actualización de frecuencia observada para el intervalo correspondiente
                 for (int j = 0; j < cantidadIntervalos; j++)
                 {
@@ -123,9 +119,7 @@ namespace SIM_TP2.Generadores
                         break;
                     }
                 }
-
-                // lista.Add(valor);
-                dgvNormal.Rows.Add((i + 1).ToString(), valor.ToString());
+                dgvNormal.Rows.Add(++numeroDeFila, valor.ToString());
             }
 
 
@@ -155,6 +149,12 @@ namespace SIM_TP2.Generadores
             btnGraficar.Focus();
         }
 
+        private double funcionDistribucionNormal(double x, double media, double desvi)
+        {
+            double exponente = - (x - media) * (x - media) / (2 * desvi * desvi);
+            double multiplicador = 1 / (desvi * Math.Sqrt(2 * Math.PI));
+            return multiplicador * Math.Exp(exponente);
+        }
     }
 
     
