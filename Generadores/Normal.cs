@@ -4,11 +4,15 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using SIM_TP2.Util.NormalUtil;
+using SIM_TP2.Abst.Normal;
+using SIM_TP2.Histogramas;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.Generadores
 {
     public partial class Normal : Form
     {
+
         public Normal()
         {
             InitializeComponent();
@@ -26,45 +30,9 @@ namespace SIM_TP2.Generadores
             return lista;
         }
 
-        private void Normal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblA_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtA_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtB_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblB_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             dgvNormal.Rows.Clear();
-            dgvFrecuencias.Rows.Clear();
 
             int n = int.Parse(txtCantidad.Text);  // tamaño de muestra
             int cantidadIntervalos = int.Parse(boxIntervalos.Text); // cantidad de intervalos
@@ -141,6 +109,8 @@ namespace SIM_TP2.Generadores
                 tablaResultados.Rows.Add(fila);
             }
 
+            ChartDTO.SetValues(limitesInferiores, limitesSuperiores, frecuenciasObservadas);
+
             // Mostrar la tabla de resultados en un DataGridView
             dgvFrecuencias.DataSource = tablaResultados;
 
@@ -154,6 +124,19 @@ namespace SIM_TP2.Generadores
             double exponente = - (x - media) * (x - media) / (2 * desvi * desvi);
             double multiplicador = 1 / (desvi * Math.Sqrt(2 * Math.PI));
             return multiplicador * Math.Exp(exponente);
+        }
+
+        private void btnGraficarClick(object sender, EventArgs e)
+        {
+            HistoNormal ventana = new HistoNormal();
+            ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
+        }
+
+        private void LogOut(object sender, FormClosedEventArgs e)
+        {
+            Show();
         }
     }
 

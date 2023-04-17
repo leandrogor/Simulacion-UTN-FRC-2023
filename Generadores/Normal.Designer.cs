@@ -31,6 +31,8 @@ namespace SIM_TP2.Generadores
         /// </summary>
         private void InitializeComponent()
         {
+            SIM_TP2.Util.NormalUtil.BoxMullerMethod boxMullerMethod1 = new SIM_TP2.Util.NormalUtil.BoxMullerMethod();
+            SIM_TP2.Util.NormalUtil.ConvolutionMethod convolutionMethod1 = new SIM_TP2.Util.NormalUtil.ConvolutionMethod();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
             this.btnGraficar = new System.Windows.Forms.Button();
@@ -80,12 +82,12 @@ namespace SIM_TP2.Generadores
             "15",
             "20",
             "25"});
-            this.boxIntervalos.SelectedIndex = 0;
             this.boxIntervalos.Location = new System.Drawing.Point(145, 102);
             this.boxIntervalos.Margin = new System.Windows.Forms.Padding(2);
             this.boxIntervalos.Name = "boxIntervalos";
             this.boxIntervalos.Size = new System.Drawing.Size(91, 21);
             this.boxIntervalos.TabIndex = 29;
+            this.boxIntervalos.SelectedIndex = 0;
             // 
             // btnGraficar
             // 
@@ -97,6 +99,7 @@ namespace SIM_TP2.Generadores
             this.btnGraficar.TabIndex = 30;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = true;
+            this.btnGraficar.Click += new System.EventHandler(this.btnGraficarClick);
             // 
             // btnGenerar
             // 
@@ -178,7 +181,6 @@ namespace SIM_TP2.Generadores
             this.label1.TabIndex = 34;
             this.label1.Tag = "";
             this.label1.Text = "Media(mu):";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -188,7 +190,6 @@ namespace SIM_TP2.Generadores
             this.label2.Size = new System.Drawing.Size(137, 13);
             this.label2.TabIndex = 35;
             this.label2.Text = "Desviación estándar(sigma)";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtB
             // 
@@ -255,14 +256,14 @@ namespace SIM_TP2.Generadores
             // comboMetodo
             // 
             this.comboMetodo.FormattingEnabled = true;
+            this.comboMetodo.Items.AddRange(new object[] {
+            boxMullerMethod1,
+            convolutionMethod1});
             this.comboMetodo.Location = new System.Drawing.Point(145, 144);
-            List<NormalDistributionCalculator> calculators = new List<NormalDistributionCalculator>();
-            calculators.Add(new BoxMullerMethod());
-            calculators.Add(new ConvolutionMethod());
-            this.comboMetodo.DataSource = calculators;
             this.comboMetodo.Name = "comboMetodo";
             this.comboMetodo.Size = new System.Drawing.Size(86, 21);
             this.comboMetodo.TabIndex = 39;
+            this.comboMetodo.SelectedIndex = 0;
             // 
             // Normal
             // 
@@ -286,7 +287,6 @@ namespace SIM_TP2.Generadores
             this.Name = "Normal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Normal";
-            this.Load += new System.EventHandler(this.Normal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNormal)).EndInit();
