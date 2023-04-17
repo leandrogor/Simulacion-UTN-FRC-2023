@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIM_TP2.Histogramas;
+using SIM_TP2.Abst.Uniforme;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.Generadores
@@ -105,6 +106,8 @@ namespace SIM_TP2.Generadores
                 fila["Frecuencia Esperada"] = frecuenciasEsperadas[i].ToString("0.0000");
                 tablaResultados.Rows.Add(fila);
             }
+
+            ChartDTO.SetValues(limitesInferiores, limitesSuperiores, frecuenciasObservadas);
 
             // Mostrar la tabla de resultados en un DataGridView
             dgvFrecuencias.DataSource = tablaResultados;
