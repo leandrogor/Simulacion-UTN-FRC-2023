@@ -139,7 +139,7 @@ namespace SIM_TP2.Generadores
         {
             HistoNormal ventana = new HistoNormal();
             ventana.Show();
-            ventana.CrearHisto(limitesInferiores, limitesSuperiores, frecuencias);
+            ventana.CrearHisto(dgvFrecuencias);
             ventana.FormClosed += LogOut;
             Hide();
         }

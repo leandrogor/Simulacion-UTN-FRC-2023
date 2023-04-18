@@ -44,6 +44,8 @@ namespace SIM_TP2.Histogramas
 
             chrUniforme.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
 
+            chrUniforme.ChartAreas[0].AxisX.Interval = 1;
+
             for (int i = 0; i < dgvFrecuencias.Rows.Count; i++)
             {
                 var limiteInferior = Convert.ToDouble(dgvFrecuencias.Rows[i].Cells[1].Value);

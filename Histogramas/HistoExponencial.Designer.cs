@@ -61,7 +61,6 @@
             title1.Name = "Title1";
             title1.Text = "Histograma Exponencial";
             this.chrHistograma.Titles.Add(title1);
-            this.chrHistograma.Click += new System.EventHandler(this.chart1_Click);
             // 
             // HistoExponencial
             // 
@@ -73,7 +72,6 @@
             this.Name = "HistoExponencial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistoExponencial";
-            this.Load += new System.EventHandler(this.HistoExponencial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chrHistograma)).EndInit();
             this.ResumeLayout(false);
 
