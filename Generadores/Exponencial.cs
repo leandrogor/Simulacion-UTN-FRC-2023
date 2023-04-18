@@ -186,6 +186,30 @@ namespace SIM_TP2.Generadores
         {
             Show();
         }
+
+        private void select_all(object sender, EventArgs e)
+        {
+            NumericUpDown control = sender as NumericUpDown;
+            control.Select(0, control.Text.Length);
+        }
+
+        private void boxIntervalos_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                boxIntervalos.DroppedDown = true;
+                e.IsInputKey = true;
+            }
+        }
+
+        private void cbxParam_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                cbxParam.DroppedDown = true;
+                e.IsInputKey = true;
+            }
+        }
     } 
 }
 

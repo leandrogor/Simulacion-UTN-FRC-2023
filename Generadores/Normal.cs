@@ -172,69 +172,28 @@ namespace SIM_TP2.Generadores
 
             return true;
         }
-        private void dgvFrecuencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void select_all(object sender, EventArgs e)
         {
-
+            NumericUpDown control = sender as NumericUpDown;
+            control.Select(0, control.Text.Length);
         }
 
-        private void txtA_ValueChanged(object sender, EventArgs e)
+        private void boxIntervalos_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Space)
+            {
+                boxIntervalos.DroppedDown = true;
+                e.IsInputKey = true;
+            }
         }
 
-        private void comboMetodo_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboMetodo_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Normal_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCantidad_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtB_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCantidad_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void boxIntervalos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvNormal_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            if (e.KeyCode == Keys.Space)
+            {
+                comboMetodo.DroppedDown = true;
+                e.IsInputKey = true;
+            }
         }
     }
 

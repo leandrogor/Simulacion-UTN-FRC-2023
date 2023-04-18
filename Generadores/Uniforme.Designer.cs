@@ -36,13 +36,13 @@
             this.btnGraficar = new System.Windows.Forms.Button();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
             this.dgvUniforme = new System.Windows.Forms.DataGridView();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtA = new System.Windows.Forms.NumericUpDown();
             this.txtB = new System.Windows.Forms.NumericUpDown();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).BeginInit();
@@ -125,6 +125,7 @@
             this.boxIntervalos.Name = "boxIntervalos";
             this.boxIntervalos.Size = new System.Drawing.Size(120, 31);
             this.boxIntervalos.TabIndex = 4;
+            this.boxIntervalos.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.boxIntervalos_PreviewKeyDown);
             // 
             // dgvUniforme
             // 
@@ -145,6 +146,23 @@
             this.dgvUniforme.RowTemplate.Height = 24;
             this.dgvUniforme.Size = new System.Drawing.Size(439, 244);
             this.dgvUniforme.TabIndex = 25;
+            this.dgvUniforme.TabStop = false;
+            // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 200;
             // 
             // txtA
             // 
@@ -169,6 +187,7 @@
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(120, 30);
             this.txtA.TabIndex = 1;
+            this.txtA.Enter += new System.EventHandler(this.select_all);
             // 
             // txtB
             // 
@@ -198,6 +217,7 @@
             0,
             0,
             0});
+            this.txtB.Enter += new System.EventHandler(this.select_all);
             // 
             // txtCantidad
             // 
@@ -216,6 +236,7 @@
             0,
             0,
             0});
+            this.txtCantidad.Enter += new System.EventHandler(this.select_all);
             // 
             // dgvFrecuencias
             // 
@@ -233,6 +254,7 @@
             this.dgvFrecuencias.RowTemplate.Height = 24;
             this.dgvFrecuencias.Size = new System.Drawing.Size(731, 164);
             this.dgvFrecuencias.TabIndex = 26;
+            this.dgvFrecuencias.TabStop = false;
             this.dgvFrecuencias.Visible = false;
             // 
             // label1
@@ -246,22 +268,6 @@
             this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 27;
             this.label1.Text = "Intervalos:";
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 200;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 200;
             // 
             // Uniforme
             // 

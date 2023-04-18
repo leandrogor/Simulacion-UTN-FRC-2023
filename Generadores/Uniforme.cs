@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIM_TP2.Histogramas;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.Generadores
@@ -127,6 +128,21 @@ namespace SIM_TP2.Generadores
         private void LogOut(object sender, FormClosedEventArgs e)
         {
             Show();
+        }
+
+        private void select_all(object sender, EventArgs e)
+        {
+            NumericUpDown control = sender as NumericUpDown;
+            control.Select(0, control.Text.Length);
+        }
+
+        private void boxIntervalos_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                boxIntervalos.DroppedDown = true;
+                e.IsInputKey = true;
+            }
         }
     }
 }

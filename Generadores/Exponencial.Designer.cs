@@ -71,12 +71,13 @@
             0});
             this.txtParam.Name = "txtParam";
             this.txtParam.Size = new System.Drawing.Size(120, 30);
-            this.txtParam.TabIndex = 40;
+            this.txtParam.TabIndex = 4;
             this.txtParam.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
+            this.txtParam.Enter += new System.EventHandler(this.select_all);
             // 
             // cbxParam
             // 
@@ -84,13 +85,15 @@
             this.cbxParam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxParam.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxParam.FormattingEnabled = true;
+            this.cbxParam.ItemHeight = 23;
             this.cbxParam.Items.AddRange(new object[] {
             "Media",
             "Lambda"});
             this.cbxParam.Location = new System.Drawing.Point(11, 140);
             this.cbxParam.Name = "cbxParam";
             this.cbxParam.Size = new System.Drawing.Size(120, 31);
-            this.cbxParam.TabIndex = 39;
+            this.cbxParam.TabIndex = 3;
+            this.cbxParam.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.cbxParam_PreviewKeyDown);
             // 
             // txtCantidad
             // 
@@ -104,12 +107,13 @@
             0});
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(120, 30);
-            this.txtCantidad.TabIndex = 31;
+            this.txtCantidad.TabIndex = 1;
             this.txtCantidad.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
+            this.txtCantidad.Enter += new System.EventHandler(this.select_all);
             // 
             // dgvExponencial
             // 
@@ -130,6 +134,7 @@
             this.dgvExponencial.RowTemplate.Height = 24;
             this.dgvExponencial.Size = new System.Drawing.Size(439, 244);
             this.dgvExponencial.TabIndex = 38;
+            this.dgvExponencial.TabStop = false;
             // 
             // nro
             // 
@@ -153,6 +158,7 @@
             this.boxIntervalos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxIntervalos.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxIntervalos.FormattingEnabled = true;
+            this.boxIntervalos.ItemHeight = 23;
             this.boxIntervalos.Items.AddRange(new object[] {
             "10",
             "15",
@@ -161,7 +167,8 @@
             this.boxIntervalos.Location = new System.Drawing.Point(172, 62);
             this.boxIntervalos.Name = "boxIntervalos";
             this.boxIntervalos.Size = new System.Drawing.Size(120, 31);
-            this.boxIntervalos.TabIndex = 32;
+            this.boxIntervalos.TabIndex = 2;
+            this.boxIntervalos.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.boxIntervalos_PreviewKeyDown);
             // 
             // btnGraficar
             // 
@@ -171,7 +178,7 @@
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
             this.btnGraficar.Size = new System.Drawing.Size(115, 35);
-            this.btnGraficar.TabIndex = 33;
+            this.btnGraficar.TabIndex = 5;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = false;
             this.btnGraficar.Click += new System.EventHandler(this.btnGraficar_Click);
@@ -184,7 +191,7 @@
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(115, 35);
-            this.btnGenerar.TabIndex = 28;
+            this.btnGenerar.TabIndex = 0;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = false;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
@@ -227,6 +234,7 @@
             this.dgvFrecuencias.RowTemplate.Height = 24;
             this.dgvFrecuencias.Size = new System.Drawing.Size(740, 175);
             this.dgvFrecuencias.TabIndex = 41;
+            this.dgvFrecuencias.TabStop = false;
             this.dgvFrecuencias.Visible = false;
             // 
             // label2

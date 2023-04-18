@@ -41,6 +41,8 @@ namespace SIM_TP2.Generadores
             this.lblCantidad = new System.Windows.Forms.Label();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.dgvNormal = new System.Windows.Forms.DataGridView();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtB = new System.Windows.Forms.NumericUpDown();
@@ -48,8 +50,6 @@ namespace SIM_TP2.Generadores
             this.label3 = new System.Windows.Forms.Label();
             this.comboMetodo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNormal)).BeginInit();
@@ -69,13 +69,13 @@ namespace SIM_TP2.Generadores
             0});
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(135, 30);
-            this.txtCantidad.TabIndex = 28;
+            this.txtCantidad.TabIndex = 3;
             this.txtCantidad.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.txtCantidad.ValueChanged += new System.EventHandler(this.txtCantidad_ValueChanged);
+            this.txtCantidad.Enter += new System.EventHandler(this.select_all);
             // 
             // boxIntervalos
             // 
@@ -91,8 +91,8 @@ namespace SIM_TP2.Generadores
             this.boxIntervalos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxIntervalos.Name = "boxIntervalos";
             this.boxIntervalos.Size = new System.Drawing.Size(134, 31);
-            this.boxIntervalos.TabIndex = 29;
-            this.boxIntervalos.SelectedIndexChanged += new System.EventHandler(this.boxIntervalos_SelectedIndexChanged);
+            this.boxIntervalos.TabIndex = 4;
+            this.boxIntervalos.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.boxIntervalos_PreviewKeyDown);
             // 
             // btnGraficar
             // 
@@ -102,7 +102,7 @@ namespace SIM_TP2.Generadores
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
             this.btnGraficar.Size = new System.Drawing.Size(129, 39);
-            this.btnGraficar.TabIndex = 30;
+            this.btnGraficar.TabIndex = 6;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = true;
             this.btnGraficar.Click += new System.EventHandler(this.btnGraficarClick);
@@ -114,7 +114,7 @@ namespace SIM_TP2.Generadores
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(129, 39);
-            this.btnGenerar.TabIndex = 27;
+            this.btnGenerar.TabIndex = 0;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
             this.btnGenerar.Click += new System.EventHandler(this.btnGenerar_Click);
@@ -130,7 +130,6 @@ namespace SIM_TP2.Generadores
             this.lblCantidad.Size = new System.Drawing.Size(172, 24);
             this.lblCantidad.TabIndex = 31;
             this.lblCantidad.Text = "Cantidad de Valores:";
-            this.lblCantidad.Click += new System.EventHandler(this.lblCantidad_Click);
             // 
             // dgvFrecuencias
             // 
@@ -148,8 +147,8 @@ namespace SIM_TP2.Generadores
             this.dgvFrecuencias.RowTemplate.Height = 24;
             this.dgvFrecuencias.Size = new System.Drawing.Size(803, 173);
             this.dgvFrecuencias.TabIndex = 33;
+            this.dgvFrecuencias.TabStop = false;
             this.dgvFrecuencias.Visible = false;
-            this.dgvFrecuencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFrecuencias_CellContentClick);
             // 
             // dgvNormal
             // 
@@ -171,7 +170,23 @@ namespace SIM_TP2.Generadores
             this.dgvNormal.RowTemplate.Height = 24;
             this.dgvNormal.Size = new System.Drawing.Size(483, 273);
             this.dgvNormal.TabIndex = 32;
-            this.dgvNormal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNormal_CellContentClick);
+            this.dgvNormal.TabStop = false;
+            // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 200;
             // 
             // label1
             // 
@@ -186,7 +201,6 @@ namespace SIM_TP2.Generadores
             this.label1.TabIndex = 34;
             this.label1.Tag = "";
             this.label1.Text = "Media(mu):";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -200,7 +214,6 @@ namespace SIM_TP2.Generadores
             this.label2.Size = new System.Drawing.Size(173, 24);
             this.label2.TabIndex = 35;
             this.label2.Text = "Desviación estándar:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtB
             // 
@@ -225,13 +238,13 @@ namespace SIM_TP2.Generadores
             -2147483648});
             this.txtB.Name = "txtB";
             this.txtB.Size = new System.Drawing.Size(135, 30);
-            this.txtB.TabIndex = 37;
+            this.txtB.TabIndex = 2;
             this.txtB.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.txtB.ValueChanged += new System.EventHandler(this.txtB_ValueChanged);
+            this.txtB.Enter += new System.EventHandler(this.select_all);
             // 
             // txtA
             // 
@@ -256,8 +269,8 @@ namespace SIM_TP2.Generadores
             -2147483648});
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(135, 30);
-            this.txtA.TabIndex = 36;
-            this.txtA.ValueChanged += new System.EventHandler(this.txtA_ValueChanged);
+            this.txtA.TabIndex = 1;
+            this.txtA.Enter += new System.EventHandler(this.select_all);
             // 
             // label3
             // 
@@ -271,7 +284,6 @@ namespace SIM_TP2.Generadores
             this.label3.Size = new System.Drawing.Size(74, 24);
             this.label3.TabIndex = 38;
             this.label3.Text = "Método:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // comboMetodo
             // 
@@ -285,8 +297,8 @@ namespace SIM_TP2.Generadores
             this.comboMetodo.Margin = new System.Windows.Forms.Padding(4);
             this.comboMetodo.Name = "comboMetodo";
             this.comboMetodo.Size = new System.Drawing.Size(135, 31);
-            this.comboMetodo.TabIndex = 39;
-            this.comboMetodo.SelectedIndexChanged += new System.EventHandler(this.comboMetodo_SelectedIndexChanged);
+            this.comboMetodo.TabIndex = 5;
+            this.comboMetodo.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.comboMetodo_PreviewKeyDown);
             // 
             // label4
             // 
@@ -299,23 +311,6 @@ namespace SIM_TP2.Generadores
             this.label4.Size = new System.Drawing.Size(93, 24);
             this.label4.TabIndex = 40;
             this.label4.Text = "Intervalos:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 200;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 200;
             // 
             // Normal
             // 
@@ -345,7 +340,6 @@ namespace SIM_TP2.Generadores
             this.Name = "Normal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Normal";
-            this.Load += new System.EventHandler(this.Normal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNormal)).EndInit();
