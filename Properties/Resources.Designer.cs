@@ -123,6 +123,16 @@ namespace SIM_TP2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Diseño_sin_título__9_ {
+            get {
+                object obj = ResourceManager.GetObject("Diseño sin título (9)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap portada {
             get {
                 object obj = ResourceManager.GetObject("portada", resourceCulture);

@@ -40,7 +40,7 @@
             // chrHistograma
             // 
             this.chrHistograma.AllowDrop = true;
-            this.chrHistograma.BackColor = System.Drawing.Color.Peru;
+            this.chrHistograma.BackColor = System.Drawing.Color.DarkSeaGreen;
             chartArea1.Name = "ChartArea1";
             this.chrHistograma.ChartAreas.Add(chartArea1);
             this.chrHistograma.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -48,10 +48,10 @@
             this.chrHistograma.Legends.Add(legend1);
             this.chrHistograma.Location = new System.Drawing.Point(0, 0);
             this.chrHistograma.Name = "chrHistograma";
-            this.chrHistograma.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            this.chrHistograma.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Frecuencias";
             this.chrHistograma.Series.Add(series1);
             this.chrHistograma.Size = new System.Drawing.Size(800, 450);
             this.chrHistograma.TabIndex = 0;

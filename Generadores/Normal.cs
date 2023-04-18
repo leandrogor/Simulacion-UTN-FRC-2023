@@ -18,6 +18,7 @@ namespace SIM_TP2.Generadores
         {
             InitializeComponent();
             
+            
         }
 
         public List<double> NormalSerie(int n, double media, double desv, NormalDistributionCalculator calculator)
@@ -34,6 +35,9 @@ namespace SIM_TP2.Generadores
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             dgvNormal.Rows.Clear();
+
+            // Se llama a la funcion para validar los campos
+            if (validar() == false) { return; }
 
             int n = int.Parse(txtCantidad.Text);  // tamaño de muestra
             int cantidadIntervalos = int.Parse(boxIntervalos.Text); // cantidad de intervalos
@@ -95,6 +99,7 @@ namespace SIM_TP2.Generadores
 
             // Creación de la tabla de resultados
             DataTable tablaResultados = new DataTable();
+            tablaResultados.Columns.Add("Numero");
             tablaResultados.Columns.Add("Límite Inferior");
             tablaResultados.Columns.Add("Límite Superior");
             tablaResultados.Columns.Add("Frecuencia Observada");
@@ -103,6 +108,7 @@ namespace SIM_TP2.Generadores
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 DataRow fila = tablaResultados.NewRow();
+                fila["Numero"] = i + 1;
                 fila["Límite Inferior"] = limitesInferiores[i].ToString("0.0000");
                 fila["Límite Superior"] = limitesSuperiores[i].ToString("0.0000");
                 fila["Frecuencia Observada"] = frecuenciasObservadas[i];
@@ -141,6 +147,94 @@ namespace SIM_TP2.Generadores
         private void LogOut(object sender, FormClosedEventArgs e)
         {
             Show();
+        }
+        private bool validar()
+        {
+            if (int.Parse(txtCantidad.Text) <= 0)
+            {
+                MessageBox.Show("Ingrese una cantidad de valores a generar");
+                return false;
+            }
+            if (boxIntervalos.SelectedIndex == -1)
+            {
+                string text = "Seleccione un intervalo";
+                MessageBox.Show(text);
+                return false;
+            }
+
+            if (comboMetodo.SelectedIndex == -1)
+            {
+                string text = "Defina que metodo desea utilizar";
+                MessageBox.Show(text);
+                return false;
+            }
+
+
+            return true;
+        }
+        private void dgvFrecuencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtA_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboMetodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Normal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCantidad_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtB_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boxIntervalos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvNormal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 

@@ -18,6 +18,7 @@ namespace SIM_TP2.Generadores
         public Exponencial()
         {
             InitializeComponent();
+            btnGraficar.Enabled = false;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -182,6 +183,11 @@ namespace SIM_TP2.Generadores
         private void LogOut(object sender, FormClosedEventArgs e)
         {
             Show();
+        }
+
+        private void Exponencial_Load(object sender, EventArgs e)
+        {
+
         }
     } 
 }

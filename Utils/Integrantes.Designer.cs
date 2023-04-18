@@ -43,6 +43,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +53,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(248, 83);
+            this.label1.Location = new System.Drawing.Point(242, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 27);
             this.label1.TabIndex = 0;
@@ -63,7 +65,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(521, 83);
+            this.label2.Location = new System.Drawing.Point(515, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 27);
             this.label2.TabIndex = 1;
@@ -75,7 +77,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label3.Location = new System.Drawing.Point(248, 131);
+            this.label3.Location = new System.Drawing.Point(242, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 27);
             this.label3.TabIndex = 2;
@@ -87,7 +89,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label4.Location = new System.Drawing.Point(521, 131);
+            this.label4.Location = new System.Drawing.Point(515, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 27);
             this.label4.TabIndex = 3;
@@ -99,7 +101,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label5.Location = new System.Drawing.Point(248, 174);
+            this.label5.Location = new System.Drawing.Point(242, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 27);
             this.label5.TabIndex = 4;
@@ -111,7 +113,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label6.Location = new System.Drawing.Point(248, 212);
+            this.label6.Location = new System.Drawing.Point(242, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(198, 27);
             this.label6.TabIndex = 5;
@@ -123,7 +125,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label7.Location = new System.Drawing.Point(248, 249);
+            this.label7.Location = new System.Drawing.Point(242, 249);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(155, 27);
             this.label7.TabIndex = 6;
@@ -135,7 +137,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label8.Location = new System.Drawing.Point(248, 286);
+            this.label8.Location = new System.Drawing.Point(242, 286);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 27);
             this.label8.TabIndex = 7;
@@ -147,7 +149,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label9.Location = new System.Drawing.Point(248, 322);
+            this.label9.Location = new System.Drawing.Point(242, 322);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(158, 27);
             this.label9.TabIndex = 8;
@@ -159,7 +161,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label10.Location = new System.Drawing.Point(521, 249);
+            this.label10.Location = new System.Drawing.Point(515, 249);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 27);
             this.label10.TabIndex = 9;
@@ -171,7 +173,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label11.Location = new System.Drawing.Point(521, 212);
+            this.label11.Location = new System.Drawing.Point(515, 212);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 27);
             this.label11.TabIndex = 10;
@@ -183,7 +185,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label12.Location = new System.Drawing.Point(521, 174);
+            this.label12.Location = new System.Drawing.Point(515, 174);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 27);
             this.label12.TabIndex = 11;
@@ -195,7 +197,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label13.Location = new System.Drawing.Point(521, 286);
+            this.label13.Location = new System.Drawing.Point(515, 286);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(62, 27);
             this.label13.TabIndex = 12;
@@ -207,11 +209,43 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.label14.Location = new System.Drawing.Point(521, 322);
+            this.label14.Location = new System.Drawing.Point(515, 322);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 27);
             this.label14.TabIndex = 13;
             this.label14.Text = "86146";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::SIM_TP2.Properties.Resources.Diseño_sin_título__9_;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.button1.Location = new System.Drawing.Point(358, 389);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 47);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "VOLVER";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label15.Location = new System.Drawing.Point(374, 38);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 37);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Grupo 3";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label15.UseCompatibleTextRendering = true;
             // 
             // Integrantes
             // 
@@ -219,7 +253,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SIM_TP2.Properties.Resources.portada;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(872, 553);
+            this.ClientSize = new System.Drawing.Size(846, 553);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -262,5 +298,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label15;
     }
 }

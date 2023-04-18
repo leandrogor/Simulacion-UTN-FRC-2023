@@ -34,6 +34,7 @@
             this.btnExponencial = new System.Windows.Forms.Button();
             this.btnNormal = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -122,6 +123,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label1.Location = new System.Drawing.Point(366, 273);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 37);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Grupo 3";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.UseCompatibleTextRendering = true;
+            // 
             // main
             // 
             this.AccessibleDescription = "";
@@ -130,6 +146,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNormal);
             this.Controls.Add(this.btnExponencial);
@@ -153,6 +170,7 @@
         private System.Windows.Forms.Button btnExponencial;
         private System.Windows.Forms.Button btnNormal;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

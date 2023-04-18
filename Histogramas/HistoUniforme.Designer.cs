@@ -39,8 +39,8 @@
             // 
             // chrUniforme
             // 
-            this.chrUniforme.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.chrUniforme.BackSecondaryColor = System.Drawing.Color.YellowGreen;
+            this.chrUniforme.BackColor = System.Drawing.Color.Wheat;
+            this.chrUniforme.BackSecondaryColor = System.Drawing.Color.LemonChiffon;
             this.chrUniforme.BorderlineColor = System.Drawing.Color.Transparent;
             chartArea1.Name = "ChartArea1";
             this.chrUniforme.ChartAreas.Add(chartArea1);
@@ -50,7 +50,7 @@
             this.chrUniforme.Location = new System.Drawing.Point(0, 0);
             this.chrUniforme.Margin = new System.Windows.Forms.Padding(4);
             this.chrUniforme.Name = "chrUniforme";
-            this.chrUniforme.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.chrUniforme.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series1.ChartArea = "ChartArea1";
             series1.CustomProperties = "EmptyPointValue=Zero";
             series1.IsValueShownAsLabel = true;
@@ -61,7 +61,7 @@
             this.chrUniforme.TabIndex = 1;
             this.chrUniforme.Text = "chartFreq";
             title1.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.ForeColor = System.Drawing.Color.White;
+            title1.ForeColor = System.Drawing.Color.SaddleBrown;
             title1.Name = "Title1";
             title1.Text = "Histograma Uniforme";
             this.chrUniforme.Titles.Add(title1);
