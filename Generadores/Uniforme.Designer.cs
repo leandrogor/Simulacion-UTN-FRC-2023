@@ -41,8 +41,6 @@
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).BeginInit();
@@ -55,8 +53,8 @@
             this.lblB.AutoSize = true;
             this.lblB.BackColor = System.Drawing.Color.Goldenrod;
             this.lblB.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblB.Location = new System.Drawing.Point(22, 69);
+            this.lblB.ForeColor = System.Drawing.Color.White;
+            this.lblB.Location = new System.Drawing.Point(22, 68);
             this.lblB.Name = "lblB";
             this.lblB.Size = new System.Drawing.Size(154, 23);
             this.lblB.TabIndex = 16;
@@ -67,8 +65,8 @@
             this.lblA.AutoSize = true;
             this.lblA.BackColor = System.Drawing.Color.Goldenrod;
             this.lblA.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblA.Location = new System.Drawing.Point(22, 33);
+            this.lblA.ForeColor = System.Drawing.Color.White;
+            this.lblA.Location = new System.Drawing.Point(22, 32);
             this.lblA.Name = "lblA";
             this.lblA.Size = new System.Drawing.Size(153, 23);
             this.lblA.TabIndex = 17;
@@ -79,8 +77,8 @@
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.BackColor = System.Drawing.Color.Goldenrod;
             this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantidad.Location = new System.Drawing.Point(12, 100);
+            this.lblCantidad.ForeColor = System.Drawing.Color.White;
+            this.lblCantidad.Location = new System.Drawing.Point(22, 101);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(169, 23);
             this.lblCantidad.TabIndex = 19;
@@ -121,7 +119,7 @@
             "15",
             "20",
             "25"});
-            this.boxIntervalos.Location = new System.Drawing.Point(182, 136);
+            this.boxIntervalos.Location = new System.Drawing.Point(181, 135);
             this.boxIntervalos.Name = "boxIntervalos";
             this.boxIntervalos.Size = new System.Drawing.Size(120, 31);
             this.boxIntervalos.TabIndex = 4;
@@ -131,10 +129,12 @@
             this.dgvUniforme.AllowUserToAddRows = false;
             this.dgvUniforme.AllowUserToDeleteRows = false;
             this.dgvUniforme.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.dgvUniforme.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUniforme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUniforme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nro,
             this.valor});
+            this.dgvUniforme.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvUniforme.Location = new System.Drawing.Point(317, 33);
             this.dgvUniforme.Name = "dgvUniforme";
             this.dgvUniforme.ReadOnly = true;
@@ -220,7 +220,9 @@
             this.dgvFrecuencias.AllowUserToAddRows = false;
             this.dgvFrecuencias.AllowUserToDeleteRows = false;
             this.dgvFrecuencias.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.dgvFrecuencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFrecuencias.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvFrecuencias.Location = new System.Drawing.Point(25, 299);
             this.dgvFrecuencias.Name = "dgvFrecuencias";
             this.dgvFrecuencias.ReadOnly = true;
@@ -235,29 +237,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Goldenrod;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(6, 141);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(25, 139);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 21);
+            this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 27;
-            this.label1.Text = "Cantidad de Intervalos:";
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 200;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 200;
+            this.label1.Text = "Intervalos:";
             // 
             // Uniforme
             // 
@@ -266,6 +252,7 @@
             this.BackgroundImage = global::SIM_TP2.Properties.Resources._1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFrecuencias);
             this.Controls.Add(this.txtCantidad);
@@ -308,7 +295,5 @@
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.DataGridView dgvFrecuencias;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }

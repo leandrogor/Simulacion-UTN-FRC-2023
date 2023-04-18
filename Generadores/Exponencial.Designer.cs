@@ -115,7 +115,8 @@
             // 
             this.dgvExponencial.AllowUserToAddRows = false;
             this.dgvExponencial.AllowUserToDeleteRows = false;
-            this.dgvExponencial.BackgroundColor = System.Drawing.Color.OliveDrab;
+            this.dgvExponencial.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.dgvExponencial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvExponencial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExponencial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nro,
@@ -198,16 +199,17 @@
             // 
             this.dgvFrecuencias.AllowUserToAddRows = false;
             this.dgvFrecuencias.AllowUserToDeleteRows = false;
-            this.dgvFrecuencias.BackgroundColor = System.Drawing.Color.OliveDrab;
+            this.dgvFrecuencias.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
+            this.dgvFrecuencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFrecuencias.GridColor = System.Drawing.Color.DarkKhaki;
-            this.dgvFrecuencias.Location = new System.Drawing.Point(15, 305);
+            this.dgvFrecuencias.Location = new System.Drawing.Point(18, 294);
             this.dgvFrecuencias.Name = "dgvFrecuencias";
             this.dgvFrecuencias.ReadOnly = true;
             this.dgvFrecuencias.RowHeadersVisible = false;
             this.dgvFrecuencias.RowHeadersWidth = 51;
             this.dgvFrecuencias.RowTemplate.Height = 24;
-            this.dgvFrecuencias.Size = new System.Drawing.Size(731, 164);
+            this.dgvFrecuencias.Size = new System.Drawing.Size(740, 175);
             this.dgvFrecuencias.TabIndex = 41;
             this.dgvFrecuencias.Visible = false;
             // 
@@ -262,6 +264,7 @@
             this.Name = "Exponencial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exponencial";
+            this.Load += new System.EventHandler(this.Exponencial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtParam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExponencial)).EndInit();

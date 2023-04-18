@@ -18,6 +18,7 @@ namespace SIM_TP2.Generadores
         public Exponencial()
         {
             InitializeComponent();
+            btnGraficar.Enabled = false;
             boxIntervalos.SelectedIndex = 0;
             cbxParam.SelectedIndex = 0;
         }
@@ -184,6 +185,11 @@ namespace SIM_TP2.Generadores
         private void LogOut(object sender, FormClosedEventArgs e)
         {
             Show();
+        }
+
+        private void Exponencial_Load(object sender, EventArgs e)
+        {
+
         }
     } 
 }
