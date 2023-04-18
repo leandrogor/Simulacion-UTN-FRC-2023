@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SIM_TP2.Histogramas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,9 +22,7 @@ namespace SIM_TP2.Generadores
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            
-=======
+
             dgvExponencial.Rows.Clear();
 
             if (int.Parse(txtCantidad.Text) <= 0)
@@ -45,29 +44,21 @@ namespace SIM_TP2.Generadores
                 return;
             }
 
-            int N = int.Parse(txtCantidad.Text);
+            int Muestra = int.Parse(txtCantidad.Text);
             int cantidadIntervalos = int.Parse(boxIntervalos.Text); // cantidad de intervalos
-            List<double> exponentialNumbersList = negativeExponentialSerie(cantidadIntervalos, lambdaOrMeanValidation((double)txtParam.Value));
+            List<double> exponentialNumbersList = negativeExponentialSerie(Muestra, lambdaOrMeanValidation((double)txtParam.Value));
             double correction = 0.0001;
             double maxx = exponentialNumbersList.Max<double>() + correction; // Limite inferior
-            double minx = exponentialNumbersList.Min<double>() - correction; // Limite superior
-            
+            double minx = exponentialNumbersList.Min<double>(); // Limite superior
+
             double longintervalos = (maxx - minx) / cantidadIntervalos;
 
 
             double[] limInf = new double[cantidadIntervalos];
             double[] limSup = new double[cantidadIntervalos];
-            for (int i = 0; i < cantidadIntervalos; i++)
-            {
-                limInf[i] = minx + i * longintervalos;
-                limSup[i] = limInf[i] + longintervalos;
-            }
 
-            // Se calculan las frecuencias observadas
-            int[] frecObs = new int[cantidadIntervalos];
-            double[] frecEsp = new double[cantidadIntervalos];
             double Lambda = lambdaOrMeanValidation((double)txtParam.Value);
-
+            double[] frecEsp = new double[cantidadIntervalos];
             if (esMedia())
             {
                 Lambda = (1 / Lambda);
@@ -75,7 +66,16 @@ namespace SIM_TP2.Generadores
 
             for (int i = 0; i < cantidadIntervalos; i++)
             {
-                frecEsp[i] = (1 - (Math.Exp(-Lambda*limSup[i])) - (1 - (Math.Exp(-Lambda*limInf[i]))));
+                limInf[i] = minx + i * longintervalos;
+                limSup[i] = limInf[i] + longintervalos;
+                frecEsp[i] = (1 - (Math.Exp(-Lambda * limSup[i])) - (1 - (Math.Exp(-Lambda * limInf[i])))) * Muestra;
+            }
+
+            // Se calculan las frecuencias observadas
+            int[] frecObs = new int[cantidadIntervalos];
+
+            for (int i = 0; i < Muestra; i++)
+            {                         
                 double val = exponentialNumbersList[i];
 
                 for (int j = 0; j < cantidadIntervalos; j++)
@@ -87,19 +87,23 @@ namespace SIM_TP2.Generadores
                         break;
                     }
                 }
+                
 
             }
             // Se definen los headers de la tabla
             DataTable tablefrecs = new DataTable();
+            tablefrecs.Columns.Add("Numero");
             tablefrecs.Columns.Add("Límite Inferior");
             tablefrecs.Columns.Add("Límite Superior");
             tablefrecs.Columns.Add("Frecuencia Observada");
             tablefrecs.Columns.Add("Frecuencia Esperada");
+            
 
 
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 DataRow fila = tablefrecs.NewRow();
+                fila["Numero"] = i+1;
                 fila["Límite Inferior"] = limInf[i].ToString("0.0000");
                 fila["Límite Superior"] = limSup[i].ToString("0.0000");
                 fila["Frecuencia Observada"] = frecObs[i];
@@ -112,7 +116,6 @@ namespace SIM_TP2.Generadores
             btnGraficar.Focus();
 
 
->>>>>>> 34995c1 (Exponencial con fe)
         }
 
         public List<double> negativeExponentialSerie(int n, double param)
@@ -124,20 +127,25 @@ namespace SIM_TP2.Generadores
                 double psedef = Random.NextDouble();
                 double num = negativeExponentialGenerator(psedef, param);
                 lista.Add(num);
+                dgvExponencial.Rows.Add((i+1).ToString(), (double)num);
 
             }
+
             return lista;
         }
 
         private double negativeExponentialGenerator(double pseudo, double param)
         {
-<<<<<<< HEAD
+
             if (cbxParam.SelectedItem.ToString() == "Media")
             {
                 double lambda = (1 / param);
                 return (-1 / lambda) * Math.Log(1 - pseudo);
-=======
+
+            }
+            
             return (-1 / (double)txtParam.Value) * Math.Log(1 - pseudo);
+            
         }
 
         private bool esMedia()
@@ -149,14 +157,30 @@ namespace SIM_TP2.Generadores
 
             return false;
         }
+
         private double lambdaOrMeanValidation(double param)
         {
             if (esMedia())
             {
                 return (1 / param);
->>>>>>> 34995c1 (Exponencial con fe)
+
             }
-            return (-1 / (double) txtParam.Value) * Math.Log(1 - pseudo);
+        return param;
         }
-    }
+
+        private void btnGraficar_Click(object sender, EventArgs e)
+        {
+            //Graficador graficador = new Graficador();
+            HistoUniforme ventana = new HistoUniforme();
+            //ventana.Controls.Add(graficador.GraficarHistograma(dgvFrecuencias));
+            ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
+        }
+        private void LogOut(object sender, FormClosedEventArgs e)
+        {
+            Show();
+        }
+    } 
 }
+

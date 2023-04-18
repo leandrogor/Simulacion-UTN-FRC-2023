@@ -91,6 +91,7 @@ namespace SIM_TP2.Generadores
 
             // Creación de la tabla de resultados
             DataTable tablaResultados = new DataTable();
+            tablaResultados.Columns.Add("Numero");
             tablaResultados.Columns.Add("Límite Inferior");
             tablaResultados.Columns.Add("Límite Superior");
             tablaResultados.Columns.Add("Frecuencia Observada");
@@ -99,6 +100,7 @@ namespace SIM_TP2.Generadores
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 DataRow fila = tablaResultados.NewRow();
+                fila["Numero"] = 1+i; 
                 fila["Límite Inferior"] = limitesInferiores[i].ToString("0.0000");
                 fila["Límite Superior"] = limitesSuperiores[i].ToString("0.0000");
                 fila["Frecuencia Observada"] = frecuenciasObservadas[i];
@@ -125,6 +127,11 @@ namespace SIM_TP2.Generadores
         private void LogOut(object sender, FormClosedEventArgs e)
         {
             Show();
+        }
+
+        private void Uniforme_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

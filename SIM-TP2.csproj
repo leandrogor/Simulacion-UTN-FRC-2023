@@ -95,6 +95,7 @@
     <Compile Include="Abst\Normal\BoxMullerMethod.cs" />
     <Compile Include="Abst\Normal\ConvolutionMethod.cs" />
     <Compile Include="Abst\Normal\NormalDistributionCalculator.cs" />
+    <Compile Include="Utils\Graficador.cs" />
     <EmbeddedResource Include="Generadores\Exponencial.resx">
       <DependentUpon>Exponencial.cs</DependentUpon>
     </EmbeddedResource>

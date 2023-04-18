@@ -256,6 +256,7 @@
             this.Name = "Uniforme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uniforme";
+            this.Load += new System.EventHandler(this.Uniforme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).EndInit();
