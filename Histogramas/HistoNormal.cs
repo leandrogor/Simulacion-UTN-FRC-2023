@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using SIM_TP2.Abst.Normal;
 
 namespace SIM_TP2.Histogramas
 {

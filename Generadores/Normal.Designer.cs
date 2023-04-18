@@ -85,7 +85,6 @@ namespace SIM_TP2.Generadores
             "15",
             "20",
             "25"});
-            this.boxIntervalos.SelectedIndex = 0;
             this.boxIntervalos.Location = new System.Drawing.Point(217, 158);
             this.boxIntervalos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxIntervalos.Name = "boxIntervalos";
@@ -284,7 +283,6 @@ namespace SIM_TP2.Generadores
             this.comboMetodo.Items.AddRange(new object[] {
             boxMullerMethod1,
             convolutionMethod1});
-            this.comboMetodo.SelectedIndex = 0;
             this.comboMetodo.Location = new System.Drawing.Point(217, 221);
             this.comboMetodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboMetodo.Name = "comboMetodo";
