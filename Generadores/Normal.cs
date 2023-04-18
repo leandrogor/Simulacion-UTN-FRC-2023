@@ -12,7 +12,9 @@ namespace SIM_TP2.Generadores
 {
     public partial class Normal : Form
     {
-
+        private double[] limitesInferiores;
+        private double[] limitesSuperiores;
+        private int[] frecuencias;
         public Normal()
         {
             InitializeComponent();
@@ -109,7 +111,9 @@ namespace SIM_TP2.Generadores
                 tablaResultados.Rows.Add(fila);
             }
 
-            ChartDTO.SetValues(limitesInferiores, limitesSuperiores, frecuenciasObservadas);
+            this.limitesInferiores = limitesInferiores;
+            this.limitesSuperiores = limitesSuperiores;
+            this.frecuencias = frecuenciasObservadas;
 
             // Mostrar la tabla de resultados en un DataGridView
             dgvFrecuencias.DataSource = tablaResultados;
@@ -130,6 +134,7 @@ namespace SIM_TP2.Generadores
         {
             HistoNormal ventana = new HistoNormal();
             ventana.Show();
+            ventana.CrearHisto(limitesInferiores, limitesSuperiores, frecuencias);
             ventana.FormClosed += LogOut;
             Hide();
         }
