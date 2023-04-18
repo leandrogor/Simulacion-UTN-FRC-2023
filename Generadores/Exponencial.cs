@@ -25,8 +25,8 @@ namespace SIM_TP2.Generadores
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            dgvExponencial.Rows.Clear();  
-            
+            dgvExponencial.Rows.Clear();
+
             // Se llama a la funcion para validar los campos
             if (validar() == false) { return; }
 
@@ -61,12 +61,12 @@ namespace SIM_TP2.Generadores
             int[] frecObs = new int[cantidadIntervalos];
 
             for (int i = 0; i < Muestra; i++)
-            {                         
+            {
                 double val = exponentialNumbersList[i];
 
                 for (int j = 0; j < cantidadIntervalos; j++)
                 {
-                    
+
                     if (val >= limInf[j] && val < limSup[j])
                     {
                         frecObs[j]++;
@@ -81,13 +81,13 @@ namespace SIM_TP2.Generadores
             tablefrecs.Columns.Add("Límite Superior");
             tablefrecs.Columns.Add("Frecuencia Observada");
             tablefrecs.Columns.Add("Frecuencia Esperada");
-            
+
 
             // Se recorre tantas veces como intervalos y se cargan los valores por fila
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 DataRow fila = tablefrecs.NewRow();
-                fila["Numero"] = i+1;
+                fila["Numero"] = i + 1;
                 fila["Límite Inferior"] = limInf[i].ToString("0.0000");
                 fila["Límite Superior"] = limSup[i].ToString("0.0000");
                 fila["Frecuencia Observada"] = frecObs[i];
@@ -110,7 +110,7 @@ namespace SIM_TP2.Generadores
                 double psedef = Random.NextDouble();
                 double num = Math.Round(negativeExponentialGenerator(psedef, param), 4);
                 lista.Add(num);
-                dgvExponencial.Rows.Add((i+1).ToString(), (double)num);
+                dgvExponencial.Rows.Add((i + 1).ToString(), (double)num);
 
             }
 
@@ -151,7 +151,7 @@ namespace SIM_TP2.Generadores
                 return (-1 / lambda) * Math.Log(1 - pseudo);
 
             }
-            return (-1 / (double)txtParam.Value) * Math.Log(1 - pseudo);  
+            return (-1 / (double)txtParam.Value) * Math.Log(1 - pseudo);
         }
 
         private bool esMedia()
@@ -170,15 +170,15 @@ namespace SIM_TP2.Generadores
             {
                 return (1 / param);
             }
-        return param;
+            return param;
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)
         {
-            
+
             HistoExponencial ventana = new HistoExponencial();
             ventana.crearHisto(dgvFrecuencias);
-            ventana.Show();  
+            ventana.Show();
             ventana.FormClosed += LogOut;
             Hide();
         }
@@ -210,6 +210,5 @@ namespace SIM_TP2.Generadores
                 e.IsInputKey = true;
             }
         }
-    } 
+    }
 }
-

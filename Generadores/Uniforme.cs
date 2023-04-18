@@ -67,7 +67,7 @@ namespace SIM_TP2.Generadores
             int[] frecuenciasObservadas = new int[cantidadIntervalos];
             // List<double> lista = new List<double>();
             Random rnd = new Random();
-            
+
             for (int i = 0; i < n; i++)
             {
                 // Generación del valor aleatorio
@@ -84,10 +84,10 @@ namespace SIM_TP2.Generadores
                 }
 
                 // lista.Add(valor);
-                dgvUniforme.Rows.Add((i+1).ToString(), valor.ToString());
+                dgvUniforme.Rows.Add((i + 1).ToString(), valor.ToString());
             }
 
-            
+
 
             // Creación de la tabla de resultados
             DataTable tablaResultados = new DataTable();
@@ -100,7 +100,7 @@ namespace SIM_TP2.Generadores
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 DataRow fila = tablaResultados.NewRow();
-                fila["Numero"] = 1+i; 
+                fila["Numero"] = 1 + i;
                 fila["Límite Inferior"] = limitesInferiores[i].ToString("0.0000");
                 fila["Límite Superior"] = limitesSuperiores[i].ToString("0.0000");
                 fila["Frecuencia Observada"] = frecuenciasObservadas[i];

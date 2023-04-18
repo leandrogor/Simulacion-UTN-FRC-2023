@@ -1,11 +1,10 @@
-﻿using System;
+﻿using SIM_TP2.Histogramas;
+using SIM_TP2.Util.NormalUtil;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using SIM_TP2.Util.NormalUtil;
-using SIM_TP2.Histogramas;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.Generadores
 {
@@ -24,7 +23,7 @@ namespace SIM_TP2.Generadores
         public List<double> NormalSerie(int n, double media, double desv, NormalDistributionCalculator calculator)
         {
             List<double> lista = new List<double>();
-            for(int i = 0; i<n; i++)
+            for (int i = 0; i < n; i++)
             {
                 double numeroGenerado = calculator.CalcularNumero(media, desv);
                 lista.Add(Math.Round(numeroGenerado, 4));
@@ -69,7 +68,7 @@ namespace SIM_TP2.Generadores
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 //Marca de clase del intervalo.
-                double marcaDeClase = (limitesSuperiores[i] + limitesInferiores[i])/2;
+                double marcaDeClase = (limitesSuperiores[i] + limitesInferiores[i]) / 2;
 
                 //La frecuencia esperada se calculó obteniendo primero el valor de la función de densidad
                 //en la marca de clase y después se multiplicó por la amplitud para obtener la probabilidad.
@@ -130,7 +129,7 @@ namespace SIM_TP2.Generadores
 
         private double funcionDistribucionNormal(double x, double media, double desvi)
         {
-            double exponente = - (x - media) * (x - media) / (2 * desvi * desvi);
+            double exponente = -(x - media) * (x - media) / (2 * desvi * desvi);
             double multiplicador = 1 / (desvi * Math.Sqrt(2 * Math.PI));
             return multiplicador * Math.Exp(exponente);
         }
@@ -196,6 +195,4 @@ namespace SIM_TP2.Generadores
             }
         }
     }
-
-    
 }
