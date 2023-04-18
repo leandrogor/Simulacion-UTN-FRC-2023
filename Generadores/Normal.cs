@@ -4,7 +4,6 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using SIM_TP2.Util.NormalUtil;
-using SIM_TP2.Abst.Normal;
 using SIM_TP2.Histogramas;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
