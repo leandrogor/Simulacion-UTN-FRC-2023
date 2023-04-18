@@ -17,11 +17,13 @@ namespace SIM_TP2.Generadores
         public Exponencial()
         {
             InitializeComponent();
-            dgvFrecuencias.Visible = false;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            
+=======
             dgvExponencial.Rows.Clear();
 
             if (int.Parse(txtCantidad.Text) <= 0)
@@ -110,8 +112,8 @@ namespace SIM_TP2.Generadores
             btnGraficar.Focus();
 
 
+>>>>>>> 34995c1 (Exponencial con fe)
         }
-
 
         public List<double> negativeExponentialSerie(int n, double param)
         {
@@ -122,7 +124,6 @@ namespace SIM_TP2.Generadores
                 double psedef = Random.NextDouble();
                 double num = negativeExponentialGenerator(psedef, param);
                 lista.Add(num);
-                dgvExponencial.Rows.Add((i + 1).ToString(), num.ToString());
 
             }
             return lista;
@@ -130,6 +131,12 @@ namespace SIM_TP2.Generadores
 
         private double negativeExponentialGenerator(double pseudo, double param)
         {
+<<<<<<< HEAD
+            if (cbxParam.SelectedItem.ToString() == "Media")
+            {
+                double lambda = (1 / param);
+                return (-1 / lambda) * Math.Log(1 - pseudo);
+=======
             return (-1 / (double)txtParam.Value) * Math.Log(1 - pseudo);
         }
 
@@ -147,33 +154,9 @@ namespace SIM_TP2.Generadores
             if (esMedia())
             {
                 return (1 / param);
+>>>>>>> 34995c1 (Exponencial con fe)
             }
-
-            return param;
-        }
-
-        private void Exponencial_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvFrecuencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void boxIntervalos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtParam_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            return (-1 / (double) txtParam.Value) * Math.Log(1 - pseudo);
         }
     }
 }
