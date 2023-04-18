@@ -8,10 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace SIM_TP2.Generadores
 {
-
     public partial class Exponencial : Form
     {
         public Exponencial()
@@ -45,13 +43,13 @@ namespace SIM_TP2.Generadores
                 return;
             }
 
-            int N = int.Parse(txtCantidad.Text);
+
             int cantidadIntervalos = int.Parse(boxIntervalos.Text); // cantidad de intervalos
             List<double> exponentialNumbersList = negativeExponentialSerie(cantidadIntervalos, lambdaOrMeanValidation((double)txtParam.Value));
             double correction = 0.0001;
             double maxx = exponentialNumbersList.Max<double>() + correction; // Limite inferior
             double minx = exponentialNumbersList.Min<double>() - correction; // Limite superior
-            
+
             double longintervalos = (maxx - minx) / cantidadIntervalos;
 
 
@@ -65,22 +63,13 @@ namespace SIM_TP2.Generadores
 
             // Se calculan las frecuencias observadas
             int[] frecObs = new int[cantidadIntervalos];
-            double[] frecEsp = new double[cantidadIntervalos];
-            double Lambda = lambdaOrMeanValidation((double)txtParam.Value);
-
-            if (esMedia())
-            {
-                Lambda = (1 / Lambda);
-            }
 
             for (int i = 0; i < cantidadIntervalos; i++)
             {
-                frecEsp[i] = (1 - (Math.Exp(-Lambda*limSup[i])) - (1 - (Math.Exp(-Lambda*limInf[i]))));
                 double val = exponentialNumbersList[i];
 
                 for (int j = 0; j < cantidadIntervalos; j++)
                 {
-                    
                     if (val >= limInf[j] && val < limSup[j])
                     {
                         frecObs[j]++;
@@ -103,7 +92,6 @@ namespace SIM_TP2.Generadores
                 fila["Límite Inferior"] = limInf[i].ToString("0.0000");
                 fila["Límite Superior"] = limSup[i].ToString("0.0000");
                 fila["Frecuencia Observada"] = frecObs[i];
-                fila["Frecuencia Esperada"] = frecEsp[i];
                 tablefrecs.Rows.Add(fila);
             }
             dgvFrecuencias.DataSource = tablefrecs;
@@ -140,18 +128,9 @@ namespace SIM_TP2.Generadores
             return (-1 / (double)txtParam.Value) * Math.Log(1 - pseudo);
         }
 
-        private bool esMedia()
-        {
-            if (cbxParam.SelectedItem.ToString() == "Media")
-            {
-                return true;
-            }
-
-            return false;
-        }
         private double lambdaOrMeanValidation(double param)
         {
-            if (esMedia())
+            if (cbxParam.SelectedItem.ToString() == "Media")
             {
                 return (1 / param);
 >>>>>>> 34995c1 (Exponencial con fe)
