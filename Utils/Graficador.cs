@@ -8,5 +8,6 @@ namespace SIM_TP2.Utils
 {
     class Graficador
     {
+
     }
 }

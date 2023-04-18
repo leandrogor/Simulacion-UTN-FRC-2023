@@ -22,27 +22,10 @@ namespace SIM_TP2.Generadores
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-
-            dgvExponencial.Rows.Clear();
-
-            if (int.Parse(txtCantidad.Text) <= 0)
-            {
-                MessageBox.Show("Ingrese una cantidad de valores a generar");
-                return;
-            }
-            if (boxIntervalos.SelectedIndex == -1)
-            {
-                string text = "Seleccione un intervalo";
-                MessageBox.Show(text);
-                return;
-            }
-
-            if (cbxParam.SelectedIndex == -1)
-            {
-                string text = "Defina que parametro desea utilizar";
-                MessageBox.Show(text);
-                return;
-            }
+            dgvExponencial.Rows.Clear();  
+            
+            // Se llama a la funcion para validar los campos
+            if (validar() == false) { return; }
 
             int Muestra = int.Parse(txtCantidad.Text);
             int cantidadIntervalos = int.Parse(boxIntervalos.Text); // cantidad de intervalos
@@ -63,7 +46,7 @@ namespace SIM_TP2.Generadores
             {
                 Lambda = (1 / Lambda);
             }
-
+            // Se definen los intervalos y se cargan las frecuencias esperadas
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 limInf[i] = minx + i * longintervalos;
@@ -87,8 +70,6 @@ namespace SIM_TP2.Generadores
                         break;
                     }
                 }
-                
-
             }
             // Se definen los headers de la tabla
             DataTable tablefrecs = new DataTable();
@@ -99,7 +80,7 @@ namespace SIM_TP2.Generadores
             tablefrecs.Columns.Add("Frecuencia Esperada");
             
 
-
+            // Se recorre tantas veces como intervalos y se cargan los valores por fila
             for (int i = 0; i < cantidadIntervalos; i++)
             {
                 DataRow fila = tablefrecs.NewRow();
@@ -110,12 +91,11 @@ namespace SIM_TP2.Generadores
                 fila["Frecuencia Esperada"] = frecEsp[i];
                 tablefrecs.Rows.Add(fila);
             }
+
             dgvFrecuencias.DataSource = tablefrecs;
             dgvFrecuencias.Visible = true;
             btnGraficar.Enabled = true;
             btnGraficar.Focus();
-
-
         }
 
         public List<double> negativeExponentialSerie(int n, double param)
@@ -134,6 +114,31 @@ namespace SIM_TP2.Generadores
             return lista;
         }
 
+        // Funcion validadora de campos
+        private bool validar()
+        {
+            if (int.Parse(txtCantidad.Text) <= 0)
+            {
+                MessageBox.Show("Ingrese una cantidad de valores a generar");
+                return false;
+            }
+            if (boxIntervalos.SelectedIndex == -1)
+            {
+                string text = "Seleccione un intervalo";
+                MessageBox.Show(text);
+                return false;
+            }
+
+            if (cbxParam.SelectedIndex == -1)
+            {
+                string text = "Defina que parametro desea utilizar";
+                MessageBox.Show(text);
+                return false;
+            }
+
+            return true;
+        }
+
         private double negativeExponentialGenerator(double pseudo, double param)
         {
 
@@ -143,9 +148,7 @@ namespace SIM_TP2.Generadores
                 return (-1 / lambda) * Math.Log(1 - pseudo);
 
             }
-            
-            return (-1 / (double)txtParam.Value) * Math.Log(1 - pseudo);
-            
+            return (-1 / (double)txtParam.Value) * Math.Log(1 - pseudo);  
         }
 
         private bool esMedia()
@@ -163,17 +166,16 @@ namespace SIM_TP2.Generadores
             if (esMedia())
             {
                 return (1 / param);
-
             }
         return param;
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)
         {
-            //Graficador graficador = new Graficador();
-            HistoUniforme ventana = new HistoUniforme();
-            //ventana.Controls.Add(graficador.GraficarHistograma(dgvFrecuencias));
-            ventana.Show();
+            
+            HistoExponencial ventana = new HistoExponencial();
+            ventana.crearHisto(dgvFrecuencias);
+            ventana.Show();  
             ventana.FormClosed += LogOut;
             Hide();
         }

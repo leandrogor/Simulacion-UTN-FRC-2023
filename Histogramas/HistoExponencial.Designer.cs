@@ -28,20 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.chrHistograma = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            ((System.ComponentModel.ISupportInitialize)(this.chrHistograma)).BeginInit();
             this.SuspendLayout();
+            // 
+            // chrHistograma
+            // 
+            this.chrHistograma.AllowDrop = true;
+            chartArea1.Name = "ChartArea1";
+            this.chrHistograma.ChartAreas.Add(chartArea1);
+            this.chrHistograma.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend1.Name = "Legend1";
+            this.chrHistograma.Legends.Add(legend1);
+            this.chrHistograma.Location = new System.Drawing.Point(0, 0);
+            this.chrHistograma.Name = "chrHistograma";
+            this.chrHistograma.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chrHistograma.Series.Add(series1);
+            this.chrHistograma.Size = new System.Drawing.Size(800, 450);
+            this.chrHistograma.TabIndex = 0;
+            this.chrHistograma.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Histograma Exponencial";
+            this.chrHistograma.Titles.Add(title1);
+            this.chrHistograma.Click += new System.EventHandler(this.chart1_Click);
             // 
             // HistoExponencial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chrHistograma);
             this.Name = "HistoExponencial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistoExponencial";
+            this.Load += new System.EventHandler(this.HistoExponencial_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chrHistograma)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataVisualization.Charting.Chart chrHistograma;
     }
 }

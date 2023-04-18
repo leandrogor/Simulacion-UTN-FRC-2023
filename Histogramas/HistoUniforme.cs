@@ -16,5 +16,7 @@ namespace SIM_TP2.Histogramas
         {
             InitializeComponent();
         }
+
+        
     }
 }
