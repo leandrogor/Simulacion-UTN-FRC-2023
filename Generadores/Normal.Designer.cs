@@ -58,6 +58,7 @@ namespace SIM_TP2.Generadores
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(217, 116);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Maximum = new decimal(new int[] {
@@ -66,7 +67,7 @@ namespace SIM_TP2.Generadores
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(135, 28);
+            this.txtCantidad.Size = new System.Drawing.Size(135, 30);
             this.txtCantidad.TabIndex = 28;
             this.txtCantidad.Value = new decimal(new int[] {
             10,
@@ -77,6 +78,7 @@ namespace SIM_TP2.Generadores
             // boxIntervalos
             // 
             this.boxIntervalos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxIntervalos.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxIntervalos.FormattingEnabled = true;
             this.boxIntervalos.Items.AddRange(new object[] {
             "10",
@@ -86,12 +88,13 @@ namespace SIM_TP2.Generadores
             this.boxIntervalos.Location = new System.Drawing.Point(217, 158);
             this.boxIntervalos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxIntervalos.Name = "boxIntervalos";
-            this.boxIntervalos.Size = new System.Drawing.Size(134, 28);
+            this.boxIntervalos.Size = new System.Drawing.Size(134, 31);
             this.boxIntervalos.TabIndex = 29;
             // 
             // btnGraficar
             // 
             this.btnGraficar.Enabled = false;
+            this.btnGraficar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraficar.Location = new System.Drawing.Point(217, 276);
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
@@ -103,6 +106,7 @@ namespace SIM_TP2.Generadores
             // 
             // btnGenerar
             // 
+            this.btnGenerar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.Location = new System.Drawing.Point(42, 276);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
@@ -116,11 +120,11 @@ namespace SIM_TP2.Generadores
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblCantidad.Location = new System.Drawing.Point(22, 117);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(146, 20);
+            this.lblCantidad.Size = new System.Drawing.Size(169, 23);
             this.lblCantidad.TabIndex = 31;
             this.lblCantidad.Text = "Cantidad de Valores:";
             // 
@@ -181,12 +185,12 @@ namespace SIM_TP2.Generadores
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(22, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 20);
+            this.label1.Size = new System.Drawing.Size(98, 23);
             this.label1.TabIndex = 34;
             this.label1.Tag = "";
             this.label1.Text = "Media(mu):";
@@ -195,18 +199,19 @@ namespace SIM_TP2.Generadores
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(22, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(190, 20);
+            this.label2.Size = new System.Drawing.Size(223, 23);
             this.label2.TabIndex = 35;
             this.label2.Text = "Desviación estándar(sigma)";
             // 
             // txtB
             // 
             this.txtB.DecimalPlaces = 2;
+            this.txtB.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtB.Increment = new decimal(new int[] {
             1,
             0,
@@ -225,7 +230,7 @@ namespace SIM_TP2.Generadores
             0,
             -2147483648});
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(135, 28);
+            this.txtB.Size = new System.Drawing.Size(135, 30);
             this.txtB.TabIndex = 37;
             this.txtB.Value = new decimal(new int[] {
             1,
@@ -236,6 +241,7 @@ namespace SIM_TP2.Generadores
             // txtA
             // 
             this.txtA.DecimalPlaces = 2;
+            this.txtA.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtA.Increment = new decimal(new int[] {
             1,
             0,
@@ -254,25 +260,25 @@ namespace SIM_TP2.Generadores
             0,
             -2147483648});
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(135, 28);
+            this.txtA.Size = new System.Drawing.Size(135, 30);
             this.txtA.TabIndex = 36;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(42, 227);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.Size = new System.Drawing.Size(71, 23);
             this.label3.TabIndex = 38;
             this.label3.Text = "Método:";
             // 
             // comboMetodo
             // 
-            this.comboMetodo.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboMetodo.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMetodo.FormattingEnabled = true;
             this.comboMetodo.Items.AddRange(new object[] {
             boxMullerMethod1,
@@ -280,7 +286,7 @@ namespace SIM_TP2.Generadores
             this.comboMetodo.Location = new System.Drawing.Point(217, 221);
             this.comboMetodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboMetodo.Name = "comboMetodo";
-            this.comboMetodo.Size = new System.Drawing.Size(127, 26);
+            this.comboMetodo.Size = new System.Drawing.Size(127, 31);
             this.comboMetodo.TabIndex = 39;
             // 
             // Normal
@@ -288,6 +294,7 @@ namespace SIM_TP2.Generadores
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SIM_TP2.Properties.Resources._3;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.comboMetodo);
             this.Controls.Add(this.label3);
@@ -302,6 +309,7 @@ namespace SIM_TP2.Generadores
             this.Controls.Add(this.btnGraficar);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblCantidad);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

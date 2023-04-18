@@ -1,4 +1,5 @@
 ﻿using SIM_TP2.Generadores;
+using SIM_TP2.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,14 @@ namespace SIM_TP2
         private void btnNormal_Click(object sender, EventArgs e)
         {
             Normal ventana = new Normal();
+            ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Integrantes ventana = new Integrantes();
             ventana.Show();
             ventana.FormClosed += LogOut;
             Hide();

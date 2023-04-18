@@ -87,6 +87,7 @@
             // 
             // btnGenerar
             // 
+            this.btnGenerar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.Location = new System.Drawing.Point(25, 189);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
@@ -99,6 +100,7 @@
             // btnGraficar
             // 
             this.btnGraficar.Enabled = false;
+            this.btnGraficar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraficar.Location = new System.Drawing.Point(182, 189);
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
@@ -111,6 +113,7 @@
             // boxIntervalos
             // 
             this.boxIntervalos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxIntervalos.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxIntervalos.FormattingEnabled = true;
             this.boxIntervalos.Items.AddRange(new object[] {
             "10",
@@ -119,7 +122,7 @@
             "25"});
             this.boxIntervalos.Location = new System.Drawing.Point(182, 136);
             this.boxIntervalos.Name = "boxIntervalos";
-            this.boxIntervalos.Size = new System.Drawing.Size(120, 26);
+            this.boxIntervalos.Size = new System.Drawing.Size(120, 31);
             this.boxIntervalos.TabIndex = 4;
             // 
             // valor
@@ -159,6 +162,7 @@
             // txtA
             // 
             this.txtA.DecimalPlaces = 2;
+            this.txtA.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtA.Increment = new decimal(new int[] {
             1,
             0,
@@ -176,12 +180,13 @@
             0,
             -2147483648});
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(120, 25);
+            this.txtA.Size = new System.Drawing.Size(120, 30);
             this.txtA.TabIndex = 1;
             // 
             // txtB
             // 
             this.txtB.DecimalPlaces = 2;
+            this.txtB.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtB.Increment = new decimal(new int[] {
             1,
             0,
@@ -199,7 +204,7 @@
             0,
             -2147483648});
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(120, 25);
+            this.txtB.Size = new System.Drawing.Size(120, 30);
             this.txtB.TabIndex = 2;
             this.txtB.Value = new decimal(new int[] {
             1,
@@ -209,6 +214,7 @@
             // 
             // txtCantidad
             // 
+            this.txtCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(182, 98);
             this.txtCantidad.Maximum = new decimal(new int[] {
             1000000,
@@ -216,7 +222,7 @@
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(120, 25);
+            this.txtCantidad.Size = new System.Drawing.Size(120, 30);
             this.txtCantidad.TabIndex = 3;
             this.txtCantidad.Value = new decimal(new int[] {
             10,
@@ -245,6 +251,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SIM_TP2.Properties.Resources._1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
             this.Controls.Add(this.dgvFrecuencias);
             this.Controls.Add(this.txtCantidad);
@@ -257,6 +264,7 @@
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.lblB);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Uniforme";

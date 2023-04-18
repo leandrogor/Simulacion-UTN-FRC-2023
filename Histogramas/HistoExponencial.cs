@@ -30,8 +30,6 @@ namespace SIM_TP2.Histogramas
             chrHistograma.ChartAreas[0].AxisY.Minimum = 0;
             chrHistograma.ChartAreas[0].AxisX.IntervalAutoMode = (System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode)1;
             chrHistograma.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
-            //chrHistograma.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
-            //chrHistograma.ChartAreas[0].AxisY.IsMarginVisible = false;
             chrHistograma.Series[0].IsValueShownAsLabel = true;
             
 

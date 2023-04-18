@@ -52,6 +52,7 @@
             // 
             this.txtParam.BackColor = System.Drawing.Color.LightYellow;
             this.txtParam.DecimalPlaces = 2;
+            this.txtParam.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParam.Increment = new decimal(new int[] {
             1,
             0,
@@ -69,7 +70,7 @@
             0,
             0});
             this.txtParam.Name = "txtParam";
-            this.txtParam.Size = new System.Drawing.Size(120, 25);
+            this.txtParam.Size = new System.Drawing.Size(120, 30);
             this.txtParam.TabIndex = 40;
             this.txtParam.Value = new decimal(new int[] {
             1,
@@ -81,18 +82,20 @@
             // 
             this.cbxParam.BackColor = System.Drawing.Color.Cornsilk;
             this.cbxParam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxParam.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxParam.FormattingEnabled = true;
             this.cbxParam.Items.AddRange(new object[] {
             "Media",
             "Lambda"});
-            this.cbxParam.Location = new System.Drawing.Point(15, 140);
+            this.cbxParam.Location = new System.Drawing.Point(11, 140);
             this.cbxParam.Name = "cbxParam";
-            this.cbxParam.Size = new System.Drawing.Size(120, 26);
+            this.cbxParam.Size = new System.Drawing.Size(120, 31);
             this.cbxParam.TabIndex = 39;
             // 
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.LightYellow;
+            this.txtCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(172, 19);
             this.txtCantidad.Maximum = new decimal(new int[] {
             1000000,
@@ -100,7 +103,7 @@
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(120, 25);
+            this.txtCantidad.Size = new System.Drawing.Size(120, 30);
             this.txtCantidad.TabIndex = 31;
             // 
             // dgvExponencial
@@ -142,6 +145,7 @@
             // 
             this.boxIntervalos.BackColor = System.Drawing.Color.Cornsilk;
             this.boxIntervalos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxIntervalos.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxIntervalos.FormattingEnabled = true;
             this.boxIntervalos.Items.AddRange(new object[] {
             "10",
@@ -150,12 +154,13 @@
             "25"});
             this.boxIntervalos.Location = new System.Drawing.Point(172, 62);
             this.boxIntervalos.Name = "boxIntervalos";
-            this.boxIntervalos.Size = new System.Drawing.Size(120, 26);
+            this.boxIntervalos.Size = new System.Drawing.Size(120, 31);
             this.boxIntervalos.TabIndex = 32;
             // 
             // btnGraficar
             // 
             this.btnGraficar.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnGraficar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGraficar.Location = new System.Drawing.Point(172, 199);
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
@@ -168,6 +173,7 @@
             // btnGenerar
             // 
             this.btnGenerar.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnGenerar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.Location = new System.Drawing.Point(15, 199);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
@@ -181,10 +187,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Cornsilk;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 66);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 20);
+            this.label1.Size = new System.Drawing.Size(187, 23);
             this.label1.TabIndex = 37;
             this.label1.Text = "Cantidad de Intervalos:";
             // 
@@ -192,10 +198,10 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.BackColor = System.Drawing.Color.Cornsilk;
-            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(12, 26);
+            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(12, 23);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(146, 20);
+            this.lblCantidad.Size = new System.Drawing.Size(169, 23);
             this.lblCantidad.TabIndex = 36;
             this.lblCantidad.Text = "Cantidad de Valores:";
             // 
@@ -220,10 +226,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Cornsilk;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 118);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
+            this.label2.Size = new System.Drawing.Size(101, 23);
             this.label2.TabIndex = 42;
             this.label2.Text = "Parametros:";
             // 
@@ -232,6 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SIM_TP2.Properties.Resources._2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvFrecuencias);
@@ -244,6 +251,7 @@
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCantidad);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Exponencial";

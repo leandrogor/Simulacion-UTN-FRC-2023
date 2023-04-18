@@ -33,6 +33,7 @@
             this.btnUniforme = new System.Windows.Forms.Button();
             this.btnExponencial = new System.Windows.Forms.Button();
             this.btnNormal = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -104,6 +105,23 @@
             this.btnNormal.UseVisualStyleBackColor = false;
             this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::SIM_TP2.Properties.Resources.Diseño_sin_título__8_;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.SeaShell;
+            this.button1.Location = new System.Drawing.Point(341, 382);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(139, 47);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Integrantes";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // main
             // 
             this.AccessibleDescription = "";
@@ -112,6 +130,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNormal);
             this.Controls.Add(this.btnExponencial);
             this.Controls.Add(this.btnUniforme);
@@ -133,6 +152,7 @@
         private System.Windows.Forms.Button btnUniforme;
         private System.Windows.Forms.Button btnExponencial;
         private System.Windows.Forms.Button btnNormal;
+        private System.Windows.Forms.Button button1;
     }
 }
 

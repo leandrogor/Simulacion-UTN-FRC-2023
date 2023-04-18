@@ -23,7 +23,6 @@ namespace SIM_TP2.Generadores
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             dgvUniforme.Rows.Clear();
-            dgvFrecuencias.Rows.Clear();
 
             // Si no cargó cantidad de intervalos, le asignamos el valor 10.
             if (txtCantidad.Text == "")
@@ -119,6 +118,7 @@ namespace SIM_TP2.Generadores
         private void btnGraficar_Click(object sender, EventArgs e)
         {
             HistoUniforme ventana = new HistoUniforme();
+            ventana.crearHisto(dgvFrecuencias);
             ventana.Show();
             ventana.FormClosed += LogOut;
             Hide();
