@@ -117,6 +117,9 @@
             this.Controls.Add(this.btnUniforme);
             this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TransparencyKey = System.Drawing.Color.NavajoWhite;

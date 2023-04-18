@@ -33,6 +33,7 @@ namespace SIM_TP2.Generadores
         {
             SIM_TP2.Util.NormalUtil.BoxMullerMethod boxMullerMethod1 = new SIM_TP2.Util.NormalUtil.BoxMullerMethod();
             SIM_TP2.Util.NormalUtil.ConvolutionMethod convolutionMethod1 = new SIM_TP2.Util.NormalUtil.ConvolutionMethod();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Normal));
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
             this.btnGraficar = new System.Windows.Forms.Button();
@@ -57,15 +58,15 @@ namespace SIM_TP2.Generadores
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(145, 75);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidad.Location = new System.Drawing.Point(217, 116);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(90, 20);
+            this.txtCantidad.Size = new System.Drawing.Size(135, 28);
             this.txtCantidad.TabIndex = 28;
             this.txtCantidad.Value = new decimal(new int[] {
             10,
@@ -82,20 +83,19 @@ namespace SIM_TP2.Generadores
             "15",
             "20",
             "25"});
-            this.boxIntervalos.Location = new System.Drawing.Point(145, 102);
-            this.boxIntervalos.Margin = new System.Windows.Forms.Padding(2);
+            this.boxIntervalos.Location = new System.Drawing.Point(217, 158);
+            this.boxIntervalos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxIntervalos.Name = "boxIntervalos";
-            this.boxIntervalos.Size = new System.Drawing.Size(91, 21);
+            this.boxIntervalos.Size = new System.Drawing.Size(134, 28);
             this.boxIntervalos.TabIndex = 29;
-            this.boxIntervalos.SelectedIndex = 0;
             // 
             // btnGraficar
             // 
             this.btnGraficar.Enabled = false;
-            this.btnGraficar.Location = new System.Drawing.Point(145, 179);
-            this.btnGraficar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGraficar.Location = new System.Drawing.Point(217, 276);
+            this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
-            this.btnGraficar.Size = new System.Drawing.Size(86, 25);
+            this.btnGraficar.Size = new System.Drawing.Size(129, 39);
             this.btnGraficar.TabIndex = 30;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = true;
@@ -103,10 +103,10 @@ namespace SIM_TP2.Generadores
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(28, 179);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGenerar.Location = new System.Drawing.Point(42, 276);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(86, 25);
+            this.btnGenerar.Size = new System.Drawing.Size(129, 39);
             this.btnGenerar.TabIndex = 27;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
@@ -115,10 +115,12 @@ namespace SIM_TP2.Generadores
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(25, 79);
-            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCantidad.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantidad.Location = new System.Drawing.Point(22, 117);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(105, 13);
+            this.lblCantidad.Size = new System.Drawing.Size(146, 20);
             this.lblCantidad.TabIndex = 31;
             this.lblCantidad.Text = "Cantidad de Valores:";
             // 
@@ -126,15 +128,16 @@ namespace SIM_TP2.Generadores
             // 
             this.dgvFrecuencias.AllowUserToAddRows = false;
             this.dgvFrecuencias.AllowUserToDeleteRows = false;
+            this.dgvFrecuencias.BackgroundColor = System.Drawing.Color.DarkOliveGreen;
             this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFrecuencias.Location = new System.Drawing.Point(28, 220);
-            this.dgvFrecuencias.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvFrecuencias.Location = new System.Drawing.Point(42, 339);
+            this.dgvFrecuencias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvFrecuencias.Name = "dgvFrecuencias";
             this.dgvFrecuencias.ReadOnly = true;
             this.dgvFrecuencias.RowHeadersVisible = false;
             this.dgvFrecuencias.RowHeadersWidth = 51;
             this.dgvFrecuencias.RowTemplate.Height = 24;
-            this.dgvFrecuencias.Size = new System.Drawing.Size(548, 119);
+            this.dgvFrecuencias.Size = new System.Drawing.Size(822, 182);
             this.dgvFrecuencias.TabIndex = 33;
             this.dgvFrecuencias.Visible = false;
             // 
@@ -158,26 +161,32 @@ namespace SIM_TP2.Generadores
             // 
             this.dgvNormal.AllowUserToAddRows = false;
             this.dgvNormal.AllowUserToDeleteRows = false;
+            this.dgvNormal.BackgroundColor = System.Drawing.Color.DarkOliveGreen;
             this.dgvNormal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNormal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nro,
             this.valor});
-            this.dgvNormal.Location = new System.Drawing.Point(247, 28);
-            this.dgvNormal.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvNormal.GridColor = System.Drawing.Color.Bisque;
+            this.dgvNormal.Location = new System.Drawing.Point(370, 42);
+            this.dgvNormal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvNormal.Name = "dgvNormal";
             this.dgvNormal.ReadOnly = true;
             this.dgvNormal.RowHeadersVisible = false;
             this.dgvNormal.RowHeadersWidth = 51;
             this.dgvNormal.RowTemplate.Height = 24;
-            this.dgvNormal.Size = new System.Drawing.Size(329, 176);
+            this.dgvNormal.Size = new System.Drawing.Size(494, 271);
             this.dgvNormal.TabIndex = 32;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 28);
+            this.label1.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(22, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 13);
+            this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 34;
             this.label1.Tag = "";
             this.label1.Text = "Media(mu):";
@@ -185,9 +194,13 @@ namespace SIM_TP2.Generadores
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 51);
+            this.label2.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(22, 76);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 13);
+            this.label2.Size = new System.Drawing.Size(190, 20);
             this.label2.TabIndex = 35;
             this.label2.Text = "Desviación estándar(sigma)";
             // 
@@ -199,8 +212,8 @@ namespace SIM_TP2.Generadores
             0,
             0,
             131072});
-            this.txtB.Location = new System.Drawing.Point(145, 47);
-            this.txtB.Margin = new System.Windows.Forms.Padding(2);
+            this.txtB.Location = new System.Drawing.Point(217, 72);
+            this.txtB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtB.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -212,7 +225,7 @@ namespace SIM_TP2.Generadores
             0,
             -2147483648});
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(90, 20);
+            this.txtB.Size = new System.Drawing.Size(135, 28);
             this.txtB.TabIndex = 37;
             this.txtB.Value = new decimal(new int[] {
             1,
@@ -228,8 +241,8 @@ namespace SIM_TP2.Generadores
             0,
             0,
             131072});
-            this.txtA.Location = new System.Drawing.Point(145, 21);
-            this.txtA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtA.Location = new System.Drawing.Point(217, 32);
+            this.txtA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtA.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -241,35 +254,41 @@ namespace SIM_TP2.Generadores
             0,
             -2147483648});
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(90, 20);
+            this.txtA.Size = new System.Drawing.Size(135, 28);
             this.txtA.TabIndex = 36;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 147);
+            this.label3.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(42, 227);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 38;
             this.label3.Text = "Método:";
             // 
             // comboMetodo
             // 
+            this.comboMetodo.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMetodo.FormattingEnabled = true;
             this.comboMetodo.Items.AddRange(new object[] {
             boxMullerMethod1,
             convolutionMethod1});
-            this.comboMetodo.Location = new System.Drawing.Point(145, 144);
+            this.comboMetodo.Location = new System.Drawing.Point(217, 221);
+            this.comboMetodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboMetodo.Name = "comboMetodo";
-            this.comboMetodo.Size = new System.Drawing.Size(86, 21);
+            this.comboMetodo.Size = new System.Drawing.Size(127, 26);
             this.comboMetodo.TabIndex = 39;
-            this.comboMetodo.SelectedIndex = 0;
             // 
             // Normal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.BackgroundImage = global::SIM_TP2.Properties.Resources._3;
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.comboMetodo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtB);
@@ -283,7 +302,9 @@ namespace SIM_TP2.Generadores
             this.Controls.Add(this.btnGraficar);
             this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.lblCantidad);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Normal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Normal";

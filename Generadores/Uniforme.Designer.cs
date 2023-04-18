@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Uniforme));
             this.lblB = new System.Windows.Forms.Label();
             this.lblA = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnGraficar = new System.Windows.Forms.Button();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
@@ -52,43 +52,45 @@
             // lblB
             // 
             this.lblB.AutoSize = true;
-            this.lblB.Location = new System.Drawing.Point(22, 61);
+            this.lblB.BackColor = System.Drawing.Color.Goldenrod;
+            this.lblB.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblB.Location = new System.Drawing.Point(22, 69);
             this.lblB.Name = "lblB";
-            this.lblB.Size = new System.Drawing.Size(113, 16);
+            this.lblB.Size = new System.Drawing.Size(154, 23);
             this.lblB.TabIndex = 16;
             this.lblB.Text = "B (límite superior):";
             // 
             // lblA
             // 
             this.lblA.AutoSize = true;
-            this.lblA.Location = new System.Drawing.Point(22, 29);
+            this.lblA.BackColor = System.Drawing.Color.Goldenrod;
+            this.lblA.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblA.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblA.Location = new System.Drawing.Point(22, 33);
             this.lblA.Name = "lblA";
-            this.lblA.Size = new System.Drawing.Size(107, 16);
+            this.lblA.Size = new System.Drawing.Size(153, 23);
             this.lblA.TabIndex = 17;
             this.lblA.Text = "A (límite inferior) :";
             // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(22, 92);
+            this.lblCantidad.BackColor = System.Drawing.Color.Goldenrod;
+            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCantidad.Location = new System.Drawing.Point(22, 104);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(133, 16);
+            this.lblCantidad.Size = new System.Drawing.Size(169, 23);
             this.lblCantidad.TabIndex = 19;
             this.lblCantidad.Text = "Cantidad de Valores:";
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 27;
-            // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(25, 168);
+            this.btnGenerar.Location = new System.Drawing.Point(25, 189);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(115, 31);
+            this.btnGenerar.Size = new System.Drawing.Size(115, 35);
             this.btnGenerar.TabIndex = 0;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
@@ -97,10 +99,10 @@
             // btnGraficar
             // 
             this.btnGraficar.Enabled = false;
-            this.btnGraficar.Location = new System.Drawing.Point(182, 168);
+            this.btnGraficar.Location = new System.Drawing.Point(182, 189);
             this.btnGraficar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGraficar.Name = "btnGraficar";
-            this.btnGraficar.Size = new System.Drawing.Size(115, 31);
+            this.btnGraficar.Size = new System.Drawing.Size(115, 35);
             this.btnGraficar.TabIndex = 5;
             this.btnGraficar.Text = "Graficar";
             this.btnGraficar.UseVisualStyleBackColor = true;
@@ -115,9 +117,9 @@
             "15",
             "20",
             "25"});
-            this.boxIntervalos.Location = new System.Drawing.Point(182, 121);
+            this.boxIntervalos.Location = new System.Drawing.Point(182, 136);
             this.boxIntervalos.Name = "boxIntervalos";
-            this.boxIntervalos.Size = new System.Drawing.Size(120, 24);
+            this.boxIntervalos.Size = new System.Drawing.Size(120, 26);
             this.boxIntervalos.TabIndex = 4;
             // 
             // valor
@@ -140,17 +142,18 @@
             // 
             this.dgvUniforme.AllowUserToAddRows = false;
             this.dgvUniforme.AllowUserToDeleteRows = false;
+            this.dgvUniforme.BackgroundColor = System.Drawing.Color.Goldenrod;
             this.dgvUniforme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUniforme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nro,
             this.valor});
-            this.dgvUniforme.Location = new System.Drawing.Point(317, 29);
+            this.dgvUniforme.Location = new System.Drawing.Point(317, 33);
             this.dgvUniforme.Name = "dgvUniforme";
             this.dgvUniforme.ReadOnly = true;
             this.dgvUniforme.RowHeadersVisible = false;
             this.dgvUniforme.RowHeadersWidth = 51;
             this.dgvUniforme.RowTemplate.Height = 24;
-            this.dgvUniforme.Size = new System.Drawing.Size(439, 217);
+            this.dgvUniforme.Size = new System.Drawing.Size(439, 244);
             this.dgvUniforme.TabIndex = 25;
             // 
             // txtA
@@ -161,7 +164,7 @@
             0,
             0,
             131072});
-            this.txtA.Location = new System.Drawing.Point(182, 27);
+            this.txtA.Location = new System.Drawing.Point(182, 30);
             this.txtA.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -173,7 +176,7 @@
             0,
             -2147483648});
             this.txtA.Name = "txtA";
-            this.txtA.Size = new System.Drawing.Size(120, 22);
+            this.txtA.Size = new System.Drawing.Size(120, 25);
             this.txtA.TabIndex = 1;
             // 
             // txtB
@@ -184,7 +187,7 @@
             0,
             0,
             131072});
-            this.txtB.Location = new System.Drawing.Point(182, 59);
+            this.txtB.Location = new System.Drawing.Point(182, 66);
             this.txtB.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -196,7 +199,7 @@
             0,
             -2147483648});
             this.txtB.Name = "txtB";
-            this.txtB.Size = new System.Drawing.Size(120, 22);
+            this.txtB.Size = new System.Drawing.Size(120, 25);
             this.txtB.TabIndex = 2;
             this.txtB.Value = new decimal(new int[] {
             1,
@@ -206,14 +209,14 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(182, 87);
+            this.txtCantidad.Location = new System.Drawing.Point(182, 98);
             this.txtCantidad.Maximum = new decimal(new int[] {
             1000000,
             0,
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(120, 22);
+            this.txtCantidad.Size = new System.Drawing.Size(120, 25);
             this.txtCantidad.TabIndex = 3;
             this.txtCantidad.Value = new decimal(new int[] {
             10,
@@ -225,22 +228,24 @@
             // 
             this.dgvFrecuencias.AllowUserToAddRows = false;
             this.dgvFrecuencias.AllowUserToDeleteRows = false;
+            this.dgvFrecuencias.BackgroundColor = System.Drawing.Color.Goldenrod;
             this.dgvFrecuencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFrecuencias.Location = new System.Drawing.Point(25, 266);
+            this.dgvFrecuencias.Location = new System.Drawing.Point(25, 299);
             this.dgvFrecuencias.Name = "dgvFrecuencias";
             this.dgvFrecuencias.ReadOnly = true;
             this.dgvFrecuencias.RowHeadersVisible = false;
             this.dgvFrecuencias.RowHeadersWidth = 51;
             this.dgvFrecuencias.RowTemplate.Height = 24;
-            this.dgvFrecuencias.Size = new System.Drawing.Size(731, 146);
+            this.dgvFrecuencias.Size = new System.Drawing.Size(731, 164);
             this.dgvFrecuencias.TabIndex = 26;
             this.dgvFrecuencias.Visible = false;
             // 
             // Uniforme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::SIM_TP2.Properties.Resources._1;
+            this.ClientSize = new System.Drawing.Size(800, 506);
             this.Controls.Add(this.dgvFrecuencias);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtB);
@@ -249,10 +254,11 @@
             this.Controls.Add(this.boxIntervalos);
             this.Controls.Add(this.btnGraficar);
             this.Controls.Add(this.btnGenerar);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblA);
             this.Controls.Add(this.lblB);
+            this.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Uniforme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uniforme";
@@ -272,7 +278,6 @@
         private System.Windows.Forms.Label lblB;
         private System.Windows.Forms.Label lblA;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Button btnGraficar;
         private System.Windows.Forms.ComboBox boxIntervalos;
