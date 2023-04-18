@@ -35,13 +35,14 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.btnGraficar = new System.Windows.Forms.Button();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUniforme = new System.Windows.Forms.DataGridView();
             this.txtA = new System.Windows.Forms.NumericUpDown();
             this.txtB = new System.Windows.Forms.NumericUpDown();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).BeginInit();
@@ -79,7 +80,7 @@
             this.lblCantidad.BackColor = System.Drawing.Color.Goldenrod;
             this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblCantidad.Location = new System.Drawing.Point(22, 104);
+            this.lblCantidad.Location = new System.Drawing.Point(12, 100);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(169, 23);
             this.lblCantidad.TabIndex = 19;
@@ -124,22 +125,6 @@
             this.boxIntervalos.Name = "boxIntervalos";
             this.boxIntervalos.Size = new System.Drawing.Size(120, 31);
             this.boxIntervalos.TabIndex = 4;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 125;
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 125;
             // 
             // dgvUniforme
             // 
@@ -225,7 +210,7 @@
             this.txtCantidad.Size = new System.Drawing.Size(120, 30);
             this.txtCantidad.TabIndex = 3;
             this.txtCantidad.Value = new decimal(new int[] {
-            10,
+            100,
             0,
             0,
             0});
@@ -246,6 +231,34 @@
             this.dgvFrecuencias.TabIndex = 26;
             this.dgvFrecuencias.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Goldenrod;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(6, 141);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 21);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Cantidad de Intervalos:";
+            // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 200;
+            // 
             // Uniforme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -253,6 +266,7 @@
             this.BackgroundImage = global::SIM_TP2.Properties.Resources._1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFrecuencias);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.txtB);
@@ -270,7 +284,6 @@
             this.Name = "Uniforme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Uniforme";
-            this.Load += new System.EventHandler(this.Uniforme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).EndInit();
@@ -289,12 +302,13 @@
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Button btnGraficar;
         private System.Windows.Forms.ComboBox boxIntervalos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
         private System.Windows.Forms.DataGridView dgvUniforme;
         private System.Windows.Forms.NumericUpDown txtA;
         private System.Windows.Forms.NumericUpDown txtB;
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.DataGridView dgvFrecuencias;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }

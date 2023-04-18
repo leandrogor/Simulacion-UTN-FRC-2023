@@ -128,10 +128,5 @@ namespace SIM_TP2.Generadores
         {
             Show();
         }
-
-        private void Uniforme_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

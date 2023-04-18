@@ -18,6 +18,8 @@ namespace SIM_TP2.Generadores
         public Exponencial()
         {
             InitializeComponent();
+            boxIntervalos.SelectedIndex = 0;
+            cbxParam.SelectedIndex = 0;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -88,7 +90,7 @@ namespace SIM_TP2.Generadores
                 fila["Límite Inferior"] = limInf[i].ToString("0.0000");
                 fila["Límite Superior"] = limSup[i].ToString("0.0000");
                 fila["Frecuencia Observada"] = frecObs[i];
-                fila["Frecuencia Esperada"] = frecEsp[i];
+                fila["Frecuencia Esperada"] = frecEsp[i].ToString("0.0000");
                 tablefrecs.Rows.Add(fila);
             }
 
@@ -105,7 +107,7 @@ namespace SIM_TP2.Generadores
             for (int i = 0; i < n; i++)
             {
                 double psedef = Random.NextDouble();
-                double num = negativeExponentialGenerator(psedef, param);
+                double num = Math.Round(negativeExponentialGenerator(psedef, param), 4);
                 lista.Add(num);
                 dgvExponencial.Rows.Add((i+1).ToString(), (double)num);
 

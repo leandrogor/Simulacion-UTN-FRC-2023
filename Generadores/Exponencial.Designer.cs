@@ -33,8 +33,6 @@
             this.cbxParam = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.dgvExponencial = new System.Windows.Forms.DataGridView();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
             this.btnGraficar = new System.Windows.Forms.Button();
             this.btnGenerar = new System.Windows.Forms.Button();
@@ -42,6 +40,8 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtParam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExponencial)).BeginInit();
@@ -105,6 +105,11 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(120, 30);
             this.txtCantidad.TabIndex = 31;
+            this.txtCantidad.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // dgvExponencial
             // 
@@ -124,22 +129,6 @@
             this.dgvExponencial.RowTemplate.Height = 24;
             this.dgvExponencial.Size = new System.Drawing.Size(439, 244);
             this.dgvExponencial.TabIndex = 38;
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 125;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 125;
             // 
             // boxIntervalos
             // 
@@ -233,6 +222,22 @@
             this.label2.TabIndex = 42;
             this.label2.Text = "Parametros:";
             // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 200;
+            // 
             // Exponencial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -272,8 +277,6 @@
         private System.Windows.Forms.ComboBox cbxParam;
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.DataGridView dgvExponencial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.ComboBox boxIntervalos;
         private System.Windows.Forms.Button btnGraficar;
         private System.Windows.Forms.Button btnGenerar;
@@ -281,5 +284,7 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.DataGridView dgvFrecuencias;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }

@@ -76,7 +76,6 @@
             this.Name = "HistoUniforme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HistoUniforme";
-            this.Load += new System.EventHandler(this.HistoUniforme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chrUniforme)).EndInit();
             this.ResumeLayout(false);
 
