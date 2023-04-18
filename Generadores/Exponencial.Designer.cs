@@ -33,6 +33,8 @@
             this.cbxParam = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.dgvExponencial = new System.Windows.Forms.DataGridView();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.boxIntervalos = new System.Windows.Forms.ComboBox();
             this.btnGraficar = new System.Windows.Forms.Button();
             this.btnGenerar = new System.Windows.Forms.Button();
@@ -40,8 +42,6 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtParam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExponencial)).BeginInit();
@@ -130,6 +130,22 @@
             this.dgvExponencial.RowTemplate.Height = 24;
             this.dgvExponencial.Size = new System.Drawing.Size(439, 244);
             this.dgvExponencial.TabIndex = 38;
+            // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 200;
             // 
             // boxIntervalos
             // 
@@ -220,25 +236,9 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 23);
+            this.label2.Size = new System.Drawing.Size(93, 23);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Parametros:";
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 200;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 200;
+            this.label2.Text = "Parametro:";
             // 
             // Exponencial
             // 
@@ -264,7 +264,6 @@
             this.Name = "Exponencial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exponencial";
-            this.Load += new System.EventHandler(this.Exponencial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtParam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExponencial)).EndInit();

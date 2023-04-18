@@ -17,8 +17,8 @@ namespace SIM_TP2.Generadores
         public Normal()
         {
             InitializeComponent();
-            
-            
+            boxIntervalos.SelectedIndex = 0;
+            comboMetodo.SelectedIndex = 0;
         }
 
         public List<double> NormalSerie(int n, double media, double desv, NormalDistributionCalculator calculator)
@@ -27,7 +27,7 @@ namespace SIM_TP2.Generadores
             for(int i = 0; i<n; i++)
             {
                 double numeroGenerado = calculator.CalcularNumero(media, desv);
-                lista.Add(numeroGenerado);
+                lista.Add(Math.Round(numeroGenerado, 4));
             }
             return lista;
         }

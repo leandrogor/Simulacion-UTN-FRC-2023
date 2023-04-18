@@ -40,8 +40,6 @@ namespace SIM_TP2.Generadores
             this.btnGenerar = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNormal = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +48,8 @@ namespace SIM_TP2.Generadores
             this.label3 = new System.Windows.Forms.Label();
             this.comboMetodo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFrecuencias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNormal)).BeginInit();
@@ -71,7 +71,7 @@ namespace SIM_TP2.Generadores
             this.txtCantidad.Size = new System.Drawing.Size(135, 30);
             this.txtCantidad.TabIndex = 28;
             this.txtCantidad.Value = new decimal(new int[] {
-            10,
+            100,
             0,
             0,
             0});
@@ -150,22 +150,6 @@ namespace SIM_TP2.Generadores
             this.dgvFrecuencias.TabIndex = 33;
             this.dgvFrecuencias.Visible = false;
             this.dgvFrecuencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFrecuencias_CellContentClick);
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            this.valor.Width = 125;
-            // 
-            // nro
-            // 
-            this.nro.HeaderText = "Número";
-            this.nro.MinimumWidth = 6;
-            this.nro.Name = "nro";
-            this.nro.ReadOnly = true;
-            this.nro.Width = 125;
             // 
             // dgvNormal
             // 
@@ -292,7 +276,6 @@ namespace SIM_TP2.Generadores
             // comboMetodo
             // 
             this.comboMetodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboMetodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMetodo.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMetodo.FormattingEnabled = true;
             this.comboMetodo.Items.AddRange(new object[] {
@@ -317,6 +300,22 @@ namespace SIM_TP2.Generadores
             this.label4.TabIndex = 40;
             this.label4.Text = "Intervalos:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 200;
             // 
             // Normal
             // 
@@ -364,8 +363,6 @@ namespace SIM_TP2.Generadores
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.DataGridView dgvFrecuencias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
         private System.Windows.Forms.DataGridView dgvNormal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -374,5 +371,7 @@ namespace SIM_TP2.Generadores
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboMetodo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }

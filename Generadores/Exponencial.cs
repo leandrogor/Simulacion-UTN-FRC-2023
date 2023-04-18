@@ -186,11 +186,6 @@ namespace SIM_TP2.Generadores
         {
             Show();
         }
-
-        private void Exponencial_Load(object sender, EventArgs e)
-        {
-
-        }
     } 
 }
 
