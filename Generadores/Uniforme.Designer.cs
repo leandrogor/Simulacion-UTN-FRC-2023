@@ -41,6 +41,8 @@
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.dgvFrecuencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtB)).BeginInit();
@@ -245,6 +247,22 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Intervalos:";
             // 
+            // nro
+            // 
+            this.nro.HeaderText = "Número";
+            this.nro.MinimumWidth = 6;
+            this.nro.Name = "nro";
+            this.nro.ReadOnly = true;
+            this.nro.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.ReadOnly = true;
+            this.valor.Width = 200;
+            // 
             // Uniforme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -252,7 +270,6 @@
             this.BackgroundImage = global::SIM_TP2.Properties.Resources._1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 506);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvFrecuencias);
             this.Controls.Add(this.txtCantidad);
@@ -295,5 +312,7 @@
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.DataGridView dgvFrecuencias;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
     }
 }
