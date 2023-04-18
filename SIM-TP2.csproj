@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abst\Normal\ChartDTO.cs" />
     <Compile Include="Generadores\Exponencial.cs">
       <SubType>Form</SubType>
     </Compile>
