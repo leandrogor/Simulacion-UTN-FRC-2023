@@ -87,6 +87,7 @@
             this.btnNormal.TabIndex = 4;
             this.btnNormal.Text = "NORMAL";
             this.btnNormal.UseVisualStyleBackColor = true;
+            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
             // main
             // 
