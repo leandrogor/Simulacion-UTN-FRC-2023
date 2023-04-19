@@ -217,7 +217,7 @@ namespace SIM_TP2.Generadores
             // 
             // txtB
             // 
-            this.txtB.DecimalPlaces = 2;
+            this.txtB.DecimalPlaces = 4;
             this.txtB.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtB.Increment = new decimal(new int[] {
             1,
@@ -248,7 +248,7 @@ namespace SIM_TP2.Generadores
             // 
             // txtA
             // 
-            this.txtA.DecimalPlaces = 2;
+            this.txtA.DecimalPlaces = 4;
             this.txtA.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtA.Increment = new decimal(new int[] {
             1,
@@ -288,6 +288,7 @@ namespace SIM_TP2.Generadores
             // comboMetodo
             // 
             this.comboMetodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboMetodo.Enabled = false;
             this.comboMetodo.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMetodo.FormattingEnabled = true;
             this.comboMetodo.Items.AddRange(new object[] {

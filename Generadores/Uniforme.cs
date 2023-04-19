@@ -29,6 +29,7 @@ namespace SIM_TP2.Generadores
             if (txtCantidad.Text == "")
             {
                 txtCantidad.Text = "10";
+                MessageBox.Show("Se le ha asignado valor de 10 a la cantidad de valores.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             int n = int.Parse(txtCantidad.Text);  // tamaño de muestra
@@ -43,6 +44,7 @@ namespace SIM_TP2.Generadores
                 double temp = min; min = max; max = temp;
                 txtA.Text = min.ToString();
                 txtB.Text = max.ToString();
+                MessageBox.Show("Se han invertido los valores máximo y mínimo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             // Creación de los límites inferiores y superiores de los intervalos

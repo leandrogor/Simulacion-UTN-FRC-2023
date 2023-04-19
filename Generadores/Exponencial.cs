@@ -34,17 +34,20 @@ namespace SIM_TP2.Generadores
             int cantidadIntervalos = int.Parse(boxIntervalos.Text); // cantidad de intervalos
             List<double> exponentialNumbersList = negativeExponentialSerie(Muestra, lambdaOrMeanValidation((double)txtParam.Value));
             double correction = 0.0001;
+
             double maxx = exponentialNumbersList.Max<double>() + correction; // Limite inferior
             double minx = exponentialNumbersList.Min<double>(); // Limite superior
 
             double longintervalos = (maxx - minx) / cantidadIntervalos;
 
-
+            // Creamos 2 listas, una para cada limite
             double[] limInf = new double[cantidadIntervalos];
             double[] limSup = new double[cantidadIntervalos];
 
             double Lambda = lambdaOrMeanValidation((double)txtParam.Value);
             double[] frecEsp = new double[cantidadIntervalos];
+
+            // Se define lambda validando primero si es media, de serlo, se la da vuelta
             if (esMedia())
             {
                 Lambda = (1 / Lambda);
@@ -57,7 +60,8 @@ namespace SIM_TP2.Generadores
                 frecEsp[i] = (1 - (Math.Exp(-Lambda * limSup[i])) - (1 - (Math.Exp(-Lambda * limInf[i])))) * Muestra;
             }
 
-            // Se calculan las frecuencias observadas
+            // Se calculan las frecuencias observadas analizando la muestra total y luego
+            // evaluandola en cada intervalo
             int[] frecObs = new int[cantidadIntervalos];
 
             for (int i = 0; i < Muestra; i++)
@@ -145,7 +149,7 @@ namespace SIM_TP2.Generadores
         private double negativeExponentialGenerator(double pseudo, double param)
         {
 
-            if (cbxParam.SelectedItem.ToString() == "Media")
+            if (esMedia())
             {
                 double lambda = (1 / param);
                 return (-1 / lambda) * Math.Log(1 - pseudo);

@@ -57,16 +57,12 @@ namespace SIM_TP2.Generadores
             double amplitud = (max - min) / cantidadIntervalos;
             double[] limitesInferiores = new double[cantidadIntervalos];
             double[] limitesSuperiores = new double[cantidadIntervalos];
-            for (int i = 0; i < cantidadIntervalos; i++)
-            {
-                limitesInferiores[i] = min + i * amplitud;
-                limitesSuperiores[i] = limitesInferiores[i] + amplitud;
-            }
-
             // Cálculo de las frecuencias esperadas
             double[] frecuenciasEsperadas = new double[cantidadIntervalos];
             for (int i = 0; i < cantidadIntervalos; i++)
             {
+                limitesInferiores[i] = min + i * amplitud;
+                limitesSuperiores[i] = limitesInferiores[i] + amplitud;
                 //Marca de clase del intervalo.
                 double marcaDeClase = (limitesSuperiores[i] + limitesInferiores[i]) / 2;
 

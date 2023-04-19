@@ -51,7 +51,7 @@
             // txtParam
             // 
             this.txtParam.BackColor = System.Drawing.Color.LightYellow;
-            this.txtParam.DecimalPlaces = 2;
+            this.txtParam.DecimalPlaces = 4;
             this.txtParam.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParam.Increment = new decimal(new int[] {
             1,
@@ -68,7 +68,7 @@
             1,
             0,
             0,
-            0});
+            262144});
             this.txtParam.Name = "txtParam";
             this.txtParam.Size = new System.Drawing.Size(120, 30);
             this.txtParam.TabIndex = 4;
