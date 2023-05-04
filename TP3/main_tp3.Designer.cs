@@ -36,10 +36,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnGenerar = new System.Windows.Forms.Button();
+            this.btnIniciar = new System.Windows.Forms.Button();
+            this.dgvUniforme = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.destinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -75,9 +80,9 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(227, 155);
+            this.txtCantidad.Location = new System.Drawing.Point(331, 115);
             this.txtCantidad.Maximum = new decimal(new int[] {
-            1000000,
+            100000,
             0,
             0,
             0});
@@ -96,18 +101,18 @@
             this.lblCantidad.BackColor = System.Drawing.Color.Goldenrod;
             this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.Color.White;
-            this.lblCantidad.Location = new System.Drawing.Point(40, 162);
+            this.lblCantidad.Location = new System.Drawing.Point(40, 117);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(169, 23);
+            this.lblCantidad.Size = new System.Drawing.Size(177, 23);
             this.lblCantidad.TabIndex = 21;
-            this.lblCantidad.Text = "Cantidad de Valores:";
+            this.lblCantidad.Text = "Cantidad de Filas (N):";
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(227, 191);
+            this.numericUpDown1.Location = new System.Drawing.Point(331, 158);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            1000000,
+            100000,
             0,
             0,
             0});
@@ -115,7 +120,7 @@
             this.numericUpDown1.Size = new System.Drawing.Size(120, 30);
             this.numericUpDown1.TabIndex = 22;
             this.numericUpDown1.Value = new decimal(new int[] {
-            100,
+            50,
             0,
             0,
             0});
@@ -126,18 +131,18 @@
             this.label3.BackColor = System.Drawing.Color.Goldenrod;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(40, 198);
+            this.label3.Location = new System.Drawing.Point(40, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(169, 23);
+            this.label3.Size = new System.Drawing.Size(272, 23);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Cantidad de Valores:";
+            this.label3.Text = "Inicio de muestra de iteraciones (j)";
             // 
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(227, 231);
+            this.numericUpDown2.Location = new System.Drawing.Point(331, 212);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            1000000,
+            100000,
             0,
             0,
             0});
@@ -145,7 +150,7 @@
             this.numericUpDown2.Size = new System.Drawing.Size(120, 30);
             this.numericUpDown2.TabIndex = 24;
             this.numericUpDown2.Value = new decimal(new int[] {
-            100,
+            10,
             0,
             0,
             0});
@@ -156,29 +161,79 @@
             this.label4.BackColor = System.Drawing.Color.Goldenrod;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(40, 238);
+            this.label4.Location = new System.Drawing.Point(43, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(169, 23);
+            this.label4.Size = new System.Drawing.Size(269, 23);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Cantidad de Valores:";
+            this.label4.Text = "Cantidad de Vueltas a mostrar (i):";
             // 
-            // btnGenerar
+            // btnIniciar
             // 
-            this.btnGenerar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerar.Location = new System.Drawing.Point(133, 292);
-            this.btnGenerar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(115, 35);
-            this.btnGenerar.TabIndex = 26;
-            this.btnGenerar.Text = "Generar";
-            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnIniciar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciar.Location = new System.Drawing.Point(130, 321);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(115, 35);
+            this.btnIniciar.TabIndex = 26;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = true;
+            // 
+            // dgvUniforme
+            // 
+            this.dgvUniforme.AllowUserToDeleteRows = false;
+            this.dgvUniforme.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.dgvUniforme.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvUniforme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUniforme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.destinatario,
+            this.valor});
+            this.dgvUniforme.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvUniforme.Location = new System.Drawing.Point(536, 74);
+            this.dgvUniforme.Name = "dgvUniforme";
+            this.dgvUniforme.RowHeadersVisible = false;
+            this.dgvUniforme.RowHeadersWidth = 51;
+            this.dgvUniforme.RowTemplate.Height = 24;
+            this.dgvUniforme.Size = new System.Drawing.Size(439, 244);
+            this.dgvUniforme.TabIndex = 27;
+            this.dgvUniforme.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label5.Location = new System.Drawing.Point(536, 26);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(175, 31);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Tipo de destinatario";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.UseCompatibleTextRendering = true;
+            // 
+            // destinatario
+            // 
+            this.destinatario.HeaderText = "Tipo de destinatario";
+            this.destinatario.MinimumWidth = 6;
+            this.destinatario.Name = "destinatario";
+            this.destinatario.Width = 200;
+            // 
+            // valor
+            // 
+            this.valor.HeaderText = "Valor";
+            this.valor.MinimumWidth = 6;
+            this.valor.Name = "valor";
+            this.valor.Width = 200;
             // 
             // main_tp3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnGenerar);
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dgvUniforme);
+            this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.numericUpDown1);
@@ -193,6 +248,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,6 +264,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnGenerar;
+        private System.Windows.Forms.Button btnIniciar;
+        private System.Windows.Forms.DataGridView dgvUniforme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn destinatario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.Label label5;
     }
 }
