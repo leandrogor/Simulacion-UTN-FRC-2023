@@ -107,6 +107,7 @@
     <Compile Include="TP2\Utils\Integrantes.Designer.cs">
       <DependentUpon>Integrantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="TP3\ElementoProbabilidad.cs" />
     <Compile Include="TP3\main_tp3.cs">
       <SubType>Form</SubType>
     </Compile>

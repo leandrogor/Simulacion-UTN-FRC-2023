@@ -37,14 +37,12 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.dgvUniforme = new System.Windows.Forms.DataGridView();
+            this.dgvTipoDestinatario = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.destinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDestinatario)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -178,24 +176,21 @@
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
             // 
-            // dgvUniforme
+            // dgvTipoDestinatario
             // 
-            this.dgvUniforme.AllowUserToDeleteRows = false;
-            this.dgvUniforme.BackgroundColor = System.Drawing.Color.Goldenrod;
-            this.dgvUniforme.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvUniforme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUniforme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.destinatario,
-            this.valor});
-            this.dgvUniforme.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgvUniforme.Location = new System.Drawing.Point(536, 74);
-            this.dgvUniforme.Name = "dgvUniforme";
-            this.dgvUniforme.RowHeadersVisible = false;
-            this.dgvUniforme.RowHeadersWidth = 51;
-            this.dgvUniforme.RowTemplate.Height = 24;
-            this.dgvUniforme.Size = new System.Drawing.Size(439, 244);
-            this.dgvUniforme.TabIndex = 27;
-            this.dgvUniforme.TabStop = false;
+            this.dgvTipoDestinatario.AllowUserToDeleteRows = false;
+            this.dgvTipoDestinatario.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.dgvTipoDestinatario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvTipoDestinatario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoDestinatario.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvTipoDestinatario.Location = new System.Drawing.Point(536, 74);
+            this.dgvTipoDestinatario.Name = "dgvTipoDestinatario";
+            this.dgvTipoDestinatario.RowHeadersVisible = false;
+            this.dgvTipoDestinatario.RowHeadersWidth = 51;
+            this.dgvTipoDestinatario.RowTemplate.Height = 24;
+            this.dgvTipoDestinatario.Size = new System.Drawing.Size(672, 170);
+            this.dgvTipoDestinatario.TabIndex = 27;
+            this.dgvTipoDestinatario.TabStop = false;
             // 
             // label5
             // 
@@ -212,27 +207,13 @@
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label5.UseCompatibleTextRendering = true;
             // 
-            // destinatario
-            // 
-            this.destinatario.HeaderText = "Tipo de destinatario";
-            this.destinatario.MinimumWidth = 6;
-            this.destinatario.Name = "destinatario";
-            this.destinatario.Width = 200;
-            // 
-            // valor
-            // 
-            this.valor.HeaderText = "Valor";
-            this.valor.MinimumWidth = 6;
-            this.valor.Name = "valor";
-            this.valor.Width = 200;
-            // 
             // main_tp3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgvUniforme);
+            this.Controls.Add(this.dgvTipoDestinatario);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.label4);
@@ -248,7 +229,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUniforme)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDestinatario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,9 +246,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.DataGridView dgvUniforme;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinatario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
+        private System.Windows.Forms.DataGridView dgvTipoDestinatario;
         private System.Windows.Forms.Label label5;
     }
 }
