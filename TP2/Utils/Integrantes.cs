@@ -19,7 +19,7 @@ namespace SIM_TP2.Utils
 
         private void button1_Click(object sender, EventArgs e)
         {
-            main ventana = new main();
+            main_tp2 ventana = new main_tp2();
             ventana.Show();
             ventana.FormClosed += LogOut;
             Hide();

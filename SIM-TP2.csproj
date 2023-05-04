@@ -47,80 +47,95 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Generadores\Exponencial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Generadores\Exponencial.Designer.cs">
-      <DependentUpon>Exponencial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Generadores\Normal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Generadores\Normal.Designer.cs">
-      <DependentUpon>Normal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Generadores\Uniforme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Generadores\Uniforme.Designer.cs">
-      <DependentUpon>Uniforme.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Histogramas\HistoExponencial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Histogramas\HistoExponencial.Designer.cs">
-      <DependentUpon>HistoExponencial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Histogramas\HistoNormal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Histogramas\HistoNormal.Designer.cs">
-      <DependentUpon>HistoNormal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Histogramas\HistoUniforme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Histogramas\HistoUniforme.Designer.cs">
-      <DependentUpon>HistoUniforme.cs</DependentUpon>
-    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main.Designer.cs">
       <DependentUpon>main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Abst\Normal\BoxMullerMethod.cs" />
-    <Compile Include="Abst\Normal\ConvolutionMethod.cs" />
-    <Compile Include="Abst\Normal\NormalDistributionCalculator.cs" />
-    <Compile Include="Utils\Graficador.cs" />
-    <Compile Include="Utils\Integrantes.cs">
+    <Compile Include="TP2\Generadores\Exponencial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utils\Integrantes.Designer.cs">
+    <Compile Include="TP2\Generadores\Exponencial.Designer.cs">
+      <DependentUpon>Exponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP2\Generadores\Normal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP2\Generadores\Normal.Designer.cs">
+      <DependentUpon>Normal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP2\Generadores\Uniforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP2\Generadores\Uniforme.Designer.cs">
+      <DependentUpon>Uniforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP2\Histogramas\HistoExponencial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP2\Histogramas\HistoExponencial.Designer.cs">
+      <DependentUpon>HistoExponencial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP2\Histogramas\HistoNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP2\Histogramas\HistoNormal.Designer.cs">
+      <DependentUpon>HistoNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP2\Histogramas\HistoUniforme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP2\Histogramas\HistoUniforme.Designer.cs">
+      <DependentUpon>HistoUniforme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP2\main_tp2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP2\main_tp2.Designer.cs">
+      <DependentUpon>main_tp2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TP2\Abst\Normal\BoxMullerMethod.cs" />
+    <Compile Include="TP2\Abst\Normal\ConvolutionMethod.cs" />
+    <Compile Include="TP2\Abst\Normal\NormalDistributionCalculator.cs" />
+    <Compile Include="TP2\Utils\Graficador.cs" />
+    <Compile Include="TP2\Utils\Integrantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP2\Utils\Integrantes.Designer.cs">
       <DependentUpon>Integrantes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Generadores\Exponencial.resx">
-      <DependentUpon>Exponencial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Generadores\Normal.resx">
-      <DependentUpon>Normal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Generadores\Uniforme.resx">
-      <DependentUpon>Uniforme.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Histogramas\HistoExponencial.resx">
-      <DependentUpon>HistoExponencial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Histogramas\HistoNormal.resx">
-      <DependentUpon>HistoNormal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Histogramas\HistoUniforme.resx">
-      <DependentUpon>HistoUniforme.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="TP3\main_tp3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP3\main_tp3.Designer.cs">
+      <DependentUpon>main_tp3.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP2\Generadores\Exponencial.resx">
+      <DependentUpon>Exponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP2\Generadores\Normal.resx">
+      <DependentUpon>Normal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP2\Generadores\Uniforme.resx">
+      <DependentUpon>Uniforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP2\Histogramas\HistoExponencial.resx">
+      <DependentUpon>HistoExponencial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP2\Histogramas\HistoNormal.resx">
+      <DependentUpon>HistoNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP2\Histogramas\HistoUniforme.resx">
+      <DependentUpon>HistoUniforme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP2\main_tp2.resx">
+      <DependentUpon>main_tp2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,8 +147,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Utils\Integrantes.resx">
+    <EmbeddedResource Include="TP2\Utils\Integrantes.resx">
       <DependentUpon>Integrantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP3\main_tp3.resx">
+      <DependentUpon>main_tp3.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
