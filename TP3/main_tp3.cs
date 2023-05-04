@@ -16,8 +16,18 @@ namespace SIM_TP2.TP3
         {
             InitializeComponent();
 
-            dgvTipoDestinatario.Columns.Add("Nombre", "Nombre");
-            dgvTipoDestinatario.Columns.Add("Probabilidad", "Probabilidad");
+            setUpDgvTipoDestinatario();
+            setUpDgvSolicitaAsesor();
+
+
+
+
+        }
+
+        private void setUpDgvTipoDestinatario()
+        {
+            dgvTipoDestinatario.Columns.Add("tipoDestinatario", "Tipo de Destinatario");
+            dgvTipoDestinatario.Columns.Add("probabilidad", "Probabilidad");
 
             List<ElementoProbabilidad> elementos = new List<ElementoProbabilidad>();
             elementos.Add(new ElementoProbabilidad("Destinatario del mail era paciente de la clínica y había asistido en el último año", 0.6));
@@ -26,17 +36,40 @@ namespace SIM_TP2.TP3
 
             foreach (ElementoProbabilidad elemento in elementos)
             {
-                dgvTipoDestinatario.Rows.Add(elemento.Nombre, elemento.Probabilidad);
+                dgvTipoDestinatario.Rows.Add(elemento.Nombre, elemento.Probabilidad.ToString("N2"));
             }
 
-            dgvTipoDestinatario.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dgvTipoDestinatario.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
-            dgvTipoDestinatario.Columns[1].DefaultCellStyle.Format = "N2";
             dgvTipoDestinatario.Columns[0].ReadOnly = true;
             dgvTipoDestinatario.Columns[1].ReadOnly = false;
-            dgvTipoDestinatario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            //dgvTipoDestinatario.AutoSize();
+            dgvTipoDestinatario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dgvTipoDestinatario.ScrollBars = ScrollBars.None;
+            dgvTipoDestinatario.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvTipoDestinatario.AutoSize = true;
+            dgvTipoDestinatario.AllowUserToOrderColumns = false;
+        }
 
+        private void setUpDgvSolicitaAsesor()
+        {
+            dgvSolicitaAsesor.Columns.Add("tipoDestinatario", "Tipo de Destinatario");
+            dgvSolicitaAsesor.Columns.Add("probSolicitar", "Probabilidad Solicitar Asesor");
+
+            List<ElementoProbabilidad> elementos = new List<ElementoProbabilidad>();
+            elementos.Add(new ElementoProbabilidad("Destinatario del mail era paciente de la clínica y había asistido en el último año", 0.5));
+            elementos.Add(new ElementoProbabilidad("Destinatario del mail alguna vez anterior al último año había asistido a la clínica", 0.4));
+            elementos.Add(new ElementoProbabilidad("Destinatario del mail nunca había asistido a la clínica", 0.15));
+
+            foreach (ElementoProbabilidad elemento in elementos)
+            {
+                dgvSolicitaAsesor.Rows.Add(elemento.Nombre, elemento.Probabilidad.ToString("N2"));
+            }
+
+            dgvSolicitaAsesor.Columns[0].ReadOnly = true;
+            dgvSolicitaAsesor.Columns[1].ReadOnly = false;
+            dgvSolicitaAsesor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dgvSolicitaAsesor.ScrollBars = ScrollBars.None;
+            dgvSolicitaAsesor.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvSolicitaAsesor.AutoSize = true;
+            dgvSolicitaAsesor.AllowUserToOrderColumns = false;
         }
     }
 }

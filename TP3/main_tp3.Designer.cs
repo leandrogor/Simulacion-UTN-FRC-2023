@@ -39,10 +39,13 @@
             this.btnIniciar = new System.Windows.Forms.Button();
             this.dgvTipoDestinatario = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dgvSolicitaAsesor = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDestinatario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitaAsesor)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -78,7 +81,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(331, 115);
+            this.txtCantidad.Location = new System.Drawing.Point(340, 115);
             this.txtCantidad.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -99,7 +102,7 @@
             this.lblCantidad.BackColor = System.Drawing.Color.Goldenrod;
             this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.Color.White;
-            this.lblCantidad.Location = new System.Drawing.Point(40, 117);
+            this.lblCantidad.Location = new System.Drawing.Point(23, 115);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(177, 23);
             this.lblCantidad.TabIndex = 21;
@@ -108,7 +111,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(331, 158);
+            this.numericUpDown1.Location = new System.Drawing.Point(340, 158);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -129,7 +132,7 @@
             this.label3.BackColor = System.Drawing.Color.Goldenrod;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(40, 165);
+            this.label3.Location = new System.Drawing.Point(23, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(272, 23);
             this.label3.TabIndex = 23;
@@ -138,7 +141,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(331, 212);
+            this.numericUpDown2.Location = new System.Drawing.Point(340, 207);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -159,7 +162,7 @@
             this.label4.BackColor = System.Drawing.Color.Goldenrod;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(43, 214);
+            this.label4.Location = new System.Drawing.Point(23, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(269, 23);
             this.label4.TabIndex = 25;
@@ -168,7 +171,7 @@
             // btnIniciar
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(130, 321);
+            this.btnIniciar.Location = new System.Drawing.Point(62, 260);
             this.btnIniciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(115, 35);
@@ -178,17 +181,18 @@
             // 
             // dgvTipoDestinatario
             // 
+            this.dgvTipoDestinatario.AllowUserToAddRows = false;
             this.dgvTipoDestinatario.AllowUserToDeleteRows = false;
             this.dgvTipoDestinatario.BackgroundColor = System.Drawing.Color.Goldenrod;
             this.dgvTipoDestinatario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTipoDestinatario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoDestinatario.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgvTipoDestinatario.Location = new System.Drawing.Point(536, 74);
+            this.dgvTipoDestinatario.Location = new System.Drawing.Point(488, 74);
             this.dgvTipoDestinatario.Name = "dgvTipoDestinatario";
             this.dgvTipoDestinatario.RowHeadersVisible = false;
             this.dgvTipoDestinatario.RowHeadersWidth = 51;
             this.dgvTipoDestinatario.RowTemplate.Height = 24;
-            this.dgvTipoDestinatario.Size = new System.Drawing.Size(672, 170);
+            this.dgvTipoDestinatario.Size = new System.Drawing.Size(648, 114);
             this.dgvTipoDestinatario.TabIndex = 27;
             this.dgvTipoDestinatario.TabStop = false;
             // 
@@ -199,7 +203,7 @@
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label5.Location = new System.Drawing.Point(536, 26);
+            this.label5.Location = new System.Drawing.Point(488, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(175, 31);
             this.label5.TabIndex = 28;
@@ -207,11 +211,45 @@
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label5.UseCompatibleTextRendering = true;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label6.Location = new System.Drawing.Point(1220, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 31);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Solicita Asesor";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.UseCompatibleTextRendering = true;
+            // 
+            // dgvSolicitaAsesor
+            // 
+            this.dgvSolicitaAsesor.AllowUserToAddRows = false;
+            this.dgvSolicitaAsesor.AllowUserToDeleteRows = false;
+            this.dgvSolicitaAsesor.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.dgvSolicitaAsesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSolicitaAsesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSolicitaAsesor.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvSolicitaAsesor.Location = new System.Drawing.Point(1187, 74);
+            this.dgvSolicitaAsesor.Name = "dgvSolicitaAsesor";
+            this.dgvSolicitaAsesor.RowHeadersVisible = false;
+            this.dgvSolicitaAsesor.RowHeadersWidth = 51;
+            this.dgvSolicitaAsesor.RowTemplate.Height = 24;
+            this.dgvSolicitaAsesor.Size = new System.Drawing.Size(645, 114);
+            this.dgvSolicitaAsesor.TabIndex = 29;
+            this.dgvSolicitaAsesor.TabStop = false;
+            // 
             // main_tp3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.dgvSolicitaAsesor);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvTipoDestinatario);
             this.Controls.Add(this.btnIniciar);
@@ -230,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDestinatario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitaAsesor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +287,7 @@
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.DataGridView dgvTipoDestinatario;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataGridView dgvSolicitaAsesor;
     }
 }
