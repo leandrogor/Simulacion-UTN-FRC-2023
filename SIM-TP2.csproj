@@ -114,6 +114,8 @@
     <Compile Include="TP3\main_tp3.Designer.cs">
       <DependentUpon>main_tp3.cs</DependentUpon>
     </Compile>
+    <Compile Include="TP3\model\Experimento.cs" />
+    <Compile Include="TP3\util\Simulation.cs" />
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
