@@ -71,5 +71,10 @@ namespace SIM_TP2.TP3
             dgvSolicitaAsesor.AutoSize = true;
             dgvSolicitaAsesor.AllowUserToOrderColumns = false;
         }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
