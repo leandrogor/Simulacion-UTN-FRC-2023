@@ -109,7 +109,6 @@ namespace SIM_TP2.TP3
 
                         dataGridView1.Rows[i - 1].Cells[2].Value = dgvTipoDestinatario.Rows[2].Cells[0].Value.ToString();
 
-
                     }
 
                     if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[1].Value) && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[1].Value))
