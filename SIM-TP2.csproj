@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\Bianca\Descargas\Guna.UI\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -107,7 +114,19 @@
     <Compile Include="TP2\Utils\Integrantes.Designer.cs">
       <DependentUpon>Integrantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="TP3\consigna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP3\consigna.Designer.cs">
+      <DependentUpon>consigna.cs</DependentUpon>
+    </Compile>
     <Compile Include="TP3\ElementoProbabilidad.cs" />
+    <Compile Include="TP3\presentaciontp3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP3\presentaciontp3.Designer.cs">
+      <DependentUpon>presentaciontp3.cs</DependentUpon>
+    </Compile>
     <Compile Include="TP3\main_tp3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +172,12 @@
     <EmbeddedResource Include="TP2\Utils\Integrantes.resx">
       <DependentUpon>Integrantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TP3\consigna.resx">
+      <DependentUpon>consigna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP3\presentaciontp3.resx">
+      <DependentUpon>presentaciontp3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TP3\main_tp3.resx">
       <DependentUpon>main_tp3.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,6 +217,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Diseño sin título %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buttonwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Portadamain .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copia de buttonwhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copia de buttonwhite %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintp3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintp3 %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

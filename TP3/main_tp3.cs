@@ -65,6 +65,7 @@ namespace SIM_TP2.TP3
 
             dgvSolicitaAsesor.Columns[0].ReadOnly = true;
             dgvSolicitaAsesor.Columns[1].ReadOnly = false;
+            
             dgvSolicitaAsesor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dgvSolicitaAsesor.ScrollBars = ScrollBars.None;
             dgvSolicitaAsesor.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -73,6 +74,21 @@ namespace SIM_TP2.TP3
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void main_tp3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvTipoDestinatario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

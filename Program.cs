@@ -17,7 +17,7 @@ namespace SIM_TP2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main_tp3());
+            Application.Run(new main());
         }
     }
 }

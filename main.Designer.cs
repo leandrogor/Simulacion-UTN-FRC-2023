@@ -28,38 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.label2 = new System.Windows.Forms.Label();
-            this.btnTP1 = new System.Windows.Forms.Button();
-            this.btnTP2 = new System.Windows.Forms.Button();
-            this.btnTP3 = new System.Windows.Forms.Button();
+            this.btnTP1 = new Guna.UI.WinForms.GunaButton();
+            this.btnTP2 = new Guna.UI.WinForms.GunaButton();
+            this.btnTP3 = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label1.Location = new System.Drawing.Point(338, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 37);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Grupo 3";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.UseCompatibleTextRendering = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightYellow;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label2.Location = new System.Drawing.Point(181, 63);
+            this.label2.Location = new System.Drawing.Point(159, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(472, 37);
+            this.label2.Size = new System.Drawing.Size(554, 43);
             this.label2.TabIndex = 7;
             this.label2.Text = "TRABAJOS PRÁCTICOS DE SIMULACIÓN";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -67,76 +53,140 @@
             // 
             // btnTP1
             // 
-            this.btnTP1.BackgroundImage = global::SIM_TP2.Properties.Resources.Diseño_sin_título__8_;
+            this.btnTP1.AnimationHoverSpeed = 0.07F;
+            this.btnTP1.AnimationSpeed = 0.03F;
+            this.btnTP1.BackColor = System.Drawing.Color.Transparent;
+            this.btnTP1.BackgroundImage = global::SIM_TP2.Properties.Resources.buttonwhite;
+            this.btnTP1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTP1.BaseColor = System.Drawing.Color.Transparent;
+            this.btnTP1.BorderColor = System.Drawing.Color.Black;
             this.btnTP1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTP1.FlatAppearance.BorderSize = 0;
-            this.btnTP1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTP1.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTP1.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnTP1.Location = new System.Drawing.Point(65, 210);
+            this.btnTP1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnTP1.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTP1.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTP1.ForeColor = System.Drawing.Color.Black;
+            this.btnTP1.Image = null;
+            this.btnTP1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTP1.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnTP1.Location = new System.Drawing.Point(43, 255);
             this.btnTP1.Name = "btnTP1";
-            this.btnTP1.Size = new System.Drawing.Size(139, 47);
-            this.btnTP1.TabIndex = 9;
+            this.btnTP1.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnTP1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTP1.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnTP1.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.btnTP1.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTP1.Size = new System.Drawing.Size(246, 84);
+            this.btnTP1.TabIndex = 12;
             this.btnTP1.Text = "TP1";
-            this.btnTP1.UseVisualStyleBackColor = true;
-            this.btnTP1.Click += new System.EventHandler(this.btnTP1_Click);
+            this.btnTP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTP1.UseTransfarantBackground = true;
+            this.btnTP1.Click += new System.EventHandler(this.btnTP1_Click_1);
             // 
             // btnTP2
             // 
-            this.btnTP2.BackgroundImage = global::SIM_TP2.Properties.Resources.Diseño_sin_título__8_;
+            this.btnTP2.AnimationHoverSpeed = 0.07F;
+            this.btnTP2.AnimationSpeed = 0.03F;
+            this.btnTP2.BackColor = System.Drawing.Color.Transparent;
+            this.btnTP2.BackgroundImage = global::SIM_TP2.Properties.Resources.buttonwhite;
+            this.btnTP2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTP2.BaseColor = System.Drawing.Color.Transparent;
+            this.btnTP2.BorderColor = System.Drawing.Color.Black;
             this.btnTP2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTP2.FlatAppearance.BorderSize = 0;
-            this.btnTP2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTP2.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTP2.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnTP2.Location = new System.Drawing.Point(271, 210);
+            this.btnTP2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnTP2.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTP2.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTP2.ForeColor = System.Drawing.Color.Black;
+            this.btnTP2.Image = null;
+            this.btnTP2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTP2.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnTP2.Location = new System.Drawing.Point(305, 255);
             this.btnTP2.Name = "btnTP2";
-            this.btnTP2.Size = new System.Drawing.Size(139, 47);
-            this.btnTP2.TabIndex = 10;
+            this.btnTP2.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnTP2.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTP2.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnTP2.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.btnTP2.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTP2.Size = new System.Drawing.Size(256, 84);
+            this.btnTP2.TabIndex = 13;
             this.btnTP2.Text = "TP2";
-            this.btnTP2.UseVisualStyleBackColor = true;
-            this.btnTP2.Click += new System.EventHandler(this.btnTP2_Click);
+            this.btnTP2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTP2.UseTransfarantBackground = true;
+            this.btnTP2.Click += new System.EventHandler(this.btnTP2_Click_1);
             // 
             // btnTP3
             // 
-            this.btnTP3.BackgroundImage = global::SIM_TP2.Properties.Resources.Diseño_sin_título__8_;
+            this.btnTP3.AnimationHoverSpeed = 0.07F;
+            this.btnTP3.AnimationSpeed = 0.03F;
+            this.btnTP3.BackColor = System.Drawing.Color.Transparent;
+            this.btnTP3.BackgroundImage = global::SIM_TP2.Properties.Resources.buttonwhite;
+            this.btnTP3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTP3.BaseColor = System.Drawing.Color.Transparent;
+            this.btnTP3.BorderColor = System.Drawing.Color.Black;
             this.btnTP3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTP3.FlatAppearance.BorderSize = 0;
-            this.btnTP3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTP3.Font = new System.Drawing.Font("Palatino Linotype", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTP3.ForeColor = System.Drawing.Color.SeaShell;
-            this.btnTP3.Location = new System.Drawing.Point(494, 210);
+            this.btnTP3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnTP3.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTP3.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTP3.ForeColor = System.Drawing.Color.Black;
+            this.btnTP3.Image = null;
+            this.btnTP3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTP3.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnTP3.Location = new System.Drawing.Point(576, 255);
             this.btnTP3.Name = "btnTP3";
-            this.btnTP3.Size = new System.Drawing.Size(139, 47);
-            this.btnTP3.TabIndex = 11;
+            this.btnTP3.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnTP3.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTP3.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnTP3.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.btnTP3.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTP3.Size = new System.Drawing.Size(256, 84);
+            this.btnTP3.TabIndex = 14;
             this.btnTP3.Text = "TP3";
-            this.btnTP3.UseVisualStyleBackColor = true;
-            this.btnTP3.Click += new System.EventHandler(this.btnTP3_Click);
+            this.btnTP3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTP3.UseTransfarantBackground = true;
+            this.btnTP3.Click += new System.EventHandler(this.btnTP3_Click_1);
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.gunaLabel1.Location = new System.Drawing.Point(371, 155);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(100, 31);
+            this.gunaLabel1.TabIndex = 15;
+            this.gunaLabel1.Text = "Grupo 3";
+            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoSize = true;
+            this.BackgroundImage = global::SIM_TP2.Properties.Resources.Portadamain_;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(874, 487);
+            this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.btnTP3);
             this.Controls.Add(this.btnTP2);
             this.Controls.Add(this.btnTP1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TRABAJOS PRÁCTICOS DE SIMULACIÓN";
+            this.Text = "Trabajos practicos de simulacion";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnTP1;
-        private System.Windows.Forms.Button btnTP2;
-        private System.Windows.Forms.Button btnTP3;
+        private Guna.UI.WinForms.GunaButton btnTP1;
+        private Guna.UI.WinForms.GunaButton btnTP2;
+        private Guna.UI.WinForms.GunaButton btnTP3;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_tp3));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
@@ -42,6 +43,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dgvSolicitaAsesor = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND_tipo_dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_destinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND_solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Acumulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -53,9 +60,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BackColor = System.Drawing.Color.LightYellow;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label2.Location = new System.Drawing.Point(62, 37);
             this.label2.Name = "label2";
@@ -68,13 +75,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkOliveGreen;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LemonChiffon;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label1.Location = new System.Drawing.Point(84, 74);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 31);
+            this.label1.Size = new System.Drawing.Size(266, 30);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ejercicio nro 3: Nuevo Servicio";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,7 +108,7 @@
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
-            this.lblCantidad.BackColor = System.Drawing.Color.Goldenrod;
+            this.lblCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.Color.White;
             this.lblCantidad.Location = new System.Drawing.Point(23, 115);
@@ -131,7 +138,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Goldenrod;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(23, 165);
@@ -161,7 +168,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Goldenrod;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(23, 214);
@@ -186,7 +193,7 @@
             // 
             this.dgvTipoDestinatario.AllowUserToAddRows = false;
             this.dgvTipoDestinatario.AllowUserToDeleteRows = false;
-            this.dgvTipoDestinatario.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.dgvTipoDestinatario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvTipoDestinatario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTipoDestinatario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoDestinatario.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -198,6 +205,7 @@
             this.dgvTipoDestinatario.Size = new System.Drawing.Size(648, 114);
             this.dgvTipoDestinatario.TabIndex = 27;
             this.dgvTipoDestinatario.TabStop = false;
+            this.dgvTipoDestinatario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoDestinatario_CellContentClick);
             // 
             // label5
             // 
@@ -233,7 +241,7 @@
             // 
             this.dgvSolicitaAsesor.AllowUserToAddRows = false;
             this.dgvSolicitaAsesor.AllowUserToDeleteRows = false;
-            this.dgvSolicitaAsesor.BackgroundColor = System.Drawing.Color.Goldenrod;
+            this.dgvSolicitaAsesor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvSolicitaAsesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSolicitaAsesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitaAsesor.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -248,18 +256,78 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Numero,
+            this.RND_tipo_dest,
+            this.tipo_destinatario,
+            this.RND_solicita_asesor,
+            this.Solicita_asesor,
+            this.Acumulador});
+            this.dataGridView1.GridColor = System.Drawing.Color.DarkOliveGreen;
             this.dataGridView1.Location = new System.Drawing.Point(84, 357);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1681, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(1728, 389);
             this.dataGridView1.TabIndex = 31;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "Numero";
+            this.Numero.MinimumWidth = 6;
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            this.Numero.Width = 160;
+            // 
+            // RND_tipo_dest
+            // 
+            this.RND_tipo_dest.HeaderText = "RND Tipo Destinatario";
+            this.RND_tipo_dest.MinimumWidth = 6;
+            this.RND_tipo_dest.Name = "RND_tipo_dest";
+            this.RND_tipo_dest.ReadOnly = true;
+            this.RND_tipo_dest.Width = 180;
+            // 
+            // tipo_destinatario
+            // 
+            this.tipo_destinatario.HeaderText = "Tipo Destinatario";
+            this.tipo_destinatario.MinimumWidth = 6;
+            this.tipo_destinatario.Name = "tipo_destinatario";
+            this.tipo_destinatario.ReadOnly = true;
+            this.tipo_destinatario.Width = 125;
+            // 
+            // RND_solicita_asesor
+            // 
+            this.RND_solicita_asesor.HeaderText = "RND Solicita Asesor";
+            this.RND_solicita_asesor.MinimumWidth = 6;
+            this.RND_solicita_asesor.Name = "RND_solicita_asesor";
+            this.RND_solicita_asesor.ReadOnly = true;
+            this.RND_solicita_asesor.Width = 180;
+            // 
+            // Solicita_asesor
+            // 
+            this.Solicita_asesor.HeaderText = "Solicita Asesor";
+            this.Solicita_asesor.MinimumWidth = 6;
+            this.Solicita_asesor.Name = "Solicita_asesor";
+            this.Solicita_asesor.ReadOnly = true;
+            this.Solicita_asesor.Width = 180;
+            // 
+            // Acumulador
+            // 
+            this.Acumulador.HeaderText = "Acumulador solicita asesor";
+            this.Acumulador.MinimumWidth = 6;
+            this.Acumulador.Name = "Acumulador";
+            this.Acumulador.ReadOnly = true;
+            this.Acumulador.Width = 180;
             // 
             // main_tp3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::SIM_TP2.Properties.Resources.protada;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label6);
@@ -275,10 +343,13 @@
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main_tp3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo Práctico Número 3 de Simulación";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.main_tp3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -306,5 +377,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvSolicitaAsesor;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RND_tipo_dest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_destinatario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RND_solicita_asesor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Solicita_asesor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Acumulador;
     }
 }
