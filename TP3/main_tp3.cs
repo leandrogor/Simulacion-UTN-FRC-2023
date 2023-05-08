@@ -75,6 +75,86 @@ namespace SIM_TP2.TP3
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
+            double var1 = Convert.ToDouble(dgvTipoDestinatario.Rows[0].Cells[1].Value);
+            double var2 = Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[1].Value);
+            double var3 = Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[1].Value);
+
+            dataGridView1.Rows.Clear();
+
+            double suma = var1 + var2 + var3;
+            if (suma == 1)
+            {
+                Random random = new Random();
+
+                for (int i = 1; i <= Convert.ToInt32(txtCantidad.Text); i++)
+                {
+
+                    //falta validar la suma de ambas tablas sea igual a 1 y recien simular.
+
+
+                    dataGridView1.Rows.Add(1);
+                    dataGridView1.Rows[i - 1].Cells[0].Value = Convert.ToString(i);
+
+                    //GENERAR RND
+                    double rnd = random.NextDouble();
+                    dataGridView1.Rows[i - 1].Cells[1].Value = Math.Round(rnd, 4);
+
+
+                    //Mostrar tipo de Distinatario
+
+
+
+                    if (rnd > 0 && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[1].Value))
+                    {
+
+                        dataGridView1.Rows[i - 1].Cells[2].Value = dgvTipoDestinatario.Rows[2].Cells[0].Value.ToString();
+
+
+                    }
+
+                    if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[1].Value) && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[1].Value))
+                    {
+
+                        dataGridView1.Rows[i - 1].Cells[2].Value = dgvTipoDestinatario.Rows[1].Cells[0].Value.ToString();
+
+
+                    }
+
+                    if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[1].Value))
+                    {
+
+                        dataGridView1.Rows[i - 1].Cells[2].Value = dgvTipoDestinatario.Rows[0].Cells[0].Value.ToString();
+
+
+                    }
+
+
+                    //generar RND DE Asesor
+
+                    double rnd1 = random.NextDouble();
+                    dataGridView1.Rows[i - 1].Cells[3].Value = Math.Round(rnd1, 4);
+
+                    //Solicita asesor?
+
+                    int acumulador;
+
+                    foreach (DataGridViewRow dr in dataGridView1.Rows)
+                    {
+                        // if(dataGridView1.Rows[i-1].Cells[3].Value == dgvTipoDestinatario.Rows[0].Cells[0].Value.ToString())
+                        //if (rnd1 > 0 && rnd1 <= Convert.ToDouble(dgvSolicitaAsesor.Rows[1].Cells[1].Value))
+                        // {
+                        {
+                            dataGridView1.Rows[i - 1].Cells[4].Value = i + 1;
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+
+                MessageBox.Show("La suma de las probabilidades debe ser igual a 1");
+            }
 
         }
 
