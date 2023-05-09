@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.TP3
 {
@@ -122,10 +116,9 @@ namespace SIM_TP2.TP3
             Random random = new Random();
             int N = Convert.ToInt32(txtCantidad.Text);
 
-            //Validaciones para los valores de entrada
+            // Validaciones para los valores de entrada
             if (N < cantidadDeVueltas)
             {
-
                 cantidadDeVueltas = N;
             }
             if (N < inicioDeMuestra)
@@ -146,10 +139,10 @@ namespace SIM_TP2.TP3
             for (int i = 1; i <= N; i++)
             {
 
-                //GENERAR RND
+                // GENERAR RND
                 double rnd = random.NextDouble();
 
-                //Mostrar tipo de Distinatario
+                // Mostrar tipo de Distinatario
 
                 string tipoDestinatario = null;
 
@@ -161,7 +154,6 @@ namespace SIM_TP2.TP3
                 if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[2].Value) && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[2].Value))
                 {
                     tipoDestinatario = tipoAlgunaVez;
-
                 }
 
                 if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[2].Value))
@@ -169,12 +161,12 @@ namespace SIM_TP2.TP3
                     tipoDestinatario = tipoNunca;
                 }
 
-                //generar RND DE Asesor
+                // Generar RND DE Asesor
 
                 double rndAsesor = random.NextDouble();
                 bool solicitaAsesor = false;
 
-                //Solicita asesor?
+                // Solicita asesor?
                 if (tipoDestinatario.Equals(tipoEraPaciente))
                 {
                     if (rndAsesor < Convert.ToDouble(dgvSolicitaAsesor.Rows[0].Cells[1].Value)) solicitaAsesor = true;
@@ -192,7 +184,7 @@ namespace SIM_TP2.TP3
 
                 if (solicitaAsesor) acumuladorSolicitaAsesor++;
 
-                //Si está dentro del rango, mostrarlo..
+                // Si está dentro del rango, mostrarlo..
                 if (inicioDeMuestra <= i && i <= finDeMuestra)
                 {
                     dataGridView1.Rows.Add(1);
@@ -236,7 +228,6 @@ namespace SIM_TP2.TP3
                 return true;
             }
             return false;
-
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)
