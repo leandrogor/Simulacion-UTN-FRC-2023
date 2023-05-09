@@ -33,22 +33,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.iteracionestxt = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.vueltastxt = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnIniciar = new System.Windows.Forms.Button();
             this.dgvTipoDestinatario = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.dgvSolicitaAsesor = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RND_tipo_dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_destinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RND_solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Acumulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUltimaFila = new System.Windows.Forms.DataGridView();
             this.NumeroUltima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RND_tipo_destinatario_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,10 +47,18 @@
             this.RND_solicita_asesor_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solicita_asesor_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acum_solicita_asesor_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
+            this.ultfila = new Guna.UI.WinForms.GunaLabel();
+            this.btnIniciar = new Guna.UI.WinForms.GunaButton();
+            this.volver = new Guna.UI.WinForms.GunaButton();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND_tipo_dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_destinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND_solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Acumulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iteracionestxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vueltastxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDestinatario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitaAsesor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,10 +72,9 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label2.Location = new System.Drawing.Point(43, 17);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(319, 31);
+            this.label2.Size = new System.Drawing.Size(398, 37);
             this.label2.TabIndex = 8;
             this.label2.Text = "Trabajo Práctico Nro 3 de Simulación";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -86,13 +84,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LemonChiffon;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label1.Location = new System.Drawing.Point(63, 60);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1041, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 25);
+            this.label1.Size = new System.Drawing.Size(296, 33);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ejercicio nro 3: Nuevo Servicio";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,15 +98,15 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(255, 93);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCantidad.Location = new System.Drawing.Point(357, 114);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(90, 26);
+            this.txtCantidad.Size = new System.Drawing.Size(120, 30);
             this.txtCantidad.TabIndex = 20;
             this.txtCantidad.Value = new decimal(new int[] {
             100,
@@ -121,29 +118,28 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.Color.White;
-            this.lblCantidad.Location = new System.Drawing.Point(17, 93);
-            this.lblCantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCantidad.Location = new System.Drawing.Point(18, 113);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(152, 19);
+            this.lblCantidad.Size = new System.Drawing.Size(194, 24);
             this.lblCantidad.TabIndex = 21;
             this.lblCantidad.Text = "Cantidad de Filas (N):";
             // 
-            // numericUpDown1
+            // iteracionestxt
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(255, 128);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.iteracionestxt.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iteracionestxt.Location = new System.Drawing.Point(357, 158);
+            this.iteracionestxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iteracionestxt.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(90, 26);
-            this.numericUpDown1.TabIndex = 22;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.iteracionestxt.Name = "iteracionestxt";
+            this.iteracionestxt.Size = new System.Drawing.Size(120, 30);
+            this.iteracionestxt.TabIndex = 22;
+            this.iteracionestxt.Value = new decimal(new int[] {
             50,
             0,
             0,
@@ -153,29 +149,28 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(17, 134);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(18, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 19);
+            this.label3.Size = new System.Drawing.Size(308, 24);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Inicio de muestra de iteraciones (j)";
+            this.label3.Text = "Inicio de muestra de iteraciones (j):";
             // 
-            // numericUpDown2
+            // vueltastxt
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(255, 168);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.vueltastxt.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vueltastxt.Location = new System.Drawing.Point(357, 207);
+            this.vueltastxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.vueltastxt.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(90, 26);
-            this.numericUpDown2.TabIndex = 24;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.vueltastxt.Name = "vueltastxt";
+            this.vueltastxt.Size = new System.Drawing.Size(120, 30);
+            this.vueltastxt.TabIndex = 24;
+            this.vueltastxt.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -185,26 +180,13 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(17, 174);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(18, 213);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(229, 19);
+            this.label4.Size = new System.Drawing.Size(296, 24);
             this.label4.TabIndex = 25;
             this.label4.Text = "Cantidad de Vueltas a mostrar (i):";
-            // 
-            // btnIniciar
-            // 
-            this.btnIniciar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(46, 211);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(86, 28);
-            this.btnIniciar.TabIndex = 26;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // dgvTipoDestinatario
             // 
@@ -212,50 +194,19 @@
             this.dgvTipoDestinatario.AllowUserToDeleteRows = false;
             this.dgvTipoDestinatario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvTipoDestinatario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTipoDestinatario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoDestinatario.ColumnHeadersHeight = 29;
+            this.dgvTipoDestinatario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvTipoDestinatario.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgvTipoDestinatario.Location = new System.Drawing.Point(366, 60);
-            this.dgvTipoDestinatario.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvTipoDestinatario.Location = new System.Drawing.Point(505, 97);
+            this.dgvTipoDestinatario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvTipoDestinatario.Name = "dgvTipoDestinatario";
             this.dgvTipoDestinatario.RowHeadersVisible = false;
             this.dgvTipoDestinatario.RowHeadersWidth = 51;
             this.dgvTipoDestinatario.RowTemplate.Height = 24;
-            this.dgvTipoDestinatario.Size = new System.Drawing.Size(486, 93);
+            this.dgvTipoDestinatario.Size = new System.Drawing.Size(645, 114);
             this.dgvTipoDestinatario.TabIndex = 27;
             this.dgvTipoDestinatario.TabStop = false;
             this.dgvTipoDestinatario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoDestinatario_CellContentClick);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label5.Location = new System.Drawing.Point(366, 21);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 25);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Tipo de destinatario";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.UseCompatibleTextRendering = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label6.Location = new System.Drawing.Point(915, 21);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 25);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Solicita Asesor";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.UseCompatibleTextRendering = true;
             // 
             // dgvSolicitaAsesor
             // 
@@ -263,16 +214,17 @@
             this.dgvSolicitaAsesor.AllowUserToDeleteRows = false;
             this.dgvSolicitaAsesor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvSolicitaAsesor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSolicitaAsesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSolicitaAsesor.ColumnHeadersHeight = 29;
+            this.dgvSolicitaAsesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSolicitaAsesor.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgvSolicitaAsesor.Location = new System.Drawing.Point(890, 60);
-            this.dgvSolicitaAsesor.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvSolicitaAsesor.Location = new System.Drawing.Point(1244, 97);
+            this.dgvSolicitaAsesor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvSolicitaAsesor.Name = "dgvSolicitaAsesor";
             this.dgvSolicitaAsesor.RowHeadersVisible = false;
             this.dgvSolicitaAsesor.RowHeadersWidth = 51;
             this.dgvSolicitaAsesor.RowTemplate.Height = 24;
-            this.dgvSolicitaAsesor.Size = new System.Drawing.Size(484, 93);
-            this.dgvSolicitaAsesor.TabIndex = 29;
+            this.dgvSolicitaAsesor.Size = new System.Drawing.Size(645, 114);
+            this.dgvSolicitaAsesor.TabIndex = 27;
             this.dgvSolicitaAsesor.TabStop = false;
             // 
             // dataGridView1
@@ -287,15 +239,163 @@
             this.Solicita_asesor,
             this.Acumulador});
             this.dataGridView1.GridColor = System.Drawing.Color.DarkOliveGreen;
-            this.dataGridView1.Location = new System.Drawing.Point(63, 290);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(83, 323);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1296, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(1728, 418);
             this.dataGridView1.TabIndex = 31;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Visible = false;
+            // 
+            // dgvUltimaFila
+            // 
+            this.dgvUltimaFila.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dgvUltimaFila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUltimaFila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.NumeroUltima,
+            this.RND_tipo_destinatario_ultima,
+            this.tipo_destinatario_ultima,
+            this.RND_solicita_asesor_ultima,
+            this.solicita_asesor_ultima,
+            this.acum_solicita_asesor_ultima});
+            this.dgvUltimaFila.Location = new System.Drawing.Point(83, 843);
+            this.dgvUltimaFila.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUltimaFila.Name = "dgvUltimaFila";
+            this.dgvUltimaFila.RowHeadersWidth = 51;
+            this.dgvUltimaFila.Size = new System.Drawing.Size(1498, 86);
+            this.dgvUltimaFila.TabIndex = 32;
+            this.dgvUltimaFila.Visible = false;
+            // 
+            // NumeroUltima
+            // 
+            this.NumeroUltima.Frozen = true;
+            this.NumeroUltima.HeaderText = "Numero";
+            this.NumeroUltima.MinimumWidth = 6;
+            this.NumeroUltima.Name = "NumeroUltima";
+            this.NumeroUltima.ReadOnly = true;
+            this.NumeroUltima.Width = 125;
+            // 
+            // RND_tipo_destinatario_ultima
+            // 
+            this.RND_tipo_destinatario_ultima.Frozen = true;
+            this.RND_tipo_destinatario_ultima.HeaderText = "RND Tipo Destinatario";
+            this.RND_tipo_destinatario_ultima.MinimumWidth = 6;
+            this.RND_tipo_destinatario_ultima.Name = "RND_tipo_destinatario_ultima";
+            this.RND_tipo_destinatario_ultima.ReadOnly = true;
+            this.RND_tipo_destinatario_ultima.Width = 125;
+            // 
+            // tipo_destinatario_ultima
+            // 
+            this.tipo_destinatario_ultima.Frozen = true;
+            this.tipo_destinatario_ultima.HeaderText = "Tipo Destinatario";
+            this.tipo_destinatario_ultima.MinimumWidth = 6;
+            this.tipo_destinatario_ultima.Name = "tipo_destinatario_ultima";
+            this.tipo_destinatario_ultima.ReadOnly = true;
+            this.tipo_destinatario_ultima.Width = 125;
+            // 
+            // RND_solicita_asesor_ultima
+            // 
+            this.RND_solicita_asesor_ultima.Frozen = true;
+            this.RND_solicita_asesor_ultima.HeaderText = "RND Solicita Asesor";
+            this.RND_solicita_asesor_ultima.MinimumWidth = 6;
+            this.RND_solicita_asesor_ultima.Name = "RND_solicita_asesor_ultima";
+            this.RND_solicita_asesor_ultima.ReadOnly = true;
+            this.RND_solicita_asesor_ultima.Width = 125;
+            // 
+            // solicita_asesor_ultima
+            // 
+            this.solicita_asesor_ultima.Frozen = true;
+            this.solicita_asesor_ultima.HeaderText = "Solicita Asesor";
+            this.solicita_asesor_ultima.MinimumWidth = 6;
+            this.solicita_asesor_ultima.Name = "solicita_asesor_ultima";
+            this.solicita_asesor_ultima.ReadOnly = true;
+            this.solicita_asesor_ultima.Width = 125;
+            // 
+            // acum_solicita_asesor_ultima
+            // 
+            this.acum_solicita_asesor_ultima.Frozen = true;
+            this.acum_solicita_asesor_ultima.HeaderText = "Acumulador solicita asesor";
+            this.acum_solicita_asesor_ultima.MinimumWidth = 6;
+            this.acum_solicita_asesor_ultima.Name = "acum_solicita_asesor_ultima";
+            this.acum_solicita_asesor_ultima.ReadOnly = true;
+            this.acum_solicita_asesor_ultima.Width = 125;
+            // 
+            // ultfila
+            // 
+            this.ultfila.AutoSize = true;
+            this.ultfila.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ultfila.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultfila.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ultfila.Location = new System.Drawing.Point(80, 815);
+            this.ultfila.Name = "ultfila";
+            this.ultfila.Size = new System.Drawing.Size(100, 24);
+            this.ultfila.TabIndex = 34;
+            this.ultfila.Text = "Ultima Fila";
+            this.ultfila.Visible = false;
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.AnimationHoverSpeed = 0.07F;
+            this.btnIniciar.AnimationSpeed = 0.03F;
+            this.btnIniciar.BackColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite__2_;
+            this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIniciar.BaseColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.BorderColor = System.Drawing.Color.Black;
+            this.btnIniciar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIniciar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnIniciar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnIniciar.Font = new System.Drawing.Font("Perpetua Titling MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciar.ForeColor = System.Drawing.Color.White;
+            this.btnIniciar.Image = null;
+            this.btnIniciar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnIniciar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnIniciar.Location = new System.Drawing.Point(74, 259);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnIniciar.OnHoverForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.btnIniciar.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.btnIniciar.OnPressedColor = System.Drawing.Color.White;
+            this.btnIniciar.Size = new System.Drawing.Size(209, 59);
+            this.btnIniciar.TabIndex = 35;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnIniciar.UseTransfarantBackground = true;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // volver
+            // 
+            this.volver.AnimationHoverSpeed = 0.07F;
+            this.volver.AnimationSpeed = 0.03F;
+            this.volver.BackColor = System.Drawing.Color.Transparent;
+            this.volver.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite__2_;
+            this.volver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.volver.BaseColor = System.Drawing.Color.Transparent;
+            this.volver.BorderColor = System.Drawing.Color.Black;
+            this.volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.volver.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.volver.FocusedColor = System.Drawing.Color.Empty;
+            this.volver.Font = new System.Drawing.Font("Perpetua Titling MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.volver.ForeColor = System.Drawing.Color.White;
+            this.volver.Image = null;
+            this.volver.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.volver.ImageSize = new System.Drawing.Size(20, 20);
+            this.volver.Location = new System.Drawing.Point(1602, 870);
+            this.volver.Name = "volver";
+            this.volver.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.volver.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.volver.OnHoverForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.volver.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.volver.OnPressedColor = System.Drawing.Color.White;
+            this.volver.Size = new System.Drawing.Size(209, 59);
+            this.volver.TabIndex = 36;
+            this.volver.Text = "Volver";
+            this.volver.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.volver.UseTransfarantBackground = true;
+            this.volver.Click += new System.EventHandler(this.volver_Click);
             // 
             // Numero
             // 
@@ -319,7 +419,7 @@
             this.tipo_destinatario.MinimumWidth = 6;
             this.tipo_destinatario.Name = "tipo_destinatario";
             this.tipo_destinatario.ReadOnly = true;
-            this.tipo_destinatario.Width = 125;
+            this.tipo_destinatario.Width = 130;
             // 
             // RND_solicita_asesor
             // 
@@ -345,89 +445,23 @@
             this.Acumulador.ReadOnly = true;
             this.Acumulador.Width = 180;
             // 
-            // dgvUltimaFila
-            // 
-            this.dgvUltimaFila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUltimaFila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NumeroUltima,
-            this.RND_tipo_destinatario_ultima,
-            this.tipo_destinatario_ultima,
-            this.RND_solicita_asesor_ultima,
-            this.solicita_asesor_ultima,
-            this.acum_solicita_asesor_ultima});
-            this.dgvUltimaFila.Location = new System.Drawing.Point(63, 740);
-            this.dgvUltimaFila.Name = "dgvUltimaFila";
-            this.dgvUltimaFila.Size = new System.Drawing.Size(998, 70);
-            this.dgvUltimaFila.TabIndex = 32;
-            // 
-            // NumeroUltima
-            // 
-            this.NumeroUltima.Frozen = true;
-            this.NumeroUltima.HeaderText = "Numero";
-            this.NumeroUltima.Name = "NumeroUltima";
-            this.NumeroUltima.ReadOnly = true;
-            // 
-            // RND_tipo_destinatario_ultima
-            // 
-            this.RND_tipo_destinatario_ultima.Frozen = true;
-            this.RND_tipo_destinatario_ultima.HeaderText = "RND Tipo Destinatario";
-            this.RND_tipo_destinatario_ultima.Name = "RND_tipo_destinatario_ultima";
-            this.RND_tipo_destinatario_ultima.ReadOnly = true;
-            // 
-            // tipo_destinatario_ultima
-            // 
-            this.tipo_destinatario_ultima.Frozen = true;
-            this.tipo_destinatario_ultima.HeaderText = "Tipo Destinatario";
-            this.tipo_destinatario_ultima.Name = "tipo_destinatario_ultima";
-            this.tipo_destinatario_ultima.ReadOnly = true;
-            // 
-            // RND_solicita_asesor_ultima
-            // 
-            this.RND_solicita_asesor_ultima.Frozen = true;
-            this.RND_solicita_asesor_ultima.HeaderText = "RND Solicita Asesor";
-            this.RND_solicita_asesor_ultima.Name = "RND_solicita_asesor_ultima";
-            this.RND_solicita_asesor_ultima.ReadOnly = true;
-            // 
-            // solicita_asesor_ultima
-            // 
-            this.solicita_asesor_ultima.Frozen = true;
-            this.solicita_asesor_ultima.HeaderText = "Solicita Asesor";
-            this.solicita_asesor_ultima.Name = "solicita_asesor_ultima";
-            this.solicita_asesor_ultima.ReadOnly = true;
-            // 
-            // acum_solicita_asesor_ultima
-            // 
-            this.acum_solicita_asesor_ultima.Frozen = true;
-            this.acum_solicita_asesor_ultima.HeaderText = "Acumulador solicita asesor";
-            this.acum_solicita_asesor_ultima.Name = "acum_solicita_asesor_ultima";
-            this.acum_solicita_asesor_ultima.ReadOnly = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(60, 706);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Ultima fila";
-            // 
             // main_tp3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::SIM_TP2.Properties.Resources.protada;
-            this.ClientSize = new System.Drawing.Size(1426, 839);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(1901, 1033);
+            this.Controls.Add(this.volver);
+            this.Controls.Add(this.btnIniciar);
+            this.Controls.Add(this.ultfila);
             this.Controls.Add(this.dgvUltimaFila);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvSolicitaAsesor);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvTipoDestinatario);
-            this.Controls.Add(this.btnIniciar);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.vueltastxt);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.iteracionestxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblCantidad);
@@ -435,15 +469,15 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "main_tp3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo Práctico Número 3 de Simulación";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.main_tp3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iteracionestxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vueltastxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoDestinatario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitaAsesor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -459,29 +493,28 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown iteracionestxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown vueltastxt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.DataGridView dgvTipoDestinatario;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dgvSolicitaAsesor;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RND_tipo_dest;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_destinatario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RND_solicita_asesor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Solicita_asesor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Acumulador;
         private System.Windows.Forms.DataGridView dgvUltimaFila;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroUltima;
         private System.Windows.Forms.DataGridViewTextBoxColumn RND_tipo_destinatario_ultima;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_destinatario_ultima;
         private System.Windows.Forms.DataGridViewTextBoxColumn RND_solicita_asesor_ultima;
         private System.Windows.Forms.DataGridViewTextBoxColumn solicita_asesor_ultima;
         private System.Windows.Forms.DataGridViewTextBoxColumn acum_solicita_asesor_ultima;
+        private Guna.UI.WinForms.GunaLabel ultfila;
+        private Guna.UI.WinForms.GunaButton btnIniciar;
+        private Guna.UI.WinForms.GunaButton volver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RND_tipo_dest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_destinatario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RND_solicita_asesor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Solicita_asesor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Acumulador;
     }
 }

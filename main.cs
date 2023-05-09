@@ -8,6 +8,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -30,6 +31,10 @@ namespace SIM_TP2
         private void btnTP1_Click_1(object sender, EventArgs e)
         {
             Process.Start("https://docs.google.com/spreadsheets/d/1EnwSdqRv1e5qPhd1Rg8W9G3Qgj8OqPo5J1cwQzCiu6g/edit?usp=sharing");
+            Hide();
+            
+            main ventana = new main();
+            ventana.Show();
         }
 
         private void btnTP3_Click_1(object sender, EventArgs e)

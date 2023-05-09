@@ -58,7 +58,7 @@
             this.btnTP3.Image = null;
             this.btnTP3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTP3.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTP3.Location = new System.Drawing.Point(537, 304);
+            this.btnTP3.Location = new System.Drawing.Point(550, 304);
             this.btnTP3.Name = "btnTP3";
             this.btnTP3.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnTP3.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -89,7 +89,7 @@
             this.consigna.Image = null;
             this.consigna.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.consigna.ImageSize = new System.Drawing.Size(20, 20);
-            this.consigna.Location = new System.Drawing.Point(194, 304);
+            this.consigna.Location = new System.Drawing.Point(207, 304);
             this.consigna.Name = "consigna";
             this.consigna.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.consigna.OnHoverBorderColor = System.Drawing.Color.Black;

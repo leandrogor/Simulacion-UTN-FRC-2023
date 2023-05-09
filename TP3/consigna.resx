@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="gunaLabel3.Text" xml:space="preserve">
+    <value>"Realizar un programa que efectúe la simulación de un sistema utilizando la simulación de Montecarlo. A cada grupo le corresponderá un ejercicio distinto y con él deberá proporcionar la información solicitada referente a los resultados de la simulación en una pantalla de informes. El programa deberá soportar el ingreso de los datos mediante parámetros."</value>
+  </data>
+  <data name="gunaLabel4.Text" xml:space="preserve">
+    <value>Un centro de Salud de nuestra ciudad está lanzando un servicio de cobertura médica prepaga. A un grupo de la población seleccionado al azar se les envió un mail con la propuesta de adhesión al servicio y la posibilidad de solicitar la visita de agente asesor a través de un link.</value>
+  </data>
+  <data name="gunaLabel9.Text" xml:space="preserve">
+    <value>En cada caso se analiza si se solicito o no asesor. La clínica necesita estimar cuantas visitas de asesores serán solicitadas si continúa enviando mails a nuevos grupos de población. Hacer el estudio para una población de tamaño N</value>
+  </data>
+  <metadata name="gunaColorTransition1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

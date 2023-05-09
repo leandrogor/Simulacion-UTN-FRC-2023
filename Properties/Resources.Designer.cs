@@ -123,6 +123,16 @@ namespace SIM_TP2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Copia_de_buttonwhite__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Copia de buttonwhite (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos {
             get {
                 object obj = ResourceManager.GetObject("Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos", resourceCulture);
