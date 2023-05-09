@@ -44,6 +44,11 @@ namespace SIM_TP2.TP3
             dgvTipoDestinatario.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvTipoDestinatario.AutoSize = true;
             dgvTipoDestinatario.AllowUserToOrderColumns = false;
+
+            foreach (DataGridViewColumn columna in dgvTipoDestinatario.Columns)
+            {
+                columna.SortMode = DataGridViewColumnSortMode.NotSortable; // Deshabilitamos la ordenación en la columna
+            }
         }
 
         private void setUpDgvSolicitaAsesor()
@@ -69,6 +74,11 @@ namespace SIM_TP2.TP3
             dgvSolicitaAsesor.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dgvSolicitaAsesor.AutoSize = true;
             dgvSolicitaAsesor.AllowUserToOrderColumns = false;
+
+            foreach (DataGridViewColumn columna in dgvSolicitaAsesor.Columns)
+            {
+                columna.SortMode = DataGridViewColumnSortMode.NotSortable; // Deshabilitamos la ordenación en la columna
+            }
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
