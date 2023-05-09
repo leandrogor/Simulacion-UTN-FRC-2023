@@ -50,13 +50,13 @@
             this.Solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Acumulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUltimaFila = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
             this.NumeroUltima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RND_tipo_destinatario_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo_destinatario_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RND_solicita_asesor_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.solicita_asesor_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.acum_solicita_asesor_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -73,7 +73,7 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.label2.Location = new System.Drawing.Point(46, 30);
+            this.label2.Location = new System.Drawing.Point(43, 17);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(319, 31);
@@ -102,7 +102,7 @@
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(255, 93);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -134,7 +134,7 @@
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown1.Location = new System.Drawing.Point(255, 128);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -166,7 +166,7 @@
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown2.Location = new System.Drawing.Point(255, 168);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -198,7 +198,7 @@
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciar.Location = new System.Drawing.Point(46, 211);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(86, 28);
             this.btnIniciar.TabIndex = 26;
@@ -215,7 +215,7 @@
             this.dgvTipoDestinatario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoDestinatario.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvTipoDestinatario.Location = new System.Drawing.Point(366, 60);
-            this.dgvTipoDestinatario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTipoDestinatario.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTipoDestinatario.Name = "dgvTipoDestinatario";
             this.dgvTipoDestinatario.RowHeadersVisible = false;
             this.dgvTipoDestinatario.RowHeadersWidth = 51;
@@ -266,7 +266,7 @@
             this.dgvSolicitaAsesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSolicitaAsesor.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvSolicitaAsesor.Location = new System.Drawing.Point(890, 60);
-            this.dgvSolicitaAsesor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSolicitaAsesor.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSolicitaAsesor.Name = "dgvSolicitaAsesor";
             this.dgvSolicitaAsesor.RowHeadersVisible = false;
             this.dgvSolicitaAsesor.RowHeadersWidth = 51;
@@ -288,7 +288,7 @@
             this.Acumulador});
             this.dataGridView1.GridColor = System.Drawing.Color.DarkOliveGreen;
             this.dataGridView1.Location = new System.Drawing.Point(63, 290);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -360,15 +360,6 @@
             this.dgvUltimaFila.Size = new System.Drawing.Size(998, 70);
             this.dgvUltimaFila.TabIndex = 32;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(76, 708);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Ultima fila";
-            // 
             // NumeroUltima
             // 
             this.NumeroUltima.Frozen = true;
@@ -411,6 +402,15 @@
             this.acum_solicita_asesor_ultima.Name = "acum_solicita_asesor_ultima";
             this.acum_solicita_asesor_ultima.ReadOnly = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(60, 706);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Ultima fila";
+            // 
             // main_tp3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,7 +435,7 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "main_tp3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo Práctico Número 3 de Simulación";

@@ -15,12 +15,8 @@ namespace SIM_TP2.TP3
         public main_tp3()
         {
             InitializeComponent();
-
             setUpDgvTipoDestinatario();
             setUpDgvSolicitaAsesor();
-
-
-
 
         }
 
@@ -94,18 +90,51 @@ namespace SIM_TP2.TP3
             dataGridView1.Rows.Clear();
 
             double suma = var1 + var2 + var3;
-            if (suma != 1)
+            if (suma > 1)
             {
-                MessageBox.Show("La suma de las probabilidades debe ser igual a 1");
+                MessageBox.Show("La suma de las probabilidades en la tabla de destinatario debe ser igual a 1","Error en la probabilidad");
                 return;
             }
-            
+
+            double var4 = Convert.ToDouble(dgvTipoDestinatario.Rows[0].Cells[1].Value);
+            double var5 = Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[1].Value);
+            double var6 = Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[1].Value);
+            //Agregar que ningun valor pueda ser cero
+            double sumaTabla2 = var4 + var5 + var6;
+            if (sumaTabla2 > 1)
+            {
+                MessageBox.Show("La suma de las probabilidades en la tabla de solicitud de asesor debe ser igual a 1", "Error en la probabilidad");
+                return;
+            }
+
+
             Random random = new Random();
             int N = Convert.ToInt32(txtCantidad.Text);
+            //Validaciones para los valores de entrada
+            if (N < cantidadDeVueltas)
+            {
+                
+                cantidadDeVueltas = N;
+            }
+            if (N < inicioDeMuestra)
+            {
+                numericUpDown1.Value = N;
+                inicioDeMuestra = N;
+            }
+            int validadorAux1 = N - inicioDeMuestra;
+            int validadorAux2 = 0;
+
+            if( validadorAux1 < cantidadDeVueltas)
+            {
+                validadorAux2 = cantidadDeVueltas - validadorAux1;
+                inicioDeMuestra = inicioDeMuestra - validadorAux2;
+                numericUpDown1.Value = inicioDeMuestra;
+
+            }
 
             for (int i = 1; i <= N; i++)
             {
-                //falta validar la suma de ambas tablas sea igual a 1 y recien simular.
+                
 
                 //GENERAR RND
                 double rnd = random.NextDouble();
@@ -117,28 +146,19 @@ namespace SIM_TP2.TP3
 
                 if (rnd > 0 && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[1].Value))
                 {
-
                     tipoDestinatario = tipoEraPaciente;
-
                 }
 
                 if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[1].Value) && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[1].Value))
                 {
-
                     tipoDestinatario = tipoAlgunaVez;
-
 
                 }
 
                 if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[1].Value))
                 {
-
                     tipoDestinatario = tipoNunca;
-
                 }
-
-
-                
 
                 //generar RND DE Asesor
 
@@ -168,7 +188,6 @@ namespace SIM_TP2.TP3
                 if (inicioDeMuestra <= i && i <= finDeMuestra)
                 {
                     dataGridView1.Rows.Add(1);
-
                     dataGridView1.Rows[tableIndex].Cells[0].Value = Convert.ToString(i);
                     dataGridView1.Rows[tableIndex].Cells[1].Value = Math.Round(rnd, 4);
                     dataGridView1.Rows[tableIndex].Cells[2].Value = tipoDestinatario;
@@ -188,8 +207,8 @@ namespace SIM_TP2.TP3
                     dgvUltimaFila.Rows[0].Cells[4].Value = (solicitaAsesor ? "Si" : "No");
                     dgvUltimaFila.Rows[0].Cells[5].Value = acumuladorSolicitaAsesor;
                 }
+
             }
-            
 
         }
 
