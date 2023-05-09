@@ -66,7 +66,7 @@
             this.btnTP3.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
             this.btnTP3.OnPressedColor = System.Drawing.Color.Black;
             this.btnTP3.Size = new System.Drawing.Size(256, 84);
-            this.btnTP3.TabIndex = 15;
+            this.btnTP3.TabIndex = 0;
             this.btnTP3.Text = "Resolucion";
             this.btnTP3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTP3.UseTransfarantBackground = true;
@@ -97,7 +97,7 @@
             this.consigna.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
             this.consigna.OnPressedColor = System.Drawing.Color.Black;
             this.consigna.Size = new System.Drawing.Size(256, 84);
-            this.consigna.TabIndex = 16;
+            this.consigna.TabIndex = 1;
             this.consigna.Text = "Consigna";
             this.consigna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.consigna.UseTransfarantBackground = true;

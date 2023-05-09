@@ -40,6 +40,12 @@
             this.dgvTipoDestinatario = new System.Windows.Forms.DataGridView();
             this.dgvSolicitaAsesor = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND_tipo_dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_destinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RND_solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Acumulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvUltimaFila = new System.Windows.Forms.DataGridView();
             this.NumeroUltima = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RND_tipo_destinatario_ultima = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,12 +56,7 @@
             this.ultfila = new Guna.UI.WinForms.GunaLabel();
             this.btnIniciar = new Guna.UI.WinForms.GunaButton();
             this.volver = new Guna.UI.WinForms.GunaButton();
-            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RND_tipo_dest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_destinatario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RND_solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Solicita_asesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Acumulador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionestxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vueltastxt)).BeginInit();
@@ -107,7 +108,7 @@
             0});
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(120, 30);
-            this.txtCantidad.TabIndex = 20;
+            this.txtCantidad.TabIndex = 2;
             this.txtCantidad.Value = new decimal(new int[] {
             100,
             0,
@@ -138,7 +139,7 @@
             0});
             this.iteracionestxt.Name = "iteracionestxt";
             this.iteracionestxt.Size = new System.Drawing.Size(120, 30);
-            this.iteracionestxt.TabIndex = 22;
+            this.iteracionestxt.TabIndex = 3;
             this.iteracionestxt.Value = new decimal(new int[] {
             50,
             0,
@@ -169,7 +170,7 @@
             0});
             this.vueltastxt.Name = "vueltastxt";
             this.vueltastxt.Size = new System.Drawing.Size(120, 30);
-            this.vueltastxt.TabIndex = 24;
+            this.vueltastxt.TabIndex = 4;
             this.vueltastxt.Value = new decimal(new int[] {
             10,
             0,
@@ -206,7 +207,6 @@
             this.dgvTipoDestinatario.Size = new System.Drawing.Size(645, 114);
             this.dgvTipoDestinatario.TabIndex = 27;
             this.dgvTipoDestinatario.TabStop = false;
-            this.dgvTipoDestinatario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTipoDestinatario_CellContentClick);
             // 
             // dgvSolicitaAsesor
             // 
@@ -229,6 +229,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -243,14 +245,64 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1728, 418);
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.Visible = false;
             // 
+            // Numero
+            // 
+            this.Numero.HeaderText = "Numero";
+            this.Numero.MinimumWidth = 6;
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            this.Numero.Width = 160;
+            // 
+            // RND_tipo_dest
+            // 
+            this.RND_tipo_dest.HeaderText = "RND Tipo Destinatario";
+            this.RND_tipo_dest.MinimumWidth = 6;
+            this.RND_tipo_dest.Name = "RND_tipo_dest";
+            this.RND_tipo_dest.ReadOnly = true;
+            this.RND_tipo_dest.Width = 180;
+            // 
+            // tipo_destinatario
+            // 
+            this.tipo_destinatario.HeaderText = "Tipo Destinatario";
+            this.tipo_destinatario.MinimumWidth = 6;
+            this.tipo_destinatario.Name = "tipo_destinatario";
+            this.tipo_destinatario.ReadOnly = true;
+            this.tipo_destinatario.Width = 130;
+            // 
+            // RND_solicita_asesor
+            // 
+            this.RND_solicita_asesor.HeaderText = "RND Solicita Asesor";
+            this.RND_solicita_asesor.MinimumWidth = 6;
+            this.RND_solicita_asesor.Name = "RND_solicita_asesor";
+            this.RND_solicita_asesor.ReadOnly = true;
+            this.RND_solicita_asesor.Width = 180;
+            // 
+            // Solicita_asesor
+            // 
+            this.Solicita_asesor.HeaderText = "Solicita Asesor";
+            this.Solicita_asesor.MinimumWidth = 6;
+            this.Solicita_asesor.Name = "Solicita_asesor";
+            this.Solicita_asesor.ReadOnly = true;
+            this.Solicita_asesor.Width = 180;
+            // 
+            // Acumulador
+            // 
+            this.Acumulador.HeaderText = "Acumulador solicita asesor";
+            this.Acumulador.MinimumWidth = 6;
+            this.Acumulador.Name = "Acumulador";
+            this.Acumulador.ReadOnly = true;
+            this.Acumulador.Width = 180;
+            // 
             // dgvUltimaFila
             // 
+            this.dgvUltimaFila.AllowUserToDeleteRows = false;
             this.dgvUltimaFila.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dgvUltimaFila.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUltimaFila.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -263,6 +315,8 @@
             this.dgvUltimaFila.Location = new System.Drawing.Point(83, 843);
             this.dgvUltimaFila.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUltimaFila.Name = "dgvUltimaFila";
+            this.dgvUltimaFila.ReadOnly = true;
+            this.dgvUltimaFila.RowHeadersVisible = false;
             this.dgvUltimaFila.RowHeadersWidth = 51;
             this.dgvUltimaFila.Size = new System.Drawing.Size(1498, 86);
             this.dgvUltimaFila.TabIndex = 32;
@@ -360,7 +414,7 @@
             this.btnIniciar.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
             this.btnIniciar.OnPressedColor = System.Drawing.Color.White;
             this.btnIniciar.Size = new System.Drawing.Size(209, 59);
-            this.btnIniciar.TabIndex = 35;
+            this.btnIniciar.TabIndex = 1;
             this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnIniciar.UseTransfarantBackground = true;
@@ -397,53 +451,36 @@
             this.volver.UseTransfarantBackground = true;
             this.volver.Click += new System.EventHandler(this.volver_Click);
             // 
-            // Numero
+            // gunaButton1
             // 
-            this.Numero.HeaderText = "Numero";
-            this.Numero.MinimumWidth = 6;
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            this.Numero.Width = 160;
-            // 
-            // RND_tipo_dest
-            // 
-            this.RND_tipo_dest.HeaderText = "RND Tipo Destinatario";
-            this.RND_tipo_dest.MinimumWidth = 6;
-            this.RND_tipo_dest.Name = "RND_tipo_dest";
-            this.RND_tipo_dest.ReadOnly = true;
-            this.RND_tipo_dest.Width = 180;
-            // 
-            // tipo_destinatario
-            // 
-            this.tipo_destinatario.HeaderText = "Tipo Destinatario";
-            this.tipo_destinatario.MinimumWidth = 6;
-            this.tipo_destinatario.Name = "tipo_destinatario";
-            this.tipo_destinatario.ReadOnly = true;
-            this.tipo_destinatario.Width = 130;
-            // 
-            // RND_solicita_asesor
-            // 
-            this.RND_solicita_asesor.HeaderText = "RND Solicita Asesor";
-            this.RND_solicita_asesor.MinimumWidth = 6;
-            this.RND_solicita_asesor.Name = "RND_solicita_asesor";
-            this.RND_solicita_asesor.ReadOnly = true;
-            this.RND_solicita_asesor.Width = 180;
-            // 
-            // Solicita_asesor
-            // 
-            this.Solicita_asesor.HeaderText = "Solicita Asesor";
-            this.Solicita_asesor.MinimumWidth = 6;
-            this.Solicita_asesor.Name = "Solicita_asesor";
-            this.Solicita_asesor.ReadOnly = true;
-            this.Solicita_asesor.Width = 180;
-            // 
-            // Acumulador
-            // 
-            this.Acumulador.HeaderText = "Acumulador solicita asesor";
-            this.Acumulador.MinimumWidth = 6;
-            this.Acumulador.Name = "Acumulador";
-            this.Acumulador.ReadOnly = true;
-            this.Acumulador.Width = 180;
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite__2_;
+            this.gunaButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaButton1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("Perpetua Titling MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton1.ForeColor = System.Drawing.Color.White;
+            this.gunaButton1.Image = null;
+            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(289, 259);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.gunaButton1.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.White;
+            this.gunaButton1.Size = new System.Drawing.Size(391, 59);
+            this.gunaButton1.TabIndex = 5;
+            this.gunaButton1.Text = "Ver tabla intervalos";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.UseTransfarantBackground = true;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
             // main_tp3
             // 
@@ -452,6 +489,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = global::SIM_TP2.Properties.Resources.protada;
             this.ClientSize = new System.Drawing.Size(1901, 1033);
+            this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.volver);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.ultfila);
@@ -474,7 +512,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo Práctico Número 3 de Simulación";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.main_tp3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionestxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vueltastxt)).EndInit();
@@ -516,5 +553,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RND_solicita_asesor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Solicita_asesor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acumulador;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
     }
 }

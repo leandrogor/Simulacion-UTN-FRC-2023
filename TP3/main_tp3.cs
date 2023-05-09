@@ -18,7 +18,6 @@ namespace SIM_TP2.TP3
             InitializeComponent();
             setUpDgvTipoDestinatario();
             setUpDgvSolicitaAsesor();
-
         }
 
         private void setUpDgvTipoDestinatario()
@@ -64,7 +63,7 @@ namespace SIM_TP2.TP3
 
             dgvSolicitaAsesor.Columns[0].ReadOnly = true;
             dgvSolicitaAsesor.Columns[1].ReadOnly = false;
-            
+
             dgvSolicitaAsesor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dgvSolicitaAsesor.ScrollBars = ScrollBars.None;
             dgvSolicitaAsesor.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -75,10 +74,7 @@ namespace SIM_TP2.TP3
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             if (validar_txt()) return;
-             
-            double var1 = Convert.ToDouble(dgvTipoDestinatario.Rows[0].Cells[2].Value);
-            double var2 = Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[2].Value);
-            double var3 = Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[2].Value);
+            if (validar_dgv_1()) return;
 
             int inicioDeMuestra = Convert.ToInt32(iteracionestxt.Value); //j
             int cantidadDeVueltas = Convert.ToInt32(vueltastxt.Value); //i
@@ -93,14 +89,6 @@ namespace SIM_TP2.TP3
             int tableIndex = 0;
 
             dataGridView1.Rows.Clear();
-
-            double suma = var1 + var2 + var3;
-            if (suma != 1)
-            {
-                MessageBox.Show("La suma de las probabilidades en la tabla de destinatario debe ser igual a 1","Error en la probabilidad");
-                return;
-            }
-
             dgvUltimaFila.Show();
             ultfila.Show();
             dataGridView1.Show();
@@ -122,7 +110,7 @@ namespace SIM_TP2.TP3
             //Validaciones para los valores de entrada
             if (N < cantidadDeVueltas)
             {
-                
+
                 cantidadDeVueltas = N;
             }
             if (N < inicioDeMuestra)
@@ -132,22 +120,19 @@ namespace SIM_TP2.TP3
             }
 
             int validadorAux1 = N - inicioDeMuestra;
-            int validadorAux2 = 0;
 
-            if( validadorAux1 < cantidadDeVueltas)
+            if (validadorAux1 < cantidadDeVueltas)
             {
-                validadorAux2 = cantidadDeVueltas - validadorAux1;
+                int validadorAux2 = cantidadDeVueltas - validadorAux1;
                 inicioDeMuestra = inicioDeMuestra - validadorAux2;
                 iteracionestxt.Value = inicioDeMuestra;
-
             }
 
             for (int i = 1; i <= N; i++)
-            {     
+            {
 
                 //GENERAR RND
                 double rnd = random.NextDouble();
-
 
                 //Mostrar tipo de Distinatario
 
@@ -177,7 +162,7 @@ namespace SIM_TP2.TP3
                 //Solicita asesor?
                 if (tipoDestinatario.Equals(tipoEraPaciente))
                 {
-                    if(rndAsesor < Convert.ToDouble(dgvSolicitaAsesor.Rows[0].Cells[1].Value)) solicitaAsesor = true;
+                    if (rndAsesor < Convert.ToDouble(dgvSolicitaAsesor.Rows[0].Cells[1].Value)) solicitaAsesor = true;
                 }
 
                 if (tipoDestinatario.Equals(tipoAlgunaVez))
@@ -191,7 +176,6 @@ namespace SIM_TP2.TP3
                 }
 
                 if (solicitaAsesor) acumuladorSolicitaAsesor++;
-
 
                 //Si está dentro del rango, mostrarlo..
                 if (inicioDeMuestra <= i && i <= finDeMuestra)
@@ -207,7 +191,7 @@ namespace SIM_TP2.TP3
                     tableIndex++;
                 }
 
-                if(i == N)
+                if (i == N)
                 {
                     dgvUltimaFila.Rows[0].Cells[0].Value = Convert.ToString(i);
                     dgvUltimaFila.Rows[0].Cells[1].Value = Math.Round(rnd, 4);
@@ -216,31 +200,12 @@ namespace SIM_TP2.TP3
                     dgvUltimaFila.Rows[0].Cells[4].Value = (solicitaAsesor ? "Si" : "No");
                     dgvUltimaFila.Rows[0].Cells[5].Value = acumuladorSolicitaAsesor;
                 }
-
             }
-
-        }
-
-        private void main_tp3_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvTipoDestinatario_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void volver_Click(object sender, EventArgs e)
         {
-            presentaciontp3 ventana = new presentaciontp3();
-            ventana.Show();
-            ventana.FormClosed += LogOut;
-            Hide();
-        }
-        private void LogOut(object sender, FormClosedEventArgs e)
-        {
-            Show();
+            Close();
         }
 
         private bool validar_txt()
@@ -248,26 +213,38 @@ namespace SIM_TP2.TP3
             if (txtCantidad.Value <= 0)
             {
 
-                MessageBox.Show("La cantidad dde filas a mostrar debe ser mayor a 0", "Datos invalidos",MessageBoxButtons.OK,MessageBoxIcon.Exclamation) ;
+                MessageBox.Show("La cantidad de filas a mostrar debe ser mayor a 0", "Datos invalidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return true;
 
             }
             if (vueltastxt.Value <= 0)
             {
-
                 MessageBox.Show("La cantidad de vueltas a mostrar debe ser mayor a 0", "Datos invalidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return true;
-
             }
-           
-
-
-
-
             return false;
-            
+
         }
 
-        
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            if (validar_dgv_1()) return;
+            tablaIntervalos tabla = new tablaIntervalos(dgvTipoDestinatario, dgvSolicitaAsesor);
+            tabla.Show();
+        }
+
+        private bool validar_dgv_1()
+        {
+            double var1 = Convert.ToDouble(dgvTipoDestinatario.Rows[0].Cells[2].Value);
+            double var2 = Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[2].Value);
+            double var3 = Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[2].Value);
+            double suma = var1 + var2 + var3;
+            if (suma != 1)
+            {
+                MessageBox.Show("La suma de las probabilidades en la tabla de destinatario debe ser igual a 1", "Error en la probabilidad");
+                return true;
+            }
+            return false;
+        }
     }
 }
