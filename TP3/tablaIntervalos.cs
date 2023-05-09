@@ -16,6 +16,9 @@ namespace SIM_TP2.TP3
         {
             InitializeComponent();
 
+            dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 12);
+            dgv.DefaultCellStyle.Font = new Font("Calibri", 12);
+
             dgv.Columns.Add("desti", "Destinatario");
             dgv.Columns.Add("min1", "Mínimo");
             dgv.Columns.Add("max1", "Máximo");

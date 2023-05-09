@@ -51,7 +51,7 @@
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1191, 224);
+            this.dgv.Size = new System.Drawing.Size(1389, 221);
             this.dgv.TabIndex = 28;
             this.dgv.TabStop = false;
             // 
@@ -59,7 +59,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1191, 224);
+            this.ClientSize = new System.Drawing.Size(1389, 221);
             this.Controls.Add(this.dgv);
             this.Name = "tablaIntervalos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

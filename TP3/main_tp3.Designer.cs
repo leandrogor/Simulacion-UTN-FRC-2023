@@ -85,12 +85,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LemonChiffon;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label1.Location = new System.Drawing.Point(1041, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 33);
+            this.label1.Size = new System.Drawing.Size(345, 38);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ejercicio nro 3: Nuevo Servicio";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,11 +119,11 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.Color.White;
             this.lblCantidad.Location = new System.Drawing.Point(18, 113);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(194, 24);
+            this.lblCantidad.Size = new System.Drawing.Size(210, 27);
             this.lblCantidad.TabIndex = 21;
             this.lblCantidad.Text = "Cantidad de Filas (N):";
             // 
@@ -150,11 +150,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(18, 164);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(308, 24);
+            this.label3.Size = new System.Drawing.Size(330, 27);
             this.label3.TabIndex = 23;
             this.label3.Text = "Inicio de muestra de iteraciones (j):";
             // 
@@ -181,11 +181,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(18, 213);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(296, 24);
+            this.label4.Size = new System.Drawing.Size(318, 27);
             this.label4.TabIndex = 25;
             this.label4.Text = "Cantidad de Vueltas a mostrar (i):";
             // 
@@ -318,7 +318,7 @@
             this.dgvUltimaFila.ReadOnly = true;
             this.dgvUltimaFila.RowHeadersVisible = false;
             this.dgvUltimaFila.RowHeadersWidth = 51;
-            this.dgvUltimaFila.Size = new System.Drawing.Size(1498, 86);
+            this.dgvUltimaFila.Size = new System.Drawing.Size(1498, 131);
             this.dgvUltimaFila.TabIndex = 32;
             this.dgvUltimaFila.Visible = false;
             // 
@@ -380,11 +380,11 @@
             // 
             this.ultfila.AutoSize = true;
             this.ultfila.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ultfila.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ultfila.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultfila.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ultfila.Location = new System.Drawing.Point(80, 815);
+            this.ultfila.Location = new System.Drawing.Point(77, 793);
             this.ultfila.Name = "ultfila";
-            this.ultfila.Size = new System.Drawing.Size(100, 24);
+            this.ultfila.Size = new System.Drawing.Size(128, 32);
             this.ultfila.TabIndex = 34;
             this.ultfila.Text = "Ultima Fila";
             this.ultfila.Visible = false;

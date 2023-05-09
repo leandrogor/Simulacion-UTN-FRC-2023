@@ -76,6 +76,11 @@ namespace SIM_TP2.TP3
             if (validar_txt()) return;
             if (validar_dgv_1()) return;
 
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 13);
+            dataGridView1.DefaultCellStyle.Font = new Font("Calibri", 13);
+            dgvUltimaFila.ColumnHeadersDefaultCellStyle.Font = new Font("Calibri", 13);
+            dgvUltimaFila.DefaultCellStyle.Font = new Font("Calibri", 13);
+
             int inicioDeMuestra = Convert.ToInt32(iteracionestxt.Value); //j
             int cantidadDeVueltas = Convert.ToInt32(vueltastxt.Value); //i
             int finDeMuestra = inicioDeMuestra + cantidadDeVueltas;
@@ -212,10 +217,8 @@ namespace SIM_TP2.TP3
         {
             if (txtCantidad.Value <= 0)
             {
-
                 MessageBox.Show("La cantidad de filas a mostrar debe ser mayor a 0", "Datos invalidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return true;
-
             }
             if (vueltastxt.Value <= 0)
             {
