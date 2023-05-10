@@ -146,17 +146,17 @@ namespace SIM_TP2.TP3
 
                 string tipoDestinatario = null;
 
-                if (rnd > 0 && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[2].Value))
+                if (rnd < Convert.ToDouble(dgvTipoDestinatario.Rows[0].Cells[2].Value))
                 {
                     tipoDestinatario = tipoEraPaciente;
                 }
 
-                if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[2].Cells[2].Value) && rnd <= Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[2].Value))
+                else if (rnd < Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[2].Value) + Convert.ToDouble(dgvTipoDestinatario.Rows[0].Cells[2].Value))
                 {
                     tipoDestinatario = tipoAlgunaVez;
                 }
 
-                if (rnd > Convert.ToDouble(dgvTipoDestinatario.Rows[1].Cells[2].Value))
+                else
                 {
                     tipoDestinatario = tipoNunca;
                 }
@@ -179,7 +179,7 @@ namespace SIM_TP2.TP3
 
                 if (tipoDestinatario.Equals(tipoNunca))
                 {
-                    if (rndAsesor < Convert.ToDouble(dgvSolicitaAsesor.Rows[1].Cells[1].Value)) solicitaAsesor = true;
+                    if (rndAsesor < Convert.ToDouble(dgvSolicitaAsesor.Rows[2].Cells[1].Value)) solicitaAsesor = true;
                 }
 
                 if (solicitaAsesor) acumuladorSolicitaAsesor++;
@@ -189,9 +189,9 @@ namespace SIM_TP2.TP3
                 {
                     dataGridView1.Rows.Add(1);
                     dataGridView1.Rows[tableIndex].Cells[0].Value = Convert.ToString(i);
-                    dataGridView1.Rows[tableIndex].Cells[1].Value = Math.Round(rnd, 4);
+                    dataGridView1.Rows[tableIndex].Cells[1].Value = Math.Truncate(rnd * 10000) / 10000;
                     dataGridView1.Rows[tableIndex].Cells[2].Value = tipoDestinatario;
-                    dataGridView1.Rows[tableIndex].Cells[3].Value = Math.Round(rndAsesor, 4);
+                    dataGridView1.Rows[tableIndex].Cells[3].Value = Math.Truncate(rndAsesor * 10000) / 10000;
                     dataGridView1.Rows[tableIndex].Cells[4].Value = (solicitaAsesor ? "Si" : "No");
                     dataGridView1.Rows[tableIndex].Cells[5].Value = acumuladorSolicitaAsesor;
 
@@ -201,9 +201,9 @@ namespace SIM_TP2.TP3
                 if (i == N)
                 {
                     dgvUltimaFila.Rows[0].Cells[0].Value = Convert.ToString(i);
-                    dgvUltimaFila.Rows[0].Cells[1].Value = Math.Round(rnd, 4);
+                    dgvUltimaFila.Rows[0].Cells[1].Value = Math.Truncate(rnd * 10000) / 10000;
                     dgvUltimaFila.Rows[0].Cells[2].Value = tipoDestinatario;
-                    dgvUltimaFila.Rows[0].Cells[3].Value = Math.Round(rndAsesor, 4);
+                    dgvUltimaFila.Rows[0].Cells[3].Value = Math.Truncate(rndAsesor * 10000) / 10000;
                     dgvUltimaFila.Rows[0].Cells[4].Value = (solicitaAsesor ? "Si" : "No");
                     dgvUltimaFila.Rows[0].Cells[5].Value = acumuladorSolicitaAsesor;
                 }

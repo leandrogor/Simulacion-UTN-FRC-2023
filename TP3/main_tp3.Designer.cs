@@ -102,7 +102,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(357, 114);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCantidad.Maximum = new decimal(new int[] {
-            100000,
+            1000000,
             0,
             0,
             0});
@@ -110,7 +110,7 @@
             this.txtCantidad.Size = new System.Drawing.Size(120, 30);
             this.txtCantidad.TabIndex = 2;
             this.txtCantidad.Value = new decimal(new int[] {
-            100,
+            100000,
             0,
             0,
             0});
@@ -140,11 +140,6 @@
             this.iteracionestxt.Name = "iteracionestxt";
             this.iteracionestxt.Size = new System.Drawing.Size(120, 30);
             this.iteracionestxt.TabIndex = 3;
-            this.iteracionestxt.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
             // 
             // label3
             // 
@@ -172,7 +167,7 @@
             this.vueltastxt.Size = new System.Drawing.Size(120, 30);
             this.vueltastxt.TabIndex = 4;
             this.vueltastxt.Value = new decimal(new int[] {
-            10,
+            200,
             0,
             0,
             0});
@@ -231,6 +226,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -248,7 +245,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1728, 418);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1728, 469);
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.Visible = false;
             // 
@@ -312,7 +310,7 @@
             this.RND_solicita_asesor_ultima,
             this.solicita_asesor_ultima,
             this.acum_solicita_asesor_ultima});
-            this.dgvUltimaFila.Location = new System.Drawing.Point(83, 843);
+            this.dgvUltimaFila.Location = new System.Drawing.Point(83, 856);
             this.dgvUltimaFila.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUltimaFila.Name = "dgvUltimaFila";
             this.dgvUltimaFila.ReadOnly = true;
@@ -382,7 +380,7 @@
             this.ultfila.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ultfila.Font = new System.Drawing.Font("Palatino Linotype", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultfila.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ultfila.Location = new System.Drawing.Point(77, 793);
+            this.ultfila.Location = new System.Drawing.Point(77, 806);
             this.ultfila.Name = "ultfila";
             this.ultfila.Size = new System.Drawing.Size(128, 32);
             this.ultfila.TabIndex = 34;
