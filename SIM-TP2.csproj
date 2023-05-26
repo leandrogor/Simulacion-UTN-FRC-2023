@@ -147,6 +147,18 @@
       <DependentUpon>tablaIntervalos.cs</DependentUpon>
     </Compile>
     <Compile Include="TP3\util\Simulation.cs" />
+    <Compile Include="TP4\Cosngina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP4\Cosngina.Designer.cs">
+      <DependentUpon>Cosngina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP4\main_TP4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP4\main_TP4.Designer.cs">
+      <DependentUpon>main_TP4.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +207,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TP3\tablaIntervalos.resx">
       <DependentUpon>tablaIntervalos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP4\Cosngina.resx">
+      <DependentUpon>Cosngina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP4\main_TP4.resx">
+      <DependentUpon>main_TP4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
