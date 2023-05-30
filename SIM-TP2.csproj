@@ -153,6 +153,7 @@
     <Compile Include="TP4\Cosngina.Designer.cs">
       <DependentUpon>Cosngina.cs</DependentUpon>
     </Compile>
+    <Compile Include="TP4\Entidades\Cancha.cs" />
     <Compile Include="TP4\main_TP4.cs">
       <SubType>Form</SubType>
     </Compile>

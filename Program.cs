@@ -1,4 +1,5 @@
 ﻿using SIM_TP2.TP3;
+using SIM_TP2.TP4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace SIM_TP2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main());
+            Application.Run(new main_TP4());
         }
     }
 }
