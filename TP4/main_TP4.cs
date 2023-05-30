@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIM_TP2.Generadores;
+using SIM_TP2.TP4.Entidades;
 
 namespace SIM_TP2.TP4
 {
@@ -26,6 +27,25 @@ namespace SIM_TP2.TP4
         private void dgv_cola_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            Gestor gestor = new Gestor();
+            gestor.iniciar(10, 1, 0, 0.167, 
+                new List<List<double>>
+                {
+                    new List<double> { 10 },
+                    new List<double> { 1, 2 },
+                    new List<double> { 1, 2 },
+                }, 
+                new List<List<double>>
+                {
+                    new List<double> { 1, 2 },
+                    new List<double> { 1, 2 },
+                    new List<double> { 1, 2 },
+                }
+                );
         }
 
         //Utilizar los generadores anteriores para los RND  de las llegadas 
