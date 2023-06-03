@@ -14,6 +14,11 @@ namespace SIM_TP2.TP4.Entidades
         private int acEspF = 0;
         private int acEspH = 0;
         private int acEspB = 0;
+        private Cancha cancha;
+        private Futbol futbol;
+        private HandBall handBall;
+        private BasketBall basketBall;
+        private object evento;
 
 
         public void iniciar(double tiempoASimular, double horaInicioAMostrar, int cantIterAMostrar, double tiempoLimpieza,
@@ -32,17 +37,22 @@ namespace SIM_TP2.TP4.Entidades
             BasketBall.ocupacionMinima = ocupaciones[2][0];
             BasketBall.ocupacionMaxima = ocupaciones[2][1];
 
-            Cancha cancha = new Cancha();
-            Futbol futbol = new Futbol();
-            HandBall handBall = new HandBall();
-            BasketBall basketBall = new BasketBall();
+            cancha = new Cancha();
+            futbol = new Futbol();
+            handBall = new HandBall();
+            basketBall = new BasketBall();
 
 
-            //while(reloj < tiempoASimular)
+            //while (reloj < tiempoASimular)
             //{
-            //    cancha
+            //    evento = obtenerProximoEvento();
             //}
 
+        }
+
+        public object obtenerProximoEvento()
+        {
+            return new object();//new[] { cancha, futbol, handBall, basketBall }.OrderBy(x => x.x);
         }
 
     }
