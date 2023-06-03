@@ -8,24 +8,25 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class HandBall : IDisciplina
     {
-        private string nombre { get; set; }
-        private double llegadaMinima { get; set; }
-        private double llegadaMaxima { get; set; }
-        private double tiempoLlegada { get; set; }
-        public double proximaLlegada { get; set; }
-        private double ocupacionMinima { get; set; }
-        private double ocupacionMaxima { get; set; }
+        private static string nombre { get; set; } = "Hand Ball";
+        public static double llegadaMinima { get; set; }
+        public static double llegadaMaxima { get; set; }
 
-        private Random rndLlegada = new Random(2);
+        public static double ocupacionMinima { get; set; }
+        public static double ocupacionMaxima { get; set; }
+
+        private double tiempoLlegada;
+
+        private double proximaLlegada;
+
+        public double TiempoLlegada { get => tiempoLlegada; set => tiempoLlegada = value; }
+        public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }
+
+        private static Random rndLlegada = new Random(2);
 
 
-        public HandBall(double llegadaMinima, double llegadaMaxima, double ocupacionMinima, double ocupacionMaxima)
+        public HandBall()
         {
-            nombre = "Hand Ball";
-            this.llegadaMinima = llegadaMinima;
-            this.llegadaMaxima = llegadaMaxima;
-            this.ocupacionMinima = ocupacionMinima;
-            this.ocupacionMaxima = ocupacionMaxima;
             generarProximaLlegada(0, rndLlegada.NextDouble());
         }
 
@@ -36,8 +37,8 @@ namespace SIM_TP2.TP4.Entidades
 
         public void generarProximaLlegada(double horaInicio, double rnd)
         {
-            tiempoLlegada = llegadaMinima + rnd * (llegadaMaxima - llegadaMinima);
-            proximaLlegada = horaInicio + tiempoLlegada;
+            TiempoLlegada = llegadaMinima + rnd * (llegadaMaxima - llegadaMinima);
+            ProximaLlegada = horaInicio + TiempoLlegada;
         }
 
         public double generarFinJuego(double horaInicio, Random rnd)

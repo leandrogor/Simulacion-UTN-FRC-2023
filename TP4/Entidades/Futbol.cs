@@ -8,22 +8,23 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class Futbol : IDisciplina
     {
-        private string nombre { get; set; }
-        private double media { get; set; }
-        private double tiempoLlegada { get; set; }
-        public double proximaLlegada { get; set; }
-        private double ocupacionMinima { get; set; }
-        private double ocupacionMaxima { get; set; }
+        private static string nombre { get; set; } = "Futbol";
+        public static double media { get; set; }
+        public static double ocupacionMinima { get; set; }
+        public static double ocupacionMaxima { get; set; }
+        
+        private double tiempoLlegada;
 
-        private Random rndLlegada = new Random(1);
+        private double proximaLlegada;
+
+        public double TiempoLlegada { get => tiempoLlegada; set => tiempoLlegada = value; }
+        public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }
+
+        private static Random rndLlegada = new Random(1);
 
         
-        public Futbol(double media, double ocupacionMinima, double ocupacionMaxima)
+        public Futbol()
         {
-            nombre = "Fútbol";
-            this.media = media;
-            this.ocupacionMinima = ocupacionMinima;
-            this.ocupacionMaxima = ocupacionMaxima;
             generarProximaLlegada(0, rndLlegada.NextDouble());
         }
 
@@ -34,8 +35,8 @@ namespace SIM_TP2.TP4.Entidades
 
         public void generarProximaLlegada(double horaInicio, double rnd)
         {
-            tiempoLlegada = (-media * Math.Log(1 - rnd));
-            proximaLlegada = horaInicio + tiempoLlegada;
+            TiempoLlegada = (-media * Math.Log(1 - rnd));
+            ProximaLlegada = horaInicio + TiempoLlegada;
         }
 
         public double generarFinJuego(double horaInicio, Random rnd)

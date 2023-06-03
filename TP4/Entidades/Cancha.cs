@@ -12,14 +12,13 @@ namespace SIM_TP2.TP4.Entidades
         private Queue<IDisciplina> colaFH { get; set; }
         private Queue<IDisciplina> colaB { get; set; }
         private double tiempoJuego { get; set; }
-        private double tiempoLimpieza { get; set; }
+        public static double tiempoLimpieza { get; set; }
         private double horaFin { get; set; }
 
         private Random rnd = new Random();
 
-        public Cancha(double tiempoLimpieza)
+        public Cancha()
         {
-            this.tiempoLimpieza = tiempoLimpieza;
             colaFH = new Queue<IDisciplina>();
             colaB = new Queue<IDisciplina>();
             libre = true;
