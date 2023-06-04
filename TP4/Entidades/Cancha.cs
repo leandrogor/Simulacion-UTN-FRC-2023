@@ -8,12 +8,13 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class Cancha
     {
-        private bool libre { get; set; }
-        private Queue<IDisciplina> colaFH { get; set; }
-        private Queue<IDisciplina> colaB { get; set; }
-        private double tiempoJuego { get; set; }
+        private bool libre;
+        private Queue<IDisciplina> colaFH;
+        private Queue<IDisciplina> colaB;
+        private double tiempoJuego;
+        private double horaFin;
         public static double tiempoLimpieza { get; set; }
-        private double horaFin { get; set; }
+        public double HoraFin { get => horaFin; set => horaFin = value; }
 
         private Random rnd = new Random();
 
@@ -22,17 +23,17 @@ namespace SIM_TP2.TP4.Entidades
             colaFH = new Queue<IDisciplina>();
             colaB = new Queue<IDisciplina>();
             libre = true;
-            horaFin = Double.MaxValue;
+            HoraFin = Double.MaxValue;
         }
 
-        public bool recibirDisciplina(double horaInicio, IDisciplina disciplina)
+        public void recibirDisciplina(double horaInicio, IDisciplina disciplina, int retirados)
         {
             if (libre)
             {
-                generarProximoFinJuego(horaInicio, disciplina);
-                return true;
+                horaFin = generarProximoFinJuego(horaInicio, disciplina);
+                libre = false;
             }
-            if (hayLugarEnCola())
+            else if (hayLugarEnCola())
             {
                 if (disciplina.nombre() == "Basket Ball")
                 {
@@ -42,19 +43,37 @@ namespace SIM_TP2.TP4.Entidades
                 {
                     colaFH.Enqueue(disciplina);
                 }
-                return true;
             }
-            return false;
+            else
+            {
+                retirados++;
+            }
         }
 
-        public double generarProximoFinJuego(double horaInicio, Object disciplina)
+        public double generarProximoFinJuego(double horaInicio, IDisciplina disciplina)
         {
-            return 1;
+            return disciplina.generarFinJuego(horaInicio, rnd);
         }
 
         public bool hayLugarEnCola()
         {
             return colaB.Count + colaFH.Count < 5;
+        }
+
+        public void iniciarProximoJuego(double reloj)
+        {
+            if (colaFH.Count > 0)
+            {
+                horaFin = generarProximoFinJuego(reloj, colaFH.Dequeue());
+            }
+            else if (colaB.Count > 0)
+            {
+                horaFin = generarProximoFinJuego(reloj, colaB.Dequeue());
+            }
+            else
+            {
+                libre = true;
+            }
         }
 
 

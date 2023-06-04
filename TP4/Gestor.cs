@@ -42,17 +42,63 @@ namespace SIM_TP2.TP4.Entidades
             handBall = new HandBall();
             basketBall = new BasketBall();
 
+            while (reloj < tiempoASimular)
+            {
+                evento = obtenerProximoEvento();
+                Console.WriteLine(evento);
 
-            //while (reloj < tiempoASimular)
-            //{
-            //    evento = obtenerProximoEvento();
-            //}
+                if (evento is Cancha)
+                {
+                    cancha.iniciarProximoJuego(reloj);
+                }
+                else
+                {
+                    cancha.recibirDisciplina(reloj, (IDisciplina)evento, acRetirados);
+                    if (evento is Futbol)
+                    {
+                        futbol = new Futbol();
+                    }
+                    else if (evento is HandBall)
+                    {
+                        handBall = new HandBall();
+                    }
+                    else
+                    {
+                        basketBall = new BasketBall();
+                    }
+                    acGrupos++;
+                }
 
+                reloj = obtenerProximoReloj();
+            }
         }
 
         public object obtenerProximoEvento()
         {
-            return new object();//new[] { cancha, futbol, handBall, basketBall }.OrderBy(x => x.x);
+            double menorTiempo = obtenerProximoReloj();
+
+            if (menorTiempo == cancha.HoraFin)
+            {
+                return cancha;
+            }
+            else if (menorTiempo == futbol.ProximaLlegada)
+            {
+                return futbol;
+            }
+            else if (menorTiempo == handBall.ProximaLlegada)
+            {
+                return handBall;
+            }
+            else
+            {
+                return basketBall;
+            }
+        }
+
+        public double obtenerProximoReloj()
+        {
+            List<double> tiempos = new List<double> { cancha.HoraFin, futbol.ProximaLlegada, handBall.ProximaLlegada, basketBall.ProximaLlegada };
+            return tiempos.Min();
         }
 
     }
