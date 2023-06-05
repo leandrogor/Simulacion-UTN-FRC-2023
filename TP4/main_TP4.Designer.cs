@@ -186,7 +186,6 @@
             this.dgv_cola.RowHeadersWidth = 51;
             this.dgv_cola.Size = new System.Drawing.Size(2592, 517);
             this.dgv_cola.TabIndex = 0;
-            this.dgv_cola.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cola_CellContentClick);
             // 
             // Numero
             // 
@@ -1187,7 +1186,6 @@
             this.Name = "main_TP4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "main_tp4";
-            this.Load += new System.EventHandler(this.main_TP4_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

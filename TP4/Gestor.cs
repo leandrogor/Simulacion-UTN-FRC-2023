@@ -33,9 +33,7 @@ namespace SIM_TP2.TP4.Entidades
         private int iteraciones;
         private object evento;
 
-
-        public void iniciar(double tiempoASimular, double horaInicioAMostrar, int cantIterAMostrar, double tiempoLimpieza,
-            List<List<double>> llegadas, List<List<double>> ocupaciones)
+        public Gestor(double tiempoLimpieza, List<List<double>> llegadas, List<List<double>> ocupaciones)
         {
             Futbol.setFutbol(llegadas[0][0], ocupaciones[0][0], ocupaciones[0][1]);
             HandBall.setHandBall(llegadas[1][0], llegadas[1][1], ocupaciones[1][0], ocupaciones[1][1]);
@@ -56,7 +54,10 @@ namespace SIM_TP2.TP4.Entidades
             Console.WriteLine(handBall.ProximaLlegada);
             Console.WriteLine(basketBall.ProximaLlegada);
             Console.WriteLine();
+        }
 
+        public void iniciar(double tiempoASimular, double horaInicioAMostrar, int cantIterAMostrar)
+        {
             while (iteraciones < 100000)
             {
                 evento = obtenerProximoEvento();
@@ -67,7 +68,7 @@ namespace SIM_TP2.TP4.Entidades
                     break;
                 }
 
-                Console.WriteLine("Iteración: " + (iteraciones+1));
+                Console.WriteLine("Iteración: " + (iteraciones + 1));
                 Console.WriteLine("Reloj: " + reloj);
                 Console.WriteLine(evento);
 
@@ -97,7 +98,6 @@ namespace SIM_TP2.TP4.Entidades
                     acGrupos++;
                 }
                 iteraciones++;
-                
                 Console.WriteLine();
             }
             Console.WriteLine("Ac. Grupos    : " + acGrupos);
