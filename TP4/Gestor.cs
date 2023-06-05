@@ -29,6 +29,7 @@ namespace SIM_TP2.TP4.Entidades
         private Futbol futbol;
         private HandBall handBall;
         private BasketBall basketBall;
+        private Limpieza limpieza;
 
         private int iteraciones;
         private object evento;
@@ -39,10 +40,12 @@ namespace SIM_TP2.TP4.Entidades
             HandBall.setHandBall(llegadas[1][0], llegadas[1][1], ocupaciones[1][0], ocupaciones[1][1]);
             BasketBall.setBasketBall(llegadas[2][0], llegadas[2][1], ocupaciones[2][0], ocupaciones[2][1]);
 
-            cancha = new Cancha(tiempoLimpieza);
+            cancha = new Cancha();
             futbol = new Futbol(reloj, rndF.NextDouble());
             handBall = new HandBall(reloj, rndH.NextDouble());
             basketBall = new BasketBall(reloj, rndB.NextDouble());
+            limpieza = new Limpieza(tiempoLimpieza);
+
 
             Console.WriteLine();
             Console.WriteLine(rndF.NextDouble());
@@ -74,7 +77,14 @@ namespace SIM_TP2.TP4.Entidades
 
                 if (evento is Cancha)
                 {
+                    limpieza.generarProximaLimpieza(reloj);
+                    cancha.HoraFin = Double.MaxValue;
+                }
+                else if(evento is Limpieza)
+                {
+                    limpieza.ProximaLimpieza = Double.MaxValue;
                     cancha.iniciarProximoJuego(reloj);
+                    Console.WriteLine("Proximo fin juego: " + cancha.HoraFin);
                 }
                 else
                 {
@@ -109,12 +119,16 @@ namespace SIM_TP2.TP4.Entidades
 
         public object obtenerProximoEvento()
         {
-            List<double> tiempos = new List<double> { cancha.HoraFin, futbol.ProximaLlegada, handBall.ProximaLlegada, basketBall.ProximaLlegada };
+            List<double> tiempos = new List<double> { cancha.HoraFin, futbol.ProximaLlegada, handBall.ProximaLlegada, basketBall.ProximaLlegada , limpieza.ProximaLimpieza};
             double menorTiempo = tiempos.Min();
 
             if (menorTiempo == cancha.HoraFin)
             {
                 return cancha;
+            }
+            else if (menorTiempo == limpieza.ProximaLimpieza)
+            {
+                return limpieza;
             }
             else if (menorTiempo == futbol.ProximaLlegada)
             {
@@ -135,6 +149,10 @@ namespace SIM_TP2.TP4.Entidades
             if (evento is Cancha)
             {
                 return ((Cancha)evento).HoraFin;
+            }
+            else if(evento is Limpieza)
+            {
+                return ((Limpieza)evento).ProximaLimpieza;
             }
             else
             {

@@ -11,7 +11,6 @@ namespace SIM_TP2.TP4.Entidades
         private bool libre = true;
         private Queue<IDisciplina> colaFH = new Queue<IDisciplina>();
         private Queue<IDisciplina> colaB = new Queue<IDisciplina>();
-        private double tiempoLimpieza;
         private double tiempoJuego;
         private double horaFin = Double.MaxValue;
 
@@ -19,9 +18,8 @@ namespace SIM_TP2.TP4.Entidades
 
         private Random rnd = new Random();
 
-        public Cancha(double tpoLimpieza)
+        public Cancha()
         {
-            tiempoLimpieza = tpoLimpieza;
         }
 
         public void recibirDisciplina(double horaInicio, IDisciplina disciplina, int retirados)
@@ -74,7 +72,7 @@ namespace SIM_TP2.TP4.Entidades
         public double generarProximoFinJuego(double horaInicio, IDisciplina disciplina)
         {
             tiempoJuego = disciplina.generarTiempoJuego(rnd.NextDouble());
-            return horaInicio + tiempoJuego + tiempoLimpieza;
+            return horaInicio + tiempoJuego;
         }
 
         public bool hayLugarEnCola()

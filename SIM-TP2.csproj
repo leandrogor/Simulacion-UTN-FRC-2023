@@ -157,6 +157,7 @@
     <Compile Include="TP4\Entidades\Cancha.cs" />
     <Compile Include="TP4\Entidades\Futbol.cs" />
     <Compile Include="TP4\Entidades\HandBall.cs" />
+    <Compile Include="TP4\Entidades\Limpieza.cs" />
     <Compile Include="TP4\Gestor.cs" />
     <Compile Include="TP4\Entidades\IDisciplina.cs" />
     <Compile Include="TP4\main_TP4.cs">
