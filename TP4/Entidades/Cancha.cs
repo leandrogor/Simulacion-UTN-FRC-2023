@@ -52,15 +52,30 @@ namespace SIM_TP2.TP4.Entidades
             horaFin = generarProximoFinJuego(reloj, disciplina);
         }
 
-        public void iniciarProximoJuego(double reloj)
+        public void iniciarProximoJuego(double reloj, ref double acEspF, ref double acEspH, ref double acEspB)
         {
             if (colaFH.Count > 0)
             {
-                horaFin = generarProximoFinJuego(reloj, colaFH.Dequeue());
+                IDisciplina deporte = colaFH.Dequeue();
+
+                if (deporte is Futbol)
+                {
+                    acEspF += reloj - deporte.ProximaLlegada;
+                }
+                else
+                {
+                    acEspH += reloj - deporte.ProximaLlegada;
+                }
+
+                horaFin = generarProximoFinJuego(reloj, deporte);
             }
             else if (colaB.Count > 0)
             {
-                horaFin = generarProximoFinJuego(reloj, colaB.Dequeue());
+                IDisciplina deporte = colaB.Dequeue();
+
+                acEspB += reloj - deporte.ProximaLlegada;
+
+                horaFin = generarProximoFinJuego(reloj, deporte);
             }
             else
             {

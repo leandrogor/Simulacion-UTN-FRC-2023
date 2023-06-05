@@ -16,9 +16,9 @@ namespace SIM_TP2.TP4.Entidades
         private int acLlegH = 0;
         private int acLlegB = 0;
 
-        private int acEspF = 0;
-        private int acEspH = 0;
-        private int acEspB = 0;
+        private double acEspF = 0;
+        private double acEspH = 0;
+        private double acEspB = 0;
 
         private static Random seed = new Random();
         private Random rndF = new Random(seed.Next());
@@ -80,10 +80,10 @@ namespace SIM_TP2.TP4.Entidades
                     limpieza.generarProximaLimpieza(reloj);
                     cancha.HoraFin = Double.MaxValue;
                 }
-                else if(evento is Limpieza)
+                else if (evento is Limpieza)
                 {
                     limpieza.ProximaLimpieza = Double.MaxValue;
-                    cancha.iniciarProximoJuego(reloj);
+                    cancha.iniciarProximoJuego(reloj, ref acEspF, ref acEspH, ref acEspB);
                     Console.WriteLine("Proximo fin juego: " + cancha.HoraFin);
                 }
                 else
@@ -115,11 +115,16 @@ namespace SIM_TP2.TP4.Entidades
             Console.WriteLine("Ac. Futbol    : " + acLlegF);
             Console.WriteLine("Ac. Handball  : " + acLlegH);
             Console.WriteLine("Ac. Basketball: " + acLlegB);
+            Console.WriteLine("Ac. Espera F: " + acEspF);
+            Console.WriteLine("Ac. Espera H: " + acEspH);
+            Console.WriteLine("Ac. Espera B: " + acEspB);
+            calcularEstadisticos();
         }
+
 
         public object obtenerProximoEvento()
         {
-            List<double> tiempos = new List<double> { cancha.HoraFin, futbol.ProximaLlegada, handBall.ProximaLlegada, basketBall.ProximaLlegada , limpieza.ProximaLimpieza};
+            List<double> tiempos = new List<double> { cancha.HoraFin, futbol.ProximaLlegada, handBall.ProximaLlegada, basketBall.ProximaLlegada, limpieza.ProximaLimpieza };
             double menorTiempo = tiempos.Min();
 
             if (menorTiempo == cancha.HoraFin)
@@ -150,7 +155,7 @@ namespace SIM_TP2.TP4.Entidades
             {
                 return ((Cancha)evento).HoraFin;
             }
-            else if(evento is Limpieza)
+            else if (evento is Limpieza)
             {
                 return ((Limpieza)evento).ProximaLimpieza;
             }
@@ -159,6 +164,17 @@ namespace SIM_TP2.TP4.Entidades
                 return ((IDisciplina)evento).ProximaLlegada;
             }
         }
-
+        private void calcularEstadisticos()
+        {
+            Console.WriteLine();
+            string porcenRetSinJugar = (acRetirados/acGrupos*100).ToString();
+            string promEsperaF = (acEspF/acLlegF).ToString();
+            string promEsperaH = (acEspF/acLlegH).ToString();
+            string promEsperaB = (acEspF/acLlegB).ToString();
+            Console.WriteLine("porcenRetSinJugar: " + porcenRetSinJugar);
+            Console.WriteLine("promEsperaF: " + promEsperaF);
+            Console.WriteLine("promEsperaH: " + promEsperaH);
+            Console.WriteLine("promEsperaB: " + promEsperaB);
+        }
     }
 }
