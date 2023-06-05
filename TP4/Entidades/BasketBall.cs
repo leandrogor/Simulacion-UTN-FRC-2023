@@ -8,25 +8,29 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class BasketBall : IDisciplina
     {
-        private static string nombre { get; set; } = "Basket Ball";
-        public static double llegadaMinima { get; set; }
-        public static double llegadaMaxima { get; set; }
-        public static double ocupacionMinima { get; set; }
-        public static double ocupacionMaxima { get; set; }
-        
-        private double tiempoLlegada;
+        private static string nombre = "Basket Ball";
+        private static double llegadaMinima;
+        private static double llegadaMaxima;
+        private static double ocupacionMinima;
+        private static double ocupacionMaxima;
 
+        private double tiempoLlegada;
         private double proximaLlegada;
 
         public double TiempoLlegada { get => tiempoLlegada; set => tiempoLlegada = value; }
         public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }
 
-        private static Random rndLlegada = new Random(3);
-
-
-        public BasketBall()
+        public static void setBasketBall(double llegMin, double llegMax, double ocMin, double ocMax)
         {
-            generarProximaLlegada(0, rndLlegada.NextDouble());
+            llegadaMinima = llegMin;
+            llegadaMaxima = llegMax;
+            ocupacionMinima = ocMin;
+            ocupacionMaxima = ocMax;
+        }
+
+        public BasketBall(double horaInicio, double rnd)
+        {
+            generarProximaLlegada(horaInicio, rnd);
         }
 
         string IDisciplina.nombre()
@@ -38,11 +42,12 @@ namespace SIM_TP2.TP4.Entidades
         {
             TiempoLlegada = llegadaMinima + rnd * (llegadaMaxima - llegadaMinima);
             ProximaLlegada = horaInicio + TiempoLlegada;
+            Console.WriteLine("Próxima llegada: " + proximaLlegada);
         }
 
-        public double generarFinJuego(double horaInicio, Random rnd)
+        public double generarTiempoJuego(double rnd)
         {
-            return horaInicio + ocupacionMinima + rnd.NextDouble() * (ocupacionMaxima - ocupacionMinima);
+            return ocupacionMinima + rnd * (ocupacionMaxima - ocupacionMinima);
         }
     }
 }

@@ -12,6 +12,8 @@ namespace SIM_TP2.TP4.Entidades
 
         void generarProximaLlegada(double horaInicio, double rnd);
 
-        double generarFinJuego (double horaInicio, Random rnd);
+        double generarTiempoJuego (double rnd);
+
+        double ProximaLlegada { get; set; }
     }
 }

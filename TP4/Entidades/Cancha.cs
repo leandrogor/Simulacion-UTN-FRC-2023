@@ -8,29 +8,27 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class Cancha
     {
-        private bool libre;
-        private Queue<IDisciplina> colaFH;
-        private Queue<IDisciplina> colaB;
+        private bool libre = true;
+        private Queue<IDisciplina> colaFH = new Queue<IDisciplina>();
+        private Queue<IDisciplina> colaB = new Queue<IDisciplina>();
+        private double tiempoLimpieza;
         private double tiempoJuego;
-        private double horaFin;
-        public static double tiempoLimpieza { get; set; }
+        private double horaFin = Double.MaxValue;
+
         public double HoraFin { get => horaFin; set => horaFin = value; }
 
         private Random rnd = new Random();
 
-        public Cancha()
+        public Cancha(double tpoLimpieza)
         {
-            colaFH = new Queue<IDisciplina>();
-            colaB = new Queue<IDisciplina>();
-            libre = true;
-            HoraFin = Double.MaxValue;
+            tiempoLimpieza = tpoLimpieza;
         }
 
         public void recibirDisciplina(double horaInicio, IDisciplina disciplina, int retirados)
         {
             if (libre)
             {
-                horaFin = generarProximoFinJuego(horaInicio, disciplina);
+                iniciarProximoJuego(horaInicio, disciplina);
                 libre = false;
             }
             else if (hayLugarEnCola())
@@ -48,16 +46,12 @@ namespace SIM_TP2.TP4.Entidades
             {
                 retirados++;
             }
+            Console.WriteLine("Hora fin: " + horaFin);
         }
 
-        public double generarProximoFinJuego(double horaInicio, IDisciplina disciplina)
+        public void iniciarProximoJuego(double reloj, IDisciplina disciplina)
         {
-            return disciplina.generarFinJuego(horaInicio, rnd);
-        }
-
-        public bool hayLugarEnCola()
-        {
-            return colaB.Count + colaFH.Count < 5;
+            horaFin = generarProximoFinJuego(reloj, disciplina);
         }
 
         public void iniciarProximoJuego(double reloj)
@@ -73,9 +67,20 @@ namespace SIM_TP2.TP4.Entidades
             else
             {
                 libre = true;
+                horaFin = Double.MaxValue;
             }
         }
 
+        public double generarProximoFinJuego(double horaInicio, IDisciplina disciplina)
+        {
+            tiempoJuego = disciplina.generarTiempoJuego(rnd.NextDouble());
+            return horaInicio + tiempoJuego + tiempoLimpieza;
+        }
+
+        public bool hayLugarEnCola()
+        {
+            return colaB.Count + colaFH.Count < 5;
+        }
 
     }
 }

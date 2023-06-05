@@ -36,7 +36,7 @@ namespace SIM_TP2.TP4
                 double)horasSimular.Value,
                 (double)horaInicioMostrar.Value,
                 (int)eventosAMostrar.Value,
-                (double)tiempoLimpiezaCancha.Value,
+                (double)tiempoLimpiezaCancha.Value / 60,
 
                 new List<List<double>>
                 {
