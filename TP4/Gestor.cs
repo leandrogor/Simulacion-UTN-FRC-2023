@@ -73,6 +73,7 @@ namespace SIM_TP2.TP4.Entidades
 
         public void iniciar(double tiempoASimular, double horaInicioAMostrar, int cantIterAMostrar)
         {
+            
             int iteracionMostrada = 1;
             while (iteraciones < 100000)
             {
@@ -134,7 +135,13 @@ namespace SIM_TP2.TP4.Entidades
                 }
 
                 iteraciones++;
+
+
+
+                
                 Console.WriteLine();
+
+
 
                 //if (reloj >= horaInicioAMostrar && )
 
