@@ -79,6 +79,33 @@
             this.label15 = new System.Windows.Forms.Label();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.btnIniciar = new Guna.UI.WinForms.GunaButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoPromEsperaFutbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoPromEsperaHand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoPromEsperaBasket = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,33 +147,6 @@
             this.TipoCliente6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoCliente6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraLlegadaCliente6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoPromEsperaFutbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoPromEsperaHand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoPromEsperaBasket = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tiempoLimpiezaCancha)).BeginInit();
@@ -920,7 +920,7 @@
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Size = new System.Drawing.Size(152, 72);
-            this.gunaButton1.TabIndex = 16;
+            this.gunaButton1.TabIndex = 17;
             this.gunaButton1.Text = "VOLVER";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
@@ -953,329 +953,6 @@
             this.btnIniciar.Text = "INICIAR";
             this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
-            // Numero
-            // 
-            this.Numero.Frozen = true;
-            this.Numero.HeaderText = "Nº";
-            this.Numero.MinimumWidth = 6;
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            this.Numero.Width = 30;
-            // 
-            // NombreEvento
-            // 
-            this.NombreEvento.Frozen = true;
-            this.NombreEvento.HeaderText = "Nombre Evento";
-            this.NombreEvento.MinimumWidth = 6;
-            this.NombreEvento.Name = "NombreEvento";
-            this.NombreEvento.ReadOnly = true;
-            this.NombreEvento.Width = 150;
-            // 
-            // Reloj
-            // 
-            this.Reloj.HeaderText = "Reloj";
-            this.Reloj.MinimumWidth = 6;
-            this.Reloj.Name = "Reloj";
-            this.Reloj.ReadOnly = true;
-            this.Reloj.Width = 70;
-            // 
-            // RND1
-            // 
-            this.RND1.HeaderText = "RND1";
-            this.RND1.MinimumWidth = 6;
-            this.RND1.Name = "RND1";
-            this.RND1.ReadOnly = true;
-            this.RND1.Width = 70;
-            // 
-            // ProxLlegadaF
-            // 
-            this.ProxLlegadaF.HeaderText = "Proxima Llegada Futbol";
-            this.ProxLlegadaF.MinimumWidth = 6;
-            this.ProxLlegadaF.Name = "ProxLlegadaF";
-            this.ProxLlegadaF.ReadOnly = true;
-            this.ProxLlegadaF.Width = 75;
-            // 
-            // RND2
-            // 
-            this.RND2.HeaderText = "RND2";
-            this.RND2.MinimumWidth = 6;
-            this.RND2.Name = "RND2";
-            this.RND2.ReadOnly = true;
-            this.RND2.Width = 70;
-            // 
-            // ProxLlegadaH
-            // 
-            this.ProxLlegadaH.HeaderText = "Proxima Llegada Handball";
-            this.ProxLlegadaH.MinimumWidth = 6;
-            this.ProxLlegadaH.Name = "ProxLlegadaH";
-            this.ProxLlegadaH.ReadOnly = true;
-            this.ProxLlegadaH.Width = 75;
-            // 
-            // RND3
-            // 
-            this.RND3.HeaderText = "RND3";
-            this.RND3.MinimumWidth = 6;
-            this.RND3.Name = "RND3";
-            this.RND3.ReadOnly = true;
-            this.RND3.Width = 70;
-            // 
-            // ProxLlegadaB
-            // 
-            this.ProxLlegadaB.HeaderText = "Proxima Llegada Basketball";
-            this.ProxLlegadaB.MinimumWidth = 6;
-            this.ProxLlegadaB.Name = "ProxLlegadaB";
-            this.ProxLlegadaB.ReadOnly = true;
-            this.ProxLlegadaB.Width = 75;
-            // 
-            // RND4
-            // 
-            this.RND4.HeaderText = "RND4";
-            this.RND4.MinimumWidth = 6;
-            this.RND4.Name = "RND4";
-            this.RND4.ReadOnly = true;
-            this.RND4.Width = 70;
-            // 
-            // ProxFinJuego
-            // 
-            this.ProxFinJuego.HeaderText = "Proximo Fin Juego";
-            this.ProxFinJuego.MinimumWidth = 6;
-            this.ProxFinJuego.Name = "ProxFinJuego";
-            this.ProxFinJuego.ReadOnly = true;
-            this.ProxFinJuego.Width = 70;
-            // 
-            // FinLimpieza
-            // 
-            this.FinLimpieza.HeaderText = "Fin Limpieza";
-            this.FinLimpieza.MinimumWidth = 6;
-            this.FinLimpieza.Name = "FinLimpieza";
-            this.FinLimpieza.ReadOnly = true;
-            this.FinLimpieza.Width = 75;
-            // 
-            // EstadoCola
-            // 
-            this.EstadoCola.HeaderText = "Estado";
-            this.EstadoCola.MinimumWidth = 6;
-            this.EstadoCola.Name = "EstadoCola";
-            this.EstadoCola.ReadOnly = true;
-            // 
-            // ColaFH
-            // 
-            this.ColaFH.HeaderText = "Cola FH";
-            this.ColaFH.MinimumWidth = 6;
-            this.ColaFH.Name = "ColaFH";
-            this.ColaFH.ReadOnly = true;
-            this.ColaFH.Width = 35;
-            // 
-            // ColaB
-            // 
-            this.ColaB.HeaderText = "Cola B";
-            this.ColaB.MinimumWidth = 6;
-            this.ColaB.Name = "ColaB";
-            this.ColaB.ReadOnly = true;
-            this.ColaB.Width = 35;
-            // 
-            // AcLlegadaGrupos
-            // 
-            this.AcLlegadaGrupos.HeaderText = "Acumulador Llegada Grupos";
-            this.AcLlegadaGrupos.MinimumWidth = 6;
-            this.AcLlegadaGrupos.Name = "AcLlegadaGrupos";
-            this.AcLlegadaGrupos.ReadOnly = true;
-            this.AcLlegadaGrupos.Width = 70;
-            // 
-            // AcGruposRetirados
-            // 
-            this.AcGruposRetirados.HeaderText = "Acumulador grupos retirados sin jugar";
-            this.AcGruposRetirados.MinimumWidth = 6;
-            this.AcGruposRetirados.Name = "AcGruposRetirados";
-            this.AcGruposRetirados.ReadOnly = true;
-            this.AcGruposRetirados.Width = 70;
-            // 
-            // AcLlegF
-            // 
-            this.AcLlegF.HeaderText = "Acumulador Llegada Futbol";
-            this.AcLlegF.MinimumWidth = 6;
-            this.AcLlegF.Name = "AcLlegF";
-            this.AcLlegF.ReadOnly = true;
-            this.AcLlegF.Width = 110;
-            // 
-            // AcLlegB
-            // 
-            this.AcLlegB.HeaderText = "Acumulador Llegada BasketBall";
-            this.AcLlegB.MinimumWidth = 6;
-            this.AcLlegB.Name = "AcLlegB";
-            this.AcLlegB.ReadOnly = true;
-            this.AcLlegB.Width = 110;
-            // 
-            // AcLlegHB
-            // 
-            this.AcLlegHB.HeaderText = "Acumulador Llegada HandBall";
-            this.AcLlegHB.MinimumWidth = 6;
-            this.AcLlegHB.Name = "AcLlegHB";
-            this.AcLlegHB.ReadOnly = true;
-            this.AcLlegHB.Width = 110;
-            // 
-            // AcEsperaF
-            // 
-            this.AcEsperaF.HeaderText = "Acumulador Espera Futbol";
-            this.AcEsperaF.MinimumWidth = 6;
-            this.AcEsperaF.Name = "AcEsperaF";
-            this.AcEsperaF.ReadOnly = true;
-            this.AcEsperaF.Width = 70;
-            // 
-            // AcEsperaH
-            // 
-            this.AcEsperaH.HeaderText = "Acumulador Espera Handball";
-            this.AcEsperaH.MinimumWidth = 6;
-            this.AcEsperaH.Name = "AcEsperaH";
-            this.AcEsperaH.ReadOnly = true;
-            this.AcEsperaH.Width = 70;
-            // 
-            // AcEsperaB
-            // 
-            this.AcEsperaB.HeaderText = "Acumulador Espera Basketball";
-            this.AcEsperaB.MinimumWidth = 6;
-            this.AcEsperaB.Name = "AcEsperaB";
-            this.AcEsperaB.ReadOnly = true;
-            this.AcEsperaB.Width = 70;
-            // 
-            // TipoCliente1
-            // 
-            this.TipoCliente1.HeaderText = "Tipo Equipo1";
-            this.TipoCliente1.MinimumWidth = 6;
-            this.TipoCliente1.Name = "TipoCliente1";
-            this.TipoCliente1.ReadOnly = true;
-            this.TipoCliente1.Width = 70;
-            // 
-            // EstadoCliente1
-            // 
-            this.EstadoCliente1.HeaderText = "Estado Equipo1";
-            this.EstadoCliente1.MinimumWidth = 6;
-            this.EstadoCliente1.Name = "EstadoCliente1";
-            this.EstadoCliente1.ReadOnly = true;
-            // 
-            // HoraLlegadaCliente1
-            // 
-            this.HoraLlegadaCliente1.HeaderText = "Hora Llegada Equipo1";
-            this.HoraLlegadaCliente1.MinimumWidth = 6;
-            this.HoraLlegadaCliente1.Name = "HoraLlegadaCliente1";
-            this.HoraLlegadaCliente1.ReadOnly = true;
-            this.HoraLlegadaCliente1.Width = 70;
-            // 
-            // TipoCliente2
-            // 
-            this.TipoCliente2.HeaderText = "Tipo Equipo 2";
-            this.TipoCliente2.MinimumWidth = 6;
-            this.TipoCliente2.Name = "TipoCliente2";
-            this.TipoCliente2.ReadOnly = true;
-            this.TipoCliente2.Width = 70;
-            // 
-            // EstadoCliente2
-            // 
-            this.EstadoCliente2.HeaderText = "Estado Equipo 2";
-            this.EstadoCliente2.MinimumWidth = 6;
-            this.EstadoCliente2.Name = "EstadoCliente2";
-            this.EstadoCliente2.ReadOnly = true;
-            // 
-            // HoraLlegadaCliente2
-            // 
-            this.HoraLlegadaCliente2.HeaderText = "Hora Llegada Equipo2";
-            this.HoraLlegadaCliente2.MinimumWidth = 6;
-            this.HoraLlegadaCliente2.Name = "HoraLlegadaCliente2";
-            this.HoraLlegadaCliente2.ReadOnly = true;
-            this.HoraLlegadaCliente2.Width = 70;
-            // 
-            // TipoCliente3
-            // 
-            this.TipoCliente3.HeaderText = "Tipo Equipo 3";
-            this.TipoCliente3.MinimumWidth = 6;
-            this.TipoCliente3.Name = "TipoCliente3";
-            this.TipoCliente3.ReadOnly = true;
-            this.TipoCliente3.Width = 70;
-            // 
-            // EstadoCliente3
-            // 
-            this.EstadoCliente3.HeaderText = "Estado Equipo 3";
-            this.EstadoCliente3.MinimumWidth = 6;
-            this.EstadoCliente3.Name = "EstadoCliente3";
-            this.EstadoCliente3.ReadOnly = true;
-            // 
-            // HoraLlegadaCliente3
-            // 
-            this.HoraLlegadaCliente3.HeaderText = "Hora Llegada Equipo3";
-            this.HoraLlegadaCliente3.MinimumWidth = 6;
-            this.HoraLlegadaCliente3.Name = "HoraLlegadaCliente3";
-            this.HoraLlegadaCliente3.ReadOnly = true;
-            this.HoraLlegadaCliente3.Width = 70;
-            // 
-            // TipoCliente4
-            // 
-            this.TipoCliente4.HeaderText = "Tipo Equipo4";
-            this.TipoCliente4.MinimumWidth = 6;
-            this.TipoCliente4.Name = "TipoCliente4";
-            this.TipoCliente4.ReadOnly = true;
-            this.TipoCliente4.Width = 70;
-            // 
-            // EstadoCliente4
-            // 
-            this.EstadoCliente4.HeaderText = "Estado Equipo 4";
-            this.EstadoCliente4.MinimumWidth = 6;
-            this.EstadoCliente4.Name = "EstadoCliente4";
-            this.EstadoCliente4.ReadOnly = true;
-            // 
-            // HoraLlegadaCliente4
-            // 
-            this.HoraLlegadaCliente4.HeaderText = "Hora Llegada Equipo4";
-            this.HoraLlegadaCliente4.MinimumWidth = 6;
-            this.HoraLlegadaCliente4.Name = "HoraLlegadaCliente4";
-            this.HoraLlegadaCliente4.ReadOnly = true;
-            this.HoraLlegadaCliente4.Width = 70;
-            // 
-            // TipoCliente5
-            // 
-            this.TipoCliente5.HeaderText = "Tipo Equipo5";
-            this.TipoCliente5.MinimumWidth = 6;
-            this.TipoCliente5.Name = "TipoCliente5";
-            this.TipoCliente5.ReadOnly = true;
-            this.TipoCliente5.Width = 70;
-            // 
-            // EstadoCliente5
-            // 
-            this.EstadoCliente5.HeaderText = "Estado Equipo5";
-            this.EstadoCliente5.MinimumWidth = 6;
-            this.EstadoCliente5.Name = "EstadoCliente5";
-            this.EstadoCliente5.ReadOnly = true;
-            // 
-            // HoraLlegadaCliente5
-            // 
-            this.HoraLlegadaCliente5.HeaderText = "Hora Llegada Equipo5";
-            this.HoraLlegadaCliente5.MinimumWidth = 6;
-            this.HoraLlegadaCliente5.Name = "HoraLlegadaCliente5";
-            this.HoraLlegadaCliente5.ReadOnly = true;
-            this.HoraLlegadaCliente5.Width = 70;
-            // 
-            // TipoCliente6
-            // 
-            this.TipoCliente6.HeaderText = "Tipo Equipo6";
-            this.TipoCliente6.MinimumWidth = 6;
-            this.TipoCliente6.Name = "TipoCliente6";
-            this.TipoCliente6.ReadOnly = true;
-            this.TipoCliente6.Width = 70;
-            // 
-            // EstadoCliente6
-            // 
-            this.EstadoCliente6.HeaderText = "Estado Equipo6";
-            this.EstadoCliente6.MinimumWidth = 6;
-            this.EstadoCliente6.Name = "EstadoCliente6";
-            this.EstadoCliente6.ReadOnly = true;
-            // 
-            // HoraLlegadaCliente6
-            // 
-            this.HoraLlegadaCliente6.HeaderText = "Hora Llegada Equipo6";
-            this.HoraLlegadaCliente6.MinimumWidth = 6;
-            this.HoraLlegadaCliente6.Name = "HoraLlegadaCliente6";
-            this.HoraLlegadaCliente6.ReadOnly = true;
-            this.HoraLlegadaCliente6.Width = 70;
             // 
             // dataGridView1
             // 
@@ -1352,6 +1029,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(2000, 135);
             this.dataGridView1.TabIndex = 43;
+            this.dataGridView1.TabStop = false;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1563,6 +1241,336 @@
             this.TiempoPromEsperaBasket.ReadOnly = true;
             this.TiempoPromEsperaBasket.Width = 80;
             // 
+            // Numero
+            // 
+            this.Numero.Frozen = true;
+            this.Numero.HeaderText = "Nº";
+            this.Numero.MinimumWidth = 6;
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            this.Numero.Width = 40;
+            // 
+            // NombreEvento
+            // 
+            this.NombreEvento.Frozen = true;
+            this.NombreEvento.HeaderText = "Nombre Evento";
+            this.NombreEvento.MinimumWidth = 6;
+            this.NombreEvento.Name = "NombreEvento";
+            this.NombreEvento.ReadOnly = true;
+            this.NombreEvento.Width = 150;
+            // 
+            // Reloj
+            // 
+            this.Reloj.HeaderText = "Reloj";
+            this.Reloj.MinimumWidth = 6;
+            this.Reloj.Name = "Reloj";
+            this.Reloj.ReadOnly = true;
+            this.Reloj.Width = 70;
+            // 
+            // RND1
+            // 
+            this.RND1.HeaderText = "RND1";
+            this.RND1.MinimumWidth = 6;
+            this.RND1.Name = "RND1";
+            this.RND1.ReadOnly = true;
+            this.RND1.Width = 70;
+            // 
+            // ProxLlegadaF
+            // 
+            this.ProxLlegadaF.HeaderText = "Proxima Llegada Futbol";
+            this.ProxLlegadaF.MinimumWidth = 6;
+            this.ProxLlegadaF.Name = "ProxLlegadaF";
+            this.ProxLlegadaF.ReadOnly = true;
+            this.ProxLlegadaF.Width = 75;
+            // 
+            // RND2
+            // 
+            this.RND2.HeaderText = "RND2";
+            this.RND2.MinimumWidth = 6;
+            this.RND2.Name = "RND2";
+            this.RND2.ReadOnly = true;
+            this.RND2.Width = 70;
+            // 
+            // ProxLlegadaH
+            // 
+            this.ProxLlegadaH.HeaderText = "Proxima Llegada Handball";
+            this.ProxLlegadaH.MinimumWidth = 6;
+            this.ProxLlegadaH.Name = "ProxLlegadaH";
+            this.ProxLlegadaH.ReadOnly = true;
+            this.ProxLlegadaH.Width = 75;
+            // 
+            // RND3
+            // 
+            this.RND3.HeaderText = "RND3";
+            this.RND3.MinimumWidth = 6;
+            this.RND3.Name = "RND3";
+            this.RND3.ReadOnly = true;
+            this.RND3.Width = 70;
+            // 
+            // ProxLlegadaB
+            // 
+            this.ProxLlegadaB.HeaderText = "Proxima Llegada Basketball";
+            this.ProxLlegadaB.MinimumWidth = 6;
+            this.ProxLlegadaB.Name = "ProxLlegadaB";
+            this.ProxLlegadaB.ReadOnly = true;
+            this.ProxLlegadaB.Width = 75;
+            // 
+            // RND4
+            // 
+            this.RND4.HeaderText = "RND4";
+            this.RND4.MinimumWidth = 6;
+            this.RND4.Name = "RND4";
+            this.RND4.ReadOnly = true;
+            this.RND4.Width = 70;
+            // 
+            // ProxFinJuego
+            // 
+            this.ProxFinJuego.HeaderText = "Proximo Fin Juego";
+            this.ProxFinJuego.MinimumWidth = 6;
+            this.ProxFinJuego.Name = "ProxFinJuego";
+            this.ProxFinJuego.ReadOnly = true;
+            this.ProxFinJuego.Width = 70;
+            // 
+            // FinLimpieza
+            // 
+            this.FinLimpieza.HeaderText = "Fin Limpieza";
+            this.FinLimpieza.MinimumWidth = 6;
+            this.FinLimpieza.Name = "FinLimpieza";
+            this.FinLimpieza.ReadOnly = true;
+            this.FinLimpieza.Width = 75;
+            // 
+            // EstadoCola
+            // 
+            this.EstadoCola.HeaderText = "Estado";
+            this.EstadoCola.MinimumWidth = 6;
+            this.EstadoCola.Name = "EstadoCola";
+            this.EstadoCola.ReadOnly = true;
+            this.EstadoCola.Width = 125;
+            // 
+            // ColaFH
+            // 
+            this.ColaFH.HeaderText = "Cola FH";
+            this.ColaFH.MinimumWidth = 6;
+            this.ColaFH.Name = "ColaFH";
+            this.ColaFH.ReadOnly = true;
+            this.ColaFH.Width = 35;
+            // 
+            // ColaB
+            // 
+            this.ColaB.HeaderText = "Cola B";
+            this.ColaB.MinimumWidth = 6;
+            this.ColaB.Name = "ColaB";
+            this.ColaB.ReadOnly = true;
+            this.ColaB.Width = 35;
+            // 
+            // AcLlegadaGrupos
+            // 
+            this.AcLlegadaGrupos.HeaderText = "Acumulador Llegada Grupos";
+            this.AcLlegadaGrupos.MinimumWidth = 6;
+            this.AcLlegadaGrupos.Name = "AcLlegadaGrupos";
+            this.AcLlegadaGrupos.ReadOnly = true;
+            this.AcLlegadaGrupos.Width = 70;
+            // 
+            // AcGruposRetirados
+            // 
+            this.AcGruposRetirados.HeaderText = "Acumulador grupos retirados sin jugar";
+            this.AcGruposRetirados.MinimumWidth = 6;
+            this.AcGruposRetirados.Name = "AcGruposRetirados";
+            this.AcGruposRetirados.ReadOnly = true;
+            this.AcGruposRetirados.Width = 70;
+            // 
+            // AcLlegF
+            // 
+            this.AcLlegF.HeaderText = "Acumulador Llegada Futbol";
+            this.AcLlegF.MinimumWidth = 6;
+            this.AcLlegF.Name = "AcLlegF";
+            this.AcLlegF.ReadOnly = true;
+            this.AcLlegF.Width = 110;
+            // 
+            // AcLlegB
+            // 
+            this.AcLlegB.HeaderText = "Acumulador Llegada BasketBall";
+            this.AcLlegB.MinimumWidth = 6;
+            this.AcLlegB.Name = "AcLlegB";
+            this.AcLlegB.ReadOnly = true;
+            this.AcLlegB.Width = 110;
+            // 
+            // AcLlegHB
+            // 
+            this.AcLlegHB.HeaderText = "Acumulador Llegada HandBall";
+            this.AcLlegHB.MinimumWidth = 6;
+            this.AcLlegHB.Name = "AcLlegHB";
+            this.AcLlegHB.ReadOnly = true;
+            this.AcLlegHB.Width = 110;
+            // 
+            // AcEsperaF
+            // 
+            this.AcEsperaF.HeaderText = "Acumulador Espera Futbol";
+            this.AcEsperaF.MinimumWidth = 6;
+            this.AcEsperaF.Name = "AcEsperaF";
+            this.AcEsperaF.ReadOnly = true;
+            this.AcEsperaF.Width = 70;
+            // 
+            // AcEsperaH
+            // 
+            this.AcEsperaH.HeaderText = "Acumulador Espera Handball";
+            this.AcEsperaH.MinimumWidth = 6;
+            this.AcEsperaH.Name = "AcEsperaH";
+            this.AcEsperaH.ReadOnly = true;
+            this.AcEsperaH.Width = 70;
+            // 
+            // AcEsperaB
+            // 
+            this.AcEsperaB.HeaderText = "Acumulador Espera Basketball";
+            this.AcEsperaB.MinimumWidth = 6;
+            this.AcEsperaB.Name = "AcEsperaB";
+            this.AcEsperaB.ReadOnly = true;
+            this.AcEsperaB.Width = 70;
+            // 
+            // TipoCliente1
+            // 
+            this.TipoCliente1.HeaderText = "Tipo Equipo1";
+            this.TipoCliente1.MinimumWidth = 6;
+            this.TipoCliente1.Name = "TipoCliente1";
+            this.TipoCliente1.ReadOnly = true;
+            this.TipoCliente1.Width = 70;
+            // 
+            // EstadoCliente1
+            // 
+            this.EstadoCliente1.HeaderText = "Estado Equipo1";
+            this.EstadoCliente1.MinimumWidth = 6;
+            this.EstadoCliente1.Name = "EstadoCliente1";
+            this.EstadoCliente1.ReadOnly = true;
+            this.EstadoCliente1.Width = 125;
+            // 
+            // HoraLlegadaCliente1
+            // 
+            this.HoraLlegadaCliente1.HeaderText = "Hora Llegada Equipo1";
+            this.HoraLlegadaCliente1.MinimumWidth = 6;
+            this.HoraLlegadaCliente1.Name = "HoraLlegadaCliente1";
+            this.HoraLlegadaCliente1.ReadOnly = true;
+            this.HoraLlegadaCliente1.Width = 70;
+            // 
+            // TipoCliente2
+            // 
+            this.TipoCliente2.HeaderText = "Tipo Equipo 2";
+            this.TipoCliente2.MinimumWidth = 6;
+            this.TipoCliente2.Name = "TipoCliente2";
+            this.TipoCliente2.ReadOnly = true;
+            this.TipoCliente2.Width = 70;
+            // 
+            // EstadoCliente2
+            // 
+            this.EstadoCliente2.HeaderText = "Estado Equipo 2";
+            this.EstadoCliente2.MinimumWidth = 6;
+            this.EstadoCliente2.Name = "EstadoCliente2";
+            this.EstadoCliente2.ReadOnly = true;
+            this.EstadoCliente2.Width = 125;
+            // 
+            // HoraLlegadaCliente2
+            // 
+            this.HoraLlegadaCliente2.HeaderText = "Hora Llegada Equipo2";
+            this.HoraLlegadaCliente2.MinimumWidth = 6;
+            this.HoraLlegadaCliente2.Name = "HoraLlegadaCliente2";
+            this.HoraLlegadaCliente2.ReadOnly = true;
+            this.HoraLlegadaCliente2.Width = 70;
+            // 
+            // TipoCliente3
+            // 
+            this.TipoCliente3.HeaderText = "Tipo Equipo 3";
+            this.TipoCliente3.MinimumWidth = 6;
+            this.TipoCliente3.Name = "TipoCliente3";
+            this.TipoCliente3.ReadOnly = true;
+            this.TipoCliente3.Width = 70;
+            // 
+            // EstadoCliente3
+            // 
+            this.EstadoCliente3.HeaderText = "Estado Equipo 3";
+            this.EstadoCliente3.MinimumWidth = 6;
+            this.EstadoCliente3.Name = "EstadoCliente3";
+            this.EstadoCliente3.ReadOnly = true;
+            this.EstadoCliente3.Width = 125;
+            // 
+            // HoraLlegadaCliente3
+            // 
+            this.HoraLlegadaCliente3.HeaderText = "Hora Llegada Equipo3";
+            this.HoraLlegadaCliente3.MinimumWidth = 6;
+            this.HoraLlegadaCliente3.Name = "HoraLlegadaCliente3";
+            this.HoraLlegadaCliente3.ReadOnly = true;
+            this.HoraLlegadaCliente3.Width = 70;
+            // 
+            // TipoCliente4
+            // 
+            this.TipoCliente4.HeaderText = "Tipo Equipo4";
+            this.TipoCliente4.MinimumWidth = 6;
+            this.TipoCliente4.Name = "TipoCliente4";
+            this.TipoCliente4.ReadOnly = true;
+            this.TipoCliente4.Width = 70;
+            // 
+            // EstadoCliente4
+            // 
+            this.EstadoCliente4.HeaderText = "Estado Equipo 4";
+            this.EstadoCliente4.MinimumWidth = 6;
+            this.EstadoCliente4.Name = "EstadoCliente4";
+            this.EstadoCliente4.ReadOnly = true;
+            this.EstadoCliente4.Width = 125;
+            // 
+            // HoraLlegadaCliente4
+            // 
+            this.HoraLlegadaCliente4.HeaderText = "Hora Llegada Equipo4";
+            this.HoraLlegadaCliente4.MinimumWidth = 6;
+            this.HoraLlegadaCliente4.Name = "HoraLlegadaCliente4";
+            this.HoraLlegadaCliente4.ReadOnly = true;
+            this.HoraLlegadaCliente4.Width = 70;
+            // 
+            // TipoCliente5
+            // 
+            this.TipoCliente5.HeaderText = "Tipo Equipo5";
+            this.TipoCliente5.MinimumWidth = 6;
+            this.TipoCliente5.Name = "TipoCliente5";
+            this.TipoCliente5.ReadOnly = true;
+            this.TipoCliente5.Width = 70;
+            // 
+            // EstadoCliente5
+            // 
+            this.EstadoCliente5.HeaderText = "Estado Equipo5";
+            this.EstadoCliente5.MinimumWidth = 6;
+            this.EstadoCliente5.Name = "EstadoCliente5";
+            this.EstadoCliente5.ReadOnly = true;
+            this.EstadoCliente5.Width = 125;
+            // 
+            // HoraLlegadaCliente5
+            // 
+            this.HoraLlegadaCliente5.HeaderText = "Hora Llegada Equipo5";
+            this.HoraLlegadaCliente5.MinimumWidth = 6;
+            this.HoraLlegadaCliente5.Name = "HoraLlegadaCliente5";
+            this.HoraLlegadaCliente5.ReadOnly = true;
+            this.HoraLlegadaCliente5.Width = 70;
+            // 
+            // TipoCliente6
+            // 
+            this.TipoCliente6.HeaderText = "Tipo Equipo6";
+            this.TipoCliente6.MinimumWidth = 6;
+            this.TipoCliente6.Name = "TipoCliente6";
+            this.TipoCliente6.ReadOnly = true;
+            this.TipoCliente6.Width = 70;
+            // 
+            // EstadoCliente6
+            // 
+            this.EstadoCliente6.HeaderText = "Estado Equipo6";
+            this.EstadoCliente6.MinimumWidth = 6;
+            this.EstadoCliente6.Name = "EstadoCliente6";
+            this.EstadoCliente6.ReadOnly = true;
+            this.EstadoCliente6.Width = 125;
+            // 
+            // HoraLlegadaCliente6
+            // 
+            this.HoraLlegadaCliente6.HeaderText = "Hora Llegada Equipo6";
+            this.HoraLlegadaCliente6.MinimumWidth = 6;
+            this.HoraLlegadaCliente6.Name = "HoraLlegadaCliente6";
+            this.HoraLlegadaCliente6.ReadOnly = true;
+            this.HoraLlegadaCliente6.Width = 70;
+            // 
             // main_TP4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1658,6 +1666,33 @@
         private System.Windows.Forms.Label label15;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaButton btnIniciar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoPromEsperaFutbol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoPromEsperaHand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoPromEsperaBasket;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreEvento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reloj;
@@ -1699,32 +1734,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoCliente6;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCliente6;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraLlegadaCliente6;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoPromEsperaFutbol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoPromEsperaHand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoPromEsperaBasket;
     }
 }
