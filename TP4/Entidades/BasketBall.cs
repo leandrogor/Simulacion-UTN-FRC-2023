@@ -17,8 +17,10 @@ namespace SIM_TP2.TP4.Entidades
         private double tiempoLlegada;
         private double proximaLlegada;
 
+        private double rndUtilizado;
         public double TiempoLlegada { get => tiempoLlegada; set => tiempoLlegada = value; }
         public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }
+        public double RndUtilizado { get => rndUtilizado; set => rndUtilizado = value; }
 
         public static void setBasketBall(double llegMin, double llegMax, double ocMin, double ocMax)
         {
@@ -40,6 +42,7 @@ namespace SIM_TP2.TP4.Entidades
 
         public void generarProximaLlegada(double horaInicio, double rnd)
         {
+            RndUtilizado = rnd;
             TiempoLlegada = llegadaMinima + rnd * (llegadaMaxima - llegadaMinima);
             ProximaLlegada = horaInicio + TiempoLlegada;
             Console.WriteLine("Próxima llegada: " + proximaLlegada);

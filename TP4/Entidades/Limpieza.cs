@@ -13,6 +13,7 @@ namespace SIM_TP2.TP4.Entidades
         private static double tiempoLimpieza;
         private double proximaLimpieza;
 
+
         public Limpieza(double tmpLimpieza)
         {
             tiempoLimpieza = tmpLimpieza;

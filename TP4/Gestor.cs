@@ -31,11 +31,16 @@ namespace SIM_TP2.TP4.Entidades
         private BasketBall basketBall;
         private Limpieza limpieza;
 
+        private main_TP4 pantalla;
+
         private int iteraciones;
         private object evento;
 
-        public Gestor(double tiempoLimpieza, List<List<double>> llegadas, List<List<double>> ocupaciones)
+        public Gestor(double tiempoLimpieza, List<List<double>> llegadas, List<List<double>> ocupaciones, main_TP4 pantalla)
         {
+
+            this.pantalla = pantalla;
+
             Futbol.setFutbol(llegadas[0][0], ocupaciones[0][0], ocupaciones[0][1]);
             HandBall.setHandBall(llegadas[1][0], llegadas[1][1], ocupaciones[1][0], ocupaciones[1][1]);
             BasketBall.setBasketBall(llegadas[2][0], llegadas[2][1], ocupaciones[2][0], ocupaciones[2][1]);
@@ -46,11 +51,18 @@ namespace SIM_TP2.TP4.Entidades
             basketBall = new BasketBall(reloj, rndB.NextDouble());
             limpieza = new Limpieza(tiempoLimpieza);
 
+            double rndFutbol = rndF.NextDouble();
+            double rndBasket = rndB.NextDouble();
+            double rndHandBa = rndH.NextDouble();
+
+            string estadoInicialCancha = "Libre";
+
+            pantalla.mostrarFilaInicio(0, reloj, rndFutbol, futbol.ProximaLlegada, rndBasket, basketBall.ProximaLlegada, rndHandBa, handBall.ProximaLlegada, estadoInicialCancha, null);
 
             Console.WriteLine();
-            Console.WriteLine(rndF.NextDouble());
-            Console.WriteLine(rndH.NextDouble());
-            Console.WriteLine(rndB.NextDouble());
+            Console.WriteLine(rndFutbol);
+            Console.WriteLine(rndBasket);
+            Console.WriteLine(rndHandBa);
             Console.WriteLine();
             Console.WriteLine(reloj);
             Console.WriteLine(futbol.ProximaLlegada);
@@ -61,6 +73,7 @@ namespace SIM_TP2.TP4.Entidades
 
         public void iniciar(double tiempoASimular, double horaInicioAMostrar, int cantIterAMostrar)
         {
+            int interacionMostrada = 0;
             while (iteraciones < 100000)
             {
                 evento = obtenerProximoEvento();
@@ -71,9 +84,12 @@ namespace SIM_TP2.TP4.Entidades
                     break;
                 }
 
+
                 Console.WriteLine("Iteración: " + (iteraciones + 1));
                 Console.WriteLine("Reloj: " + reloj);
                 Console.WriteLine(evento);
+
+
 
                 if (evento is Cancha)
                 {
@@ -109,6 +125,10 @@ namespace SIM_TP2.TP4.Entidades
                 }
                 iteraciones++;
                 Console.WriteLine();
+
+                //if (reloj >= horaInicioAMostrar && )
+
+
             }
             Console.WriteLine("Ac. Grupos    : " + acGrupos);
             Console.WriteLine("Ac. Retirados : " + acRetirados);

@@ -14,7 +14,10 @@ namespace SIM_TP2.TP4.Entidades
         private double tiempoJuego;
         private double horaFin = Double.MaxValue;
 
+        private double rndUtilizado;
+
         public double HoraFin { get => horaFin; set => horaFin = value; }
+        public double RndUtilizado { get => rndUtilizado; set => rndUtilizado = value; }
 
         private Random rnd = new Random();
 
@@ -52,11 +55,12 @@ namespace SIM_TP2.TP4.Entidades
             horaFin = generarProximoFinJuego(reloj, disciplina);
         }
 
-        public void iniciarProximoJuego(double reloj, ref double acEspF, ref double acEspH, ref double acEspB)
+        public IDisciplina iniciarProximoJuego(double reloj, ref double acEspF, ref double acEspH, ref double acEspB)
         {
+            IDisciplina deporte = null;
             if (colaFH.Count > 0)
             {
-                IDisciplina deporte = colaFH.Dequeue();
+                deporte = colaFH.Dequeue();
 
                 if (deporte is Futbol)
                 {
@@ -71,7 +75,7 @@ namespace SIM_TP2.TP4.Entidades
             }
             else if (colaB.Count > 0)
             {
-                IDisciplina deporte = colaB.Dequeue();
+                deporte = colaB.Dequeue();
 
                 acEspB += reloj - deporte.ProximaLlegada;
 
@@ -82,6 +86,7 @@ namespace SIM_TP2.TP4.Entidades
                 libre = true;
                 horaFin = Double.MaxValue;
             }
+            return deporte;
         }
 
         public double generarProximoFinJuego(double horaInicio, IDisciplina disciplina)
