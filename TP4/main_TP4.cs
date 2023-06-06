@@ -57,10 +57,11 @@ namespace SIM_TP2.TP4
             dgv_cola.Rows[filaAMostrar].Cells["ProxLlegadaH"].Value = proximaLlegadaBasket;
             dgv_cola.Rows[filaAMostrar].Cells["ProxLlegadaB"].Value = proximaLlegadaHandBall;
 
-            if (evento.Equals(""))
+            if (evento is Cancha)
+            {
 
-                dgv_cola.Rows[filaAMostrar].Cells[""];
-
+            }
+            
             dgv_cola.Rows[1].Cells["ProxFinJuego"].Value = proximoFinJuego;
 
 
