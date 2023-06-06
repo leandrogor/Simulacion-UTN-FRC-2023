@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,7 +35,7 @@ namespace SIM_TP2.TP4
             dgv_cola.Rows[0].Cells["EstadoCola"].Value = estadoInicialCancha;
             dgv_cola.Rows[0].Cells["ColaFH"].Value = 0;
             dgv_cola.Rows[0].Cells["ColaB"].Value = 0;
-            mostrarCola(colaInicial);
+            mostrarCola(colaInicial, 0);
 
         }
 
@@ -45,10 +46,16 @@ namespace SIM_TP2.TP4
             dgv_cola.Rows[fila].Cells["Reloj"].Value = reloj;
         }
 
-        private void mostrarCola(List<IDisciplina> cola)
+        private void mostrarCola(List<IDisciplina> cola, int filaAMostrar)
         {
             if (cola == null || cola.Count == 0) return;
-
+            for(int i = 1; i <= cola.Count; i++)
+            {
+                if (cola[i-1] == null || cola[i - 1].Estado == null) continue;
+                dgv_cola.Rows[filaAMostrar].Cells["TipoCliente" + i.ToString()].Value = cola[i-1].Nombre();
+                dgv_cola.Rows[filaAMostrar].Cells["EstadoCliente" + i.ToString()].Value = cola[i-1].Estado;
+                dgv_cola.Rows[filaAMostrar].Cells["HoraLlegadaCliente" + i.ToString()].Value = cola[i-1].ProximaLlegada;
+            }
         }
         public void agregarFilaDeIteracion(int filaAMostrar, int iteracion, double reloj, object evento, double rndFutbol, double proximaLlegadaFutbol, double rndBasket, 
             double proximaLlegadaBasket, double rndHandBa, double proximaLlegadaHandBall, double rndFinJuego, double proximoFinJuego, double finLimpieza, bool libre)
@@ -84,10 +91,36 @@ namespace SIM_TP2.TP4
             
             
         }
-        public void agregarCola(int filaAMostrar, Queue<IDisciplina> colaFH, Queue<IDisciplina> colaB)
+        public void agregarCola(int filaAMostrar, IDisciplina jugando, Queue<IDisciplina> colaFH, Queue<IDisciplina> colaB)
         {
             dgv_cola.Rows[filaAMostrar].Cells["ColaFH"].Value = colaFH.Count;
             dgv_cola.Rows[filaAMostrar].Cells["ColaB"].Value = colaB.Count;
+            Queue<IDisciplina> colaFHcopy = new Queue<IDisciplina>(colaFH);
+            Queue<IDisciplina> colaBcopy = new Queue<IDisciplina>(colaB);
+            List<IDisciplina> disciplinas = new List<IDisciplina>();
+            
+            if(jugando is BasketBall)
+            {
+                colaFHcopy.Enqueue(jugando); 
+                disciplinas = MergeQueues(colaFHcopy, colaBcopy);
+            }
+            else
+            {
+                disciplinas.Add(jugando);
+                disciplinas.AddRange(MergeQueues(colaFHcopy, colaBcopy));
+            }
+            mostrarCola(disciplinas, filaAMostrar);
+        }
+        private List<T> MergeQueues<T>(Queue<T> queue1, Queue<T> queue2)
+        {
+            //sirve para juntar las dos colas
+            Queue<T> mergedQueue = new Queue<T>(queue1);
+            while (queue2.Count > 0)
+            {
+                mergedQueue.Enqueue(queue2.Dequeue());
+            }
+
+            return mergedQueue.ToList();
         }
 
         public void agregarEstadisticas(int filaAMostrar, int acGrupos, int acRetirados)

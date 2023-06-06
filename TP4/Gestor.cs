@@ -88,13 +88,12 @@ namespace SIM_TP2.TP4.Entidades
                 Console.WriteLine("Iteración: " + (iteraciones + 1));
                 Console.WriteLine("Reloj: " + reloj);
                 Console.WriteLine(evento);
-                
-
 
                 if (evento is Cancha)
                 {
                     limpieza.generarProximaLimpieza(reloj);
                     cancha.HoraFin = Double.MaxValue;
+                    cancha.Jugando.Estado = null;
                 }
                 else if (evento is Limpieza)
                 {
@@ -129,7 +128,7 @@ namespace SIM_TP2.TP4.Entidades
                     pantalla.agregarFilaDeIteracion(iteracionMostrada, iteraciones, reloj, evento, futbol.RndUtilizado, futbol.ProximaLlegada,
                         basketBall.RndUtilizado, basketBall.ProximaLlegada, handBall.RndUtilizado, handBall.ProximaLlegada, cancha.RndUtilizado,
                         cancha.HoraFin, limpieza.ProximaLimpieza, cancha.Libre);
-                    pantalla.agregarCola(iteracionMostrada, cancha.ColaFH, cancha.ColaB);
+                    pantalla.agregarCola(iteracionMostrada, cancha.Jugando, cancha.ColaFH, cancha.ColaB);
                     pantalla.agregarEstadisticas(iteracionMostrada, acGrupos, acRetirados);
                     iteracionMostrada++;
                 }

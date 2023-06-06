@@ -16,13 +16,14 @@ namespace SIM_TP2.TP4.Entidades
 
         private double tiempoLlegada;
         private double proximaLlegada;
+        private string estado = "Esperando";
 
         private double rndUtilizado;
-
 
         public double TiempoLlegada { get => tiempoLlegada; set => tiempoLlegada = value; }
         public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }
         public double RndUtilizado { get => rndUtilizado; set => rndUtilizado = value; }
+        public string Estado { get => estado; set => estado = value; }
 
         public static void setHandBall(double llegMin, double llegMax, double ocMin, double ocMax)
         {
@@ -37,7 +38,7 @@ namespace SIM_TP2.TP4.Entidades
             generarProximaLlegada(horaInicio, rnd);
         }
 
-        string IDisciplina.nombre()
+        public string Nombre()
         {
             return nombre;
         }

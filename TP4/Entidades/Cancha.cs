@@ -13,7 +13,7 @@ namespace SIM_TP2.TP4.Entidades
         private Queue<IDisciplina> colaB = new Queue<IDisciplina>();
         private double tiempoJuego;
         private double horaFin = Double.MaxValue;
-
+        private IDisciplina jugando = null;
         private double rndUtilizado;
 
         public double HoraFin { get => horaFin; set => horaFin = value; }
@@ -21,6 +21,7 @@ namespace SIM_TP2.TP4.Entidades
         public bool Libre { get => libre; set => libre = value; }
         public Queue<IDisciplina> ColaFH { get => colaFH; set => colaFH = value; }
         public Queue<IDisciplina> ColaB { get => colaB; set => colaB = value; }
+        public IDisciplina Jugando { get => jugando; set => jugando = value; }
 
         private Random rnd = new Random();
 
@@ -28,12 +29,12 @@ namespace SIM_TP2.TP4.Entidades
         {
             if (Libre)
             {
-                iniciarProximoJuego(horaInicio, disciplina);
+                Jugando = iniciarProximoJuego(horaInicio, disciplina);
                 Libre = false;
             }
             else if (hayLugarEnCola())
             {
-                if (disciplina.nombre() == "Basket Ball")
+                if (disciplina.Nombre().Equals("Basket Ball"))
                 {
                     colaB.Enqueue(disciplina);
                 }
@@ -49,12 +50,14 @@ namespace SIM_TP2.TP4.Entidades
             Console.WriteLine("Hora fin: " + horaFin);
         }
 
-        public void iniciarProximoJuego(double reloj, IDisciplina disciplina)
+        public IDisciplina iniciarProximoJuego(double reloj, IDisciplina disciplina)
         {
+            disciplina.Estado = "Jugando";
             horaFin = generarProximoFinJuego(reloj, disciplina);
+            return disciplina;
         }
 
-        public IDisciplina iniciarProximoJuego(double reloj, ref double acEspF, ref double acEspH, ref double acEspB)
+        public void iniciarProximoJuego(double reloj, ref double acEspF, ref double acEspH, ref double acEspB)
         {
             IDisciplina deporte = null;
             if (colaFH.Count > 0)
@@ -85,7 +88,8 @@ namespace SIM_TP2.TP4.Entidades
                 Libre = true;
                 horaFin = Double.MaxValue;
             }
-            return deporte;
+            if(deporte != null) deporte.Estado = "Jugando";
+            jugando = deporte;
         }
 
         public double generarProximoFinJuego(double horaInicio, IDisciplina disciplina)

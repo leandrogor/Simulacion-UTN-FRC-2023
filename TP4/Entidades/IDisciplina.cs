@@ -8,11 +8,12 @@ namespace SIM_TP2.TP4.Entidades
 {
     public interface IDisciplina
     {
-        string nombre();
+        string Nombre();
 
         void generarProximaLlegada(double horaInicio, double rnd);
 
         double generarTiempoJuego(double rnd);
+        string Estado { get; set; }
 
         double ProximaLlegada { get; set; }
 
