@@ -70,7 +70,7 @@
             this.consignabtn.OnHoverImage = null;
             this.consignabtn.OnPressedColor = System.Drawing.Color.Black;
             this.consignabtn.Size = new System.Drawing.Size(182, 72);
-            this.consignabtn.TabIndex = 42;
+            this.consignabtn.TabIndex = 1;
             this.consignabtn.Text = "CONSIGNA";
             this.consignabtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.consignabtn.Click += new System.EventHandler(this.gunaButton1_Click);
@@ -99,8 +99,8 @@
             this.tp4button.OnHoverImage = null;
             this.tp4button.OnPressedColor = System.Drawing.Color.Black;
             this.tp4button.Size = new System.Drawing.Size(182, 72);
-            this.tp4button.TabIndex = 43;
-            this.tp4button.Text = "TP4";
+            this.tp4button.TabIndex = 0;
+            this.tp4button.Text = "Resolucion";
             this.tp4button.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tp4button.Click += new System.EventHandler(this.gunaButton2_Click);
             // 

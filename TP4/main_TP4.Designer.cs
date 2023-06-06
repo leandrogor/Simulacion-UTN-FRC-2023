@@ -227,6 +227,7 @@
             this.dgv_cola.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_cola.Size = new System.Drawing.Size(2430, 615);
             this.dgv_cola.TabIndex = 0;
+            this.dgv_cola.TabStop = false;
             // 
             // Numero
             // 
@@ -599,7 +600,7 @@
             this.tiempoLimpiezaCancha.Margin = new System.Windows.Forms.Padding(4);
             this.tiempoLimpiezaCancha.Name = "tiempoLimpiezaCancha";
             this.tiempoLimpiezaCancha.Size = new System.Drawing.Size(121, 28);
-            this.tiempoLimpiezaCancha.TabIndex = 21;
+            this.tiempoLimpiezaCancha.TabIndex = 4;
             this.tiempoLimpiezaCancha.Value = new decimal(new int[] {
             10,
             0,
@@ -613,7 +614,7 @@
             this.horaInicioMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.horaInicioMostrar.Name = "horaInicioMostrar";
             this.horaInicioMostrar.Size = new System.Drawing.Size(121, 28);
-            this.horaInicioMostrar.TabIndex = 1;
+            this.horaInicioMostrar.TabIndex = 2;
             // 
             // label17
             // 
@@ -660,7 +661,7 @@
             0});
             this.horasSimular.Name = "horasSimular";
             this.horasSimular.Size = new System.Drawing.Size(144, 28);
-            this.horasSimular.TabIndex = 0;
+            this.horasSimular.TabIndex = 1;
             this.horasSimular.Value = new decimal(new int[] {
             50,
             0,
@@ -674,7 +675,7 @@
             this.eventosAMostrar.Margin = new System.Windows.Forms.Padding(4);
             this.eventosAMostrar.Name = "eventosAMostrar";
             this.eventosAMostrar.Size = new System.Drawing.Size(121, 28);
-            this.eventosAMostrar.TabIndex = 2;
+            this.eventosAMostrar.TabIndex = 3;
             this.eventosAMostrar.Value = new decimal(new int[] {
             20,
             0,
@@ -725,7 +726,7 @@
             0});
             this.maxLlegBasc.Name = "maxLlegBasc";
             this.maxLlegBasc.Size = new System.Drawing.Size(79, 27);
-            this.maxLlegBasc.TabIndex = 38;
+            this.maxLlegBasc.TabIndex = 9;
             this.maxLlegBasc.Value = new decimal(new int[] {
             10,
             0,
@@ -772,7 +773,7 @@
             0});
             this.minLlegBasc.Name = "minLlegBasc";
             this.minLlegBasc.Size = new System.Drawing.Size(79, 27);
-            this.minLlegBasc.TabIndex = 34;
+            this.minLlegBasc.TabIndex = 8;
             this.minLlegBasc.Value = new decimal(new int[] {
             6,
             0,
@@ -808,7 +809,7 @@
             0});
             this.maxLlegHand.Name = "maxLlegHand";
             this.maxLlegHand.Size = new System.Drawing.Size(79, 27);
-            this.maxLlegHand.TabIndex = 33;
+            this.maxLlegHand.TabIndex = 7;
             this.maxLlegHand.Value = new decimal(new int[] {
             14,
             0,
@@ -855,7 +856,7 @@
             0});
             this.minLlegHand.Name = "minLlegHand";
             this.minLlegHand.Size = new System.Drawing.Size(79, 27);
-            this.minLlegHand.TabIndex = 29;
+            this.minLlegHand.TabIndex = 6;
             this.minLlegHand.Value = new decimal(new int[] {
             10,
             0,
@@ -897,7 +898,7 @@
             this.expNegFutbol.Margin = new System.Windows.Forms.Padding(4);
             this.expNegFutbol.Name = "expNegFutbol";
             this.expNegFutbol.Size = new System.Drawing.Size(79, 27);
-            this.expNegFutbol.TabIndex = 3;
+            this.expNegFutbol.TabIndex = 5;
             this.expNegFutbol.Value = new decimal(new int[] {
             10,
             0,
@@ -962,7 +963,7 @@
             0});
             this.maxOcFut.Name = "maxOcFut";
             this.maxOcFut.Size = new System.Drawing.Size(79, 27);
-            this.maxOcFut.TabIndex = 43;
+            this.maxOcFut.TabIndex = 11;
             this.maxOcFut.Value = new decimal(new int[] {
             100,
             0,
@@ -1009,7 +1010,7 @@
             0});
             this.minOcFut.Name = "minOcFut";
             this.minOcFut.Size = new System.Drawing.Size(79, 27);
-            this.minOcFut.TabIndex = 39;
+            this.minOcFut.TabIndex = 10;
             this.minOcFut.Value = new decimal(new int[] {
             80,
             0,
@@ -1045,7 +1046,7 @@
             0});
             this.maxOcBas.Name = "maxOcBas";
             this.maxOcBas.Size = new System.Drawing.Size(79, 27);
-            this.maxOcBas.TabIndex = 38;
+            this.maxOcBas.TabIndex = 15;
             this.maxOcBas.Value = new decimal(new int[] {
             130,
             0,
@@ -1092,7 +1093,7 @@
             0});
             this.minOcBasc.Name = "minOcBasc";
             this.minOcBasc.Size = new System.Drawing.Size(79, 27);
-            this.minOcBasc.TabIndex = 34;
+            this.minOcBasc.TabIndex = 14;
             this.minOcBasc.Value = new decimal(new int[] {
             70,
             0,
@@ -1128,7 +1129,7 @@
             0});
             this.maxOcHand.Name = "maxOcHand";
             this.maxOcHand.Size = new System.Drawing.Size(79, 27);
-            this.maxOcHand.TabIndex = 33;
+            this.maxOcHand.TabIndex = 13;
             this.maxOcHand.Value = new decimal(new int[] {
             100,
             0,
@@ -1175,7 +1176,7 @@
             0});
             this.minOcHand.Name = "minOcHand";
             this.minOcHand.Size = new System.Drawing.Size(79, 27);
-            this.minOcHand.TabIndex = 29;
+            this.minOcHand.TabIndex = 12;
             this.minOcHand.Value = new decimal(new int[] {
             60,
             0,
@@ -1217,7 +1218,7 @@
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Size = new System.Drawing.Size(182, 72);
-            this.gunaButton1.TabIndex = 41;
+            this.gunaButton1.TabIndex = 16;
             this.gunaButton1.Text = "VOLVER";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
@@ -1246,7 +1247,7 @@
             this.btnIniciar.OnHoverImage = null;
             this.btnIniciar.OnPressedColor = System.Drawing.Color.Black;
             this.btnIniciar.Size = new System.Drawing.Size(158, 64);
-            this.btnIniciar.TabIndex = 42;
+            this.btnIniciar.TabIndex = 0;
             this.btnIniciar.Text = "INICIAR";
             this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
