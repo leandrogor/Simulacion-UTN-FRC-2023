@@ -305,6 +305,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icono.ico" />
+    <None Include="Resources\Purple Pixelated Reminder Instagram Post.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

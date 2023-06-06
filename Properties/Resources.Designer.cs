@@ -289,5 +289,15 @@ namespace SIM_TP2.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_Pixelated_Reminder_Instagram_Post {
+            get {
+                object obj = ResourceManager.GetObject("Purple Pixelated Reminder Instagram Post", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.btnTP2 = new Guna.UI.WinForms.GunaButton();
             this.btnTP3 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btn_tp4 = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
             // label2
@@ -157,6 +158,37 @@
             this.gunaLabel1.Text = "Grupo 3";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btn_tp4
+            // 
+            this.btn_tp4.AnimationHoverSpeed = 0.07F;
+            this.btn_tp4.AnimationSpeed = 0.03F;
+            this.btn_tp4.BackColor = System.Drawing.Color.Transparent;
+            this.btn_tp4.BackgroundImage = global::SIM_TP2.Properties.Resources.buttonwhite;
+            this.btn_tp4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_tp4.BaseColor = System.Drawing.Color.Transparent;
+            this.btn_tp4.BorderColor = System.Drawing.Color.Black;
+            this.btn_tp4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_tp4.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_tp4.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_tp4.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tp4.ForeColor = System.Drawing.Color.Black;
+            this.btn_tp4.Image = null;
+            this.btn_tp4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_tp4.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_tp4.Location = new System.Drawing.Point(305, 345);
+            this.btn_tp4.Name = "btn_tp4";
+            this.btn_tp4.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btn_tp4.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_tp4.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btn_tp4.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.btn_tp4.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_tp4.Size = new System.Drawing.Size(256, 84);
+            this.btn_tp4.TabIndex = 16;
+            this.btn_tp4.Text = "TP4";
+            this.btn_tp4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_tp4.UseTransfarantBackground = true;
+            this.btn_tp4.Click += new System.EventHandler(this.gunaButton1_Click);
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -165,6 +197,7 @@
             this.BackgroundImage = global::SIM_TP2.Properties.Resources.Portadamain_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(874, 487);
+            this.Controls.Add(this.btn_tp4);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.btnTP3);
             this.Controls.Add(this.btnTP2);
@@ -188,5 +221,6 @@
         private Guna.UI.WinForms.GunaButton btnTP2;
         private Guna.UI.WinForms.GunaButton btnTP3;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaButton btn_tp4;
     }
 }

@@ -124,11 +124,17 @@
   <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Copia de buttonwhite (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Copia de buttonwhite (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Diseño sin título" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diseño sin título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Diseño sin título (9)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diseño sin título (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maintp3 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintp3 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="buttonwhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buttonwhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +145,11 @@
   <data name="protada" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\protada.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maintp3 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maintp3 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="maintp3 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maintp3 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Diseño sin título3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diseño sin título3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +169,8 @@
   <data name="Diseño sin título2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diseño sin título2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="maintp3 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\maintp3 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Diseño sin título (8)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Diseño sin título (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,7 +187,7 @@
   <data name="maintp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maintp3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Copia de buttonwhite (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Copia de buttonwhite (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Purple Pixelated Reminder Instagram Post" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Purple Pixelated Reminder Instagram Post.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -133,6 +133,14 @@ namespace SIM_TP2.TP4
             gestor.iniciar((double)horasSimular.Value, (double)horaInicioMostrar.Value, (int)eventosAMostrar.Value);
         }
 
-        
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
