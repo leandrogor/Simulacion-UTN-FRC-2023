@@ -133,6 +133,16 @@ namespace SIM_TP2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Copia_de_buttonwhite1 {
+            get {
+                object obj = ResourceManager.GetObject("Copia de buttonwhite1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos {
             get {
                 object obj = ResourceManager.GetObject("Dibujado a Mano Marrón y Verde Arte Iconos Conjunto de Iconos", resourceCulture);
@@ -296,6 +306,36 @@ namespace SIM_TP2.Properties {
         internal static System.Drawing.Bitmap Purple_Pixelated_Reminder_Instagram_Post {
             get {
                 object obj = ResourceManager.GetObject("Purple Pixelated Reminder Instagram Post", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_Pixelated_Reminder_Instagram_Post__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Purple Pixelated Reminder Instagram Post (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Purple_Pixelated_Reminder_Instagram_Post__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Purple Pixelated Reminder Instagram Post (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tp4 {
+            get {
+                object obj = ResourceManager.GetObject("tp4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

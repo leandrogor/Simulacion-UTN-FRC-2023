@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SIM_TP2.TP4
 {
-    public partial class Cosngina : Form
+    public partial class consignatp4 : Form
     {
-        public Cosngina()
+        public consignatp4()
         {
             InitializeComponent();
         }
@@ -20,6 +20,16 @@ namespace SIM_TP2.TP4
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbl_Consigna_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {         
+            Close();
         }
     }
 }

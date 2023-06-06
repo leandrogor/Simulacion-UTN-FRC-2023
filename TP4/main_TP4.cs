@@ -9,7 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SIM_TP2.Generadores;
+using SIM_TP2.TP3;
 using SIM_TP2.TP4.Entidades;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.TP4
 {
@@ -174,6 +176,11 @@ namespace SIM_TP2.TP4
         private void groupBox3_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {      
+            Hide();
         }
     }
 }

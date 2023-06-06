@@ -147,11 +147,11 @@
       <DependentUpon>tablaIntervalos.cs</DependentUpon>
     </Compile>
     <Compile Include="TP3\util\Simulation.cs" />
-    <Compile Include="TP4\Cosngina.cs">
+    <Compile Include="TP4\consignatp4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TP4\Cosngina.Designer.cs">
-      <DependentUpon>Cosngina.cs</DependentUpon>
+    <Compile Include="TP4\consignatp4.Designer.cs">
+      <DependentUpon>consignatp4.cs</DependentUpon>
     </Compile>
     <Compile Include="TP4\Entidades\BasketBall.cs" />
     <Compile Include="TP4\Entidades\Cancha.cs" />
@@ -165,6 +165,12 @@
     </Compile>
     <Compile Include="TP4\main_TP4.Designer.cs">
       <DependentUpon>main_TP4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP4\presentaciontp4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP4\presentaciontp4.Designer.cs">
+      <DependentUpon>presentaciontp4.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -215,11 +221,14 @@
     <EmbeddedResource Include="TP3\tablaIntervalos.resx">
       <DependentUpon>tablaIntervalos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TP4\Cosngina.resx">
-      <DependentUpon>Cosngina.cs</DependentUpon>
+    <EmbeddedResource Include="TP4\consignatp4.resx">
+      <DependentUpon>consignatp4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TP4\main_TP4.resx">
       <DependentUpon>main_TP4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP4\presentaciontp4.resx">
+      <DependentUpon>presentaciontp4.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -304,7 +313,12 @@
     <None Include="Resources\Copia de buttonwhite %282%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Purple Pixelated Reminder Instagram Post %282%29.png" />
+    <None Include="Resources\tp4.gif" />
+    <None Include="Resources\Copia de buttonwhite1.png" />
+    <Content Include="Resources\shine.ico" />
     <Content Include="Resources\icono.ico" />
+    <None Include="Resources\Purple Pixelated Reminder Instagram Post %281%29.png" />
     <None Include="Resources\Purple Pixelated Reminder Instagram Post.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -117,13 +117,69 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label1.Text" xml:space="preserve">
-    <value>A un polideportivo llegan grupos de deportistas a practicar tres disciplinas: Fútbol, Hand Ball y Basket Ball. El polideportivo cuenta con un predio de piso sintético donde se han marcado las canchas de las tres disciplinas. 
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        l17qoPaw/wfcBPy/paCk4wAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Solo se puede practicar una disciplina por vez. Los grupos ingresan a la cancha de a uno por vez, cuando es el turno de un grupo de Basket este accede a la cancha si no hay algún grupo de otra disciplina esperando. 
-En caso contrario, las otras disciplinas tienen prioridad de uso de la cancha. Los grupos llegan y permanecen ocupando la cancha según los tiempos indicados en la tabla adjunta.
-Después de cada jugada se limpia la cancha si están las dos libres, tarea que demora 10 minutos. Si un grupo llega y hay 5 grupos esperando se retira. </value>
   </data>
 </root>

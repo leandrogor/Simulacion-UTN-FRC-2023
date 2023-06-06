@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_TP4));
             this.dgv_cola = new System.Windows.Forms.DataGridView();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,7 +114,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.minOcHand = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnIniciar = new System.Windows.Forms.Button();
+            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btnIniciar = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tiempoLimpiezaCancha)).BeginInit();
@@ -196,13 +198,13 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Indigo;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_cola.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_cola.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgv_cola.Location = new System.Drawing.Point(13, 205);
+            this.dgv_cola.Location = new System.Drawing.Point(13, 195);
             this.dgv_cola.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_cola.Name = "dgv_cola";
             this.dgv_cola.ReadOnly = true;
@@ -558,7 +560,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Gold;
+            this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tiempoLimpiezaCancha);
@@ -681,7 +683,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Orange;
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.maxLlegBasc);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
@@ -915,7 +917,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox3.BackColor = System.Drawing.Color.SlateBlue;
             this.groupBox3.Controls.Add(this.maxOcFut);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label20);
@@ -1191,39 +1193,86 @@
             this.label15.TabIndex = 30;
             this.label15.Text = "Uniforme(";
             // 
+            // gunaButton1
+            // 
+            this.gunaButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaButton1.AnimationSpeed = 0.03F;
+            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
+            this.gunaButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaButton1.BaseColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaButton1.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
+            this.gunaButton1.Image = null;
+            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaButton1.Location = new System.Drawing.Point(1727, 841);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gunaButton1.Name = "gunaButton1";
+            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaButton1.OnHoverImage = null;
+            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaButton1.Size = new System.Drawing.Size(182, 72);
+            this.gunaButton1.TabIndex = 41;
+            this.gunaButton1.Text = "VOLVER";
+            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
+            // 
             // btnIniciar
             // 
-            this.btnIniciar.BackColor = System.Drawing.Color.Gold;
-            this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnIniciar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnIniciar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnIniciar.Font = new System.Drawing.Font("SimSun", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(1549, 120);
+            this.btnIniciar.AnimationHoverSpeed = 0.07F;
+            this.btnIniciar.AnimationSpeed = 0.03F;
+            this.btnIniciar.BackColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
+            this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIniciar.BaseColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.BorderColor = System.Drawing.Color.Black;
+            this.btnIniciar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnIniciar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnIniciar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciar.ForeColor = System.Drawing.Color.Black;
+            this.btnIniciar.Image = null;
+            this.btnIniciar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnIniciar.Location = new System.Drawing.Point(1518, 123);
             this.btnIniciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(144, 63);
-            this.btnIniciar.TabIndex = 40;
-            this.btnIniciar.Text = "Iniciar";
-            this.btnIniciar.UseVisualStyleBackColor = false;
+            this.btnIniciar.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnIniciar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnIniciar.OnHoverImage = null;
+            this.btnIniciar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnIniciar.Size = new System.Drawing.Size(158, 64);
+            this.btnIniciar.TabIndex = 42;
+            this.btnIniciar.Text = "INICIAR";
+            this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // main_TP4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::SIM_TP2.Properties.Resources.Purple_Pixelated_Reminder_Instagram_Post;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1784, 750);
+            this.ClientSize = new System.Drawing.Size(1921, 912);
             this.Controls.Add(this.btnIniciar);
+            this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv_cola);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "main_TP4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "main_tp4";
+            this.Text = "Tp4";
+            this.TransparencyKey = System.Drawing.SystemColors.ActiveCaption;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -1293,7 +1342,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown minOcHand;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreEvento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Reloj;
@@ -1335,5 +1383,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoCliente6;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCliente6;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraLlegadaCliente6;
+        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnIniciar;
     }
 }

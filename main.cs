@@ -56,7 +56,7 @@ namespace SIM_TP2
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            main_TP4 ventana = new main_TP4();
+            presentaciontp4 ventana = new presentaciontp4();
             ventana.Show();
             ventana.FormClosed += LogOut;
             Hide();
