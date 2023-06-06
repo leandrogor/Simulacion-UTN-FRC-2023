@@ -60,22 +60,10 @@ namespace SIM_TP2.TP4.Entidades
             string estadoInicialCancha = "Libre";
 
             pantalla.mostrarFilaInicio(0, reloj, rndFutbol, futbol.ProximaLlegada, rndBasket, basketBall.ProximaLlegada, rndHandBa, handBall.ProximaLlegada, estadoInicialCancha, null);
-
-            Console.WriteLine();
-            Console.WriteLine(rndFutbol);
-            Console.WriteLine(rndBasket);
-            Console.WriteLine(rndHandBa);
-            Console.WriteLine();
-            Console.WriteLine(reloj);
-            Console.WriteLine(futbol.ProximaLlegada);
-            Console.WriteLine(handBall.ProximaLlegada);
-            Console.WriteLine(basketBall.ProximaLlegada);
-            Console.WriteLine();
         }
 
         public void iniciar(double tiempoASimular, double horaInicioAMostrar, int cantIterAMostrar)
         {
-            
             int iteracionMostrada = 1;
             while (iteraciones < 100000)
             {
@@ -86,12 +74,6 @@ namespace SIM_TP2.TP4.Entidades
                 {
                     break;
                 }
-
-
-                Console.WriteLine("Iteración: " + (iteraciones + 1));
-                Console.WriteLine("Reloj: " + reloj);
-                Console.WriteLine(evento);
-
                 if (evento is Cancha)
                 {
                     limpieza.generarProximaLimpieza(reloj);
@@ -102,7 +84,6 @@ namespace SIM_TP2.TP4.Entidades
                 {
                     limpieza.ProximaLimpieza = Double.MaxValue;
                     cancha.iniciarProximoJuego(reloj, ref acEspF, ref acEspH, ref acEspB);
-                    Console.WriteLine("Proximo fin juego: " + cancha.HoraFin);
                 }
                 else
                 {
@@ -139,28 +120,23 @@ namespace SIM_TP2.TP4.Entidades
 
                 utlimoEvento.Clear();
                 utlimoEvento.AddRange(new List<object> {
-                    iteraciones, evento, reloj,
-                    futbol.ProximaLlegada,
-                    basketBall.ProximaLlegada, 
-                    handBall.ProximaLlegada, 
-                    cancha.HoraFin, 
-                    limpieza.ProximaLimpieza, cancha.Libre,
-                    cancha.ColaFH, cancha.ColaB, 
-                    acGrupos, acRetirados, acLlegF, acLlegH, acLlegB, acEspF, acEspH, acEspB
-
+                    iteraciones+1, evento, reloj.ToString("0.00"),
+                    futbol.ProximaLlegada.ToString("0.00"),
+                    basketBall.ProximaLlegada.ToString("0.00"),
+                    handBall.ProximaLlegada.ToString("0.00"),
+                    cancha.HoraFin == double.MaxValue ? "" : cancha.HoraFin.ToString("0.00"),
+                    limpieza.ProximaLimpieza == double.MaxValue ? "" : cancha.HoraFin.ToString("0.00"),
+                    cancha.Libre ? "Libre" : "Ocupado",
+                    cancha.ColaFH.Count(), cancha.ColaB.Count(),
+                    acGrupos, acRetirados, acLlegF, acLlegH, acLlegB, 
+                    acEspF.ToString("0.00"), acEspH.ToString("0.00"), acEspB.ToString("0.00")
                 });
-
                 iteraciones++;
-
-                Console.WriteLine();
-
-
             }
-
             calcularEstadisticos();
             pantalla.MostrarUltimaFila(utlimoEvento);
+            pantalla.limpiarFilas();
         }
-
 
         public object obtenerProximoEvento()
         {
@@ -207,11 +183,10 @@ namespace SIM_TP2.TP4.Entidades
 
         private void calcularEstadisticos()
         {
-            
-            string promEsperaF = (acEspF/acLlegF).ToString();
-            string promEsperaH = (acEspF/acLlegH).ToString();
-            string promEsperaB = (acEspF/acLlegB).ToString();
-            string porcenRetSinJugar = (acRetirados/acGrupos*100).ToString();
+            string promEsperaF = acLlegF > 0 ? (acEspF / acLlegF).ToString("0.00") : "0";
+            string promEsperaH = acLlegH > 0 ? (acEspF / acLlegH).ToString("0.00") : "0";
+            string promEsperaB = acLlegB > 0 ? (acEspF / acLlegB).ToString("0.00") : "0";
+            string porcenRetSinJugar = ((double)acRetirados / (double)acGrupos * 100).ToString("0.00") + "%";
 
             utlimoEvento.AddRange(new List<object>
             {
@@ -220,7 +195,6 @@ namespace SIM_TP2.TP4.Entidades
                 promEsperaB,
                 porcenRetSinJugar
             });
-
 
         }
     }

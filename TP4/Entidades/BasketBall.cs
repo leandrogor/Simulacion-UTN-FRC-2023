@@ -43,7 +43,6 @@ namespace SIM_TP2.TP4.Entidades
             RndUtilizado = rnd;
             TiempoLlegada = llegadaMinima + rnd * (llegadaMaxima - llegadaMinima);
             ProximaLlegada = horaInicio + TiempoLlegada;
-            Console.WriteLine("Próxima llegada: " + proximaLlegada);
         }
 
         public double generarTiempoJuego(double rnd)

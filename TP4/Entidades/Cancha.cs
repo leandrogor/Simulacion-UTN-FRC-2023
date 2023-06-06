@@ -47,7 +47,6 @@ namespace SIM_TP2.TP4.Entidades
             {
                 retirados++;
             }
-            Console.WriteLine("Hora fin: " + horaFin);
         }
 
         public IDisciplina iniciarProximoJuego(double reloj, IDisciplina disciplina)
