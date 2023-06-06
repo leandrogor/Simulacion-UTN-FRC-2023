@@ -28,6 +28,9 @@ namespace SIM_TP2.TP4.Entidades
             proximaLimpieza = horaActual + tiempoLimpieza;
             Console.WriteLine("Hora fin limpieza: " + proximaLimpieza);
         }
-
+        public override string ToString()
+        {
+            return "Fin Limpieza";
+        }
     }
 }

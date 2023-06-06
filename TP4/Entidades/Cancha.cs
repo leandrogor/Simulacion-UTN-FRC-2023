@@ -18,19 +18,18 @@ namespace SIM_TP2.TP4.Entidades
 
         public double HoraFin { get => horaFin; set => horaFin = value; }
         public double RndUtilizado { get => rndUtilizado; set => rndUtilizado = value; }
+        public bool Libre { get => libre; set => libre = value; }
+        public Queue<IDisciplina> ColaFH { get => colaFH; set => colaFH = value; }
+        public Queue<IDisciplina> ColaB { get => colaB; set => colaB = value; }
 
         private Random rnd = new Random();
 
-        public Cancha()
+        public void recibirDisciplina(double horaInicio, IDisciplina disciplina, ref int retirados)
         {
-        }
-
-        public void recibirDisciplina(double horaInicio, IDisciplina disciplina, int retirados)
-        {
-            if (libre)
+            if (Libre)
             {
                 iniciarProximoJuego(horaInicio, disciplina);
-                libre = false;
+                Libre = false;
             }
             else if (hayLugarEnCola())
             {
@@ -83,7 +82,7 @@ namespace SIM_TP2.TP4.Entidades
             }
             else
             {
-                libre = true;
+                Libre = true;
                 horaFin = Double.MaxValue;
             }
             return deporte;
@@ -91,13 +90,19 @@ namespace SIM_TP2.TP4.Entidades
 
         public double generarProximoFinJuego(double horaInicio, IDisciplina disciplina)
         {
-            tiempoJuego = disciplina.generarTiempoJuego(rnd.NextDouble());
+            rndUtilizado = rnd.NextDouble();
+            tiempoJuego = disciplina.generarTiempoJuego(rndUtilizado);
             return horaInicio + tiempoJuego;
         }
 
         public bool hayLugarEnCola()
         {
             return colaB.Count + colaFH.Count < 5;
+        }
+
+        public override string ToString()
+        {
+            return "Fin Juego";
         }
 
     }

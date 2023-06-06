@@ -52,5 +52,9 @@ namespace SIM_TP2.TP4.Entidades
         {
             return ocupacionMinima + rnd * (ocupacionMaxima - ocupacionMinima);
         }
+        public override string ToString()
+        {
+            return "Llegada BasketBall";
+        }
     }
 }

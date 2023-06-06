@@ -82,12 +82,16 @@
             this.ProxFinJuego = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FinLimpieza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoCola = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cola = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColaFH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColaB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcLlegadaGrupos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcGruposRetirados = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcLlegF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcLlegB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcLlegHB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AcEsperaF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AcEsperaH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AcEsperaB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AcLlegadaGrupos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AcGruposRetirados = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoCliente1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoCliente1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraLlegadaCliente1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -129,6 +133,7 @@
             // 
             // dgv_cola
             // 
+            this.dgv_cola.AllowUserToAddRows = false;
             this.dgv_cola.AllowUserToDeleteRows = false;
             this.dgv_cola.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_cola.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -145,12 +150,16 @@
             this.ProxFinJuego,
             this.FinLimpieza,
             this.EstadoCola,
-            this.Cola,
+            this.ColaFH,
+            this.ColaB,
+            this.AcLlegadaGrupos,
+            this.AcGruposRetirados,
+            this.AcLlegF,
+            this.AcLlegB,
+            this.AcLlegHB,
             this.AcEsperaF,
             this.AcEsperaH,
             this.AcEsperaB,
-            this.AcLlegadaGrupos,
-            this.AcGruposRetirados,
             this.TipoCliente1,
             this.EstadoCliente1,
             this.HoraLlegadaCliente1,
@@ -172,8 +181,10 @@
             this.dgv_cola.Location = new System.Drawing.Point(12, 262);
             this.dgv_cola.Name = "dgv_cola";
             this.dgv_cola.ReadOnly = true;
+            this.dgv_cola.RowHeadersVisible = false;
             this.dgv_cola.RowHeadersWidth = 51;
-            this.dgv_cola.Size = new System.Drawing.Size(1944, 420);
+            this.dgv_cola.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_cola.Size = new System.Drawing.Size(1900, 500);
             this.dgv_cola.TabIndex = 0;
             // 
             // groupBox1
@@ -227,11 +238,6 @@
             this.horaInicioMostrar.Name = "horaInicioMostrar";
             this.horaInicioMostrar.Size = new System.Drawing.Size(91, 23);
             this.horaInicioMostrar.TabIndex = 1;
-            this.horaInicioMostrar.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // label17
             // 
@@ -774,7 +780,7 @@
             // btnIniciar
             // 
             this.btnIniciar.Location = new System.Drawing.Point(27, 169);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(102, 59);
             this.btnIniciar.TabIndex = 40;
@@ -798,7 +804,6 @@
             this.NombreEvento.MinimumWidth = 6;
             this.NombreEvento.Name = "NombreEvento";
             this.NombreEvento.ReadOnly = true;
-            this.NombreEvento.Width = 75;
             // 
             // Reloj
             // 
@@ -886,13 +891,53 @@
             this.EstadoCola.ReadOnly = true;
             this.EstadoCola.Width = 125;
             // 
-            // Cola
+            // ColaFH
             // 
-            this.Cola.HeaderText = "Cola";
-            this.Cola.MinimumWidth = 6;
-            this.Cola.Name = "Cola";
-            this.Cola.ReadOnly = true;
-            this.Cola.Width = 35;
+            this.ColaFH.HeaderText = "Cola FH";
+            this.ColaFH.MinimumWidth = 6;
+            this.ColaFH.Name = "ColaFH";
+            this.ColaFH.ReadOnly = true;
+            this.ColaFH.Width = 35;
+            // 
+            // ColaB
+            // 
+            this.ColaB.HeaderText = "Cola B";
+            this.ColaB.Name = "ColaB";
+            this.ColaB.ReadOnly = true;
+            // 
+            // AcLlegadaGrupos
+            // 
+            this.AcLlegadaGrupos.HeaderText = "Acumulador Llegada Grupos";
+            this.AcLlegadaGrupos.MinimumWidth = 6;
+            this.AcLlegadaGrupos.Name = "AcLlegadaGrupos";
+            this.AcLlegadaGrupos.ReadOnly = true;
+            this.AcLlegadaGrupos.Width = 75;
+            // 
+            // AcGruposRetirados
+            // 
+            this.AcGruposRetirados.HeaderText = "Acumulador grupos retirados sin jugar";
+            this.AcGruposRetirados.MinimumWidth = 6;
+            this.AcGruposRetirados.Name = "AcGruposRetirados";
+            this.AcGruposRetirados.ReadOnly = true;
+            this.AcGruposRetirados.Width = 75;
+            // 
+            // AcLlegF
+            // 
+            this.AcLlegF.HeaderText = "Acumulador Llegada Futbol";
+            this.AcLlegF.Name = "AcLlegF";
+            this.AcLlegF.ReadOnly = true;
+            // 
+            // AcLlegB
+            // 
+            this.AcLlegB.HeaderText = "Acumulador Llegada BasketBall";
+            this.AcLlegB.Name = "AcLlegB";
+            this.AcLlegB.ReadOnly = true;
+            // 
+            // AcLlegHB
+            // 
+            this.AcLlegHB.HeaderText = "Acumulador Llegada HandBall";
+            this.AcLlegHB.Name = "AcLlegHB";
+            this.AcLlegHB.ReadOnly = true;
             // 
             // AcEsperaF
             // 
@@ -917,22 +962,6 @@
             this.AcEsperaB.Name = "AcEsperaB";
             this.AcEsperaB.ReadOnly = true;
             this.AcEsperaB.Width = 75;
-            // 
-            // AcLlegadaGrupos
-            // 
-            this.AcLlegadaGrupos.HeaderText = "Acumulador Llegada Grupos";
-            this.AcLlegadaGrupos.MinimumWidth = 6;
-            this.AcLlegadaGrupos.Name = "AcLlegadaGrupos";
-            this.AcLlegadaGrupos.ReadOnly = true;
-            this.AcLlegadaGrupos.Width = 75;
-            // 
-            // AcGruposRetirados
-            // 
-            this.AcGruposRetirados.HeaderText = "Acumulador grupos retirados sin jugar";
-            this.AcGruposRetirados.MinimumWidth = 6;
-            this.AcGruposRetirados.Name = "AcGruposRetirados";
-            this.AcGruposRetirados.ReadOnly = true;
-            this.AcGruposRetirados.Width = 75;
             // 
             // TipoCliente1
             // 
@@ -1091,6 +1120,7 @@
             this.Name = "main_TP4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "main_tp4";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1173,12 +1203,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinJuego;
         private System.Windows.Forms.DataGridViewTextBoxColumn FinLimpieza;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCola;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cola;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColaFH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColaB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AcLlegadaGrupos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AcGruposRetirados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AcLlegF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AcLlegB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AcLlegHB;
         private System.Windows.Forms.DataGridViewTextBoxColumn AcEsperaF;
         private System.Windows.Forms.DataGridViewTextBoxColumn AcEsperaH;
         private System.Windows.Forms.DataGridViewTextBoxColumn AcEsperaB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AcLlegadaGrupos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AcGruposRetirados;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoCliente1;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCliente1;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraLlegadaCliente1;
