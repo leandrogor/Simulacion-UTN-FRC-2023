@@ -319,6 +319,7 @@
             this.dgvUltimaFila.Size = new System.Drawing.Size(1498, 131);
             this.dgvUltimaFila.TabIndex = 32;
             this.dgvUltimaFila.Visible = false;
+            
             // 
             // NumeroUltima
             // 
@@ -510,6 +511,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo Práctico Número 3 de Simulación";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionestxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vueltastxt)).EndInit();
