@@ -59,6 +59,7 @@ namespace SIM_TP2.TP4
                 dgv_cola.Rows[filaAMostrar].Cells["HoraLlegadaCliente" + i.ToString()].Value = cola[i-1].ProximaLlegada;
             }
         }
+
         public void agregarFilaDeIteracion(int filaAMostrar, int iteracion, double reloj, object evento, double rndFutbol, double proximaLlegadaFutbol, double rndBasket, 
             double proximaLlegadaBasket, double rndHandBa, double proximaLlegadaHandBall, double rndFinJuego, double proximoFinJuego, double finLimpieza, bool libre)
         {
@@ -93,6 +94,7 @@ namespace SIM_TP2.TP4
             
             
         }
+
         public void agregarCola(int filaAMostrar, IDisciplina jugando, Queue<IDisciplina> colaFH, Queue<IDisciplina> colaB)
         {
             dgv_cola.Rows[filaAMostrar].Cells["ColaFH"].Value = colaFH.Count;
@@ -113,6 +115,7 @@ namespace SIM_TP2.TP4
             }
             mostrarCola(disciplinas, filaAMostrar);
         }
+
         private List<T> MergeQueues<T>(Queue<T> queue1, Queue<T> queue2)
         {
             //sirve para juntar las dos colas
@@ -129,6 +132,17 @@ namespace SIM_TP2.TP4
         {
             dgv_cola.Rows[filaAMostrar].Cells["AcLlegadaGrupos"].Value = acGrupos;
             dgv_cola.Rows[filaAMostrar].Cells["AcGruposRetirados"].Value = acRetirados;
+        }
+
+        public void agregarAcumulador(int filaAMostrar, int acLlegF, int acLlegH, int acLlegB, double acEspF, double acEspH, double acEspB)
+        {
+            dgv_cola.Rows[filaAMostrar].Cells["AcLlegF"].Value = acLlegF;
+            dgv_cola.Rows[filaAMostrar].Cells["AcLlegHB"].Value = acLlegH;
+            dgv_cola.Rows[filaAMostrar].Cells["AcLlegB"].Value = acLlegB;
+
+            dgv_cola.Rows[filaAMostrar].Cells["AcEsperaF"].Value = acEspF;
+            dgv_cola.Rows[filaAMostrar].Cells["AcEsperaH"].Value = acEspH;
+            dgv_cola.Rows[filaAMostrar].Cells["AcEsperaB"].Value = acEspB;
         }
 
         private void filaPrimeraIteracion(double rndFutbol, double rndHandBa, double rndBasket, double rndFinJuego)
@@ -182,5 +196,22 @@ namespace SIM_TP2.TP4
         {      
             Hide();
         }
+
+        public void MostrarUltimaFila(List<object>Ult)
+        {
+            dgv_final.Rows.Add();
+
+            for(int i = 0; i < Ult.Count; i++)
+            {
+
+                if (i == 1)
+                {
+                    continue;
+                }
+
+                dgv_final.Rows[0].Cells[i].Value = Ult[i].ToString();
+            }
+        }
+
     }
 }

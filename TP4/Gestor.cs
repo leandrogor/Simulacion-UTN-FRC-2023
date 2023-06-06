@@ -36,6 +36,8 @@ namespace SIM_TP2.TP4.Entidades
         private int iteraciones;
         private object evento;
 
+        private List<object> utlimoEvento = new List<object>();
+
         public Gestor(double tiempoLimpieza, List<List<double>> llegadas, List<List<double>> ocupaciones, main_TP4 pantalla)
         {
 
@@ -131,31 +133,32 @@ namespace SIM_TP2.TP4.Entidades
                         cancha.HoraFin, limpieza.ProximaLimpieza, cancha.Libre);
                     pantalla.agregarCola(iteracionMostrada, cancha.Jugando, cancha.ColaFH, cancha.ColaB);
                     pantalla.agregarEstadisticas(iteracionMostrada, acGrupos, acRetirados);
+                    pantalla.agregarAcumulador(iteracionMostrada, acLlegF, acLlegH, acLlegB, acEspF, acEspH, acEspB);
                     iteracionMostrada++;
                 }
 
+                utlimoEvento.Clear();
+                utlimoEvento.AddRange(new List<object> {
+                    iteraciones, evento, reloj,
+                    futbol.ProximaLlegada,
+                    basketBall.ProximaLlegada, 
+                    handBall.ProximaLlegada, 
+                    cancha.HoraFin, 
+                    limpieza.ProximaLimpieza, cancha.Libre,
+                    cancha.ColaFH, cancha.ColaB, 
+                    acGrupos, acRetirados, acLlegF, acLlegH, acLlegB, acEspF, acEspH, acEspB
+
+                });
+
                 iteraciones++;
 
-
-
-                
                 Console.WriteLine();
 
 
-
-                //if (reloj >= horaInicioAMostrar && )
-
-
             }
-            Console.WriteLine("Ac. Grupos    : " + acGrupos);
-            Console.WriteLine("Ac. Retirados : " + acRetirados);
-            Console.WriteLine("Ac. Futbol    : " + acLlegF);
-            Console.WriteLine("Ac. Handball  : " + acLlegH);
-            Console.WriteLine("Ac. Basketball: " + acLlegB);
-            Console.WriteLine("Ac. Espera F: " + acEspF);
-            Console.WriteLine("Ac. Espera H: " + acEspH);
-            Console.WriteLine("Ac. Espera B: " + acEspB);
+
             calcularEstadisticos();
+            pantalla.MostrarUltimaFila(utlimoEvento);
         }
 
 
@@ -201,17 +204,24 @@ namespace SIM_TP2.TP4.Entidades
                 return ((IDisciplina)evento).ProximaLlegada;
             }
         }
+
         private void calcularEstadisticos()
         {
-            Console.WriteLine();
-            string porcenRetSinJugar = (acRetirados/acGrupos*100).ToString();
+            
             string promEsperaF = (acEspF/acLlegF).ToString();
             string promEsperaH = (acEspF/acLlegH).ToString();
             string promEsperaB = (acEspF/acLlegB).ToString();
-            Console.WriteLine("porcenRetSinJugar: " + porcenRetSinJugar);
-            Console.WriteLine("promEsperaF: " + promEsperaF);
-            Console.WriteLine("promEsperaH: " + promEsperaH);
-            Console.WriteLine("promEsperaB: " + promEsperaB);
+            string porcenRetSinJugar = (acRetirados/acGrupos*100).ToString();
+
+            utlimoEvento.AddRange(new List<object>
+            {
+                promEsperaF,
+                promEsperaH,
+                promEsperaB,
+                porcenRetSinJugar
+            });
+
+
         }
     }
 }
