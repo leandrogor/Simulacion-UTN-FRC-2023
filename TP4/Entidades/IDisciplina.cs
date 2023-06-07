@@ -13,6 +13,7 @@ namespace SIM_TP2.TP4.Entidades
         void generarProximaLlegada(double horaInicio, double rnd);
 
         double generarTiempoJuego(double rnd);
+
         string Estado { get; set; }
 
         double ProximaLlegada { get; set; }

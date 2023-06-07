@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SIM_TP2.TP4.Entidades
 {
@@ -40,7 +38,6 @@ namespace SIM_TP2.TP4.Entidades
 
         public Gestor(double tiempoLimpieza, List<List<double>> llegadas, List<List<double>> ocupaciones, main_TP4 pantalla)
         {
-
             this.pantalla = pantalla;
 
             Futbol.setFutbol(llegadas[0][0], ocupaciones[0][0], ocupaciones[0][1]);
@@ -54,12 +51,10 @@ namespace SIM_TP2.TP4.Entidades
             limpieza = new Limpieza(tiempoLimpieza);
 
             double rndFutbol = rndF.NextDouble();
-            double rndBasket = rndB.NextDouble();
             double rndHandBa = rndH.NextDouble();
+            double rndBasket = rndB.NextDouble();
 
-            string estadoInicialCancha = "Libre";
-
-            pantalla.mostrarFilaInicio(0, reloj, rndFutbol, futbol.ProximaLlegada, rndBasket, basketBall.ProximaLlegada, rndHandBa, handBall.ProximaLlegada, estadoInicialCancha, null);
+            pantalla.mostrarFilaInicio(reloj, rndFutbol, futbol.ProximaLlegada, rndHandBa, handBall.ProximaLlegada, rndBasket, basketBall.ProximaLlegada);
         }
 
         public void iniciar(double tiempoASimular, double horaInicioAMostrar, int cantIterAMostrar)
@@ -128,7 +123,7 @@ namespace SIM_TP2.TP4.Entidades
                     limpieza.ProximaLimpieza == double.MaxValue ? "" : cancha.HoraFin.ToString("0.00"),
                     cancha.Libre ? "Libre" : "Ocupado",
                     cancha.ColaFH.Count(), cancha.ColaB.Count(),
-                    acGrupos, acRetirados, acLlegF, acLlegH, acLlegB, 
+                    acGrupos, acRetirados, acLlegF, acLlegH, acLlegB,
                     acEspF.ToString("0.00"), acEspH.ToString("0.00"), acEspB.ToString("0.00")
                 });
                 iteraciones++;

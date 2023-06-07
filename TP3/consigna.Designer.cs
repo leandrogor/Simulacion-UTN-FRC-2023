@@ -99,7 +99,6 @@
             this.gunaLabel5.Size = new System.Drawing.Size(665, 26);
             this.gunaLabel5.TabIndex = 4;
             this.gunaLabel5.Text = "Se plantean tres posibles casos: ";
-            this.gunaLabel5.Click += new System.EventHandler(this.gunaLabel5_Click);
             // 
             // gunaLabel6
             // 
@@ -156,7 +155,6 @@
         System.Drawing.Color.Orange};
             this.gunaColorTransition1.EndColor = System.Drawing.Color.Blue;
             this.gunaColorTransition1.StartColor = System.Drawing.Color.White;
-            this.gunaColorTransition1.ValueChanged += new System.EventHandler(this.gunaLabel5_Click);
             // 
             // btnTP3
             // 

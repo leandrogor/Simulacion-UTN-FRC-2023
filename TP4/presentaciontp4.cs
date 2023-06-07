@@ -1,12 +1,4 @@
-﻿using SIM_TP2.TP3;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace SIM_TP2.TP4
@@ -20,15 +12,24 @@ namespace SIM_TP2.TP4
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-             consignatp4 ventana = new consignatp4();
+            consignatp4 ventana = new consignatp4();
             ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
+        }
 
+        private void LogOut(object sender, FormClosedEventArgs e)
+        {
+            Show();
         }
 
         private void gunaButton2_Click(object sender, EventArgs e)
         {
             main_TP4 ventana = new main_TP4();
             ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
         }
+
     }
 }

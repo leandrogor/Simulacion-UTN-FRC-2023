@@ -9,27 +9,25 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class Limpieza
     {
-        public static string nombre = "Limpieza";
         private static double tiempoLimpieza;
-        private double proximaLimpieza;
+        private double proximaLimpieza = Double.MaxValue;
 
+        public double ProximaLimpieza { get => proximaLimpieza; set => proximaLimpieza = value; }
 
         public Limpieza(double tmpLimpieza)
         {
             tiempoLimpieza = tmpLimpieza;
-            proximaLimpieza = Double.MaxValue;
         }
-
-        public double TiempoLimpieza { get => tiempoLimpieza; set => tiempoLimpieza = value; }
-        public double ProximaLimpieza { get => proximaLimpieza; set => proximaLimpieza = value; }
 
         public void generarProximaLimpieza(double horaActual)
         {
             proximaLimpieza = horaActual + tiempoLimpieza;
         }
+
         public override string ToString()
         {
             return "Fin Limpieza";
         }
+
     }
 }

@@ -37,6 +37,10 @@ namespace SIM_TP2.TP4.Entidades
             generarProximaLlegada(horaInicio, rnd);
         }
 
+        public string Nombre()
+        {
+            return nombre;
+        }
 
         public void generarProximaLlegada(double horaInicio, double rnd)
         {
@@ -49,14 +53,10 @@ namespace SIM_TP2.TP4.Entidades
         {
             return ocupacionMinima + rnd * (ocupacionMaxima - ocupacionMinima);
         }
+
         public override string ToString()
         {
             return "Llegada BasketBall";
-        }
-
-        public string Nombre()
-        {
-            return nombre;
         }
 
     }

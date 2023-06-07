@@ -1,17 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Dynamic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SIM_TP2.Generadores;
-using SIM_TP2.TP3;
 using SIM_TP2.TP4.Entidades;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace SIM_TP2.TP4
 {
@@ -24,39 +15,41 @@ namespace SIM_TP2.TP4
             InitializeComponent();
         }
 
-        public void mostrarFilaInicio(int iteracion, double reloj, double rndFutbol, double proximaLlegadaFutbol, double rndBasket, double proximaLlegadaBasket, double rndHandBa, double proximaLlegadaHandBall, string estadoInicialCancha, List<IDisciplina> colaInicial)
+        private void btnIniciar_Click(object sender, EventArgs e)
         {
-            mostrarColumnasInicio(-1, "Inicio", reloj, 0);
-            dgv_cola.Rows[0].Cells["RND1"].Value = rndFutbol.ToString("0.00");
-            dgv_cola.Rows[0].Cells["ProxLlegadaF"].Value = proximaLlegadaFutbol.ToString("0.00");
-            dgv_cola.Rows[0].Cells["RND2"].Value = rndHandBa.ToString("0.00");
-            dgv_cola.Rows[0].Cells["ProxLlegadaH"].Value = proximaLlegadaBasket.ToString("0.00");
-            dgv_cola.Rows[0].Cells["RND3"].Value = rndBasket.ToString("0.00");
-            dgv_cola.Rows[0].Cells["ProxLlegadaB"].Value = proximaLlegadaHandBall.ToString("0.00");
+            dgv_cola.Rows.Clear();
+            dgv_final.Rows.Clear();
 
-            dgv_cola.Rows[0].Cells["EstadoCola"].Value = estadoInicialCancha;
-            dgv_cola.Rows[0].Cells["ColaFH"].Value = 0;
-            dgv_cola.Rows[0].Cells["ColaB"].Value = 0;
-            mostrarCola(colaInicial, 0);
+            // Agregar al dgv tantas filas como cantidad de eventos se piden para mostrar
+            for (int i = 0; i < (int)eventosAMostrar.Value + 1; i++) dgv_cola.Rows.Add();
+            dgv_final.Rows.Add();
+
+            Gestor gestor = new Gestor(
+
+                (double)tiempoLimpiezaCancha.Value / 60,
+
+                new List<List<double>>
+                {
+                    new List<double> { (double)expNegFutbol.Value },
+                    new List<double> { (double)minLlegHand.Value, (double)maxLlegHand.Value },
+                    new List<double> { (double)minLlegBasc.Value, (double)maxLlegBasc.Value },
+                },
+
+                new List<List<double>>
+                {
+                    new List<double> { (double)minOcFut.Value / 60, (double)maxOcFut.Value / 60 },
+                    new List<double> { (double)minOcHand.Value / 60, (double)maxOcFut.Value / 60 },
+                    new List<double> { (double)minOcBasc.Value / 60, (double)maxOcBas.Value / 60 },
+                },
+
+                this);
+
+            gestor.iniciar((double)horasSimular.Value, (double)horaInicioMostrar.Value, (int)eventosAMostrar.Value);
         }
 
-        private void mostrarColumnasInicio(int iteracion, string evento, double reloj, int fila)
+        private void gunaButton1_Click(object sender, EventArgs e)
         {
-            dgv_cola.Rows[fila].Cells["Numero"].Value = iteracion + 1;
-            dgv_cola.Rows[fila].Cells["NombreEvento"].Value = evento;
-            dgv_cola.Rows[fila].Cells["Reloj"].Value = reloj.ToString("0.00");
-        }
-
-        private void mostrarCola(List<IDisciplina> cola, int filaAMostrar)
-        {
-            if (cola == null || cola.Count == 0) return;
-            for (int i = 1; i <= cola.Count; i++)
-            {
-                if (cola[i - 1] == null || cola[i - 1].Estado == null) continue;
-                dgv_cola.Rows[filaAMostrar].Cells["TipoCliente" + i.ToString()].Value = cola[i - 1].Nombre();
-                dgv_cola.Rows[filaAMostrar].Cells["EstadoCliente" + i.ToString()].Value = cola[i - 1].Estado;
-                dgv_cola.Rows[filaAMostrar].Cells["HoraLlegadaCliente" + i.ToString()].Value = cola[i - 1].ProximaLlegada.ToString("0.00");
-            }
+            Close();
         }
 
         public void agregarFilaDeIteracion(int filaAMostrar, int iteracion, double reloj, object evento, double rndFutbol, double proximaLlegadaFutbol, double rndBasket,
@@ -94,8 +87,28 @@ namespace SIM_TP2.TP4
                 else columnaRnd = "RND3";
                 dgv_cola.Rows[filaAMostrar].Cells[columnaRnd].Value = disciplina.RndUtilizado.ToString("0.00");
             }
-            
+        }
 
+        private void mostrarColumnasInicio(int iteracion, string evento, double reloj, int fila)
+        {
+            dgv_cola.Rows[fila].Cells["Numero"].Value = iteracion + 1;
+            dgv_cola.Rows[fila].Cells["NombreEvento"].Value = evento;
+            dgv_cola.Rows[fila].Cells["Reloj"].Value = reloj.ToString("0.00");
+        }
+
+        public void mostrarFilaInicio(double reloj, double rndFutbol, double proximaLlegadaFutbol, double rndHandBa, double proximaLlegadaHandBall, double rndBasket, double proximaLlegadaBasket, List<IDisciplina> colaInicial = null)
+        {
+            mostrarColumnasInicio(-1, "Inicio", reloj, 0);
+            dgv_cola.Rows[0].Cells["RND1"].Value = rndFutbol.ToString("0.00");
+            dgv_cola.Rows[0].Cells["ProxLlegadaF"].Value = proximaLlegadaFutbol.ToString("0.00");
+            dgv_cola.Rows[0].Cells["RND2"].Value = rndHandBa.ToString("0.00");
+            dgv_cola.Rows[0].Cells["ProxLlegadaH"].Value = proximaLlegadaBasket.ToString("0.00");
+            dgv_cola.Rows[0].Cells["RND3"].Value = rndBasket.ToString("0.00");
+            dgv_cola.Rows[0].Cells["ProxLlegadaB"].Value = proximaLlegadaHandBall.ToString("0.00");
+            dgv_cola.Rows[0].Cells["EstadoCola"].Value = "Libre";
+            dgv_cola.Rows[0].Cells["ColaFH"].Value = 0;
+            dgv_cola.Rows[0].Cells["ColaB"].Value = 0;
+            mostrarCola(colaInicial, 0);
         }
 
         public void agregarCola(int filaAMostrar, IDisciplina jugando, Queue<IDisciplina> colaFH, Queue<IDisciplina> colaB)
@@ -121,7 +134,7 @@ namespace SIM_TP2.TP4
 
         private List<T> MergeQueues<T>(Queue<T> queue1, Queue<T> queue2)
         {
-            //sirve para juntar las dos colas
+            // Sirve para juntar las dos colas
             Queue<T> mergedQueue = new Queue<T>(queue1);
             while (queue2.Count > 0)
             {
@@ -129,6 +142,18 @@ namespace SIM_TP2.TP4
             }
 
             return mergedQueue.ToList();
+        }
+
+        private void mostrarCola(List<IDisciplina> cola, int filaAMostrar)
+        {
+            if (cola == null || cola.Count == 0) return;
+            for (int i = 1; i <= cola.Count; i++)
+            {
+                if (cola[i - 1] == null || cola[i - 1].Estado == null) continue;
+                dgv_cola.Rows[filaAMostrar].Cells["TipoCliente" + i.ToString()].Value = cola[i - 1].Nombre();
+                dgv_cola.Rows[filaAMostrar].Cells["EstadoCliente" + i.ToString()].Value = cola[i - 1].Estado;
+                dgv_cola.Rows[filaAMostrar].Cells["HoraLlegadaCliente" + i.ToString()].Value = cola[i - 1].ProximaLlegada.ToString("0.00");
+            }
         }
 
         public void agregarEstadisticas(int filaAMostrar, int acGrupos, int acRetirados)
@@ -148,45 +173,8 @@ namespace SIM_TP2.TP4
             dgv_cola.Rows[filaAMostrar].Cells["AcEsperaB"].Value = acEspB.ToString("0.00");
         }
 
-        private void btnIniciar_Click(object sender, EventArgs e)
-        {
-
-            dgv_cola.Rows.Clear();
-            for (int i = 0; i < (int)eventosAMostrar.Value + 1; i++) dgv_cola.Rows.Add();
-
-            Gestor gestor = new Gestor(
-
-                (double)tiempoLimpiezaCancha.Value / 60,
-
-                new List<List<double>>
-                {
-                    new List<double> { (double)expNegFutbol.Value },
-                    new List<double> { (double)minLlegHand.Value, (double)maxLlegHand.Value },
-                    new List<double> { (double)minLlegBasc.Value, (double)maxLlegBasc.Value },
-                },
-
-                new List<List<double>>
-                {
-                    new List<double> { (double)minOcFut.Value / 60, (double)maxOcFut.Value / 60 },
-                    new List<double> { (double)minOcHand.Value / 60, (double)maxOcFut.Value / 60 },
-                    new List<double> { (double)minOcBasc.Value / 60, (double)maxOcBas.Value / 60 },
-                },
-                this);
-
-
-            gestor.iniciar((double)horasSimular.Value, (double)horaInicioMostrar.Value, (int)eventosAMostrar.Value);
-        }
-
-        private void gunaButton1_Click(object sender, EventArgs e)
-        {
-            Hide();
-        }
-
         public void MostrarUltimaFila(List<object> Ult)
         {
-            dgv_final.Rows.Clear();
-            dgv_final.Rows.Add();
-
             for (int i = 0; i < Ult.Count; i++)
             {
                 dgv_final.Rows[0].Cells[i].Value = Ult[i].ToString();
@@ -196,13 +184,10 @@ namespace SIM_TP2.TP4
         public void limpiarFilas()
         {
             int ultimaFila = dgv_cola.Rows.Count - 1;
-
             while (ultimaFila >= 0)
             {
                 DataGridViewRow fila = dgv_cola.Rows[ultimaFila];
-
                 bool filaVacia = true;
-
                 foreach (DataGridViewCell celda in fila.Cells)
                 {
                     if (celda.Value != null && !string.IsNullOrEmpty(celda.Value.ToString()))
@@ -211,16 +196,8 @@ namespace SIM_TP2.TP4
                         break;
                     }
                 }
-
-                if (filaVacia)
-                {
-                    dgv_cola.Rows.Remove(fila);
-                }
-                else
-                {
-                    break;
-                }
-
+                if (filaVacia) dgv_cola.Rows.Remove(fila);
+                else break;
                 ultimaFila--;
             }
 

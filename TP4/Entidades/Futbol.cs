@@ -59,6 +59,5 @@ namespace SIM_TP2.TP4.Entidades
             return "Llegada Futbol";
         }
 
-
     }
 }

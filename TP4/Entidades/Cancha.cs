@@ -87,7 +87,7 @@ namespace SIM_TP2.TP4.Entidades
                 Libre = true;
                 horaFin = Double.MaxValue;
             }
-            if(deporte != null) deporte.Estado = "Jugando";
+            if (deporte != null) deporte.Estado = "Jugando";
             jugando = deporte;
         }
 

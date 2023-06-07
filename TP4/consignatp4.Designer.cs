@@ -48,7 +48,6 @@
             this.lbl_Consigna.Size = new System.Drawing.Size(194, 42);
             this.lbl_Consigna.TabIndex = 0;
             this.lbl_Consigna.Text = "CONSIGNA";
-            this.lbl_Consigna.Click += new System.EventHandler(this.lbl_Consigna_Click);
             // 
             // label1
             // 
@@ -60,7 +59,6 @@
             this.label1.Size = new System.Drawing.Size(746, 79);
             this.label1.TabIndex = 2;
             this.label1.Text = resources.GetString("label1.Text");
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
