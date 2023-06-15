@@ -1,9 +1,5 @@
-﻿using SIM_TP2.TP3;
-using SIM_TP2.TP4;
+﻿using SIM_TP2.TP5;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SIM_TP2
@@ -18,7 +14,7 @@ namespace SIM_TP2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new main());
+            Application.Run(new solucionTP5());
         }
     }
 }
