@@ -57,5 +57,10 @@ namespace SIM_TP2
             ventana.FormClosed += LogOut;
             Hide();
         }
+
+        private void btnTP5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

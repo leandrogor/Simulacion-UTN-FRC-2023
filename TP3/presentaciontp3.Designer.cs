@@ -117,7 +117,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "presentaciontp3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Trabajo Practico N°3";
+            this.Text = "Trabajo Práctico Nº3";
             this.ResumeLayout(false);
 
         }

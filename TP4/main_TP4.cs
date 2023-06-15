@@ -8,7 +8,7 @@ namespace SIM_TP2.TP4
 {
     public partial class main_TP4 : Form
     {
-        bool mostrar = true;
+        bool mostrarRND4 = true;
 
         public main_TP4()
         {
@@ -47,7 +47,7 @@ namespace SIM_TP2.TP4
             gestor.iniciar((double)horasSimular.Value, (double)horaInicioMostrar.Value, (int)eventosAMostrar.Value);
         }
 
-        private void gunaButton1_Click(object sender, EventArgs e)
+        private void btnVolver_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -57,7 +57,7 @@ namespace SIM_TP2.TP4
         {
             if (evento is Limpieza)
             {
-                mostrar = true;
+                mostrarRND4 = true;
             }
             mostrarColumnasInicio(iteracion, evento.ToString(), reloj, filaAMostrar);
 
@@ -70,10 +70,10 @@ namespace SIM_TP2.TP4
             if (proximoFinJuego != Double.MaxValue)
             {
                 dgv_cola.Rows[filaAMostrar].Cells["ProxFinJuego"].Value = proximoFinJuego.ToString("0.00");
-                if (mostrar)
+                if (mostrarRND4)
                 {
                     dgv_cola.Rows[filaAMostrar].Cells["RND4"].Value = rndFinJuego.ToString("0.00");
-                    mostrar = false;
+                    mostrarRND4 = false;
                 }
             }
             if (finLimpieza != Double.MaxValue) dgv_cola.Rows[filaAMostrar].Cells["FinLimpieza"].Value = finLimpieza.ToString("0.00");

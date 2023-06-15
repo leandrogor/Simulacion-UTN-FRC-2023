@@ -118,7 +118,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.minOcHand = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.btnVolver = new Guna.UI.WinForms.GunaButton();
             this.btnIniciar = new Guna.UI.WinForms.GunaButton();
             this.dgv_final = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1236,34 +1236,34 @@
             this.label15.TabIndex = 30;
             this.label15.Text = "Uniforme(";
             // 
-            // gunaButton1
+            // btnVolver
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
-            this.gunaButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.Black;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(1757, 117);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Size = new System.Drawing.Size(157, 70);
-            this.gunaButton1.TabIndex = 17;
-            this.gunaButton1.Text = "VOLVER";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.btnVolver.AnimationHoverSpeed = 0.07F;
+            this.btnVolver.AnimationSpeed = 0.03F;
+            this.btnVolver.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolver.BaseColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BorderColor = System.Drawing.Color.Black;
+            this.btnVolver.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnVolver.FocusedColor = System.Drawing.Color.Empty;
+            this.btnVolver.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
+            this.btnVolver.Image = null;
+            this.btnVolver.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnVolver.Location = new System.Drawing.Point(1757, 117);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnVolver.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnVolver.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnVolver.OnHoverImage = null;
+            this.btnVolver.OnPressedColor = System.Drawing.Color.Black;
+            this.btnVolver.Size = new System.Drawing.Size(157, 70);
+            this.btnVolver.TabIndex = 17;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnIniciar
             // 
@@ -1562,7 +1562,7 @@
             this.ClientSize = new System.Drawing.Size(2223, 1049);
             this.Controls.Add(this.dgv_final);
             this.Controls.Add(this.btnIniciar);
-            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1573,7 +1573,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "main_TP4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tp4";
+            this.Text = "Trabajo Práctico Nº4";
             this.TransparencyKey = System.Drawing.SystemColors.ActiveCaption;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).EndInit();
@@ -1645,7 +1645,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.NumericUpDown minOcHand;
         private System.Windows.Forms.Label label15;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
+        private Guna.UI.WinForms.GunaButton btnVolver;
         private Guna.UI.WinForms.GunaButton btnIniciar;
         private System.Windows.Forms.DataGridView dgv_final;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;

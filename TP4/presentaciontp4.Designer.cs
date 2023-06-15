@@ -32,6 +32,7 @@
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.consignabtn = new Guna.UI.WinForms.GunaButton();
             this.tp4button = new Guna.UI.WinForms.GunaButton();
+            this.btnDDC = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             this.consignabtn.ForeColor = System.Drawing.Color.Black;
             this.consignabtn.Image = null;
             this.consignabtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.consignabtn.Location = new System.Drawing.Point(253, 416);
+            this.consignabtn.Location = new System.Drawing.Point(204, 416);
             this.consignabtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.consignabtn.Name = "consignabtn";
             this.consignabtn.OnHoverBaseColor = System.Drawing.Color.Transparent;
@@ -90,7 +91,7 @@
             this.tp4button.ForeColor = System.Drawing.Color.Black;
             this.tp4button.Image = null;
             this.tp4button.ImageSize = new System.Drawing.Size(20, 20);
-            this.tp4button.Location = new System.Drawing.Point(569, 416);
+            this.tp4button.Location = new System.Drawing.Point(414, 416);
             this.tp4button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tp4button.Name = "tp4button";
             this.tp4button.OnHoverBaseColor = System.Drawing.Color.Transparent;
@@ -104,6 +105,35 @@
             this.tp4button.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tp4button.Click += new System.EventHandler(this.gunaButton2_Click);
             // 
+            // btnDDC
+            // 
+            this.btnDDC.AnimationHoverSpeed = 0.07F;
+            this.btnDDC.AnimationSpeed = 0.03F;
+            this.btnDDC.BackColor = System.Drawing.Color.Transparent;
+            this.btnDDC.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
+            this.btnDDC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDDC.BaseColor = System.Drawing.Color.Transparent;
+            this.btnDDC.BorderColor = System.Drawing.Color.Black;
+            this.btnDDC.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDDC.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDDC.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDDC.ForeColor = System.Drawing.Color.Black;
+            this.btnDDC.Image = null;
+            this.btnDDC.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDDC.Location = new System.Drawing.Point(626, 416);
+            this.btnDDC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDDC.Name = "btnDDC";
+            this.btnDDC.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnDDC.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDDC.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDDC.OnHoverImage = null;
+            this.btnDDC.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDDC.Size = new System.Drawing.Size(182, 72);
+            this.btnDDC.TabIndex = 2;
+            this.btnDDC.Text = "DDC";
+            this.btnDDC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDDC.Click += new System.EventHandler(this.btnDDC_Click);
+            // 
             // presentaciontp4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -112,6 +142,7 @@
             this.BackgroundImage = global::SIM_TP2.Properties.Resources.Purple_Pixelated_Reminder_Instagram_Post__2_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 551);
+            this.Controls.Add(this.btnDDC);
             this.Controls.Add(this.tp4button);
             this.Controls.Add(this.consignabtn);
             this.Controls.Add(this.gunaPictureBox1);
@@ -119,7 +150,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "presentaciontp4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Presentacion";
+            this.Text = "Trabajo Práctico Nº4";
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -130,5 +161,6 @@
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaButton consignabtn;
         private Guna.UI.WinForms.GunaButton tp4button;
+        private Guna.UI.WinForms.GunaButton btnDDC;
     }
 }

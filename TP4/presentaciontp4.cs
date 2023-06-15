@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace SIM_TP2.TP4
@@ -31,5 +32,9 @@ namespace SIM_TP2.TP4
             Hide();
         }
 
+        private void btnDDC_Click(object sender, EventArgs e)
+        {
+            Process.Start("..\\..\\Assets\\DDC.jpg");
+        }
     }
 }

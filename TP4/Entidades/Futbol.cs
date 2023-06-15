@@ -13,11 +13,11 @@ namespace SIM_TP2.TP4.Entidades
         private static double ocupacionMinima;
         private static double ocupacionMaxima;
 
-        private double rndUtilizado;
-
         private double tiempoLlegada;
         private double proximaLlegada;
+
         private string estado = "Esperando";
+        private double rndUtilizado;
 
         public double TiempoLlegada { get => tiempoLlegada; set => tiempoLlegada = value; }
         public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }

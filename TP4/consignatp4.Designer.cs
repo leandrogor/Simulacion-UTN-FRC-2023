@@ -130,7 +130,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "consignatp4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consigna";
+            this.Text = "Trabajo Práctico Nº4 - Consigna";
             this.ResumeLayout(false);
             this.PerformLayout();
 

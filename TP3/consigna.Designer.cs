@@ -208,7 +208,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "consigna";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Consigna";
+            this.Text = "Trabajo Práctico Nº3 - Consigna";
             this.ResumeLayout(false);
             this.PerformLayout();
 

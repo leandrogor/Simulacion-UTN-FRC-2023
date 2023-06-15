@@ -16,9 +16,10 @@ namespace SIM_TP2.TP4.Entidades
 
         private double tiempoLlegada;
         private double proximaLlegada;
-        private string estado = "Esperando";
 
+        private string estado = "Esperando";
         private double rndUtilizado;
+
         public double TiempoLlegada { get => tiempoLlegada; set => tiempoLlegada = value; }
         public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }
         public double RndUtilizado { get => rndUtilizado; set => rndUtilizado = value; }

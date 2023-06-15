@@ -158,7 +158,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main_tp2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Trabajo Práctico Número 2 de Simulación";
+            this.Text = "Trabajo Práctico Nº2";
             this.TransparencyKey = System.Drawing.Color.NavajoWhite;
             this.ResumeLayout(false);
             this.PerformLayout();
