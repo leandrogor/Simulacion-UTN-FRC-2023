@@ -172,6 +172,25 @@
     <Compile Include="TP4\presentaciontp4.Designer.cs">
       <DependentUpon>presentaciontp4.cs</DependentUpon>
     </Compile>
+    <Compile Include="TP5\consignaTP5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP5\consignaTP5.Designer.cs">
+      <DependentUpon>consignaTP5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP5\Gestor2.0.cs" />
+    <Compile Include="TP5\mainTP5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP5\mainTP5.Designer.cs">
+      <DependentUpon>mainTP5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TP5\solucionTP5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP5\solucionTP5.Designer.cs">
+      <DependentUpon>solucionTP5.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +248,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TP4\presentaciontp4.resx">
       <DependentUpon>presentaciontp4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP5\consignaTP5.resx">
+      <DependentUpon>consignaTP5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP5\mainTP5.resx">
+      <DependentUpon>mainTP5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP5\solucionTP5.resx">
+      <DependentUpon>solucionTP5.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -316,6 +344,7 @@
     <None Include="Resources\Purple Pixelated Reminder Instagram Post %282%29.png" />
     <None Include="Resources\tp4.gif" />
     <None Include="Resources\Copia de buttonwhite1.png" />
+    <None Include="Assets\consignaTP5.jpg" />
     <Content Include="Resources\shine.ico" />
     <Content Include="Resources\icono.ico" />
     <None Include="Resources\Purple Pixelated Reminder Instagram Post %281%29.png" />

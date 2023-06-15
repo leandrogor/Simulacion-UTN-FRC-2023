@@ -103,6 +103,16 @@ namespace SIM_TP2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap consignaTP5 {
+            get {
+                object obj = ResourceManager.GetObject("consignaTP5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Copia_de_buttonwhite {
             get {
                 object obj = ResourceManager.GetObject("Copia de buttonwhite", resourceCulture);

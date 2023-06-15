@@ -185,7 +185,7 @@
             this.btnTP4.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
             this.btnTP4.OnPressedColor = System.Drawing.Color.Black;
             this.btnTP4.Size = new System.Drawing.Size(256, 84);
-            this.btnTP4.TabIndex = 0;
+            this.btnTP4.TabIndex = 4;
             this.btnTP4.Text = "TP4";
             this.btnTP4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTP4.UseTransfarantBackground = true;
@@ -228,7 +228,7 @@
             this.btnTP5.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
             this.btnTP5.OnPressedColor = System.Drawing.Color.Black;
             this.btnTP5.Size = new System.Drawing.Size(256, 84);
-            this.btnTP5.TabIndex = 17;
+            this.btnTP5.TabIndex = 0;
             this.btnTP5.Text = "TP5";
             this.btnTP5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTP5.UseTransfarantBackground = true;

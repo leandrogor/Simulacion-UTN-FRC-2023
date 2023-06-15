@@ -1,6 +1,7 @@
 ﻿using SIM_TP2.Generadores;
 using SIM_TP2.TP3;
 using SIM_TP2.TP4;
+using SIM_TP2.TP5;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,7 +61,10 @@ namespace SIM_TP2
 
         private void btnTP5_Click(object sender, EventArgs e)
         {
-
+            mainTP5 ventana = new mainTP5();
+            ventana.Show();
+            ventana.FormClosed += LogOut;
+            Hide();
         }
     }
 }
