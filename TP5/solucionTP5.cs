@@ -32,6 +32,9 @@ namespace SIM_TP2.TP5
             Gestor2 gestor = new Gestor2(
 
                 400 / 60,
+                (double)dFutbol.Value,
+                (double)dHandBall.Value,
+                (double)dBasketBall.Value,
 
                 new List<List<double>>
                 {
@@ -81,7 +84,11 @@ namespace SIM_TP2.TP5
                     mostrarRND4 = false;
                 }
             }
-            if (finLimpieza != Double.MaxValue) dgv_cola.Rows[filaAMostrar].Cells["FinLimpieza"].Value = finLimpieza.ToString("0.00");
+            if (finLimpieza != Double.MaxValue)
+            {
+                dgv_cola.Rows[filaAMostrar].Cells["TiempoLimpieza"].Value = (finLimpieza - reloj).ToString("0.00");
+                dgv_cola.Rows[filaAMostrar].Cells["FinLimpieza"].Value = finLimpieza.ToString("0.00");
+            }
 
             if (evento is IDisciplina)
             {

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SIM_TP2.TP5.Entidades;
 
 namespace SIM_TP2.TP5
 {
@@ -32,7 +33,7 @@ namespace SIM_TP2.TP5
         private Futbol futbol;
         private HandBall handBall;
         private BasketBall basketBall;
-        private Limpieza limpieza;
+        private LimpiezaIntegracion limpieza;
 
         private solucionTP5 pantalla;
 
@@ -41,7 +42,7 @@ namespace SIM_TP2.TP5
 
         private List<object> utlimoEvento = new List<object>();
 
-        public Gestor2(double tiempoLimpieza, List<List<double>> llegadas, List<List<double>> ocupaciones, solucionTP5 pantalla)
+        public Gestor2(double h, double dFutbol, double dHandball, double dBasketBall, List<List<double>> llegadas, List<List<double>> ocupaciones, solucionTP5 pantalla)
         {
             this.pantalla = pantalla;
 
@@ -53,11 +54,15 @@ namespace SIM_TP2.TP5
             futbol = new Futbol(reloj, rndF.NextDouble());
             handBall = new HandBall(reloj, rndH.NextDouble());
             basketBall = new BasketBall(reloj, rndB.NextDouble());
-            limpieza = new Limpieza(tiempoLimpieza);
+            limpieza = new LimpiezaIntegracion(h);
 
             double rndFutbol = rndF.NextDouble();
             double rndHandBa = rndH.NextDouble();
             double rndBasket = rndB.NextDouble();
+
+            futbol.D = dFutbol;
+            handBall.D = dHandball;
+            basketBall.D = dBasketBall;
 
             pantalla.mostrarFilaInicio(reloj, rndFutbol, futbol.ProximaLlegada, rndHandBa, handBall.ProximaLlegada, rndBasket, basketBall.ProximaLlegada);
         }
@@ -76,11 +81,11 @@ namespace SIM_TP2.TP5
                 }
                 if (evento is Cancha)
                 {
-                    limpieza.generarProximaLimpieza(reloj);
+                    limpieza.generarProximaLimpieza(reloj, cancha.Jugando.D, cancha.ColaB.Count + cancha.ColaFH.Count);
                     cancha.HoraFin = Double.MaxValue;
                     cancha.Jugando.Estado = null;
                 }
-                else if (evento is Limpieza)
+                else if (evento is LimpiezaIntegracion)
                 {
                     limpieza.ProximaLimpieza = Double.MaxValue;
                     cancha.iniciarProximoJuego(reloj, ref acEspF, ref acEspH, ref acEspB);
@@ -171,9 +176,9 @@ namespace SIM_TP2.TP5
             {
                 return ((Cancha)evento).HoraFin;
             }
-            else if (evento is Limpieza)
+            else if (evento is LimpiezaIntegracion)
             {
-                return ((Limpieza)evento).ProximaLimpieza;
+                return ((LimpiezaIntegracion)evento).ProximaLimpieza;
             }
             else
             {

@@ -178,6 +178,7 @@
     <Compile Include="TP5\consignaTP5.Designer.cs">
       <DependentUpon>consignaTP5.cs</DependentUpon>
     </Compile>
+    <Compile Include="TP5\Entidades\LimpiezaIntegracion.cs" />
     <Compile Include="TP5\Gestor2.0.cs" />
     <Compile Include="TP5\mainTP5.cs">
       <SubType>Form</SubType>

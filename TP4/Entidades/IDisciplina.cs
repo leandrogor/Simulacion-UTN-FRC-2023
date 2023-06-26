@@ -19,5 +19,7 @@ namespace SIM_TP2.TP4.Entidades
         double ProximaLlegada { get; set; }
 
         double RndUtilizado { get; set; }
+
+        double D { get; set; }
     }
 }

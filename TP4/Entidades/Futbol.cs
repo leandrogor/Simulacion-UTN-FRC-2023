@@ -12,6 +12,7 @@ namespace SIM_TP2.TP4.Entidades
         private static double media;
         private static double ocupacionMinima;
         private static double ocupacionMaxima;
+        private static double d;
 
         private double tiempoLlegada;
         private double proximaLlegada;
@@ -23,6 +24,7 @@ namespace SIM_TP2.TP4.Entidades
         public double ProximaLlegada { get => proximaLlegada; set => proximaLlegada = value; }
         public double RndUtilizado { get => rndUtilizado; set => rndUtilizado = value; }
         public string Estado { get => estado; set => estado = value; }
+        public double D { get => d; set => d = value; }
 
         public static void setFutbol(double med, double ocMin, double ocMax)
         {
