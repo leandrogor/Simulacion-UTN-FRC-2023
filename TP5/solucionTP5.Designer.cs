@@ -92,8 +92,6 @@
             this.expNegFutbol = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tiempoLimpiezaCancha = new System.Windows.Forms.NumericUpDown();
             this.horaInicioMostrar = new System.Windows.Forms.NumericUpDown();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -144,6 +142,13 @@
             this.HoraLlegadaCliente6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnIniciar = new Guna.UI.WinForms.GunaButton();
             this.btnVolver = new Guna.UI.WinForms.GunaButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dFutbol = new System.Windows.Forms.NumericUpDown();
+            this.lblDFutbol = new System.Windows.Forms.Label();
+            this.lblDHandball = new System.Windows.Forms.Label();
+            this.dHandBall = new System.Windows.Forms.NumericUpDown();
+            this.lblDBasketball = new System.Windows.Forms.Label();
+            this.dBasketBall = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_final)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxOcFut)).BeginInit();
@@ -159,11 +164,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.minLlegHand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expNegFutbol)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tiempoLimpiezaCancha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horaInicioMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horasSimular)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosAMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dFutbol)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dHandBall)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBasketBall)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_final
@@ -215,8 +223,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_final.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_final.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgv_final.Location = new System.Drawing.Point(6, 821);
-            this.dgv_final.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_final.Location = new System.Drawing.Point(4, 667);
             this.dgv_final.Name = "dgv_final";
             this.dgv_final.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -236,7 +243,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_final.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_final.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_final.Size = new System.Drawing.Size(2000, 141);
+            this.dgv_final.Size = new System.Drawing.Size(1500, 115);
             this.dgv_final.TabIndex = 50;
             this.dgv_final.TabStop = false;
             // 
@@ -443,11 +450,9 @@
             this.groupBox3.Controls.Add(this.minOcHand);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(1118, 18);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Location = new System.Drawing.Point(838, 15);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(356, 174);
+            this.groupBox3.Size = new System.Drawing.Size(267, 141);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ocupación de Canchas (mins)";
@@ -461,15 +466,14 @@
             0,
             0,
             196608});
-            this.maxOcFut.Location = new System.Drawing.Point(211, 44);
-            this.maxOcFut.Margin = new System.Windows.Forms.Padding(4);
+            this.maxOcFut.Location = new System.Drawing.Point(158, 36);
             this.maxOcFut.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.maxOcFut.Name = "maxOcFut";
-            this.maxOcFut.Size = new System.Drawing.Size(79, 27);
+            this.maxOcFut.Size = new System.Drawing.Size(59, 23);
             this.maxOcFut.TabIndex = 11;
             this.maxOcFut.Value = new decimal(new int[] {
             100,
@@ -481,10 +485,9 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(288, 47);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(216, 38);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 17);
+            this.label16.Size = new System.Drawing.Size(35, 14);
             this.label16.TabIndex = 42;
             this.label16.Text = ") hs";
             // 
@@ -492,10 +495,9 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(189, 52);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(142, 42);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(13, 20);
+            this.label20.Size = new System.Drawing.Size(10, 16);
             this.label20.TabIndex = 41;
             this.label20.Text = ",";
             // 
@@ -508,15 +510,14 @@
             0,
             0,
             196608});
-            this.minOcFut.Location = new System.Drawing.Point(113, 46);
-            this.minOcFut.Margin = new System.Windows.Forms.Padding(4);
+            this.minOcFut.Location = new System.Drawing.Point(85, 37);
             this.minOcFut.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.minOcFut.Name = "minOcFut";
-            this.minOcFut.Size = new System.Drawing.Size(79, 27);
+            this.minOcFut.Size = new System.Drawing.Size(59, 23);
             this.minOcFut.TabIndex = 10;
             this.minOcFut.Value = new decimal(new int[] {
             80,
@@ -528,10 +529,9 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(19, 43);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(14, 35);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(89, 17);
+            this.label21.Size = new System.Drawing.Size(70, 14);
             this.label21.TabIndex = 40;
             this.label21.Text = "Uniforme(";
             // 
@@ -544,15 +544,14 @@
             0,
             0,
             196608});
-            this.maxOcBas.Location = new System.Drawing.Point(216, 117);
-            this.maxOcBas.Margin = new System.Windows.Forms.Padding(4);
+            this.maxOcBas.Location = new System.Drawing.Point(162, 95);
             this.maxOcBas.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.maxOcBas.Name = "maxOcBas";
-            this.maxOcBas.Size = new System.Drawing.Size(79, 27);
+            this.maxOcBas.Size = new System.Drawing.Size(59, 23);
             this.maxOcBas.TabIndex = 15;
             this.maxOcBas.Value = new decimal(new int[] {
             130,
@@ -564,10 +563,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(293, 121);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(220, 98);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(44, 17);
+            this.label10.Size = new System.Drawing.Size(35, 14);
             this.label10.TabIndex = 37;
             this.label10.Text = ") hs";
             // 
@@ -575,10 +573,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(196, 126);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(147, 102);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 20);
+            this.label11.Size = new System.Drawing.Size(10, 16);
             this.label11.TabIndex = 36;
             this.label11.Text = ",";
             // 
@@ -591,15 +588,14 @@
             0,
             0,
             196608});
-            this.minOcBasc.Location = new System.Drawing.Point(119, 117);
-            this.minOcBasc.Margin = new System.Windows.Forms.Padding(4);
+            this.minOcBasc.Location = new System.Drawing.Point(89, 95);
             this.minOcBasc.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.minOcBasc.Name = "minOcBasc";
-            this.minOcBasc.Size = new System.Drawing.Size(79, 27);
+            this.minOcBasc.Size = new System.Drawing.Size(59, 23);
             this.minOcBasc.TabIndex = 14;
             this.minOcBasc.Value = new decimal(new int[] {
             70,
@@ -611,10 +607,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(20, 123);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(15, 100);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(89, 17);
+            this.label12.Size = new System.Drawing.Size(70, 14);
             this.label12.TabIndex = 35;
             this.label12.Text = "Uniforme(";
             // 
@@ -627,15 +622,14 @@
             0,
             0,
             196608});
-            this.maxOcHand.Location = new System.Drawing.Point(211, 79);
-            this.maxOcHand.Margin = new System.Windows.Forms.Padding(4);
+            this.maxOcHand.Location = new System.Drawing.Point(158, 64);
             this.maxOcHand.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.maxOcHand.Name = "maxOcHand";
-            this.maxOcHand.Size = new System.Drawing.Size(79, 27);
+            this.maxOcHand.Size = new System.Drawing.Size(59, 23);
             this.maxOcHand.TabIndex = 13;
             this.maxOcHand.Value = new decimal(new int[] {
             100,
@@ -647,10 +641,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(288, 82);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(216, 67);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 17);
+            this.label13.Size = new System.Drawing.Size(35, 14);
             this.label13.TabIndex = 32;
             this.label13.Text = ") hs";
             // 
@@ -658,10 +651,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(189, 87);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(142, 71);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 20);
+            this.label14.Size = new System.Drawing.Size(10, 16);
             this.label14.TabIndex = 31;
             this.label14.Text = ",";
             // 
@@ -674,15 +666,14 @@
             0,
             0,
             196608});
-            this.minOcHand.Location = new System.Drawing.Point(113, 80);
-            this.minOcHand.Margin = new System.Windows.Forms.Padding(4);
+            this.minOcHand.Location = new System.Drawing.Point(85, 65);
             this.minOcHand.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.minOcHand.Name = "minOcHand";
-            this.minOcHand.Size = new System.Drawing.Size(79, 27);
+            this.minOcHand.Size = new System.Drawing.Size(59, 23);
             this.minOcHand.TabIndex = 12;
             this.minOcHand.Value = new decimal(new int[] {
             60,
@@ -694,10 +685,9 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(19, 78);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(14, 63);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 17);
+            this.label15.Size = new System.Drawing.Size(70, 14);
             this.label15.TabIndex = 30;
             this.label15.Text = "Uniforme(";
             // 
@@ -718,11 +708,9 @@
             this.groupBox2.Controls.Add(this.expNegFutbol);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(664, 18);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Location = new System.Drawing.Point(498, 15);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(451, 174);
+            this.groupBox2.Size = new System.Drawing.Size(338, 141);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tiempo de llegadas (hs)";
@@ -736,15 +724,14 @@
             0,
             0,
             196608});
-            this.maxLlegBasc.Location = new System.Drawing.Point(329, 113);
-            this.maxLlegBasc.Margin = new System.Windows.Forms.Padding(4);
+            this.maxLlegBasc.Location = new System.Drawing.Point(247, 92);
             this.maxLlegBasc.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.maxLlegBasc.Name = "maxLlegBasc";
-            this.maxLlegBasc.Size = new System.Drawing.Size(79, 27);
+            this.maxLlegBasc.Size = new System.Drawing.Size(59, 23);
             this.maxLlegBasc.TabIndex = 9;
             this.maxLlegBasc.Value = new decimal(new int[] {
             10,
@@ -756,10 +743,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(405, 121);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(304, 98);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 17);
+            this.label6.Size = new System.Drawing.Size(35, 14);
             this.label6.TabIndex = 37;
             this.label6.Text = ") hs";
             // 
@@ -767,10 +753,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(309, 121);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(232, 98);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 20);
+            this.label7.Size = new System.Drawing.Size(10, 16);
             this.label7.TabIndex = 36;
             this.label7.Text = ",";
             // 
@@ -783,15 +768,14 @@
             0,
             0,
             196608});
-            this.minLlegBasc.Location = new System.Drawing.Point(232, 114);
-            this.minLlegBasc.Margin = new System.Windows.Forms.Padding(4);
+            this.minLlegBasc.Location = new System.Drawing.Point(174, 93);
             this.minLlegBasc.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.minLlegBasc.Name = "minLlegBasc";
-            this.minLlegBasc.Size = new System.Drawing.Size(79, 27);
+            this.minLlegBasc.Size = new System.Drawing.Size(59, 23);
             this.minLlegBasc.TabIndex = 8;
             this.minLlegBasc.Value = new decimal(new int[] {
             6,
@@ -803,10 +787,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 121);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(14, 98);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(206, 17);
+            this.label8.Size = new System.Drawing.Size(161, 14);
             this.label8.TabIndex = 35;
             this.label8.Text = "Basket Ball: Uniforme(";
             // 
@@ -819,15 +802,14 @@
             0,
             0,
             196608});
-            this.maxLlegHand.Location = new System.Drawing.Point(309, 75);
-            this.maxLlegHand.Margin = new System.Windows.Forms.Padding(4);
+            this.maxLlegHand.Location = new System.Drawing.Point(232, 61);
             this.maxLlegHand.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.maxLlegHand.Name = "maxLlegHand";
-            this.maxLlegHand.Size = new System.Drawing.Size(79, 27);
+            this.maxLlegHand.Size = new System.Drawing.Size(59, 23);
             this.maxLlegHand.TabIndex = 7;
             this.maxLlegHand.Value = new decimal(new int[] {
             14,
@@ -839,10 +821,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(385, 80);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(289, 65);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 17);
+            this.label5.Size = new System.Drawing.Size(35, 14);
             this.label5.TabIndex = 32;
             this.label5.Text = ") hs";
             // 
@@ -850,10 +831,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(287, 82);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(215, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(13, 20);
+            this.label3.Size = new System.Drawing.Size(10, 16);
             this.label3.TabIndex = 31;
             this.label3.Text = ",";
             // 
@@ -866,15 +846,14 @@
             0,
             0,
             196608});
-            this.minLlegHand.Location = new System.Drawing.Point(211, 76);
-            this.minLlegHand.Margin = new System.Windows.Forms.Padding(4);
+            this.minLlegHand.Location = new System.Drawing.Point(158, 62);
             this.minLlegHand.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.minLlegHand.Name = "minLlegHand";
-            this.minLlegHand.Size = new System.Drawing.Size(79, 27);
+            this.minLlegHand.Size = new System.Drawing.Size(59, 23);
             this.minLlegHand.TabIndex = 6;
             this.minLlegHand.Value = new decimal(new int[] {
             10,
@@ -886,10 +865,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 80);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(14, 65);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(188, 17);
+            this.label4.Size = new System.Drawing.Size(147, 14);
             this.label4.TabIndex = 30;
             this.label4.Text = "Hand Ball: Uniforme(";
             // 
@@ -897,10 +875,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(275, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(206, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 17);
+            this.label2.Size = new System.Drawing.Size(21, 14);
             this.label2.TabIndex = 28;
             this.label2.Text = "hs";
             // 
@@ -913,10 +890,9 @@
             0,
             0,
             196608});
-            this.expNegFutbol.Location = new System.Drawing.Point(187, 36);
-            this.expNegFutbol.Margin = new System.Windows.Forms.Padding(4);
+            this.expNegFutbol.Location = new System.Drawing.Point(140, 29);
             this.expNegFutbol.Name = "expNegFutbol";
-            this.expNegFutbol.Size = new System.Drawing.Size(79, 27);
+            this.expNegFutbol.Size = new System.Drawing.Size(59, 23);
             this.expNegFutbol.TabIndex = 5;
             this.expNegFutbol.Value = new decimal(new int[] {
             10,
@@ -928,10 +904,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(19, 38);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(14, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 17);
+            this.label9.Size = new System.Drawing.Size(119, 14);
             this.label9.TabIndex = 23;
             this.label9.Text = "Fútbol: Exp. Neg";
             // 
@@ -939,8 +914,6 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.tiempoLimpiezaCancha);
             this.groupBox1.Controls.Add(this.horaInicioMostrar);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label18);
@@ -948,67 +921,34 @@
             this.groupBox1.Controls.Add(this.horasSimular);
             this.groupBox1.Controls.Add(this.eventosAMostrar);
             this.groupBox1.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 18);
+            this.groupBox1.Location = new System.Drawing.Point(7, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(651, 174);
+            this.groupBox1.Size = new System.Drawing.Size(488, 141);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Simulacion";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 116);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 17);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Tiempo Limpieza Canchas (mins)";
-            // 
-            // tiempoLimpiezaCancha
-            // 
-            this.tiempoLimpiezaCancha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tiempoLimpiezaCancha.Location = new System.Drawing.Point(497, 110);
-            this.tiempoLimpiezaCancha.Margin = new System.Windows.Forms.Padding(4);
-            this.tiempoLimpiezaCancha.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.tiempoLimpiezaCancha.Name = "tiempoLimpiezaCancha";
-            this.tiempoLimpiezaCancha.Size = new System.Drawing.Size(121, 28);
-            this.tiempoLimpiezaCancha.TabIndex = 4;
-            this.tiempoLimpiezaCancha.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
             // horaInicioMostrar
             // 
             this.horaInicioMostrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.horaInicioMostrar.Location = new System.Drawing.Point(497, 37);
-            this.horaInicioMostrar.Margin = new System.Windows.Forms.Padding(4);
+            this.horaInicioMostrar.Location = new System.Drawing.Point(373, 30);
             this.horaInicioMostrar.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.horaInicioMostrar.Name = "horaInicioMostrar";
-            this.horaInicioMostrar.Size = new System.Drawing.Size(121, 28);
+            this.horaInicioMostrar.Size = new System.Drawing.Size(91, 24);
             this.horaInicioMostrar.TabIndex = 2;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(41, 34);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(31, 28);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(152, 17);
+            this.label17.Size = new System.Drawing.Size(119, 14);
             this.label17.TabIndex = 18;
             this.label17.Text = "Horas a simular:";
             // 
@@ -1016,10 +956,9 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(267, 43);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(200, 35);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(179, 17);
+            this.label18.Size = new System.Drawing.Size(140, 14);
             this.label18.TabIndex = 19;
             this.label18.Text = "Mostrar desde Hora:";
             // 
@@ -1027,25 +966,23 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(197, 75);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(148, 61);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(278, 17);
+            this.label19.Size = new System.Drawing.Size(217, 14);
             this.label19.TabIndex = 20;
             this.label19.Text = "Cantidad de eventos a mostrar:";
             // 
             // horasSimular
             // 
             this.horasSimular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.horasSimular.Location = new System.Drawing.Point(45, 68);
-            this.horasSimular.Margin = new System.Windows.Forms.Padding(4);
+            this.horasSimular.Location = new System.Drawing.Point(34, 55);
             this.horasSimular.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.horasSimular.Name = "horasSimular";
-            this.horasSimular.Size = new System.Drawing.Size(144, 28);
+            this.horasSimular.Size = new System.Drawing.Size(108, 24);
             this.horasSimular.TabIndex = 1;
             this.horasSimular.Value = new decimal(new int[] {
             50,
@@ -1056,15 +993,14 @@
             // eventosAMostrar
             // 
             this.eventosAMostrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.eventosAMostrar.Location = new System.Drawing.Point(497, 74);
-            this.eventosAMostrar.Margin = new System.Windows.Forms.Padding(4);
+            this.eventosAMostrar.Location = new System.Drawing.Point(373, 60);
             this.eventosAMostrar.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.eventosAMostrar.Name = "eventosAMostrar";
-            this.eventosAMostrar.Size = new System.Drawing.Size(121, 28);
+            this.eventosAMostrar.Size = new System.Drawing.Size(91, 24);
             this.eventosAMostrar.TabIndex = 3;
             this.eventosAMostrar.Value = new decimal(new int[] {
             20,
@@ -1139,8 +1075,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_cola.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_cola.GridColor = System.Drawing.Color.DarkSlateBlue;
-            this.dgv_cola.Location = new System.Drawing.Point(6, 198);
-            this.dgv_cola.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_cola.Location = new System.Drawing.Point(4, 161);
             this.dgv_cola.Name = "dgv_cola";
             this.dgv_cola.ReadOnly = true;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1160,7 +1095,7 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
             this.dgv_cola.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_cola.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_cola.Size = new System.Drawing.Size(2000, 615);
+            this.dgv_cola.Size = new System.Drawing.Size(1500, 500);
             this.dgv_cola.TabIndex = 45;
             this.dgv_cola.TabStop = false;
             // 
@@ -1509,15 +1444,15 @@
             this.btnIniciar.ForeColor = System.Drawing.Color.Black;
             this.btnIniciar.Image = null;
             this.btnIniciar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnIniciar.Location = new System.Drawing.Point(1558, 121);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnIniciar.Location = new System.Drawing.Point(1299, 787);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnIniciar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnIniciar.OnHoverForeColor = System.Drawing.Color.White;
             this.btnIniciar.OnHoverImage = null;
             this.btnIniciar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnIniciar.Size = new System.Drawing.Size(157, 70);
+            this.btnIniciar.Size = new System.Drawing.Size(118, 57);
             this.btnIniciar.TabIndex = 44;
             this.btnIniciar.Text = "INICIAR";
             this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1538,27 +1473,125 @@
             this.btnVolver.ForeColor = System.Drawing.Color.Black;
             this.btnVolver.Image = null;
             this.btnVolver.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnVolver.Location = new System.Drawing.Point(1750, 121);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnVolver.Location = new System.Drawing.Point(1153, 787);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnVolver.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnVolver.OnHoverForeColor = System.Drawing.Color.White;
             this.btnVolver.OnHoverImage = null;
             this.btnVolver.OnPressedColor = System.Drawing.Color.Black;
-            this.btnVolver.Size = new System.Drawing.Size(157, 70);
+            this.btnVolver.Size = new System.Drawing.Size(118, 57);
             this.btnVolver.TabIndex = 46;
             this.btnVolver.Text = "VOLVER";
             this.btnVolver.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox4.Controls.Add(this.lblDBasketball);
+            this.groupBox4.Controls.Add(this.dBasketBall);
+            this.groupBox4.Controls.Add(this.lblDHandball);
+            this.groupBox4.Controls.Add(this.dHandBall);
+            this.groupBox4.Controls.Add(this.lblDFutbol);
+            this.groupBox4.Controls.Add(this.dFutbol);
+            this.groupBox4.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(1135, 19);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(282, 137);
+            this.groupBox4.TabIndex = 48;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Limpieza";
+            // 
+            // dFutbol
+            // 
+            this.dFutbol.Location = new System.Drawing.Point(156, 31);
+            this.dFutbol.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.dFutbol.Name = "dFutbol";
+            this.dFutbol.Size = new System.Drawing.Size(120, 24);
+            this.dFutbol.TabIndex = 0;
+            this.dFutbol.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // lblDFutbol
+            // 
+            this.lblDFutbol.AutoSize = true;
+            this.lblDFutbol.Location = new System.Drawing.Point(15, 33);
+            this.lblDFutbol.Name = "lblDFutbol";
+            this.lblDFutbol.Size = new System.Drawing.Size(88, 15);
+            this.lblDFutbol.TabIndex = 1;
+            this.lblDFutbol.Text = "Fútbol: D";
+            // 
+            // lblDHandball
+            // 
+            this.lblDHandball.AutoSize = true;
+            this.lblDHandball.Location = new System.Drawing.Point(15, 65);
+            this.lblDHandball.Name = "lblDHandball";
+            this.lblDHandball.Size = new System.Drawing.Size(106, 15);
+            this.lblDHandball.TabIndex = 3;
+            this.lblDHandball.Text = "HandBall: D";
+            // 
+            // dHandBall
+            // 
+            this.dHandBall.Location = new System.Drawing.Point(156, 63);
+            this.dHandBall.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.dHandBall.Name = "dHandBall";
+            this.dHandBall.Size = new System.Drawing.Size(120, 24);
+            this.dHandBall.TabIndex = 2;
+            this.dHandBall.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            // 
+            // lblDBasketball
+            // 
+            this.lblDBasketball.AutoSize = true;
+            this.lblDBasketball.Location = new System.Drawing.Point(15, 100);
+            this.lblDBasketball.Name = "lblDBasketball";
+            this.lblDBasketball.Size = new System.Drawing.Size(124, 15);
+            this.lblDBasketball.TabIndex = 5;
+            this.lblDBasketball.Text = "BasketBall: D";
+            // 
+            // dBasketBall
+            // 
+            this.dBasketBall.Location = new System.Drawing.Point(156, 98);
+            this.dBasketBall.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.dBasketBall.Name = "dBasketBall";
+            this.dBasketBall.Size = new System.Drawing.Size(120, 24);
+            this.dBasketBall.TabIndex = 4;
+            this.dBasketBall.Value = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            // 
             // solucionTP5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2223, 1049);
+            this.ClientSize = new System.Drawing.Size(1443, 852);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.dgv_final);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.btnVolver);
@@ -1568,6 +1601,7 @@
             this.Controls.Add(this.dgv_cola);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "solucionTP5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo Práctico Nº5";
@@ -1591,11 +1625,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.expNegFutbol)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tiempoLimpiezaCancha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horaInicioMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horasSimular)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventosAMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cola)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dFutbol)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dHandBall)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBasketBall)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1659,8 +1697,6 @@
         private System.Windows.Forms.NumericUpDown expNegFutbol;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown tiempoLimpiezaCancha;
         private System.Windows.Forms.NumericUpDown horaInicioMostrar;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -1709,5 +1745,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoCliente6;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoCliente6;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraLlegadaCliente6;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label lblDFutbol;
+        private System.Windows.Forms.NumericUpDown dFutbol;
+        private System.Windows.Forms.Label lblDBasketball;
+        private System.Windows.Forms.NumericUpDown dBasketBall;
+        private System.Windows.Forms.Label lblDHandball;
+        private System.Windows.Forms.NumericUpDown dHandBall;
     }
 }
