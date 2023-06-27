@@ -8,11 +8,11 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class Futbol : IDisciplina
     {
-        private static string nombre = "Futbol";
+        public static string nombre = "Futbol";
         private static double media;
         private static double ocupacionMinima;
         private static double ocupacionMaxima;
-        private static double d;
+        public static double d;
 
         private double tiempoLlegada;
         private double proximaLlegada;

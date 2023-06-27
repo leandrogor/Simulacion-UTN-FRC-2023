@@ -1,4 +1,5 @@
 ﻿using SIM_TP2.TP4.Entidades;
+using SIM_TP2.TP5.Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace SIM_TP2.TP5
@@ -31,7 +33,7 @@ namespace SIM_TP2.TP5
 
             Gestor2 gestor = new Gestor2(
 
-                400 / 60,
+                (double)hEuler.Value,
                 (double)dFutbol.Value,
                 (double)dHandBall.Value,
                 (double)dBasketBall.Value,
@@ -61,7 +63,7 @@ namespace SIM_TP2.TP5
         }
 
         public void agregarFilaDeIteracion(int filaAMostrar, int iteracion, double reloj, object evento, double rndFutbol, double proximaLlegadaFutbol, double rndBasket,
-            double proximaLlegadaBasket, double rndHandBa, double proximaLlegadaHandBall, double rndFinJuego, double proximoFinJuego, double finLimpieza, bool libre)
+            double proximaLlegadaBasket, double rndHandBa, double proximaLlegadaHandBall, double rndFinJuego, double proximoFinJuego, double finLimpieza, bool libre, double tiempoLimpieza)
         {
             if (evento is Limpieza)
             {
@@ -86,7 +88,7 @@ namespace SIM_TP2.TP5
             }
             if (finLimpieza != Double.MaxValue)
             {
-                dgv_cola.Rows[filaAMostrar].Cells["TiempoLimpieza"].Value = (finLimpieza - reloj).ToString("0.00");
+                dgv_cola.Rows[filaAMostrar].Cells["TiempoLimpieza"].Value = tiempoLimpieza.ToString("0.00");
                 dgv_cola.Rows[filaAMostrar].Cells["FinLimpieza"].Value = finLimpieza.ToString("0.00");
             }
 
@@ -213,6 +215,42 @@ namespace SIM_TP2.TP5
                 ultimaFila--;
             }
 
+        }
+
+        private void dgv_cola_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dgv_cola.Columns[e.ColumnIndex].Name != "TiempoLimpieza") return;
+            if (dgv_cola.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null) return;
+            //se viene logica rara
+            
+            int rowDondeEstaInfo = e.RowIndex - 1; //hay que encontrar la fila que no tenga un tiempoLimpieza para ver con qué datos se calculó el tiempo de limpieza
+            while(dgv_cola.Rows[rowDondeEstaInfo].Cells[e.ColumnIndex].Value != null)
+            {
+                rowDondeEstaInfo--;
+            }
+            double d = 0, c = 0;
+            for (int i = 1; i <= 6; i++)
+            {
+                if (dgv_cola.Rows[rowDondeEstaInfo].Cells["TipoCliente" + i.ToString()].Value == null) continue;
+
+                if (dgv_cola.Rows[rowDondeEstaInfo].Cells["EstadoCliente" + i.ToString()].Value.Equals("Jugando"))
+                {
+                    if (dgv_cola.Rows[rowDondeEstaInfo].Cells["TipoCliente" + i.ToString()].Value.Equals(Futbol.nombre)) d = Futbol.d;
+                    if (dgv_cola.Rows[rowDondeEstaInfo].Cells["TipoCliente" + i.ToString()].Value.Equals(HandBall.nombre)) d = HandBall.d;
+                    if (dgv_cola.Rows[rowDondeEstaInfo].Cells["TipoCliente" + i.ToString()].Value.Equals(BasketBall.nombre)) d = BasketBall.d;
+                }
+                else
+                {
+                    c++;
+                }
+            }
+            GrillaIntegracionNumerica ventana = new GrillaIntegracionNumerica();
+            ventana.Show();
+            List<List<double>> euler = LimpiezaIntegracion.mostrarEuler(d, c);
+            Console.WriteLine("Valor D: " + d + "; Valor C: " + c);
+            ventana.mostrarGrilla(euler);
+            
+            
         }
     }
 }

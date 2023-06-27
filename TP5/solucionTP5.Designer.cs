@@ -101,15 +101,6 @@
             this.horasSimular = new System.Windows.Forms.NumericUpDown();
             this.eventosAMostrar = new System.Windows.Forms.NumericUpDown();
             this.dgv_cola = new System.Windows.Forms.DataGridView();
-            this.btnIniciar = new Guna.UI.WinForms.GunaButton();
-            this.btnVolver = new Guna.UI.WinForms.GunaButton();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.lblDBasketball = new System.Windows.Forms.Label();
-            this.dBasketBall = new System.Windows.Forms.NumericUpDown();
-            this.lblDHandball = new System.Windows.Forms.Label();
-            this.dHandBall = new System.Windows.Forms.NumericUpDown();
-            this.lblDFutbol = new System.Windows.Forms.Label();
-            this.dFutbol = new System.Windows.Forms.NumericUpDown();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Reloj = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -152,6 +143,15 @@
             this.TipoCliente6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoCliente6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraLlegadaCliente6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblDBasketball = new System.Windows.Forms.Label();
+            this.dBasketBall = new System.Windows.Forms.NumericUpDown();
+            this.lblDHandball = new System.Windows.Forms.Label();
+            this.dHandBall = new System.Windows.Forms.NumericUpDown();
+            this.lblDFutbol = new System.Windows.Forms.Label();
+            this.dFutbol = new System.Windows.Forms.NumericUpDown();
+            this.btnIniciar = new Guna.UI.WinForms.GunaButton();
+            this.btnVolver = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_final)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.maxOcFut)).BeginInit();
@@ -963,11 +963,11 @@
             // 
             this.lblIntegracionNumerica.AutoSize = true;
             this.lblIntegracionNumerica.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIntegracionNumerica.Location = new System.Drawing.Point(64, 94);
+            this.lblIntegracionNumerica.Location = new System.Drawing.Point(141, 94);
             this.lblIntegracionNumerica.Name = "lblIntegracionNumerica";
-            this.lblIntegracionNumerica.Size = new System.Drawing.Size(301, 14);
+            this.lblIntegracionNumerica.Size = new System.Drawing.Size(224, 14);
             this.lblIntegracionNumerica.TabIndex = 21;
-            this.lblIntegracionNumerica.Text = "Integración numérica Euler (ui: 1min) (h):";
+            this.lblIntegracionNumerica.Text = "Integración numérica Euler (h):";
             // 
             // horaInicioMostrar
             // 
@@ -1139,161 +1139,7 @@
             this.dgv_cola.Size = new System.Drawing.Size(1500, 500);
             this.dgv_cola.TabIndex = 45;
             this.dgv_cola.TabStop = false;
-            // 
-            // btnIniciar
-            // 
-            this.btnIniciar.AnimationHoverSpeed = 0.07F;
-            this.btnIniciar.AnimationSpeed = 0.03F;
-            this.btnIniciar.BackColor = System.Drawing.Color.Transparent;
-            this.btnIniciar.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
-            this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIniciar.BaseColor = System.Drawing.Color.Transparent;
-            this.btnIniciar.BorderColor = System.Drawing.Color.Black;
-            this.btnIniciar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnIniciar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnIniciar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.ForeColor = System.Drawing.Color.Black;
-            this.btnIniciar.Image = null;
-            this.btnIniciar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnIniciar.Location = new System.Drawing.Point(1299, 787);
-            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.btnIniciar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnIniciar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnIniciar.OnHoverImage = null;
-            this.btnIniciar.OnPressedColor = System.Drawing.Color.Black;
-            this.btnIniciar.Size = new System.Drawing.Size(118, 57);
-            this.btnIniciar.TabIndex = 44;
-            this.btnIniciar.Text = "INICIAR";
-            this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.AnimationHoverSpeed = 0.07F;
-            this.btnVolver.AnimationSpeed = 0.03F;
-            this.btnVolver.BackColor = System.Drawing.Color.Transparent;
-            this.btnVolver.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
-            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVolver.BaseColor = System.Drawing.Color.Transparent;
-            this.btnVolver.BorderColor = System.Drawing.Color.Black;
-            this.btnVolver.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnVolver.FocusedColor = System.Drawing.Color.Empty;
-            this.btnVolver.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.Black;
-            this.btnVolver.Image = null;
-            this.btnVolver.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnVolver.Location = new System.Drawing.Point(1153, 787);
-            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.btnVolver.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnVolver.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnVolver.OnHoverImage = null;
-            this.btnVolver.OnPressedColor = System.Drawing.Color.Black;
-            this.btnVolver.Size = new System.Drawing.Size(118, 57);
-            this.btnVolver.TabIndex = 46;
-            this.btnVolver.Text = "VOLVER";
-            this.btnVolver.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox4.Controls.Add(this.lblDBasketball);
-            this.groupBox4.Controls.Add(this.dBasketBall);
-            this.groupBox4.Controls.Add(this.lblDHandball);
-            this.groupBox4.Controls.Add(this.dHandBall);
-            this.groupBox4.Controls.Add(this.lblDFutbol);
-            this.groupBox4.Controls.Add(this.dFutbol);
-            this.groupBox4.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(1135, 19);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(282, 137);
-            this.groupBox4.TabIndex = 48;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Limpieza";
-            // 
-            // lblDBasketball
-            // 
-            this.lblDBasketball.AutoSize = true;
-            this.lblDBasketball.Location = new System.Drawing.Point(15, 100);
-            this.lblDBasketball.Name = "lblDBasketball";
-            this.lblDBasketball.Size = new System.Drawing.Size(124, 15);
-            this.lblDBasketball.TabIndex = 5;
-            this.lblDBasketball.Text = "BasketBall: D";
-            // 
-            // dBasketBall
-            // 
-            this.dBasketBall.Location = new System.Drawing.Point(156, 98);
-            this.dBasketBall.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.dBasketBall.Name = "dBasketBall";
-            this.dBasketBall.Size = new System.Drawing.Size(120, 24);
-            this.dBasketBall.TabIndex = 4;
-            this.dBasketBall.Value = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            // 
-            // lblDHandball
-            // 
-            this.lblDHandball.AutoSize = true;
-            this.lblDHandball.Location = new System.Drawing.Point(15, 65);
-            this.lblDHandball.Name = "lblDHandball";
-            this.lblDHandball.Size = new System.Drawing.Size(106, 15);
-            this.lblDHandball.TabIndex = 3;
-            this.lblDHandball.Text = "HandBall: D";
-            // 
-            // dHandBall
-            // 
-            this.dHandBall.Location = new System.Drawing.Point(156, 63);
-            this.dHandBall.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.dHandBall.Name = "dHandBall";
-            this.dHandBall.Size = new System.Drawing.Size(120, 24);
-            this.dHandBall.TabIndex = 2;
-            this.dHandBall.Value = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
-            // 
-            // lblDFutbol
-            // 
-            this.lblDFutbol.AutoSize = true;
-            this.lblDFutbol.Location = new System.Drawing.Point(15, 33);
-            this.lblDFutbol.Name = "lblDFutbol";
-            this.lblDFutbol.Size = new System.Drawing.Size(88, 15);
-            this.lblDFutbol.TabIndex = 1;
-            this.lblDFutbol.Text = "Futbol: D";
-            // 
-            // dFutbol
-            // 
-            this.dFutbol.Location = new System.Drawing.Point(156, 31);
-            this.dFutbol.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.dFutbol.Name = "dFutbol";
-            this.dFutbol.Size = new System.Drawing.Size(120, 24);
-            this.dFutbol.TabIndex = 0;
-            this.dFutbol.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
+            this.dgv_cola.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_cola_CellMouseDoubleClick);
             // 
             // Numero
             // 
@@ -1630,6 +1476,161 @@
             this.HoraLlegadaCliente6.Name = "HoraLlegadaCliente6";
             this.HoraLlegadaCliente6.ReadOnly = true;
             this.HoraLlegadaCliente6.Width = 70;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox4.Controls.Add(this.lblDBasketball);
+            this.groupBox4.Controls.Add(this.dBasketBall);
+            this.groupBox4.Controls.Add(this.lblDHandball);
+            this.groupBox4.Controls.Add(this.dHandBall);
+            this.groupBox4.Controls.Add(this.lblDFutbol);
+            this.groupBox4.Controls.Add(this.dFutbol);
+            this.groupBox4.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(1135, 19);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(282, 137);
+            this.groupBox4.TabIndex = 48;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Limpieza";
+            // 
+            // lblDBasketball
+            // 
+            this.lblDBasketball.AutoSize = true;
+            this.lblDBasketball.Location = new System.Drawing.Point(15, 100);
+            this.lblDBasketball.Name = "lblDBasketball";
+            this.lblDBasketball.Size = new System.Drawing.Size(124, 15);
+            this.lblDBasketball.TabIndex = 5;
+            this.lblDBasketball.Text = "BasketBall: D";
+            // 
+            // dBasketBall
+            // 
+            this.dBasketBall.Location = new System.Drawing.Point(156, 98);
+            this.dBasketBall.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.dBasketBall.Name = "dBasketBall";
+            this.dBasketBall.Size = new System.Drawing.Size(120, 24);
+            this.dBasketBall.TabIndex = 4;
+            this.dBasketBall.Value = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            // 
+            // lblDHandball
+            // 
+            this.lblDHandball.AutoSize = true;
+            this.lblDHandball.Location = new System.Drawing.Point(15, 65);
+            this.lblDHandball.Name = "lblDHandball";
+            this.lblDHandball.Size = new System.Drawing.Size(106, 15);
+            this.lblDHandball.TabIndex = 3;
+            this.lblDHandball.Text = "HandBall: D";
+            // 
+            // dHandBall
+            // 
+            this.dHandBall.Location = new System.Drawing.Point(156, 63);
+            this.dHandBall.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.dHandBall.Name = "dHandBall";
+            this.dHandBall.Size = new System.Drawing.Size(120, 24);
+            this.dHandBall.TabIndex = 2;
+            this.dHandBall.Value = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            // 
+            // lblDFutbol
+            // 
+            this.lblDFutbol.AutoSize = true;
+            this.lblDFutbol.Location = new System.Drawing.Point(15, 33);
+            this.lblDFutbol.Name = "lblDFutbol";
+            this.lblDFutbol.Size = new System.Drawing.Size(88, 15);
+            this.lblDFutbol.TabIndex = 1;
+            this.lblDFutbol.Text = "Futbol: D";
+            // 
+            // dFutbol
+            // 
+            this.dFutbol.Location = new System.Drawing.Point(156, 31);
+            this.dFutbol.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.dFutbol.Name = "dFutbol";
+            this.dFutbol.Size = new System.Drawing.Size(120, 24);
+            this.dFutbol.TabIndex = 0;
+            this.dFutbol.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // btnIniciar
+            // 
+            this.btnIniciar.AnimationHoverSpeed = 0.07F;
+            this.btnIniciar.AnimationSpeed = 0.03F;
+            this.btnIniciar.BackColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
+            this.btnIniciar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIniciar.BaseColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.BorderColor = System.Drawing.Color.Black;
+            this.btnIniciar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnIniciar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnIniciar.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciar.ForeColor = System.Drawing.Color.Black;
+            this.btnIniciar.Image = null;
+            this.btnIniciar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnIniciar.Location = new System.Drawing.Point(1299, 787);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnIniciar.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnIniciar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnIniciar.OnHoverImage = null;
+            this.btnIniciar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnIniciar.Size = new System.Drawing.Size(118, 57);
+            this.btnIniciar.TabIndex = 44;
+            this.btnIniciar.Text = "INICIAR";
+            this.btnIniciar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.AnimationHoverSpeed = 0.07F;
+            this.btnVolver.AnimationSpeed = 0.03F;
+            this.btnVolver.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BackgroundImage = global::SIM_TP2.Properties.Resources.Copia_de_buttonwhite1;
+            this.btnVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVolver.BaseColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BorderColor = System.Drawing.Color.Black;
+            this.btnVolver.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnVolver.FocusedColor = System.Drawing.Color.Empty;
+            this.btnVolver.Font = new System.Drawing.Font("SimSun", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
+            this.btnVolver.Image = null;
+            this.btnVolver.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnVolver.Location = new System.Drawing.Point(1153, 787);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnVolver.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnVolver.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnVolver.OnHoverImage = null;
+            this.btnVolver.OnPressedColor = System.Drawing.Color.Black;
+            this.btnVolver.Size = new System.Drawing.Size(118, 57);
+            this.btnVolver.TabIndex = 46;
+            this.btnVolver.Text = "VOLVER";
+            this.btnVolver.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // solucionTP5
             // 

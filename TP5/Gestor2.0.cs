@@ -12,6 +12,8 @@ namespace SIM_TP2.TP5
 {
     public class Gestor2
     {
+        private double tiempoLimpieza = 0;
+
         private double reloj = 0;
         private int acGrupos = 0;
         private int acRetirados = 0;
@@ -81,7 +83,7 @@ namespace SIM_TP2.TP5
                 }
                 if (evento is Cancha)
                 {
-                    limpieza.generarProximaLimpieza(reloj, cancha.Jugando.D, cancha.ColaB.Count + cancha.ColaFH.Count);
+                    tiempoLimpieza = limpieza.generarProximaLimpieza(reloj, cancha.Jugando.D, cancha.ColaB.Count + cancha.ColaFH.Count);
                     cancha.HoraFin = Double.MaxValue;
                     cancha.Jugando.Estado = null;
                 }
@@ -116,7 +118,7 @@ namespace SIM_TP2.TP5
                 {
                     pantalla.agregarFilaDeIteracion(iteracionMostrada, iteraciones, reloj, evento, futbol.RndUtilizado, futbol.ProximaLlegada,
                         basketBall.RndUtilizado, basketBall.ProximaLlegada, handBall.RndUtilizado, handBall.ProximaLlegada, cancha.RndUtilizado,
-                        cancha.HoraFin, limpieza.ProximaLimpieza, cancha.Libre);
+                        cancha.HoraFin, limpieza.ProximaLimpieza, cancha.Libre, tiempoLimpieza);
                     pantalla.agregarCola(iteracionMostrada, cancha.Jugando, cancha.ColaFH, cancha.ColaB);
                     pantalla.agregarEstadisticas(iteracionMostrada, acGrupos, acRetirados);
                     pantalla.agregarAcumulador(iteracionMostrada, acLlegF, acLlegH, acLlegB, acEspF, acEspH, acEspB);

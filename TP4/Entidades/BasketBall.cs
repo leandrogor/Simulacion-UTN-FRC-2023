@@ -8,12 +8,12 @@ namespace SIM_TP2.TP4.Entidades
 {
     public class BasketBall : IDisciplina
     {
-        private static string nombre = "Basket Ball";
+        public static string nombre = "Basket Ball";
         private static double llegadaMinima;
         private static double llegadaMaxima;
         private static double ocupacionMinima;
         private static double ocupacionMaxima;
-        private static double d;
+        public static double d;
 
         private double tiempoLlegada;
         private double proximaLlegada;

@@ -180,6 +180,12 @@
     </Compile>
     <Compile Include="TP5\Entidades\LimpiezaIntegracion.cs" />
     <Compile Include="TP5\Gestor2.0.cs" />
+    <Compile Include="TP5\GrillaIntegracionNumerica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TP5\GrillaIntegracionNumerica.Designer.cs">
+      <DependentUpon>GrillaIntegracionNumerica.cs</DependentUpon>
+    </Compile>
     <Compile Include="TP5\mainTP5.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TP5\consignaTP5.resx">
       <DependentUpon>consignaTP5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TP5\GrillaIntegracionNumerica.resx">
+      <DependentUpon>GrillaIntegracionNumerica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TP5\mainTP5.resx">
       <DependentUpon>mainTP5.cs</DependentUpon>

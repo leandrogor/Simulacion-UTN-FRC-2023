@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,31 +9,40 @@ namespace SIM_TP2.TP5.Entidades
 {
     public class LimpiezaIntegracion
     {
-        private double h;
+        private static double h;
         private double proximaLimpieza;
-
+        private Dictionary<Keydc, double> memoization; //optimización
+        struct Keydc
+        {
+            public double dKey;
+            public double cKey;
+        }
         public LimpiezaIntegracion(double h) 
         { 
-            this.h = h;
+            LimpiezaIntegracion.h = h;
+            memoization = new Dictionary<Keydc, double>();//optimization
         }
 
         public double ProximaLimpieza { get => proximaLimpieza; set => proximaLimpieza = value; }
 
         public double calcularUnidadesDeIntegracion(double d,  double c)
         {
+            Keydc key = new Keydc { dKey = d, cKey = c }; //optimization
+            if (memoization.ContainsKey(key)) return memoization[key]; //optimization
             double actualD = 0;
             double actualt = 0;
             while(actualD < d)
             {
                 double dydx = 0.6 * c + actualt;
-                double hdydx = this.h * dydx;
-                actualD += this.h * hdydx;
-                actualt += this.h;
+                double hdydx = h * dydx;
+                actualD += h * hdydx;
+                actualt += h;
             }
+            memoization.Add(key, actualt);//optimization
             return actualt;
         }
 
-        public List<List<double>> mostrarEuler(double d, double c)
+        public static List<List<double>> mostrarEuler(double d, double c)
         {
             List<List<double>> euler = new List<List<double>>(); //fila: t, Di, dDi/dt, h * dDi/dt, Di+1
             double actualD = 0;
@@ -43,20 +53,22 @@ namespace SIM_TP2.TP5.Entidades
                 fila.Add(actualt);
                 fila.Add(actualD);
                 double dydx = 0.6 * c + actualt;
-                double hdydx = this.h * dydx;
+                double hdydx = h * dydx;
                 fila.Add(dydx);
                 fila.Add(hdydx);
-                actualD += this.h * hdydx;
-                actualt += this.h;
+                actualD += h * hdydx;
+                actualt += h;
                 fila.Add(actualD); 
                 euler.Add(fila);
             }
             return euler;
         }
 
-        public void generarProximaLimpieza(double reloj, double d, int v)
+        public double generarProximaLimpieza(double reloj, double d, int v)
         {
-            ProximaLimpieza = reloj + calcularUnidadesDeIntegracion(d, v) / 60; //dividido 60 porque da el valor en minutos y nosotros lo tenemos todo en horas
+            double unidades = calcularUnidadesDeIntegracion(d, v) / 60; //dividido 60 porque da el valor en minutos y nosotros lo tenemos todo en horas
+            ProximaLimpieza = reloj + unidades; 
+            return unidades;
         }
 
         public override string ToString()
