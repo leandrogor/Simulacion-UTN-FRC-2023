@@ -16,11 +16,13 @@ namespace SIM_TP2.TP5
     public partial class solucionTP5 : Form
     {
         bool mostrarRND4 = true;
+        Gestor2 gestor;
 
         public solucionTP5()
         {
             InitializeComponent();
             dgv_cola.CellFormatting += dgv_cola_CellFormatting;
+            dgv_final.CellFormatting += dgv_final_CellFormatting;
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -32,7 +34,7 @@ namespace SIM_TP2.TP5
             for (int i = 0; i < (int)eventosAMostrar.Value + 1; i++) dgv_cola.Rows.Add();
             dgv_final.Rows.Add();
 
-            Gestor2 gestor = new Gestor2(
+            gestor = new Gestor2(
 
                 (double)hEuler.Value,
                 (double)dFutbol.Value,
@@ -225,20 +227,40 @@ namespace SIM_TP2.TP5
                 var dataGridView = (DataGridView)sender;
                 var cell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-                // Establecer estilo de celda
                 cell.Style.ForeColor = Color.Blue;
                 cell.Style.Font = new Font(dataGridView.Font, FontStyle.Underline);
                 cell.Style.SelectionForeColor = Color.Blue;
 
                 if(dgv_cola.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
                 {
-                    dgv_cola.Cursor = System.Windows.Forms.Cursors.Hand;
+                    dgv_cola.Cursor = Cursors.Hand;
                 }
                 else
                 {
-                    dgv_cola.Cursor = System.Windows.Forms.Cursors.Default;
+                    dgv_cola.Cursor = Cursors.Default;
                 }
+            }
+        }
 
+        private void dgv_final_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgv_final.Columns[e.ColumnIndex].Name == "TpoLimpieza")
+            {
+                var dataGridView = (DataGridView)sender;
+                var cell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                cell.Style.ForeColor = Color.Blue;
+                cell.Style.Font = new Font(dataGridView.Font, FontStyle.Underline);
+                cell.Style.SelectionForeColor = Color.Blue;
+
+                if (dgv_final.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgv_final.Cursor = Cursors.Hand;
+                }
+                else
+                {
+                    dgv_final.Cursor = Cursors.Default;
+                }
             }
         }
 
@@ -246,14 +268,14 @@ namespace SIM_TP2.TP5
         {
             if (dgv_cola.Columns[e.ColumnIndex].Name != "TiempoLimpieza") return;
             if (dgv_cola.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null) return;
-            //se viene logica rara
 
             int rowDondeEstaInfo = e.RowIndex - 1; //hay que encontrar la fila que no tenga un tiempoLimpieza para ver con qué datos se calculó el tiempo de limpieza
             while (dgv_cola.Rows[rowDondeEstaInfo].Cells[e.ColumnIndex].Value != null)
             {
                 rowDondeEstaInfo--;
             }
-            double d = 0, c = 0;
+            double d = 0;
+            int c = 0;
             for (int i = 1; i <= 6; i++)
             {
                 if (dgv_cola.Rows[rowDondeEstaInfo].Cells["TipoCliente" + i.ToString()].Value == null) continue;
@@ -269,6 +291,21 @@ namespace SIM_TP2.TP5
                     c++;
                 }
             }
+            List<List<double>> euler = LimpiezaIntegracion.mostrarEuler(d, c);
+            GrillaIntegracionNumerica ventana = new GrillaIntegracionNumerica(euler);
+            Console.WriteLine("Valor D: " + d + "; Valor C: " + c);
+            ventana.ShowDialog();
+        }
+
+        private void dgv_final_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dgv_final.Columns[e.ColumnIndex].Name != "TpoLimpieza") return;
+            if (dgv_final.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.Equals("")) return;
+
+            double d;
+            int c;
+            (d, c) = gestor.obtenerParaMostrarLimpieza();
+
             List<List<double>> euler = LimpiezaIntegracion.mostrarEuler(d, c);
             GrillaIntegracionNumerica ventana = new GrillaIntegracionNumerica(euler);
             Console.WriteLine("Valor D: " + d + "; Valor C: " + c);

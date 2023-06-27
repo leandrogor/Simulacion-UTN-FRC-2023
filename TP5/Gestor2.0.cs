@@ -43,6 +43,8 @@ namespace SIM_TP2.TP5
         private object evento;
 
         private List<object> utlimoEvento = new List<object>();
+        private IDisciplina jugando;
+        private int cantEsperando;
 
         public Gestor2(double h, double dFutbol, double dHandball, double dBasketBall, List<List<double>> llegadas, List<List<double>> ocupaciones, solucionTP5 pantalla)
         {
@@ -126,17 +128,26 @@ namespace SIM_TP2.TP5
                 }
 
                 utlimoEvento.Clear();
+
+                if (evento is Cancha)
+                {
+                    jugando = cancha.Jugando;
+                    cantEsperando = cancha.ColaB.Count + cancha.ColaFH.Count;
+                }
+
                 utlimoEvento.AddRange(new List<object> {
                     iteraciones+1, evento, reloj.ToString("0.00"),
                     futbol.ProximaLlegada.ToString("0.00"),
                     basketBall.ProximaLlegada.ToString("0.00"),
                     handBall.ProximaLlegada.ToString("0.00"),
                     cancha.HoraFin == double.MaxValue ? "" : cancha.HoraFin.ToString("0.00"),
-                    limpieza.ProximaLimpieza == double.MaxValue ? "" : cancha.HoraFin.ToString("0.00"),
+                    limpieza.ProximaLimpieza == double.MaxValue ? "" : tiempoLimpieza.ToString("0.00"),
+                    limpieza.ProximaLimpieza == double.MaxValue ? "" : limpieza.ProximaLimpieza.ToString("0.00"),
                     cancha.Libre ? "Libre" : "Ocupado",
                     cancha.ColaFH.Count(), cancha.ColaB.Count(),
                     acGrupos, acRetirados, acLlegF, acLlegH, acLlegB,
-                    acEspF.ToString("0.00"), acEspH.ToString("0.00"), acEspB.ToString("0.00")
+                    acEspF.ToString("0.00"), acEspH.ToString("0.00"), acEspB.ToString("0.00"),
+                    //cancha.Jugando.D, cancha.ColaB.Count + cancha.ColaFH.Count
                 });
                 iteraciones++;
             }
@@ -203,6 +214,11 @@ namespace SIM_TP2.TP5
                 porcenRetSinJugar
             });
 
+        }
+
+        public (double, int) obtenerParaMostrarLimpieza()
+        {
+            return (jugando.D, cantEsperando);
         }
     }
 }

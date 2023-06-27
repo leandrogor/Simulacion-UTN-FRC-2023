@@ -18,10 +18,10 @@ namespace SIM_TP2.TP5
             mostrarGrilla(euler);
             dgv_integracion_numerica.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             int totalWidth = dgv_integracion_numerica.Columns.GetColumnsWidth(DataGridViewElementStates.Visible) + 3;
-            this.Width = totalWidth - 200;
+            this.Width = totalWidth - 220;
 
             int totalHeight = dgv_integracion_numerica.ColumnHeadersHeight + dgv_integracion_numerica.Rows.Cast<DataGridViewRow>().Sum(row => row.Height);
-            this.Height = totalHeight;
+            this.Height = totalHeight + 50;
         }
 
         public void mostrarGrilla(List<List<double>> euler)

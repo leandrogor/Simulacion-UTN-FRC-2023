@@ -10,7 +10,7 @@ namespace SIM_TP2.TP5.Entidades
     public class LimpiezaIntegracion
     {
         private static double h;
-        private double proximaLimpieza;
+        private double proximaLimpieza = Double.MaxValue;
         private Dictionary<Keydc, double> memoization; //optimización
         struct Keydc
         {
@@ -42,7 +42,7 @@ namespace SIM_TP2.TP5.Entidades
             return actualt;
         }
 
-        public static List<List<double>> mostrarEuler(double d, double c)
+        public static List<List<double>> mostrarEuler(double d, int c)
         {
             List<List<double>> euler = new List<List<double>>(); //fila: t, Di, dDi/dt, h * dDi/dt, Di+1
             
