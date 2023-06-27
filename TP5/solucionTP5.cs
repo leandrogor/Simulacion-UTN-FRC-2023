@@ -20,6 +20,7 @@ namespace SIM_TP2.TP5
         public solucionTP5()
         {
             InitializeComponent();
+            dgv_cola.CellFormatting += dgv_cola_CellFormatting;
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -217,14 +218,38 @@ namespace SIM_TP2.TP5
 
         }
 
-        private void dgv_cola_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgv_cola_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dgv_cola.Columns[e.ColumnIndex].Name == "TiempoLimpieza")
+            {
+                var dataGridView = (DataGridView)sender;
+                var cell = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+
+                // Establecer estilo de celda
+                cell.Style.ForeColor = Color.Blue;
+                cell.Style.Font = new Font(dataGridView.Font, FontStyle.Underline);
+                cell.Style.SelectionForeColor = Color.Blue;
+
+                if(dgv_cola.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    dgv_cola.Cursor = System.Windows.Forms.Cursors.Hand;
+                }
+                else
+                {
+                    dgv_cola.Cursor = System.Windows.Forms.Cursors.Default;
+                }
+
+            }
+        }
+
+        private void dgv_cola_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (dgv_cola.Columns[e.ColumnIndex].Name != "TiempoLimpieza") return;
             if (dgv_cola.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null) return;
             //se viene logica rara
-            
+
             int rowDondeEstaInfo = e.RowIndex - 1; //hay que encontrar la fila que no tenga un tiempoLimpieza para ver con qué datos se calculó el tiempo de limpieza
-            while(dgv_cola.Rows[rowDondeEstaInfo].Cells[e.ColumnIndex].Value != null)
+            while (dgv_cola.Rows[rowDondeEstaInfo].Cells[e.ColumnIndex].Value != null)
             {
                 rowDondeEstaInfo--;
             }
@@ -244,13 +269,10 @@ namespace SIM_TP2.TP5
                     c++;
                 }
             }
-            GrillaIntegracionNumerica ventana = new GrillaIntegracionNumerica();
-            ventana.Show();
             List<List<double>> euler = LimpiezaIntegracion.mostrarEuler(d, c);
+            GrillaIntegracionNumerica ventana = new GrillaIntegracionNumerica(euler);
             Console.WriteLine("Valor D: " + d + "; Valor C: " + c);
-            ventana.mostrarGrilla(euler);
-            
-            
+            ventana.ShowDialog();
         }
     }
 }

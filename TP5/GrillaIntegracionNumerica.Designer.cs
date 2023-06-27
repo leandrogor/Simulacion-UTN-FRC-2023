@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GrillaIntegracionNumerica));
             this.dgv_integracion_numerica = new System.Windows.Forms.DataGridView();
             this.t = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.di = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +40,9 @@
             // 
             // dgv_integracion_numerica
             // 
+            this.dgv_integracion_numerica.AllowUserToAddRows = false;
+            this.dgv_integracion_numerica.AllowUserToDeleteRows = false;
+            this.dgv_integracion_numerica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgv_integracion_numerica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_integracion_numerica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.t,
@@ -46,44 +50,60 @@
             this.dDidt,
             this.hdDidt,
             this.Diproximo});
-            this.dgv_integracion_numerica.Location = new System.Drawing.Point(12, 12);
+            this.dgv_integracion_numerica.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_integracion_numerica.Location = new System.Drawing.Point(0, 0);
             this.dgv_integracion_numerica.Name = "dgv_integracion_numerica";
-            this.dgv_integracion_numerica.Size = new System.Drawing.Size(776, 406);
+            this.dgv_integracion_numerica.ReadOnly = true;
+            this.dgv_integracion_numerica.RowHeadersVisible = false;
+            this.dgv_integracion_numerica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_integracion_numerica.Size = new System.Drawing.Size(530, 450);
             this.dgv_integracion_numerica.TabIndex = 0;
             // 
             // t
             // 
             this.t.HeaderText = "t";
             this.t.Name = "t";
+            this.t.ReadOnly = true;
+            this.t.Width = 35;
             // 
             // di
             // 
             this.di.HeaderText = "Di";
             this.di.Name = "di";
+            this.di.ReadOnly = true;
+            this.di.Width = 42;
             // 
             // dDidt
             // 
             this.dDidt.HeaderText = "Di\'";
             this.dDidt.Name = "dDidt";
+            this.dDidt.ReadOnly = true;
+            this.dDidt.Width = 44;
             // 
             // hdDidt
             // 
             this.hdDidt.HeaderText = "h*Di\'";
             this.hdDidt.Name = "hdDidt";
+            this.hdDidt.ReadOnly = true;
+            this.hdDidt.Width = 54;
             // 
             // Diproximo
             // 
             this.Diproximo.HeaderText = "Di+1";
             this.Diproximo.Name = "Diproximo";
+            this.Diproximo.ReadOnly = true;
+            this.Diproximo.Width = 54;
             // 
             // GrillaIntegracionNumerica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(530, 450);
             this.Controls.Add(this.dgv_integracion_numerica);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GrillaIntegracionNumerica";
-            this.Text = "GrillaIntegracionNumerica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Grilla Integracion Numerica";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_integracion_numerica)).EndInit();
             this.ResumeLayout(false);
 

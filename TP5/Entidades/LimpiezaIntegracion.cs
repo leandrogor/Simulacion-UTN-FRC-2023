@@ -45,22 +45,29 @@ namespace SIM_TP2.TP5.Entidades
         public static List<List<double>> mostrarEuler(double d, double c)
         {
             List<List<double>> euler = new List<List<double>>(); //fila: t, Di, dDi/dt, h * dDi/dt, Di+1
+            
             double actualD = 0;
             double actualt = 0;
+            double dydx = 0;
+            double hdydx = 0;
             while (actualD < d)
             {
                 List<double> fila = new List<double>();
                 fila.Add(actualt);
                 fila.Add(actualD);
-                double dydx = 0.6 * c + actualt;
-                double hdydx = h * dydx;
+                dydx = 0.6 * c + actualt;
+                hdydx = h * dydx;
                 fila.Add(dydx);
                 fila.Add(hdydx);
                 actualD += h * hdydx;
                 actualt += h;
-                fila.Add(actualD); 
+                fila.Add(actualD);
                 euler.Add(fila);
             }
+            List<double> ultimaFila = new List<double>();
+            ultimaFila.Add(actualt);
+            ultimaFila.Add(actualD);
+            euler.Add(ultimaFila);
             return euler;
         }
 

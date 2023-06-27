@@ -967,7 +967,7 @@
             this.lblIntegracionNumerica.Name = "lblIntegracionNumerica";
             this.lblIntegracionNumerica.Size = new System.Drawing.Size(224, 14);
             this.lblIntegracionNumerica.TabIndex = 21;
-            this.lblIntegracionNumerica.Text = "Integración numérica Euler (h):";
+            this.lblIntegracionNumerica.Text = "Integracion numerica Euler (h):";
             // 
             // horaInicioMostrar
             // 
@@ -1139,7 +1139,7 @@
             this.dgv_cola.Size = new System.Drawing.Size(1500, 500);
             this.dgv_cola.TabIndex = 45;
             this.dgv_cola.TabStop = false;
-            this.dgv_cola.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_cola_CellMouseDoubleClick);
+            this.dgv_cola.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_cola_CellMouseClick);
             // 
             // Numero
             // 
