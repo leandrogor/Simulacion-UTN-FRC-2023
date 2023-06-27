@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainTP5));
             this.btnSolucion = new Guna.UI.WinForms.GunaButton();
             this.btnConsigna = new Guna.UI.WinForms.GunaButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSolucion
@@ -91,13 +93,25 @@
             this.btnConsigna.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnConsigna.Click += new System.EventHandler(this.btnConsigna_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(263, 51);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(454, 261);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // mainTP5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1007, 551);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSolucion);
             this.Controls.Add(this.btnConsigna);
             this.DoubleBuffered = true;
@@ -105,6 +119,7 @@
             this.Name = "mainTP5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajo Práctico Nº5";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +128,6 @@
 
         private Guna.UI.WinForms.GunaButton btnSolucion;
         private Guna.UI.WinForms.GunaButton btnConsigna;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

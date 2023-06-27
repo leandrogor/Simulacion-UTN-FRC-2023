@@ -21,6 +21,7 @@ namespace SIM_TP2.TP5
             this.Width = totalWidth + 25;
 
             int totalHeight = dgv_integracion_numerica.ColumnHeadersHeight + dgv_integracion_numerica.Rows.Cast<DataGridViewRow>().Sum(row => row.Height);
+            totalHeight = totalHeight > 800 ? 800 : totalHeight;
             this.Height = totalHeight + 50;
         }
 

@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(consignaTP5));
             this.lbl_Consigna = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new Guna.UI.WinForms.GunaButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,23 +40,13 @@
             this.lbl_Consigna.AutoSize = true;
             this.lbl_Consigna.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Consigna.Font = new System.Drawing.Font("SimSun-ExtB", 25.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Consigna.ForeColor = System.Drawing.Color.Olive;
+            this.lbl_Consigna.ForeColor = System.Drawing.Color.Beige;
             this.lbl_Consigna.Location = new System.Drawing.Point(387, 25);
             this.lbl_Consigna.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Consigna.Name = "lbl_Consigna";
             this.lbl_Consigna.Size = new System.Drawing.Size(194, 42);
             this.lbl_Consigna.TabIndex = 1;
             this.lbl_Consigna.Text = "CONSIGNA";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SIM_TP2.Properties.Resources.consignaTP5;
-            this.pictureBox1.Location = new System.Drawing.Point(203, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(571, 425);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // btnVolver
             // 
@@ -87,14 +77,25 @@
             this.btnVolver.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(237, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(526, 418);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // consignaTP5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(952, 575);
-            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lbl_Consigna);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("SimSun-ExtB", 7.8F);
@@ -112,7 +113,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_Consigna;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaButton btnVolver;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
