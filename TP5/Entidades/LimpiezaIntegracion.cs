@@ -71,9 +71,9 @@ namespace SIM_TP2.TP5.Entidades
             return euler;
         }
 
-        public double generarProximaLimpieza(double reloj, double d, int v)
+        public double generarProximaLimpieza(double reloj, double d, int cantEsperando)
         {
-            double unidades = calcularUnidadesDeIntegracion(d, v) / 60; //dividido 60 porque da el valor en minutos y nosotros lo tenemos todo en horas
+            double unidades = calcularUnidadesDeIntegracion(d, cantEsperando) / 60; //dividido 60 porque da el valor en minutos y nosotros lo tenemos todo en horas
             ProximaLimpieza = reloj + unidades; 
             return unidades;
         }

@@ -66,7 +66,7 @@
             this.Diproximo});
             this.dgv_integracion_numerica.GridColor = System.Drawing.Color.Indigo;
             this.dgv_integracion_numerica.Location = new System.Drawing.Point(0, 0);
-            this.dgv_integracion_numerica.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_integracion_numerica.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_integracion_numerica.Name = "dgv_integracion_numerica";
             this.dgv_integracion_numerica.ReadOnly = true;
             this.dgv_integracion_numerica.RowHeadersVisible = false;
@@ -83,11 +83,10 @@
             // 
             // t
             // 
-            this.t.HeaderText = "t";
+            this.t.HeaderText = "t (min)";
             this.t.MinimumWidth = 6;
             this.t.Name = "t";
             this.t.ReadOnly = true;
-            this.t.Width = 48;
             // 
             // di
             // 
@@ -130,7 +129,7 @@
             this.Controls.Add(this.dgv_integracion_numerica);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GrillaIntegracionNumerica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grilla Integracion Numerica";
