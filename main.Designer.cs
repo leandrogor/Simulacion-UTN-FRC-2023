@@ -37,6 +37,7 @@
             this.btnTP4 = new Guna.UI.WinForms.GunaButton();
             this.lblFacu = new System.Windows.Forms.Label();
             this.btnTP5 = new Guna.UI.WinForms.GunaButton();
+            this.btnFinal = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
             // 
             // label2
@@ -177,7 +178,7 @@
             this.btnTP4.Image = null;
             this.btnTP4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTP4.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTP4.Location = new System.Drawing.Point(159, 345);
+            this.btnTP4.Location = new System.Drawing.Point(33, 345);
             this.btnTP4.Name = "btnTP4";
             this.btnTP4.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnTP4.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -220,7 +221,7 @@
             this.btnTP5.Image = null;
             this.btnTP5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTP5.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTP5.Location = new System.Drawing.Point(457, 345);
+            this.btnTP5.Location = new System.Drawing.Point(305, 345);
             this.btnTP5.Name = "btnTP5";
             this.btnTP5.OnHoverBaseColor = System.Drawing.Color.Transparent;
             this.btnTP5.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -228,11 +229,42 @@
             this.btnTP5.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
             this.btnTP5.OnPressedColor = System.Drawing.Color.Black;
             this.btnTP5.Size = new System.Drawing.Size(256, 84);
-            this.btnTP5.TabIndex = 0;
+            this.btnTP5.TabIndex = 5;
             this.btnTP5.Text = "TP5";
             this.btnTP5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTP5.UseTransfarantBackground = true;
             this.btnTP5.Click += new System.EventHandler(this.btnTP5_Click);
+            // 
+            // btnFinal
+            // 
+            this.btnFinal.AnimationHoverSpeed = 0.07F;
+            this.btnFinal.AnimationSpeed = 0.03F;
+            this.btnFinal.BackColor = System.Drawing.Color.Transparent;
+            this.btnFinal.BackgroundImage = global::SIM_TP2.Properties.Resources.buttonwhite;
+            this.btnFinal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFinal.BaseColor = System.Drawing.Color.Transparent;
+            this.btnFinal.BorderColor = System.Drawing.Color.Black;
+            this.btnFinal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinal.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFinal.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFinal.Font = new System.Drawing.Font("Perpetua Titling MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinal.ForeColor = System.Drawing.Color.Black;
+            this.btnFinal.Image = null;
+            this.btnFinal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnFinal.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFinal.Location = new System.Drawing.Point(576, 345);
+            this.btnFinal.Name = "btnFinal";
+            this.btnFinal.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.btnFinal.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFinal.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnFinal.OnHoverImage = global::SIM_TP2.Properties.Resources.Dibujado_a_Mano_Marrón_y_Verde_Arte_Iconos_Conjunto_de_Iconos;
+            this.btnFinal.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFinal.Size = new System.Drawing.Size(256, 84);
+            this.btnFinal.TabIndex = 0;
+            this.btnFinal.Text = "Final - Gor";
+            this.btnFinal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnFinal.UseTransfarantBackground = true;
+            this.btnFinal.Click += new System.EventHandler(this.btnFinal_Click);
             // 
             // main
             // 
@@ -242,6 +274,7 @@
             this.BackgroundImage = global::SIM_TP2.Properties.Resources.Portadamain_;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(874, 487);
+            this.Controls.Add(this.btnFinal);
             this.Controls.Add(this.btnTP5);
             this.Controls.Add(this.lblFacu);
             this.Controls.Add(this.btnTP4);
@@ -271,5 +304,6 @@
         private Guna.UI.WinForms.GunaButton btnTP4;
         private System.Windows.Forms.Label lblFacu;
         private Guna.UI.WinForms.GunaButton btnTP5;
+        private Guna.UI.WinForms.GunaButton btnFinal;
     }
 }

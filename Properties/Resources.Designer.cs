@@ -93,9 +93,39 @@ namespace SIM_TP2.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a {
+            get {
+                object obj = ResourceManager.GetObject("a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap buttonwhite {
             get {
                 object obj = ResourceManager.GetObject("buttonwhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap consignaFinal {
+            get {
+                object obj = ResourceManager.GetObject("consignaFinal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap consignaTP5 {
+            get {
+                object obj = ResourceManager.GetObject("consignaTP5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +266,26 @@ namespace SIM_TP2.Properties {
         internal static System.Drawing.Bitmap Diseño_sin_título4 {
             get {
                 object obj = ResourceManager.GetObject("Diseño sin título4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoTP5 {
+            get {
+                object obj = ResourceManager.GetObject("fondoTP5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoTP51 {
+            get {
+                object obj = ResourceManager.GetObject("fondoTP51", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

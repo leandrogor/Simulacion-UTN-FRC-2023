@@ -1,4 +1,5 @@
-﻿using SIM_TP2.Generadores;
+﻿using SIM_TP2.Final_Gor;
+using SIM_TP2.Generadores;
 using SIM_TP2.TP3;
 using SIM_TP2.TP4;
 using SIM_TP2.TP5;
@@ -64,6 +65,14 @@ namespace SIM_TP2
             mainTP5 ventana = new mainTP5();
             ventana.Show();
             ventana.FormClosed += LogOut;
+            Hide();
+        }
+
+        private void btnFinal_Click(object sender, EventArgs e)
+        {
+            mainFinal final = new mainFinal();
+            final.Show();
+            final.FormClosed += LogOut;
             Hide();
         }
     }
