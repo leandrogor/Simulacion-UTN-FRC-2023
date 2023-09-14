@@ -227,9 +227,9 @@
             this.lblRespuesta.Location = new System.Drawing.Point(582, 34);
             this.lblRespuesta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRespuesta.Name = "lblRespuesta";
-            this.lblRespuesta.Size = new System.Drawing.Size(107, 17);
+            this.lblRespuesta.Size = new System.Drawing.Size(66, 21);
             this.lblRespuesta.TabIndex = 19;
-            this.lblRespuesta.Text = "(respuesta)";
+            this.lblRespuesta.Text = "(rta)";
             // 
             // label1
             // 
