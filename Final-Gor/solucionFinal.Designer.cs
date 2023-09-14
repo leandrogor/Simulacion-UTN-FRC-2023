@@ -42,22 +42,6 @@
             this.lblRespuesta = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvFinal = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.probabilidad = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.maxLleg = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.minLleg = new System.Windows.Forms.NumericUpDown();
-            this.label21 = new System.Windows.Forms.Label();
-            this.reparto = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.maxAt = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.minAt = new System.Windows.Forms.NumericUpDown();
-            this.label15 = new System.Windows.Forms.Label();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.relojSim = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +65,22 @@
             this.acTiempoCred = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inicioC1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.probabilidad = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.maxLleg = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.minLleg = new System.Windows.Forms.NumericUpDown();
+            this.label21 = new System.Windows.Forms.Label();
+            this.reparto = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.maxAt = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.minAt = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iteracionesSim)).BeginInit();
             this.grpRes.SuspendLayout();
@@ -140,7 +140,7 @@
             this.iteracionesSim.Size = new System.Drawing.Size(96, 28);
             this.iteracionesSim.TabIndex = 1;
             this.iteracionesSim.Value = new decimal(new int[] {
-            23,
+            22,
             0,
             0,
             0});
@@ -315,6 +315,193 @@
             this.dgvFinal.Size = new System.Drawing.Size(2027, 741);
             this.dgvFinal.TabIndex = 50;
             this.dgvFinal.TabStop = false;
+            // 
+            // Numero
+            // 
+            this.Numero.Frozen = true;
+            this.Numero.HeaderText = "Nº";
+            this.Numero.MinimumWidth = 6;
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            this.Numero.Width = 70;
+            // 
+            // relojSim
+            // 
+            this.relojSim.Frozen = true;
+            this.relojSim.HeaderText = "Reloj";
+            this.relojSim.MinimumWidth = 6;
+            this.relojSim.Name = "relojSim";
+            this.relojSim.ReadOnly = true;
+            this.relojSim.Width = 70;
+            // 
+            // NombreEvento
+            // 
+            this.NombreEvento.Frozen = true;
+            this.NombreEvento.HeaderText = "Nombre Evento";
+            this.NombreEvento.MinimumWidth = 6;
+            this.NombreEvento.Name = "NombreEvento";
+            this.NombreEvento.ReadOnly = true;
+            this.NombreEvento.Width = 140;
+            // 
+            // RND1
+            // 
+            this.RND1.HeaderText = "RND1";
+            this.RND1.MinimumWidth = 6;
+            this.RND1.Name = "RND1";
+            this.RND1.ReadOnly = true;
+            this.RND1.Width = 70;
+            // 
+            // tiempoLlegada
+            // 
+            this.tiempoLlegada.HeaderText = "Tiempo Llegada";
+            this.tiempoLlegada.MinimumWidth = 6;
+            this.tiempoLlegada.Name = "tiempoLlegada";
+            this.tiempoLlegada.ReadOnly = true;
+            this.tiempoLlegada.Width = 70;
+            // 
+            // proximaLlegada
+            // 
+            this.proximaLlegada.HeaderText = "Proxima Llegada";
+            this.proximaLlegada.MinimumWidth = 6;
+            this.proximaLlegada.Name = "proximaLlegada";
+            this.proximaLlegada.ReadOnly = true;
+            this.proximaLlegada.Width = 70;
+            // 
+            // RND2
+            // 
+            this.RND2.HeaderText = "RND2";
+            this.RND2.MinimumWidth = 6;
+            this.RND2.Name = "RND2";
+            this.RND2.ReadOnly = true;
+            this.RND2.Width = 70;
+            // 
+            // tipoCompra
+            // 
+            this.tipoCompra.HeaderText = "Tipo Compra";
+            this.tipoCompra.MinimumWidth = 6;
+            this.tipoCompra.Name = "tipoCompra";
+            this.tipoCompra.ReadOnly = true;
+            this.tipoCompra.Width = 70;
+            // 
+            // RND3
+            // 
+            this.RND3.HeaderText = "RND3";
+            this.RND3.MinimumWidth = 6;
+            this.RND3.Name = "RND3";
+            this.RND3.ReadOnly = true;
+            this.RND3.Width = 70;
+            // 
+            // tiempoAtencion
+            // 
+            this.tiempoAtencion.HeaderText = "Tiempo Atencion";
+            this.tiempoAtencion.MinimumWidth = 6;
+            this.tiempoAtencion.Name = "tiempoAtencion";
+            this.tiempoAtencion.ReadOnly = true;
+            this.tiempoAtencion.Width = 70;
+            // 
+            // finAt1
+            // 
+            this.finAt1.HeaderText = "Fin Atencion 1";
+            this.finAt1.MinimumWidth = 6;
+            this.finAt1.Name = "finAt1";
+            this.finAt1.ReadOnly = true;
+            this.finAt1.Width = 70;
+            // 
+            // tipo1
+            // 
+            this.tipo1.HeaderText = "Tipo Cliente En 1";
+            this.tipo1.MinimumWidth = 6;
+            this.tipo1.Name = "tipo1";
+            this.tipo1.ReadOnly = true;
+            this.tipo1.Width = 70;
+            // 
+            // finAt2
+            // 
+            this.finAt2.HeaderText = "Fin Atencion 2";
+            this.finAt2.MinimumWidth = 6;
+            this.finAt2.Name = "finAt2";
+            this.finAt2.ReadOnly = true;
+            this.finAt2.Width = 70;
+            // 
+            // tipo2
+            // 
+            this.tipo2.HeaderText = "Tipo Cliente En 2";
+            this.tipo2.MinimumWidth = 6;
+            this.tipo2.Name = "tipo2";
+            this.tipo2.ReadOnly = true;
+            this.tipo2.Width = 70;
+            // 
+            // colaCli
+            // 
+            this.colaCli.HeaderText = "Cola Clientes";
+            this.colaCli.MinimumWidth = 6;
+            this.colaCli.Name = "colaCli";
+            this.colaCli.ReadOnly = true;
+            this.colaCli.Width = 50;
+            // 
+            // colaCred
+            // 
+            this.colaCred.HeaderText = "Cola Credito";
+            this.colaCred.MinimumWidth = 6;
+            this.colaCred.Name = "colaCred";
+            this.colaCred.ReadOnly = true;
+            this.colaCred.Width = 50;
+            // 
+            // colaCont
+            // 
+            this.colaCont.HeaderText = "Cola Contado";
+            this.colaCont.MinimumWidth = 6;
+            this.colaCont.Name = "colaCont";
+            this.colaCont.ReadOnly = true;
+            this.colaCont.Width = 50;
+            // 
+            // restTras
+            // 
+            this.restTras.HeaderText = "Restante Traslado";
+            this.restTras.MinimumWidth = 6;
+            this.restTras.Name = "restTras";
+            this.restTras.ReadOnly = true;
+            this.restTras.Width = 70;
+            // 
+            // proximoFinTraslado
+            // 
+            this.proximoFinTraslado.HeaderText = "Proximo Fin Traslado";
+            this.proximoFinTraslado.MinimumWidth = 6;
+            this.proximoFinTraslado.Name = "proximoFinTraslado";
+            this.proximoFinTraslado.ReadOnly = true;
+            this.proximoFinTraslado.Width = 70;
+            // 
+            // contCred
+            // 
+            this.contCred.HeaderText = "Contador Credito";
+            this.contCred.MinimumWidth = 6;
+            this.contCred.Name = "contCred";
+            this.contCred.ReadOnly = true;
+            this.contCred.Width = 70;
+            // 
+            // acTiempoCred
+            // 
+            this.acTiempoCred.HeaderText = "AC Tiempo Credito";
+            this.acTiempoCred.MinimumWidth = 6;
+            this.acTiempoCred.Name = "acTiempoCred";
+            this.acTiempoCred.ReadOnly = true;
+            this.acTiempoCred.Width = 70;
+            // 
+            // tipoEntrega
+            // 
+            this.tipoEntrega.HeaderText = "Tipo Entrega";
+            this.tipoEntrega.MinimumWidth = 6;
+            this.tipoEntrega.Name = "tipoEntrega";
+            this.tipoEntrega.ReadOnly = true;
+            this.tipoEntrega.Width = 70;
+            // 
+            // inicioC1
+            // 
+            this.inicioC1.HeaderText = "Inicio Espera C1";
+            this.inicioC1.MinimumWidth = 6;
+            this.inicioC1.Name = "inicioC1";
+            this.inicioC1.ReadOnly = true;
+            this.inicioC1.Width = 70;
             // 
             // groupBox3
             // 
@@ -592,193 +779,6 @@
             this.label15.Size = new System.Drawing.Size(179, 17);
             this.label15.TabIndex = 30;
             this.label15.Text = "Atencion: Uniforme(";
-            // 
-            // Numero
-            // 
-            this.Numero.Frozen = true;
-            this.Numero.HeaderText = "Nº";
-            this.Numero.MinimumWidth = 6;
-            this.Numero.Name = "Numero";
-            this.Numero.ReadOnly = true;
-            this.Numero.Width = 70;
-            // 
-            // relojSim
-            // 
-            this.relojSim.Frozen = true;
-            this.relojSim.HeaderText = "Reloj";
-            this.relojSim.MinimumWidth = 6;
-            this.relojSim.Name = "relojSim";
-            this.relojSim.ReadOnly = true;
-            this.relojSim.Width = 70;
-            // 
-            // NombreEvento
-            // 
-            this.NombreEvento.Frozen = true;
-            this.NombreEvento.HeaderText = "Nombre Evento";
-            this.NombreEvento.MinimumWidth = 6;
-            this.NombreEvento.Name = "NombreEvento";
-            this.NombreEvento.ReadOnly = true;
-            this.NombreEvento.Width = 140;
-            // 
-            // RND1
-            // 
-            this.RND1.HeaderText = "RND1";
-            this.RND1.MinimumWidth = 6;
-            this.RND1.Name = "RND1";
-            this.RND1.ReadOnly = true;
-            this.RND1.Width = 70;
-            // 
-            // tiempoLlegada
-            // 
-            this.tiempoLlegada.HeaderText = "Tiempo Llegada";
-            this.tiempoLlegada.MinimumWidth = 6;
-            this.tiempoLlegada.Name = "tiempoLlegada";
-            this.tiempoLlegada.ReadOnly = true;
-            this.tiempoLlegada.Width = 70;
-            // 
-            // proximaLlegada
-            // 
-            this.proximaLlegada.HeaderText = "Proxima Llegada";
-            this.proximaLlegada.MinimumWidth = 6;
-            this.proximaLlegada.Name = "proximaLlegada";
-            this.proximaLlegada.ReadOnly = true;
-            this.proximaLlegada.Width = 70;
-            // 
-            // RND2
-            // 
-            this.RND2.HeaderText = "RND2";
-            this.RND2.MinimumWidth = 6;
-            this.RND2.Name = "RND2";
-            this.RND2.ReadOnly = true;
-            this.RND2.Width = 70;
-            // 
-            // tipoCompra
-            // 
-            this.tipoCompra.HeaderText = "Tipo Compra";
-            this.tipoCompra.MinimumWidth = 6;
-            this.tipoCompra.Name = "tipoCompra";
-            this.tipoCompra.ReadOnly = true;
-            this.tipoCompra.Width = 70;
-            // 
-            // RND3
-            // 
-            this.RND3.HeaderText = "RND3";
-            this.RND3.MinimumWidth = 6;
-            this.RND3.Name = "RND3";
-            this.RND3.ReadOnly = true;
-            this.RND3.Width = 70;
-            // 
-            // tiempoAtencion
-            // 
-            this.tiempoAtencion.HeaderText = "Tiempo Atencion";
-            this.tiempoAtencion.MinimumWidth = 6;
-            this.tiempoAtencion.Name = "tiempoAtencion";
-            this.tiempoAtencion.ReadOnly = true;
-            this.tiempoAtencion.Width = 70;
-            // 
-            // finAt1
-            // 
-            this.finAt1.HeaderText = "Fin Atencion 1";
-            this.finAt1.MinimumWidth = 6;
-            this.finAt1.Name = "finAt1";
-            this.finAt1.ReadOnly = true;
-            this.finAt1.Width = 70;
-            // 
-            // tipo1
-            // 
-            this.tipo1.HeaderText = "Tipo Cliente En 1";
-            this.tipo1.MinimumWidth = 6;
-            this.tipo1.Name = "tipo1";
-            this.tipo1.ReadOnly = true;
-            this.tipo1.Width = 70;
-            // 
-            // finAt2
-            // 
-            this.finAt2.HeaderText = "Fin Atencion 2";
-            this.finAt2.MinimumWidth = 6;
-            this.finAt2.Name = "finAt2";
-            this.finAt2.ReadOnly = true;
-            this.finAt2.Width = 70;
-            // 
-            // tipo2
-            // 
-            this.tipo2.HeaderText = "Tipo Cliente En 2";
-            this.tipo2.MinimumWidth = 6;
-            this.tipo2.Name = "tipo2";
-            this.tipo2.ReadOnly = true;
-            this.tipo2.Width = 70;
-            // 
-            // colaCli
-            // 
-            this.colaCli.HeaderText = "Cola Clientes";
-            this.colaCli.MinimumWidth = 6;
-            this.colaCli.Name = "colaCli";
-            this.colaCli.ReadOnly = true;
-            this.colaCli.Width = 50;
-            // 
-            // colaCred
-            // 
-            this.colaCred.HeaderText = "Cola Credito";
-            this.colaCred.MinimumWidth = 6;
-            this.colaCred.Name = "colaCred";
-            this.colaCred.ReadOnly = true;
-            this.colaCred.Width = 50;
-            // 
-            // colaCont
-            // 
-            this.colaCont.HeaderText = "Cola Contado";
-            this.colaCont.MinimumWidth = 6;
-            this.colaCont.Name = "colaCont";
-            this.colaCont.ReadOnly = true;
-            this.colaCont.Width = 50;
-            // 
-            // restTras
-            // 
-            this.restTras.HeaderText = "Restante Traslado";
-            this.restTras.MinimumWidth = 6;
-            this.restTras.Name = "restTras";
-            this.restTras.ReadOnly = true;
-            this.restTras.Width = 70;
-            // 
-            // proximoFinTraslado
-            // 
-            this.proximoFinTraslado.HeaderText = "Proximo Fin Traslado";
-            this.proximoFinTraslado.MinimumWidth = 6;
-            this.proximoFinTraslado.Name = "proximoFinTraslado";
-            this.proximoFinTraslado.ReadOnly = true;
-            this.proximoFinTraslado.Width = 70;
-            // 
-            // contCred
-            // 
-            this.contCred.HeaderText = "Contador Credito";
-            this.contCred.MinimumWidth = 6;
-            this.contCred.Name = "contCred";
-            this.contCred.ReadOnly = true;
-            this.contCred.Width = 70;
-            // 
-            // acTiempoCred
-            // 
-            this.acTiempoCred.HeaderText = "AC Tiempo Credito";
-            this.acTiempoCred.MinimumWidth = 6;
-            this.acTiempoCred.Name = "acTiempoCred";
-            this.acTiempoCred.ReadOnly = true;
-            this.acTiempoCred.Width = 70;
-            // 
-            // tipoEntrega
-            // 
-            this.tipoEntrega.HeaderText = "Tipo Entrega";
-            this.tipoEntrega.MinimumWidth = 6;
-            this.tipoEntrega.Name = "tipoEntrega";
-            this.tipoEntrega.ReadOnly = true;
-            this.tipoEntrega.Width = 70;
-            // 
-            // inicioC1
-            // 
-            this.inicioC1.HeaderText = "Inicio Espera C1";
-            this.inicioC1.MinimumWidth = 6;
-            this.inicioC1.Name = "inicioC1";
-            this.inicioC1.ReadOnly = true;
-            this.inicioC1.Width = 70;
             // 
             // solucionFinal
             // 
